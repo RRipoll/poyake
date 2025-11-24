@@ -1,9 +1,7 @@
 METADATA FOR config.AppInfo {
 	
-	'AZURENAME','AZURENAME',1,'fastlanedevstorage', DEFAULT
-	;
-	'AZUREKEY','AZUREKEY',1,'EzEiM2E6c+Q7RAIiDbK5+D36J4tXMid8OUqmNUQuggYwSG1FAFvff4hb6tvqreWaEyBDOF2vA4S1EkZ6NibZZQ==', DEFAULT
-	;
+	'AZURENAME'	;
+	'AZUREKEY'	;
 	
 	
 	}
