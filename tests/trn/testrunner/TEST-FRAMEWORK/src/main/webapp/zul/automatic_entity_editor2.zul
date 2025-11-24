@@ -1,0 +1,18 @@
+<?page title="Home Page" ?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	<window width="99%" closable="true" title="Automatic Entity Editor"
+		style="overflow:auto" border="normal" maximizable="true"
+		apply="com.jsantos.metadata.demo.AutomaticEntityEditorController2">
+		<vbox vflex="1" hflex="1">
+			<hbox vflex="1"><label>Entity  :</label><combobox id="ENTITIES_COMBO" /></hbox>
+			<hbox vflex="1"><label>Language:</label><combobox id="LANG_COMBO"><comboitem label="en_EN"/><comboitem label="es_ES"/></combobox></hbox>
+			
+			
+			<div id="GRID">
+			</div>
+		</vbox>
+
+	</window>
+</zk>

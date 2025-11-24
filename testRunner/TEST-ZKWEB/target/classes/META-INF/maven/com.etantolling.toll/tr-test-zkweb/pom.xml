@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>tr-test-zkweb</artifactId>
+	<name>TEST-ZKWEB</name>
+	<parent>
+		<groupId>com.etantolling.toll</groupId>
+		<artifactId>tr-toll</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<dependencies>
+		<dependency>
+			    <groupId>org.codehaus.jackson</groupId>
+			    <artifactId>jackson-core-asl</artifactId>
+			</dependency>
+		<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+			</dependency>
+		<dependency>
+			<groupId>com.etantolling.toll</groupId>
+			<artifactId>tr-test-utils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.etantolling.toll</groupId>
+			<artifactId>tr-test-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zhtml</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>zsoup</artifactId>
+					<groupId>org.zkoss</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkmax</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+    		<groupId>commons-beanutils</groupId>
+    		<artifactId>commons-beanutils</artifactId>
+		</dependency>
+		<dependency>
+    			<groupId>com.microsoft.azure</groupId>
+    			<artifactId>azure-storage</artifactId>
+    			
+			</dependency>
+			<dependency>
+    			<groupId>com.github.javadev</groupId>
+    			<artifactId>underscore</artifactId>
+    			<version>1.55</version>
+  			</dependency>
+	</dependencies>
+</project>

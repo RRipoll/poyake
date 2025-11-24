@@ -1,0 +1,408 @@
+FROMSQLFILE '/metadatademo/src/main/resources/metadata/crm/view/VCustomerSearch.sql'
+
+VIEW  ENTITY crm.VCustomerSearch {
+	PK customerId INT SAMEAS crm.HCustomer.customerId
+	customerTypeId INT SAMEAS crm.HCustomer.customerTypeId
+	fullName VARCHAR(256) STEREOTYPES DESCRIPTION
+	mailingAddress VARCHAR(256)
+	firstName VARCHAR(64) SAMEAS crm.HPersonOrCompany.firstName
+	lastNameOrCompanyName VARCHAR(64) SAMEAS crm.HPersonOrCompany.lastNameOrCompanyName
+	number VARCHAR(14) SAMEAS crm.HPhoneNumber.number
+	address VARCHAR(64) SAMEAS crm.HEmailAddress.address
+	lastInvoice VARCHAR(256)
+    lastInvoiceId INT SAMEAS inv.Invoice.invoiceId
+
+	LABELS {
+		ENTITY {en_EN 'Account' es_ES 'Cuenta'}
+		customerId {en_EN 'Customer #' es_ES '# Cuenta'}
+		fullName {en_EN 'Full Name' es_ES 'Nombre Completo'}
+		mailingAddress {en_EN 'Mailing Address' es_ES 'Direcci??n'}
+	}
+
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: VCustomerSearch  
+VIEW NAME: VCustomerSearch 
+VIEW SCHEMA: dbo
+
+Tables:
+	TABLE: crm.HCustomer Alias: c
+	TABLE: crm.HPersonOrCompany Alias: p
+	TABLE: crm.HPostalAddress Alias: a
+	TABLE: crm.HPhoneNumber Alias: pn
+	TABLE: crm.HEmailAddress Alias: e
+Output:
+	COLUMN: customerId -> crm.HCustomer.customerId
+	COLUMN: customerTypeId -> crm.HCustomer.customerTypeId
+	EXPRESSION: fullName -> ''
+	EXPRESSION: mailingAddress -> ''
+	COLUMN: firstName -> crm.HPersonOrCompany.firstName
+	COLUMN: lastNameOrCompanyName -> crm.HPersonOrCompany.lastNameOrCompanyName
+	COLUMN: number -> crm.HPhoneNumber.number
+	COLUMN: address -> crm.HEmailAddress.address
+	EXPRESSION: lastInvioce -> ''
+
+
+================= Resolver Information ======================== 
+Entity List:
+	acc.Allocation ,audit.InputUser ,audit.InputSource ,acc.Ledger ,acc.LedgerItem ,acc.LedgerInfo ,acc.EnuTransactionType ,acc.EnuLedgerType ,acc.Annotation ,acc.EnuAnnotationType ,crm.CustomerPk ,acc.Annotation ,acc.Balance ,acc.Cancellation ,acc.EnuAnnotationType ,acc.EnuLedgerType ,acc.EnuTransactionType ,acc.Ledger ,acc.LedgerInfo ,acc.LedgerItem ,acc.Repost ,acc.VAccountBalance ,acc.VTransactionHistory ,tolling.Trip ,payment.Payment ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,acc.VTripPayment ,acc.Allocation ,acc.VUnallocatedCredit ,acc.VUnpaidDebit ,audit.EnuInputUserGroup ,audit.InputSource ,audit.InputUser ,audit.InputUserGroup ,audit.EnuInputUserGroup ,common.EnuTemplateType ,common.FileGroup ,common.StorageFile ,common.Template ,config.Enulocale ,config.DatagridSetting ,config.Enulocale ,config.AppInfo ,crm.CustomerPaymentMethod ,payment.PaymentMethod ,crm.CustomerPk ,crm.CustomerSuplementaryContact ,crm.PersonOrCompanyPk ,crm.EnuContactType ,crm.EmailAddressPk ,crm.EnuContactType ,crm.EnuCountry ,crm.EnuCustomerType ,crm.EnuPhoneNumberType ,crm.EnuStateProvince ,crm.EnuCountry ,crm.HCustomer ,crm.PostalAddressPk ,crm.EnuCustomerType ,crm.HEmailAddress ,crm.EmailAddressPk ,crm.HPersonOrCompany ,crm.PhoneNumberPK ,crm.HPhoneNumber ,crm.EnuPhoneNumberType ,crm.HPostalAddress ,crm.EnuStateProvince ,crm.PersonOrCompanyPk ,crm.PhoneNumberPK ,crm.PostalAddressPk ,crm.VCustomerHistory ,VCustomerSearch ,crm.HCustomer ,crm.HPersonOrCompany ,crm.HPhoneNumber ,crm.HEmailAddress ,crm.VDetailPageCaseList ,cs.CSCase ,cs.CSCasePK ,cs.EnuCaseType ,cs.EnuCaseStatus ,cs.EnuCasePriority ,crm.VDetailPageVehicleList ,tolling.LicensePlate ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.VehicleInfo ,tolling.Vehicle ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.CustomerVehicle ,cs.CSCase ,cs.CSCasePK ,cs.CustomerCase ,cs.EnuCasePriority ,cs.EnuCaseStatus ,cs.EnuCaseType ,cs.VCaseSearch ,cs.CustomerCase ,inv.Invoice ,inv.InvoiceDocument ,inv.Invoice ,crm.HPostalAddress ,inv.InvoiceLedgerItem ,inv.VInvoiceableAccount ,acc.VAccountBalance ,inv.VdetailPageInvoiceList ,inv.InvoiceDocument ,inv.VinvoiceHeader ,inv.VitemInvoiceDetail ,tolling.TripInfo ,tolling.Gantry ,tolling.Pass ,inv.InvoiceLedgerItem ,inv.invoiceHeader ,inv.itemInvoiceDetail ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,payment.Payment ,payment.PaymentMethod ,payment.VPaymentMethods ,crm.CustomerPaymentMethod ,tolling.CustomerPass ,tolling.CustomerVehicle ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.EnuPromoType ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.Gantry ,tolling.LicensePlate ,tolling.Pass ,tolling.Promo ,tolling.EnuPromoType ,tolling.Trip ,tolling.TripInfo ,tolling.Vehicle ,tolling.VehicleInfo ,tolling.VFindVehicle ,tolling.VTripSearchColumns:
+	SOLVED customerId -> crm.HCustomer.customerId
+	SOLVED customerTypeId -> crm.HCustomer.customerTypeId
+	EXPRESSION fullName -> 
+	EXPRESSION mailingAddress -> 
+	SOLVED firstName -> crm.HPersonOrCompany.firstName
+	SOLVED lastNameOrCompanyName -> crm.HPersonOrCompany.lastNameOrCompanyName
+	SOLVED number -> crm.HPhoneNumber.number
+	SOLVED address -> crm.HEmailAddress.address
+	EXPRESSION lastInvioce -> 
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id VCustomerSearch
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id customerId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id customerTypeId
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          primitive_expression 
+                            constant ''
+                        as_column_alias 
+                          column_alias 
+                            id 
+                              simple_id fullName
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          primitive_expression 
+                            constant ''
+                        as_column_alias 
+                          column_alias 
+                            id 
+                              simple_id mailingAddress
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id p
+                        .
+                        id 
+                          simple_id firstName
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id p
+                        .
+                        id 
+                          simple_id lastNameOrCompanyName
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id pn
+                        .
+                        id 
+                          simple_id number
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id e
+                        .
+                        id 
+                          simple_id address
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          primitive_expression 
+                            constant ''
+                        as_column_alias 
+                          column_alias 
+                            id 
+                              simple_id lastInvioce
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id crm
+                              .
+                              id 
+                                simple_id HCustomer
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id c
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id HPersonOrCompany
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id p
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id p
+                                      .
+                                      id 
+                                        simple_id personOrCompanyId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id c
+                                      .
+                                      id 
+                                        simple_id mainContactPersonOrCompanyId
+                              and
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    function_call getDate()
+                                  comparison_operator >=
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id p
+                                      .
+                                      id 
+                                        simple_id startDate
+                              and
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id p
+                                      .
+                                      id 
+                                        simple_id endDate
+                                  comparison_operator >
+                                  expression 
+                                    function_call getDate()
+                              and
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    function_call getDate()
+                                  comparison_operator >=
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id c
+                                      .
+                                      id 
+                                        simple_id startDate
+                              and
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id c
+                                      .
+                                      id 
+                                        simple_id endDate
+                                  comparison_operator >
+                                  expression 
+                                    function_call getDate()
+                        join_part leftjoin
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id HPostalAddress
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id a
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id a
+                                      .
+                                      id 
+                                        simple_id postalAddressId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id c
+                                      .
+                                      id 
+                                        simple_id mailingPostalAddressId
+                              and
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    function_call getDate()
+                                  comparison_operator >=
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id a
+                                      .
+                                      id 
+                                        simple_id startDate
+                              and
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id a
+                                      .
+                                      id 
+                                        simple_id endDate
+                                  comparison_operator >
+                                  expression 
+                                    function_call getDate()
+                        join_part leftjoin
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id HPhoneNumber
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id pn
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id pn
+                                      .
+                                      id 
+                                        simple_id phoneNumberId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id p
+                                      .
+                                      id 
+                                        simple_id phoneNumberId
+                        join_part leftjoin
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id HEmailAddress
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id e
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id e
+                                      .
+                                      id 
+                                        simple_id emailAddressId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id p
+                                      .
+                                      id 
+                                        simple_id emailAddressId
+  <EOF>*/

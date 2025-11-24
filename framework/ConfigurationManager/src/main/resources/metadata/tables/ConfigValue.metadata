@@ -1,0 +1,7 @@
+TABLE ENTITY cfg.ConfigValue PATTERN AutoHistory{
+	configKeyId INT FKTO cfg.ConfigKey STEREOTYPES AUTOHISTORYMAINFK
+	PK revisionId INT
+	value VARCHAR(64)
+	startDate DATETIME NOTNULL DEFAULT "getDate()"
+	endDate DATETIME NOTNULL DEFAULT "\'01-Jan-2099\'"
+}

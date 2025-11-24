@@ -1,0 +1,5 @@
+ENTITY LinkTable {
+	PK addressId INT FKTO Address
+	customerId INT FKTO Customer
+	
+}

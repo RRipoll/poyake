@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<system-config>
+		<disable-event-thread>false</disable-event-thread>
+		<label-location>/WEB-INF/errors_labels.properties</label-location>
+		<label-location>/WEB-INF/header_table_labels.properties</label-location>
+	    <id-generator-class>org.zkoss.zk.ui.impl.StaticIdGenerator</id-generator-class>
+		<!-- 
+			<engine-class>com.idcglobal.toll.nh.bos.config.PermissionUIEngine</engine-class>
+	 -->
+	</system-config>
+
+	<library-property>
+		<name>org.zkoss.zul.Combobox.mold</name>
+		<value>rounded</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.zul.Button.mold</name>
+		<value>trendy</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.util.logging.realCauseBriefly</name>
+		<value>0</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.theme.preferred</name>
+		<value>atlantic</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.zul.progressbox.position</name>
+		<value>center</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.zk.ui.processMask.enabled</name>
+		<value>true</value>
+	</library-property>
+<library-property>
+        <name>org.zkoss.zk.ui.updateByClient.allowed</name>
+        <value>true</value>
+    </library-property>
+	<!-- <desktop-config>
+		<theme-provider-class>com.idcglobal.toll.nh.bos.cubic.layout.ThemeProvider</theme-provider-class>
+	</desktop-config>
+	 -->
+
+    <desktop-config> 
+      <theme-uri>/css/app.css.dsp</theme-uri>
+    </desktop-config>
+
+	<language-config>
+		<addon-uri>/WEB-INF/lang-addon.xml</addon-uri>
+    </language-config>
+	<language-config>
+        <addon-uri>/WEB-INF/ckez-bind-addon.xml</addon-uri>
+    </language-config>
+<!--     
+    <listener>
+		<description>ThreadLocal Synchronization Listener</description>
+        <listener-class>org.zkoss.zkplus.util.ThreadLocalListener</listener-class>
+    </listener>
+    
+    <preference>
+        <name>ThreadLocal</name>
+        <value>org.springframework.web.context.request.RequestContextHolder=requestAttributesHolder,inheritableRequestAttributesHolder;</value>
+ 	</preference>
+ -->    
+</zk>

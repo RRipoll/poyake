@@ -1,0 +1,265 @@
+FROMSQLFILE '/poyake-roadrunner/src/main/resources/metadata/acc/view/VTransactionHistory.sql'
+
+VIEW  ENTITY acc.VTransactionHistory {
+	postingDate DATE SAMEAS acc.Annotation.postingDate
+	ledgerItemId INT SAMEAS acc.Ledger.ledgerItemId
+	transactionTypeId INT SAMEAS acc.Ledger.transactionTypeId
+	amount MONEY SAMEAS acc.Ledger.amount
+	balance MONEY SAMEAS acc.Ledger.balance
+	PK tripId INT SAMEAS tolling.Trip.tripId
+	paymentId INT SAMEAS payment.Payment.paymentId
+	customerId INT SAMEAS acc.Annotation.customerId
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: acc.VTransactionHistory  
+VIEW NAME: VTransactionHistory 
+VIEW SCHEMA: acc
+
+Tables:
+	TABLE: acc.Ledger Alias: l
+	TABLE: acc.Annotation Alias: ann
+	TABLE: tolling.Trip Alias: t
+	TABLE: payment.Payment Alias: p
+Output:
+	COLUMN: postingDate -> acc.Annotation.postingDate
+	COLUMN: ledgerItemId -> acc.Ledger.ledgerItemId
+	COLUMN: transactionTypeId -> acc.Ledger.transactionTypeId
+	COLUMN: amount -> acc.Ledger.amount
+	COLUMN: balance -> acc.Ledger.balance
+	COLUMN: tripId -> tolling.Trip.tripId
+	COLUMN: paymentId -> payment.Payment.paymentId
+	COLUMN: customerId -> acc.Annotation.customerId
+
+
+================= Resolver Information ======================== 
+Entity List:
+	acc.Allocation ,audit.InputUser ,audit.InputSource ,acc.Ledger ,acc.LedgerItem ,acc.LedgerInfo ,acc.EnuTransactionType ,acc.EnuLedgerType ,acc.Annotation ,acc.EnuAnnotationType ,crm.CustomerPk ,acc.Balance ,acc.Cancellation ,acc.Repost ,acc.VTransactionHistory ,tolling.Trip ,payment.Payment ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,acc.VTripPayment ,acc.VUnallocatedCredit ,audit.EnuInputUserGroup ,audit.InputUserGroup ,config.DatagridSetting ,crm.CustomerPaymentMethod ,payment.PaymentMethod ,crm.CustomerSuplementaryContact ,crm.PersonOrCompanyPk ,crm.EnuContactType ,crm.EmailAddressPk ,crm.EnuCountry ,crm.EnuCustomerType ,crm.EnuPhoneNumberType ,crm.EnuStateProvince ,crm.HCustomer ,crm.PostalAddressPk ,crm.HEmailAddress ,crm.HPersonOrCompany ,crm.PhoneNumberPK ,crm.HPhoneNumber ,crm.HPostalAddress ,crm.VCustomerHistory ,VCustomerSearch ,crm.VDetailPageCaseList ,cs.CSCase ,cs.CSCasePK ,cs.EnuCaseType ,cs.EnuCaseStatus ,cs.EnuCasePriority ,crm.VDetailPageVehicleList ,tolling.LicensePlate ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.VehicleInfo ,tolling.Vehicle ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.CustomerVehicle ,cs.CustomerCase ,cs.VCaseSearch ,payment.VPaymentMethods ,tolling.CustomerPass ,tolling.Pass ,tolling.EnuPromoType ,tolling.Gantry ,tolling.Promo ,tolling.TripInfo ,tolling.VFindVehicle ,tolling.VTripSearchColumns:
+	SOLVED postingDate -> acc.Annotation.postingDate
+	SOLVED ledgerItemId -> acc.Ledger.ledgerItemId
+	SOLVED transactionTypeId -> acc.Ledger.transactionTypeId
+	SOLVED amount -> acc.Ledger.amount
+	SOLVED balance -> acc.Ledger.balance
+	SOLVED tripId -> tolling.Trip.tripId
+	SOLVED paymentId -> payment.Payment.paymentId
+	SOLVED customerId -> acc.Annotation.customerId
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id acc
+              .
+              id 
+                simple_id VTransactionHistory
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id ann
+                        .
+                        id 
+                          simple_id postingDate
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id l
+                        .
+                        id 
+                          simple_id ledgerItemId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id l
+                        .
+                        id 
+                          simple_id transactionTypeId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id l
+                        .
+                        id 
+                          simple_id amount
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id l
+                        .
+                        id 
+                          simple_id balance
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id t
+                        .
+                        id 
+                          simple_id tripId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id p
+                        .
+                        id 
+                          simple_id paymentId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id ann
+                        .
+                        id 
+                          simple_id customerId
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id acc
+                              .
+                              id 
+                                simple_id Ledger
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id l
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id acc
+                                    .
+                                    id 
+                                      simple_id Annotation
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id ann
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id ann
+                                      .
+                                      id 
+                                        simple_id annotationId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id l
+                                      .
+                                      id 
+                                        simple_id annotationId
+                        join_part leftjoin
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id tolling
+                                    .
+                                    id 
+                                      simple_id Trip
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id t
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id t
+                                      .
+                                      id 
+                                        simple_id ledgerItemId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id l
+                                      .
+                                      id 
+                                        simple_id ledgerItemId
+                        join_part leftjoin
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id payment
+                                    .
+                                    id 
+                                      simple_id Payment
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id p
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id p
+                                      .
+                                      id 
+                                        simple_id ledgerInfoId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id l
+                                      .
+                                      id 
+                                        simple_id ledgerInfoId
+  <EOF>*/

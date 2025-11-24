@@ -1,0 +1,82 @@
+FROMSQLFILE '/poyake-permission/src/main/resources/metadata/permission/view/VgroupRol.sql'
+
+VIEW  ENTITY permission.VgroupRol  STEREOTYPES CONFIG{
+	PK inputUserGroupId INT SAMEAS audit.InputUserGroup.inputUserGroupId
+	shortCode VARCHAR(16) SAMEAS audit.InputUserGroup.shortCode
+	description VARCHAR(32) SAMEAS audit.InputUserGroup.description STEREOTYPES DESCRIPTION
+	rols  MULTIPLEOBJECT MULTIREFTO permission.UserGroupRol
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: audit.VgroupRol  
+VIEW NAME: VgroupRol 
+VIEW SCHEMA: audit
+
+Tables:
+	TABLE: audit.EnuInputUserGroup Alias: ug
+Output:
+	ug.* -> audit.EnuInputUserGroup
+	EXPRESSION: rols -> ''
+
+
+================= Resolver Information ======================== 
+Entity List:
+	audit.EnuInputUserGroup ,audit.InputUser ,audit.InputSource ,audit.UserGroup ,audit.VgroupRol ,permission.UserGroupRol ,permission.Rol ,audit.VinputUser ,audit.VinputUserMulti ,audit.VuserGroup ,common.EnuTemplateType ,common.FileGroup ,common.StorageFile ,common.Template ,config.Enulocale ,config.AppInfo ,config.DatagridSetting ,config.PostingDate ,permission.EnuPermissionType ,permission.EnuPermissionValue ,permission.Permission ,permission.RolPermission ,permission.VPermissionRol ,permission.VRolLink ,permission.Vpermission ,recorder.EnuRecorderType ,recorder.RecorderData ,recorder.RecorderMasterColumns:
+	EXPANDED inputUserGroupId -> audit.EnuInputUserGroup.inputUserGroupId
+	EXPANDED shortCode -> audit.EnuInputUserGroup.shortCode
+	EXPANDED description -> audit.EnuInputUserGroup.description
+	EXPRESSION rols -> 
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id audit
+              .
+              id 
+                simple_id VgroupRol
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      asterisk 
+                        table_name 
+                          id 
+                            simple_id ug
+                        .*
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          primitive_expression 
+                            constant ''
+                        as_column_alias 
+                          column_alias 
+                            id 
+                              simple_id rols
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id audit
+                              .
+                              id 
+                                simple_id EnuInputUserGroup
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id ug
+  <EOF>*/

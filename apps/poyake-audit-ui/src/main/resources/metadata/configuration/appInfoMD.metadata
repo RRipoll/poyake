@@ -1,0 +1,382 @@
+METADATA FOR config.DatagridSetting {
+	
+	'b332a351-ea23-43d1-af4a-5793d3e8ccba','AppInfoTree','{
+  "dataTableName" : "config.AppInfoTree",
+  "aSName" : "AppInfoTree",
+  "columnConfigurations" : [ {
+    "name" : "appInfoTreeId",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "parentAppInfoTreeId",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "description",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "appInfoId",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  } ],
+  "orderByConfigurations" : [ {
+    "name" : "appInfoTreeId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "AppInfoTree.appInfoTreeId"
+  }, {
+    "name" : "parentAppInfoTreeId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "AppInfoTree.parentAppInfoTreeId"
+  }, {
+    "name" : "description",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Descripción"
+  }, {
+    "name" : "appInfoId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "AppInfoTree.appInfoId"
+  } ],
+  "filterConfigurations" : [ {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "appInfoTreeId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "parentAppInfoTreeId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "description"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "appInfoId"
+  } ],
+  "detailScreenConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "appInfoTreeId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "parentAppInfoTreeId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "description"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "appInfoId"
+  } ],
+  "editConfigurations" : [ {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "appInfoTreeId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "parentAppInfoTreeId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "description"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "appInfoId"
+  } ]
+}',DEFAULT,'1',DEFAULT,DEFAULT;
+'5bba37a8-0072-4897-ac58-d8609ca41b8d','AppInfo','{
+  "dataTableName" : "config.AppInfo",
+  "aSName" : "AppInfo",
+  "columnConfigurations" : [ {
+    "name" : "appInfoId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "sKey",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "type",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "sValue",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "inputUserGroupId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  } ],
+  "orderByConfigurations" : [ {
+    "name" : "appInfoId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "AppInfo.appInfoId"
+  }, {
+    "name" : "sKey",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "AppInfo.sKey"
+  }, {
+    "name" : "type",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "AppInfo.type"
+  }, {
+    "name" : "sValue",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "AppInfo.sValue"
+  }, {
+    "name" : "inputUserGroupId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Grupo Usuario"
+  } ],
+  "filterConfigurations" : [ {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "appInfoId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "sKey"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "type"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "sValue"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "inputUserGroupId"
+  } ],
+  "detailScreenConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "appInfoId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "sKey"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "type"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "sValue"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "inputUserGroupId"
+  } ],
+  "editConfigurations" : [ {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "appInfoId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "sKey"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "type"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "sValue"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "inputUserGroupId"
+  } ]
+}',DEFAULT,'1',DEFAULT,DEFAULT;
+
+}

@@ -1,0 +1,37 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	<?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"?>
+	<window vflex="true">
+		<tabbox width="1018px" vflex="true" id="TAB_BOX">
+			<tabs id="maintabs">				
+				<tab id="flatpanel" label="Files" />
+			</tabs>
+			<tabpanels>
+			     <tabpanel style="color:#333399;">
+					<window	apply="com.etantilling.testrunner.test.framework.toll.testframework.panel.screens.flatfileconversion.FlatFileTranslatorController" >
+					 <hlayout>
+							   <div hflex="1">
+							   <label value="File Type"/>
+							   </div>
+							   <div hflex="3">
+							   		<hlayout spacing="5px">
+										<combobox id="FILETYPE" width="100px" readonly="true">
+											<attribute name="onCreate"><![CDATA[
+											                                  self.setSelectedIndex(0);
+											                                  ]]></attribute>
+											<comboitem value="0" label="ICTX"></comboitem>
+											<comboitem value="1" label="XCTX"></comboitem>
+										</combobox>
+									</hlayout>
+								</div>
+							</hlayout>
+							
+					</window>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+	</window>
+</zk>
+

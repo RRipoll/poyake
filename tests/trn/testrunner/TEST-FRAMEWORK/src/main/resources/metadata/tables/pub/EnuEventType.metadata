@@ -1,0 +1,24 @@
+ENTITY pub.EnuEventType PATTERN Enumeration{
+	PK eventTypeId INTEGER
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 )
+	
+    
+    
+    METADATA{
+    	
+    	0, 'Generic', 'Generic';
+		1, 'Input', 'Input';
+		2, 'Report', 'Report';
+		3, 'Check', 'Check';
+		4, 'Rest_Job', 'Rest_Job';  
+    	5, 'File_Event', 'File_Event'; 
+    	6, 'Rest_Event', 'Rest_Event'; 
+    	
+    	 
+    }
+	 
+	
+}
+
+ 

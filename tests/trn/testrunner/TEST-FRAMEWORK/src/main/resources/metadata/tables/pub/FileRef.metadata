@@ -1,0 +1,11 @@
+ENTITY pub.FileRef {
+	PK filerefid INTEGER 
+    filetypeid INTEGER  
+    folderid INTEGER FKTO pub.Folder
+    azureurl VARCHAR(255) 
+    name VARCHAR(255) 
+    description VARCHAR(255)
+    deleted INTEGER DEFAULT  '0'
+    mimetype VARCHAR(255)
+	
+}

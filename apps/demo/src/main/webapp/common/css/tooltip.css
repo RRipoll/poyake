@@ -1,0 +1,12 @@
+.xstooltip 
+{
+    visibility: hidden; 
+   position: absolute; 
+    top: 0;  
+    left: 0; 
+    z-index: 2; 
+    font: normal 8pt sans-serif; 
+    padding: 3px; 
+	 background-color: #E5E5E5; 
+    
+}

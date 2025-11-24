@@ -1,0 +1,49 @@
+CREATE OR ALTER PROCEDURE dbo.reset_db_sp
+AS
+CREATE TABLE #Temp(Idx INT IDENTITY PRIMARY KEY, dropOrder INT, theStatement nvarchar(max))
+
+INSERT INTO #Temp
+			select * from (
+			select 1 as dropOrder, 'drop procedure [' + schema_name(schema_id) + '].[' + name + ']' as theStatement from sys.procedures where schema_id in (select schema_id from sys.schemas s join sys.database_principals p on s.principal_id = p.principal_id and p.default_schema_name='dbo') 
+			union 
+			select 2 as dropOrder, 'alter table [' + schema_name(schema_id) + '].[' + object_name( parent_object_id ) + '] drop constraint [' + name + ']' as theStatement from sys.check_constraints cc where schema_id in (select schema_id from sys.schemas s join sys.database_principals p on s.principal_id = p.principal_id and p.default_schema_name='dbo') and exists (select 1 from sys.objects where object_id = cc.parent_object_id and type = 'U')
+			union
+			select 3 as dropOrder, 'alter table [' + schema_name(schema_id) + '].[' + object_name( parent_object_id ) + '] drop constraint [' + name + ']' as theStatement from sys.foreign_keys where schema_id in (select schema_id from sys.schemas s join sys.database_principals p on s.principal_id = p.principal_id and p.default_schema_name='dbo') 
+			union 
+			select 3.2 as dropOrder, 'alter table [' + schema_name(schema_id) + '].[' + object_name( parent_object_id ) + '] drop constraint [' + name + ']' as theStatement from sys.default_constraints dc where schema_id in (select schema_id from sys.schemas s join sys.database_principals p on s.principal_id = p.principal_id and p.default_schema_name='dbo' and s.name not in ('dbo')) and exists (select 1 from sys.objects where object_id = dc.parent_object_id and type = 'U') 
+			union 
+			select 3.5 as dropOrder, 'drop function [' + schema_name(schema_id) + '].[' + name + ']' as theStatement from sys.objects where type in ( 'FN', 'IF', 'TF' ) and schema_id in (select schema_id from sys.schemas s join sys.database_principals p on s.principal_id = p.principal_id and p.default_schema_name='dbo') 
+			union
+			select 4 as dropOrder, 'drop view [' + schema_name(schema_id) + '].[' + name + ']' as theStatement from sys.views where schema_id in (select schema_id from sys.schemas s join sys.database_principals p on s.principal_id = p.principal_id and p.default_schema_name='dbo') 
+			union 
+			select 5 as dropOrder, 'alter table [' + schema_name(schema_id) + '].[' + name + '] SET ( SYSTEM_VERSIONING = OFF )' theStatement from sys.tables where temporal_type=2 and schema_id in (select schema_id from sys.schemas s join sys.database_principals p on s.principal_id = p.principal_id and p.default_schema_name='dbo') 
+			union 
+			select 6 as dropOrder, 'drop table [' + schema_name(schema_id) + '].[' + name + ']' as theStatement from sys.tables where schema_id in (select schema_id from sys.schemas s join sys.database_principals p on s.principal_id = p.principal_id and p.default_schema_name='dbo' and s.name not in ('dbo')) 
+			union 
+			select 11 as dropOrder, 'drop xml schema collection ' + s.name + '.' + c.name as theStatement from sys.xml_schema_collections c join sys.schemas s on s.schema_id=c.schema_id where s.name<>'sys' 
+			union 
+			select 15 as dropOrder, 'drop type [' + schema_name(schema_id) + '].[' + name + ']' as theStatement from sys.types where is_user_defined = 1 and schema_id in (select schema_id from sys.schemas s join sys.database_principals p on s.principal_id = p.principal_id and p.default_schema_name='dbo') 
+			union 
+			select 14 as dropOrder, 'drop sequence [' + schema_name(schema_id) + '].[' + name + ']' as theStatement from sys.sequences where schema_id in (select schema_id from sys.schemas s join sys.database_principals p on s.principal_id = p.principal_id and p.default_schema_name='dbo' and s.name not in ('dbo')) 
+			union 
+			select 9 as dropOrder, 'drop column encryption key ['+name+']' as theStatement from sys.column_encryption_keys 
+			union 
+			select 17 as dropOrder, 'drop column master key ['+name+']' as theStatement from sys.column_master_keys 
+			union 
+			select 20 as dropOrder, 'drop schema ' + s.name as theStatement from sys.schemas s join sys.database_principals p on s.principal_id = p.principal_id and p.default_schema_name='dbo' and s.name not in ('dbo', 'saletax')
+			) tt order by 1 
+
+DECLARE @Counter INT = 1
+DECLARE @theStatement nvarchar(max)
+
+WHILE @Counter <= (SELECT MAX(Idx) FROM #Temp)
+BEGIN
+	SELECT @theStatement =''
+	SELECT @theStatement = theStatement FROM #Temp WHERE Idx = @Counter	
+	if @theStatement not like '%dbo].%'
+		begin
+			-- print @theStatement		
+			exec sp_executesql @theStatement
+		end		
+	SET @Counter = @Counter + 1
+END

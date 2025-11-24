@@ -1,0 +1,12 @@
+TABLE ENTITY config.AppInfoTree {
+	
+	PK appInfoTreeId UUID NOTNULL STEREOTYPES FOLDER
+	parentAppInfoTreeId UUID FKTO config.AppInfoTree STEREOTYPES PARENTFOLDER
+    description VARCHAR(256)  STEREOTYPES DESCRIPTION
+    appInfoId UUID FKTO config.AppInfo STEREOTYPES ITEM
+    		
+	METADATA {
+		'1', NULL, 'c:', NULL;
+		
+	}	 
+}

@@ -1,0 +1,65 @@
+METADATA FOR testrunner.Test{
+
+'REST','TEST','','','[ {
+  "eventTypeId" : "ADD_PARAMETERS",
+  "eventName" : "adding pK",
+  "description" : "this parameter should be use as $.pK",
+  "selected" : 1,
+  "parameters" : [ {
+    "label" : "pK",
+    "trParameterTypeId" : 2,
+    "value" : "1"
+  } ]
+}, {
+  "eventDefinitionUuid" : "1",
+  "eventTypeId" : "REST_SERVICE",
+  "eventName" : "get book 1",
+  "description" : "Get Table by PK",
+  "selected" : 1,
+  "url" : "/rest/api/mt/table/{tableName}/get/{pK}",
+  "httpMethod" : 1,
+  "parameters" : [ {
+    "label" : "pK",
+    "trParameterTypeId" : 1,
+    "value" : "$.pK"
+  }, {
+    "label" : "tableName",
+    "trParameterTypeId" : 2,
+    "value" : "BOOK"
+  } ]
+}, {
+  "eventDefinitionUuid" : "5",
+  "eventTypeId" : "REST_SERVICE",
+  "eventName" : "Search Table",
+  "description" : "Search Table",
+  "selected" : 1,
+  "url" : "/rest/api/search/table/{tableName}?page={page}&size={size}&orderBy={orderBy}",
+  "httpMethod" : 3,
+  "parameters" : [ {
+    "label" : "tableName",
+    "trParameterTypeId" : 2,
+    "value" : "author"
+  }, {
+    "label" : "page",
+    "trParameterTypeId" : 1,
+    "value" : "0"
+  }, {
+    "label" : "size",
+    "trParameterTypeId" : 1,
+    "value" : "10"
+  }, {
+    "label" : "orderBy",
+    "trParameterTypeId" : 2,
+    "value" : ""
+  } ],
+  "json" : "{\\"and\\":[{\\"parameters\\":[{\\"fieldName\\":\\"fullName\\",\\"operator\\":\\"LIKE\\",\\"values\\":[\\"$.fullName\\"]}]}]}"
+
+} ]',DEFAULT,DEFAULT,DEFAULT;
+
+}
+
+METADATA FOR testrunner.Folder{
+
+'5', '3', NULL, 'REST';
+
+}

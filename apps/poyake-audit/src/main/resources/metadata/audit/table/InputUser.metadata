@@ -1,0 +1,28 @@
+//SQLFILEDEPENDENCY '/commondata/src/main/resources/metadata/config/getPostingDate.sql'
+
+TABLE ENTITY audit.InputUser PATTERN Audited STEREOTYPES CONFIG{
+	PK inputUserId INT
+	loginName VARCHAR(64) NOTNULL STEREOTYPES DESCRIPTION
+	passwd PASSWORD 
+	fullName VARCHAR(128)
+	created DATETIME NOTNULL DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	inputSourceId INT NOTNULL FKTO audit.InputSource DEFAULT "1" STEREOTYPES NOGUIINPUT
+	email EMAIL
+	
+	METADATA{
+		1,'system user',NULL,NULL,DEFAULT,DEFAULT,NULL;
+		2,'sa','jjsoft',NULL,DEFAULT,DEFAULT,NULL;
+		
+	}
+	
+	LABELS {
+		fullName {en_EN 'Full Name' es_ES 'Nombre Completo'}
+		inputUserId{en_EN 'User #' es_ES '# Usuario'}
+		loginName{en_EN 'Login Name ' es_ES 'Login'}
+		passwd{en_EN 'Passwd' es_ES 'Passwd'}
+		created{en_EN 'Created By' es_ES 'Creado por'}
+		inputSourceId{en_EN 'Source #' es_ES '# Origen'}
+	}
+	
+	
+}

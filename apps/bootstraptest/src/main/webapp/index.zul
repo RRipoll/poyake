@@ -1,0 +1,21 @@
+<?link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"?>
+<?link rel="stylesheet" href="resources/css/zk-admin-bootstrap-theme.css"?>
+<?link rel="stylesheet" href="resources/css/layout.css" ?>
+<?link rel="stylesheet" href="resources/css/zk-bootstrap.css" ?>
+<?link rel="stylesheet" href="resources/css/adminbsb.css" ?>
+
+
+<zk xmlns:n="native">
+    <hlayout viewModel="@id('vm')@init('org.zkoss.admin.MainVM')" width="100%">
+        <div class="container-fluid">
+	    	<n:section>
+	    		<n:aside>
+		        	<apply templateURI="sidebar.zul" />
+		        </n:aside>
+	        </n:section>
+	    </div>
+        <div sclass="container-fluid" hflex="1">
+            <apply templateURI="@load(vm.navigationModel.contentUrl)"/>
+        </div>
+    </hlayout>
+</zk>

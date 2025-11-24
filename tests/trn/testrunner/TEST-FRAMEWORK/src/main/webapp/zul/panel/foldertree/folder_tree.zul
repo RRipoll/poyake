@@ -1,0 +1,20 @@
+<window id="demoWindow" apply="com.testrunner.test.framework.toll.testframework.panel.screens.foldertree.tree.FolderTreeControler">
+	<style>
+	.h-inline-block {
+		display: inline-block;
+		_display: inline;
+	}
+	</style>
+	<hlayout vflex="1">
+		<vlayout>
+			<button id="bt_delete" label="Delete"/>
+			<button id="bt_addtest" label="add Test" visible="false"/>
+			<button id="bt_addfolder" label="add Folder"/>
+		</vlayout>
+		<tree id="tree" vflex="1" width="80%" height="700px"  >
+			<treecols>
+				<treecol label="Folder Tree" />		
+			</treecols>
+		</tree>
+	</hlayout>
+</window>

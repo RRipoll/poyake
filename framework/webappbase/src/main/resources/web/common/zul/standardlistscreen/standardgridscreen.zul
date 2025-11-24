@@ -1,0 +1,48 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client" 
+xmlns:n="http://www.zkoss.org/2005/zk/native" 
+xmlns:h="http://www.w3.org/1999/xhtml">
+ 	<idspace class="d-flex h-100">
+ 		<div class="card w-25 mt-filter-container" id="LIST_FILTER_DIV" >
+			<div style="position:relative">
+				<div style="padding:20px;float:left" id="FILTER_LABEL">
+					<label class="h5">${mtlabels.standardlistscreen_filter}</label>
+				</div>			
+				<div id="DROPDOWN_MENU" style="float:right;width:33px;margin-top:20px;text-align:center">
+					<h:i class="material-icons mt-dropdown-menu">more_vert</h:i>
+					<popup id="DROPDOWN_MENU_POPUP">
+						<div id="CONF_FILTER">
+							<label class="dropdown-item" style="cursor:pointer" id="COLLAPSE_FILTER_BUTTON">${mtlabels.filter_collapse}</label>
+							<label class="dropdown-item"  style="cursor:pointer" id="RESET_FILTER_BUTTON" >${mtlabels.filter_reset_filter}</label>	
+						</div>
+						<div id="CONF_EDITABLE">
+							<label class="dropdown-item"  style="cursor:pointer" id="CONF_COLUMNS_BUTTON" >${mtlabels.filter_configure_columns} </label>
+							<label class="dropdown-item"  style="cursor:pointer" id="CONF_FILTER_BUTTON" >${mtlabels.filter_configure_filter}</label>
+							<label class="dropdown-item" style="cursor:pointer"  id="CONF_ORDERBY_BUTTON" >${mtlabels.filter_configure_seleccion}</label>
+							<label class="dropdown-item" style="cursor:pointer"  id="JSON_CONF_BUTTON" >${mtlabels.filter_configure_edit_json}</label>
+						</div>
+						<div id="PERMISSIONS">
+							<label class="dropdown-item"  style="cursor:pointer" id="PERMISSIONS_BUTTON" >${mtlabels.filter_configure_permissions} </label>
+						</div>
+						<div id="LABELS">
+							<label class="dropdown-item"  style="cursor:pointer" id="LABELS_BUTTON" >${mtlabels.filter_configure_labels} </label>
+						</div>
+						<div id="METADATA">
+							<label class="dropdown-item"  style="cursor:pointer" id="METADATA_BUTTON" >${mtlabels.filter_configure_metadata} </label>
+						</div>
+					</popup>
+				</div>
+			</div>
+			<div class="body">
+				<div id="FILTERS" class="mt-filter"/>
+			</div>
+			<button id="SEARCH_BUTTON" autodisable="self" class="btn btn-primary ml-2 mr-2 waves-effect pull-right" style="position:absolute;bottom:10px;right:20px">${mtlabels.standardlistscreen_search}</button>
+		</div>
+		<div class="card " id="LIST_CONTENT_DIV" style="flex:auto;">
+			<div class="header bg-light-green" id="HEADER_GREEN">
+				<label class="h5" id="HEADER_LABEL">${mtlabels.standardlistscreen_list}</label>
+				<div class="float-right bg-light-green" id="HEADER_DIV"/>
+			</div>
+			<div id="GRID" class="body h-100 v-100" />
+		</div>
+	</idspace>
+</zk>

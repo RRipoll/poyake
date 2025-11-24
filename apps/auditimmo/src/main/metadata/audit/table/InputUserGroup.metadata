@@ -1,0 +1,11 @@
+TABLE ENTITY audit.InputUserGroup {
+	PK userGroupId INT NOTNULL
+	inputUserGroupId INT NOTNULL FKTO audit.EnuInputUserGroup
+	effectiveStartDate DATETIME NOTNULL DEFAULT "getDate()" 
+	effectiveEndDate INT NOTNULL DEFAULT '01-01-2099' 
+	active BIT NOTNULL DEFAULT "1" 
+	inputUserId  INT NOTNULL FKTO audit.InputUser  
+	inputSourceId INT NOTNULL FKTO audit.InputSource DEFAULT "0"
+	updatedAt DATETIME2(7) NOTNULL DEFAULT "getDate()"
+	isDefunct BIT NOTNULL DEFAULT "0" 
+}

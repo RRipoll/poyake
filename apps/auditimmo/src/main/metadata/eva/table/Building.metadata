@@ -1,0 +1,17 @@
+TABLE ENTITY eva.Building{
+	PK buildingId INT
+	buildingTypeId INT NOTNULL FKTO eva.EnuBuildingType
+	buildings INT NOTNULL DEFAULT "1"
+	parcelSurface NUMBER
+	buildingSurface NUMBER
+	constructionDate DATE
+	floors INT 
+	appartments INT
+	lots INT
+	accessInfo VARCHAR(2000)
+	description VARCHAR(2000)
+	
+	METADATA{
+		1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, NULL; 
+	}
+}

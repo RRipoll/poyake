@@ -1,0 +1,5 @@
+TABLE ENTITY EnuRefundRequestType PATTERN Enumeration{
+	PK refundRequestTypeId INT
+	UQ shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 )
+}

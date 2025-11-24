@@ -1,0 +1,131 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.poyake</groupId>
+  <artifactId>poyake-testrunner</artifactId>
+  <version>0.0.9-SNAPSHOT</version>
+  <name>poyake-testrunner</name>
+  <description>poyake-testrunner</description>
+
+<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<fasterxml.version>2.9.10</fasterxml.version>
+		<spring.version>5.2.4.RELEASE</spring.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<zk.version>9.5.0.2</zk.version>
+		<zkeval.version>8.0.1.1</zkeval.version>
+	</properties>
+	<repositories>
+		<repository>
+			<id>poyake-repo</id>
+			<url>http://poyake.com/maven-repository</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>com.poyake</groupId>
+			<artifactId>poyake-dbjavamap</artifactId>
+			<version>0.0.9-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.poyake</groupId>
+			<artifactId>poyake-commondata</artifactId>
+			<version>0.0.9-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.poyake</groupId>
+			<artifactId>poyake-webappbase</artifactId>
+			<version>0.0.9-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.poyake</groupId>
+			<artifactId>poyake-audit</artifactId>
+			<version>0.0.9-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.poyake</groupId>
+			<artifactId>poyake-file-ui</artifactId>
+			<version>0.0.9-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.poyake</groupId>
+			<artifactId>poyake-datagridsetting</artifactId>
+			<version>0.0.9-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.poyake</groupId>
+			<artifactId>poyake-internationalization</artifactId>
+			<version>0.0.9-SNAPSHOT</version>
+		</dependency>
+		
+		
+		
+		
+		
+		
+		
+		
+	</dependencies>
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ftp</artifactId>
+				<version>3.2.0</version>
+			</extension>
+		</extensions>
+		<plugins>
+			<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-source-plugin</artifactId>
+			<executions>
+				<execution>
+					<id>attach-sources</id>
+					<goals>
+						<goal>jar</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+			<!-- Compile java -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src-gen</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<distributionManagement>
+		<repository>
+			<id>poyake-ftp</id>
+			<url>ftp://ftp.poyake.com/public/maven-repository</url>
+		</repository>
+	</distributionManagement>
+</project>

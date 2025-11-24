@@ -1,0 +1,13 @@
+ENTITY Address {
+	PK addressId INT
+	street VARCHAR(64)
+	city VARCHAR(64)
+	zipCode VARCHAR(9)
+	country VARCHAR(16) 
+	customerId INT FKTO Customer
+
+
+	LABELS{
+		street {SHORTLABEL es_ES "Calle"}
+	}
+}

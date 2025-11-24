@@ -1,0 +1,25 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+	<window closable="true" title="Stored Values">
+	<groupbox title="Add Values">
+		
+		<hlayout  >
+			<label value="Label Name" /><textbox id="newlabelname"  width="150px" />
+			<space/>
+			<label value="Type" /><combobox id="newType" width="100px"/>
+			<space/>
+			<button id="ADD_PAREMETERS" label="Add Value" />
+		</hlayout>
+		</groupbox>
+
+		<div id="FIELD_LIST">
+		</div>
+		<button id="SAVE_BUTTON" label="Save" />
+		<space/><space/><space/><space/>
+		
+		<button id="RESET_BUTTON" label="Reset" />
+	</window>
+</zk>
+

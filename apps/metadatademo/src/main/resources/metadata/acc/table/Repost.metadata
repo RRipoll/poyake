@@ -1,0 +1,4 @@
+TABLE ENTITY acc.Repost{
+	PK fromRevisionId INT NOTNULL FKTO acc.Ledger
+	PK toRevisionId INT NOTNULL FKTO acc.Ledger
+}

@@ -1,0 +1,32 @@
+--------
+log
+/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/../temp/log_97d7d4d0-4c37-47e5-ab4d-db1ac9b9e622.txt
+
+--------
+Full match: $.authorId
+*** ------------------------------------------ --------------------------------------- ***
+*** -------------------------- EVENT RestWebService START --------------- ***
+*** ---------------------------------- ----------------------------------------------- ***
+*** Request = Http://localHost:8081/rest/api/mt/table/author/get/1
+*** parameters [Original Values: {label=pK, trParameterTypeId=1, value=$.authorId}
+Updates: {}, Original Values: {label=tableName, trParameterTypeId=2, value=author}
+Updates: {}]
+*** JSON null
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Http://localHost:8081/rest/api/mt/table/author/get/1
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*** Response.getStatusCode = 200 OK
+*** Response = {"authorId":1,"fullName":"Cervantes","note":""}
+*** ---------------------------------------------------------------------------------- ***
+*** -----------------------------EVENT RestWebService END -------------- ***
+*** ---------------------------------------------------------------------------------- ***
+--------
+data
+{"authorId":1,"fullName":"Cervantes","note":""}
+
+--------
+--------
+eventName
+Search Table
+
+--------

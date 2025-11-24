@@ -1,0 +1,15 @@
+<?page title="Home Page" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+	
+	<div>
+		<groupbox hflex="true" title="Event files">
+			<div id = "EVENT_EXISTING_FILE_LIST" />
+			<div id="EVENT_NEW_FILE_LIST"/>
+			<space/><space/><space/>
+			<button label="Add File" id="ADD_FILE_BUTTON" upload="true"/>
+		</groupbox>
+	</div>
+</zk>

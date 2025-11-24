@@ -1,0 +1,11 @@
+TABLE ENTITY common.EnuTemplateType PATTERN Enumeration{
+	PK enuTemplateTypeId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR (255) STEREOTYPES DESCRIPTION 
+	
+	ENUMETADATA{
+		1,TEST, 'template for testing';
+		2,INV, 'template for Invoices';
+	}
+	
+}

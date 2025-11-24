@@ -1,0 +1,334 @@
+FROMSQLFILE '/metadatademo/src/main/resources/metadata/inv/view/VitemInvoicedetail.sql'
+
+VIEW  ENTITY inv.VitemInvoiceDetail {
+	laneExitDate DATETIME
+	tripId INT SAMEAS tolling.Trip.tripId
+	passId INT SAMEAS tolling.TripInfo.passId
+	lpnumber VARCHAR(16) SAMEAS tolling.LicensePlate.lpnumber
+	fareAmount MONEY SAMEAS tolling.TripInfo.fareAmount
+	customerId INT SAMEAS tolling.CustomerVehicle.customerId
+	PK invoiceId INT SAMEAS inv.InvoiceLedgerItem.invoiceId
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+<<<<<<< HEAD:apps/demo/src/main/metadata/inv/view/itemInvoiceDetail.metadata
+VIEW FULL NAME: inv.itemInvoiceDetail  
+VIEW NAME: itemInvoiceDetail 
+=======
+VIEW FULL NAME: inv.VitemInvoiceDetail  
+VIEW NAME: VitemInvoiceDetail 
+>>>>>>> 8c3d504c64b59a02805f09ecf6675e846811f60b:apps/demo/src/main/metadata/inv/view/VitemInvoiceDetail.metadata
+VIEW SCHEMA: inv
+
+Tables:
+	TABLE: inv.InvoiceLedgerItem Alias: iit
+	TABLE: tolling.Trip Alias: t
+	TABLE: tolling.TripInfo Alias: ti
+	TABLE: tolling.LicensePlate Alias: lp
+	TABLE: tolling.VehicleInfo Alias: vi
+	TABLE: tolling.CustomerVehicle Alias: cv
+Output:
+	COLUMN: laneExitDate -> NOT FOUND
+	COLUMN: tripId -> tolling.Trip.tripId
+	COLUMN: passId -> tolling.TripInfo.passId
+	COLUMN: lpnumber -> tolling.LicensePlate.lpnumber
+	COLUMN: fareAmount -> tolling.TripInfo.fareAmount
+	COLUMN: customerId -> tolling.CustomerVehicle.customerId
+	COLUMN: invoiceId -> inv.InvoiceLedgerItem.invoiceId
+
+
+================= Resolver Information ======================== 
+Entity List:
+<<<<<<< HEAD:apps/demo/src/main/metadata/inv/view/itemInvoiceDetail.metadata
+	acc.Allocation ,audit.InputUser ,audit.InputSource ,acc.Ledger ,acc.LedgerItem ,acc.LedgerInfo ,acc.EnuTransactionType ,acc.EnuLedgerType ,acc.Annotation ,acc.EnuAnnotationType ,crm.CustomerPk ,acc.Annotation ,acc.Balance ,acc.Cancellation ,acc.EnuAnnotationType ,acc.EnuLedgerType ,acc.EnuTransactionType ,acc.Ledger ,acc.LedgerInfo ,acc.LedgerItem ,acc.Repost ,acc.VAccountBalance ,acc.VTransactionHistory ,tolling.Trip ,payment.Payment ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,acc.VTripPayment ,acc.Allocation ,acc.VUnallocatedCredit ,acc.VUnpaidDebit ,audit.EnuInputUserGroup ,audit.InputSource ,audit.InputUser ,audit.InputUserGroup ,audit.EnuInputUserGroup ,common.EnuTemplateType ,common.FileGroup ,common.StorageFile ,common.Template ,config.Enulocale ,config.DatagridSetting ,config.Enulocale ,config.AppInfo ,crm.CustomerPaymentMethod ,payment.PaymentMethod ,crm.CustomerPk ,crm.CustomerSuplementaryContact ,crm.PersonOrCompanyPk ,crm.EnuContactType ,crm.EmailAddressPk ,crm.EnuContactType ,crm.EnuCountry ,crm.EnuCustomerType ,crm.EnuPhoneNumberType ,crm.EnuStateProvince ,crm.EnuCountry ,crm.HCustomer ,crm.PostalAddressPk ,crm.EnuCustomerType ,crm.HEmailAddress ,crm.EmailAddressPk ,crm.HPersonOrCompany ,crm.PhoneNumberPK ,crm.HPhoneNumber ,crm.EnuPhoneNumberType ,crm.HPostalAddress ,crm.EnuStateProvince ,crm.PersonOrCompanyPk ,crm.PhoneNumberPK ,crm.PostalAddressPk ,crm.VCustomerHistory ,VCustomerSearch ,crm.HCustomer ,crm.HPersonOrCompany ,crm.HPhoneNumber ,crm.HEmailAddress ,crm.VDetailPageCaseList ,cs.CSCase ,cs.CSCasePK ,cs.EnuCaseType ,cs.EnuCaseStatus ,cs.EnuCasePriority ,crm.VDetailPageVehicleList ,tolling.LicensePlate ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.VehicleInfo ,tolling.Vehicle ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.CustomerVehicle ,cs.CSCase ,cs.CSCasePK ,cs.CustomerCase ,cs.EnuCasePriority ,cs.EnuCaseStatus ,cs.EnuCaseType ,cs.VCaseSearch ,cs.CustomerCase ,inv.Invoice ,inv.InvoiceDocument ,inv.Invoice ,crm.HPostalAddress ,inv.InvoiceLedgerItem ,inv.VInvoiceableAccount ,acc.VAccountBalance ,inv.VdetailPageInvoiceList ,inv.InvoiceDocument ,inv.invoiceHeader ,inv.itemInvoiceDetail ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,payment.Payment ,payment.PaymentMethod ,payment.VPaymentMethods ,crm.CustomerPaymentMethod ,tolling.CustomerPass ,tolling.Pass ,tolling.CustomerVehicle ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.EnuPromoType ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.Gantry ,tolling.LicensePlate ,tolling.Pass ,tolling.Promo ,tolling.EnuPromoType ,tolling.Trip ,tolling.TripInfo ,tolling.Gantry ,tolling.Vehicle ,tolling.VehicleInfo ,tolling.VFindVehicle ,tolling.VTripSearch ,tolling.TripInfoColumns:
+=======
+	acc.Allocation ,audit.InputUser ,audit.InputSource ,acc.Ledger ,acc.LedgerItem ,acc.LedgerInfo ,acc.EnuTransactionType ,acc.EnuLedgerType ,acc.Annotation ,acc.EnuAnnotationType ,crm.CustomerPk ,acc.Annotation ,acc.Balance ,acc.Cancellation ,acc.EnuAnnotationType ,acc.EnuLedgerType ,acc.EnuTransactionType ,acc.Ledger ,acc.LedgerInfo ,acc.LedgerItem ,acc.Repost ,acc.VAccountBalance ,acc.VTransactionHistory ,tolling.Trip ,payment.Payment ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,acc.VTripPayment ,acc.Allocation ,acc.VUnallocatedCredit ,acc.VUnpaidDebit ,audit.EnuInputUserGroup ,audit.InputSource ,audit.InputUser ,audit.InputUserGroup ,audit.EnuInputUserGroup ,common.EnuTemplateType ,common.FileGroup ,common.StorageFile ,common.Template ,config.Enulocale ,config.DatagridSetting ,config.Enulocale ,config.AppInfo ,crm.CustomerPaymentMethod ,payment.PaymentMethod ,crm.CustomerPk ,crm.CustomerSuplementaryContact ,crm.PersonOrCompanyPk ,crm.EnuContactType ,crm.EmailAddressPk ,crm.EnuContactType ,crm.EnuCountry ,crm.EnuCustomerType ,crm.EnuPhoneNumberType ,crm.EnuStateProvince ,crm.EnuCountry ,crm.HCustomer ,crm.PostalAddressPk ,crm.EnuCustomerType ,crm.HEmailAddress ,crm.EmailAddressPk ,crm.HPersonOrCompany ,crm.PhoneNumberPK ,crm.HPhoneNumber ,crm.EnuPhoneNumberType ,crm.HPostalAddress ,crm.EnuStateProvince ,crm.PersonOrCompanyPk ,crm.PhoneNumberPK ,crm.PostalAddressPk ,crm.VCustomerHistory ,VCustomerSearch ,crm.HCustomer ,crm.HPersonOrCompany ,crm.HPhoneNumber ,crm.HEmailAddress ,crm.VDetailPageCaseList ,cs.CSCase ,cs.CSCasePK ,cs.EnuCaseType ,cs.EnuCaseStatus ,cs.EnuCasePriority ,crm.VDetailPageVehicleList ,tolling.LicensePlate ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.VehicleInfo ,tolling.Vehicle ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.CustomerVehicle ,cs.CSCase ,cs.CSCasePK ,cs.CustomerCase ,cs.EnuCasePriority ,cs.EnuCaseStatus ,cs.EnuCaseType ,cs.VCaseSearch ,cs.CustomerCase ,inv.Invoice ,inv.InvoiceDocument ,inv.Invoice ,crm.HPostalAddress ,inv.InvoiceLedgerItem ,inv.VInvoiceableAccount ,acc.VAccountBalance ,inv.VinvoiceHeader ,inv.InvoiceDocument ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,payment.Payment ,payment.PaymentMethod ,payment.VPaymentMethods ,crm.CustomerPaymentMethod ,tolling.CustomerPass ,tolling.Pass ,tolling.CustomerVehicle ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.EnuPromoType ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.Gantry ,tolling.LicensePlate ,tolling.Pass ,tolling.Promo ,tolling.EnuPromoType ,tolling.Trip ,tolling.TripInfo ,tolling.Gantry ,tolling.Vehicle ,tolling.VehicleInfo ,tolling.VFindVehicle ,tolling.VTripSearch ,tolling.TripInfoColumns:
+>>>>>>> 8c3d504c64b59a02805f09ecf6675e846811f60b:apps/demo/src/main/metadata/inv/view/VitemInvoiceDetail.metadata
+	ATTRIBUTE_NOT_FOUND laneExitDate -> 
+	SOLVED tripId -> tolling.Trip.tripId
+	SOLVED passId -> tolling.TripInfo.passId
+	SOLVED lpnumber -> tolling.LicensePlate.lpnumber
+	SOLVED fareAmount -> tolling.TripInfo.fareAmount
+	SOLVED customerId -> tolling.CustomerVehicle.customerId
+	SOLVED invoiceId -> inv.InvoiceLedgerItem.invoiceId
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id inv
+              .
+              id 
+                simple_id VitemInvoiceDetail
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id laneExitDate
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id t
+                        .
+                        id 
+                          simple_id tripId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id ti
+                        .
+                        id 
+                          simple_id passId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id lp
+                        .
+                        id 
+                          simple_id lpnumber
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id ti
+                        .
+                        id 
+                          simple_id fareAmount
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id cv
+                        .
+                        id 
+                          simple_id customerId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id iit
+                        .
+                        id 
+                          simple_id invoiceId
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id inv
+                              .
+                              id 
+                                simple_id InvoiceLedgerItem
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id iit
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id tolling
+                                    .
+                                    id 
+                                      simple_id Trip
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id t
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id iit
+                                      .
+                                      id 
+                                        simple_id ledgerItemId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id t
+                                      .
+                                      id 
+                                        simple_id ledgerItemId
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id tolling
+                                    .
+                                    id 
+                                      simple_id TripInfo
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id ti
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id ti
+                                      .
+                                      id 
+                                        simple_id tripid
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id t
+                                      .
+                                      id 
+                                        simple_id tripid
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id tolling
+                                    .
+                                    id 
+                                      simple_id LicensePlate
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id lp
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id lp
+                                      .
+                                      id 
+                                        simple_id licensePlateId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id ti
+                                      .
+                                      id 
+                                        simple_id licensePlateId
+                        join_part leftjoin
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id tolling
+                                    .
+                                    id 
+                                      simple_id VehicleInfo
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id vi
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id lp
+                                      .
+                                      id 
+                                        simple_id licensePlateId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id ti
+                                      .
+                                      id 
+                                        simple_id licensePlateId
+                        join_part leftjoin
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id tolling
+                                    .
+                                    id 
+                                      simple_id CustomerVehicle
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id cv
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id cv
+                                      .
+                                      id 
+                                        simple_id vehicleId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id vi
+                                      .
+                                      id 
+                                        simple_id vehicleId
+  <EOF>*/

@@ -1,0 +1,11 @@
+TABLE ENTITY recorder.EnuRecorderType PATTERN Enumeration STEREOTYPES RECORDER{
+	PK enuRecorderTypeId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR (255) STEREOTYPES DESCRIPTION 
+	
+	ENUMETADATA{
+		1,INSERT, 'INSERT';
+		2,UPDATE, 'UPDATE';
+		3,DELETED, 'DELETED';
+	}
+}

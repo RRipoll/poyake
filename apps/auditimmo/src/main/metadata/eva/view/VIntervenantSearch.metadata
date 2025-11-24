@@ -1,0 +1,252 @@
+FROMSQLFILE '/auditimmo/src/main/metadata/eva/view/VIntervenantSearch.sql'
+
+VIEW  ENTITY eva.VIntervenantSearch {
+	PK intervenantId INT SAMEAS eva.Intervenant.intervenantId
+	lastName VARCHAR(64) SAMEAS crm.Contact.lastName
+	firstName VARCHAR(64) SAMEAS crm.Contact.firstName
+	companyName VARCHAR(128) SAMEAS crm.Contact.companyName
+	cellPhone VARCHAR(64) SAMEAS crm.Contact.cellPhone
+	intervenantCategoryId INT SAMEAS eva.Intervenant.intervenantCategoryId
+	permission VARCHAR(32) 
+	city VARCHAR(64) SAMEAS crm.PostalAddress.city
+	postalCode VARCHAR(10) SAMEAS crm.PostalAddress.postalCode
+	active BIT SAMEAS eva.Intervenant.active
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: eva.VIntervenantSearch  
+VIEW NAME: VIntervenantSearch 
+VIEW SCHEMA: eva
+
+Tables:
+	TABLE: eva.Intervenant Alias: i
+	TABLE: crm.Contact Alias: c
+	TABLE: crm.HPostalAddress Alias: a
+Output:
+	COLUMN: intervenantId -> eva.Intervenant.intervenantId
+	COLUMN: lastName -> crm.Contact.lastName
+	COLUMN: firstName -> crm.Contact.firstName
+	COLUMN: companyName -> crm.Contact.companyName
+	COLUMN: cellPhone -> crm.Contact.cellPhone
+	COLUMN: intervenantCategoryId -> eva.Intervenant.intervenantCategoryId
+	EXPRESSION: permission -> 'Permission'
+	COLUMN: city -> crm.HPostalAddress.city
+	COLUMN: postalCode -> crm.HPostalAddress.postalCode
+	COLUMN: active -> eva.Intervenant.active
+
+
+================= Resolver Information ======================== 
+Entity List:
+	audit.EnuInputUserGroup ,audit.InputUser ,audit.InputSource ,audit.InputUserGroup ,config.DatagridSetting ,crm.Contact ,crm.ContactPk ,crm.PostalAddressPk ,crm.EnuCountry ,crm.EnuStateProvince ,crm.HPostalAddress ,eva.Appointment ,eva.FolderPK ,eva.Building ,eva.EnuBuildingType ,eva.EnuEvaluationStatus ,eva.EnuFolderStatus ,eva.EnuIntervenantCategory ,eva.EnuNetwork ,eva.EnuNoteType ,eva.EnuWorkType ,eva.Evaluation ,eva.EvaluationPk ,eva.Intervenant ,eva.Folder ,eva.Message ,eva.Note ,eva.Work ,eva.VIntervenantSearchColumns:
+	SOLVED intervenantId -> eva.Intervenant.intervenantId
+	SOLVED lastName -> crm.Contact.lastName
+	SOLVED firstName -> crm.Contact.firstName
+	SOLVED companyName -> crm.Contact.companyName
+	SOLVED cellPhone -> crm.Contact.cellPhone
+	SOLVED intervenantCategoryId -> eva.Intervenant.intervenantCategoryId
+	EXPRESSION permission -> 
+	SOLVED city -> crm.HPostalAddress.city
+	SOLVED postalCode -> crm.HPostalAddress.postalCode
+	SOLVED active -> eva.Intervenant.active
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id eva
+              .
+              id 
+                simple_id VIntervenantSearch
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id i
+                        .
+                        id 
+                          simple_id intervenantId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id lastName
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id firstName
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id companyName
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id cellPhone
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id i
+                        .
+                        id 
+                          simple_id intervenantCategoryId
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          primitive_expression 
+                            constant 'Permission'
+                        as_column_alias as
+                          column_alias 
+                            id 
+                              simple_id permission
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id a
+                        .
+                        id 
+                          simple_id city
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id a
+                        .
+                        id 
+                          simple_id postalCode
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id i
+                        .
+                        id 
+                          simple_id active
+                  FROM
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id eva
+                              .
+                              id 
+                                simple_id Intervenant
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id i
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id Contact
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id c
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id i
+                                      .
+                                      id 
+                                        simple_id contactId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id c
+                                      .
+                                      id 
+                                        simple_id contactId
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id HPostalAddress
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id a
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id c
+                                      .
+                                      id 
+                                        simple_id postalAddressId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id a
+                                      .
+                                      id 
+                                        simple_id postalAddressId
+  <EOF>*/

@@ -1,0 +1,32 @@
+TABLE ENTITY example.Book {
+	
+	PK bookId INT
+	title VARCHAR(256) NOTNULL STEREOTYPES DESCRIPTION
+	authorId INT NOTNULL FKTO example.Author
+	description  TEXTAREA  
+	//language INT FKTO config.Enulocale
+	doc FILE_GROUP
+	genreId INT FKTO example.Genre
+	
+	
+	METADATA {
+		
+		1,"El Quijote",1,NULL,NULL, 1;
+		2,"Novelas Ejemplares",1,NULL,NULL, 1;
+		3,"La ciudad y los Perros",2,NULL,NULL, 1;
+		
+		/* 
+		1,"El Quijote",1,NULL,NULL,NULL;
+		2,"novelas ejemplares",1,NULL,NULL,NULL;
+		3,"La ciudad y los Perros",2,NULL,NULL,NULL;
+		*/
+	}
+	
+	LABELS {
+		bookId {en_EN 'Book #' es_ES '# Libro'}
+		title {en_EN 'Title' es_ES 'Título'}
+		authorId {en_EN 'Author #' es_ES '# Autor'}
+		description{en_EN 'Description' es_ES 'Descripción'}
+		doc{en_EN 'Doc' es_ES 'Doc'}
+	}
+}

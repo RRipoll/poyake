@@ -1,0 +1,9 @@
+TABLE ENTITY tolling.Promo {
+	PK promoId INT
+	customerId INT NOTNULL FKTO crm.CustomerPk
+	promoTypeId INT NOTNULL FKTO tolling.EnuPromoType
+	
+	LABELS{
+		promoTypeId {SHORTLABEL en_EN 'Promo Type'}
+	}
+}

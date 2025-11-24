@@ -1,0 +1,9 @@
+TABLE ENTITY CustomerPk{
+	PK customerId INT
+	
+	METADATA{
+		1;
+		2;
+		3;
+	}
+}

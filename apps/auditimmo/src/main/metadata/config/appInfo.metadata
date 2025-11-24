@@ -1,0 +1,11 @@
+TABLE ENTITY config.AppInfo {
+	
+	PK appInfoId INT NOTNULL
+		sKey VARCHAR(250) NOTNULL
+		sValue  VARCHAR(8000) 	  
+		
+	METADATA{
+		1, "AZURENAME", "fastlanedevstorage";
+		2, "AZUREKEY", 'EzEiM2E6c+Q7RAIiDbK5+D36J4tXMid8OUqmNUQuggYwSG1FAFvff4hb6tvqreWaEyBDOF2vA4S1EkZ6NibZZQ==';  
+	}
+}

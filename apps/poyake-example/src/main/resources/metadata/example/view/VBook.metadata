@@ -1,0 +1,98 @@
+FROMSQLFILE '/poyake-example/src/main/resources/metadata/example/view/VBook.sql'
+
+VIEW  ENTITY example.VBook {
+	PK bookId INT SAMEAS example.Book.bookId
+	title VARCHAR(256) SAMEAS example.Book.title  STEREOTYPES DESCRIPTION
+	authorId INT SAMEAS example.Book.authorId
+	description TEXTAREA SAMEAS example.Book.description 
+	//language INT SAMEAS example.Book.language
+	doc FILE_GROUP SAMEAS example.Book.doc
+	otherAuthor MULTIPLEOBJECT MULTIREFTO example.BookAuthor 
+
+	LABELS {
+		bookId {en_EN 'Book #' es_ES '# Libro'} 
+		title {en_EN 'Title' es_ES 'Título'}
+		authorId {en_EN 'Author #' es_ES '# Autor'}
+		description{en_EN 'Description' es_ES 'Descripción'}
+		//language{en_EN 'Lang' es_ES 'Idioma'}
+		doc{en_EN 'Doc' es_ES 'Doc'}
+		otherAuthor{en_EN 'Other Authors' es_ES 'Otros Autores'}
+	}
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: example.VBook  
+VIEW NAME: VBook 
+VIEW SCHEMA: example
+
+Tables:
+	TABLE: example.Book Alias: b
+Output:
+	b.* -> example.Book
+	EXPRESSION: otherAuthor -> ''
+
+
+================= Resolver Information ======================== 
+Entity List:
+	audit.InputUser ,audit.InputSource ,example.Author ,example.Book ,config.Enulocale ,example.BookAuthor ,example.VBookColumns:
+	EXPANDED bookId -> example.Book.bookId
+	EXPANDED title -> example.Book.title
+	EXPANDED authorId -> example.Book.authorId
+	EXPANDED description -> example.Book.description
+	EXPANDED language -> example.Book.language
+	EXPANDED doc -> example.Book.doc
+	EXPRESSION otherAuthor -> 
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id example
+              .
+              id 
+                simple_id VBook
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      asterisk 
+                        table_name 
+                          id 
+                            simple_id b
+                        .*
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          primitive_expression 
+                            constant ''
+                        as_column_alias 
+                          column_alias 
+                            id 
+                              simple_id otherAuthor
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id example
+                              .
+                              id 
+                                simple_id Book
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id b
+  <EOF>*/

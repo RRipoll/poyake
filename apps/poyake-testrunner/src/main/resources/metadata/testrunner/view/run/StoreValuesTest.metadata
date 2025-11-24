@@ -1,0 +1,8 @@
+VIEW ENTITY testrunner.StoreValuesTest{
+	PK storeValuestestId 	INT
+	testRunner_Api_Url 			VARCHAR(256) DEFAULT 'Http://localHost:8081' 
+	app_Api_Url 				VARCHAR(256)  DEFAULT 'Http://localHost:8081' 
+	job_Api_Url 				VARCHAR(256)  DEFAULT 'Http://localHost:8081' 
+	storeValuesEvents 		PARAMETER MULTIREFTO testrunner.StoreValuesEvent
+	
+}

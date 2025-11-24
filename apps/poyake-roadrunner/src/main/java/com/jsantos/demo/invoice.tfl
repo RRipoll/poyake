@@ -1,0 +1,142 @@
+<#ftl output_format="HTML">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		</head>
+		<body lang="en-US" style="text-align: justify; font-family: Arial;">
+		<#setting locale="en_US">
+			<center>
+				<table width="100%" bgcolor="#fff" border="0" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr>
+							<td>
+								<table bgcolor="#ffffff" border="0" cellspacing="0"	cellpadding="0" width="100%">
+									<tbody>
+										<tr>
+											<td width="30%" style="aling: left">
+												<table>
+													<tr>
+														<td style="vertical-align: bottom;">
+															<div style="text-align: left; font-size: 0.8em; font-weight: normal; margin-left: 40px"">${(invoiceHeader.recipientName)!""}</div>
+															<div style="text-align: left; font-size: 0.8em; font-weight: normal; margin-left: 40px"">${(invoiceHeader.address1)!""}</div>
+															<div style="text-align: left; font-size: 0.8em; font-weight: normal; margin-left: 40px"">${(invoiceHeader.address2)!""}</div>
+															<div style="text-align: left; font-size: 0.8em; font-weight: normal; margin-left: 40px"">${(invoiceHeader.city)!""},${(invoiceHeader.state)!""} ${(invoiceHeader.postalCode)!""}</div>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div style="text-align: left; font-size: 0.8em; font-weight: normal; margin-left: 40px">Statement Date: ${(invoiceHeader.noticeDate)!""}</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td width="30%" style="aling: right">
+												<table>
+													<tr>
+														<td>
+															<div style="text-align: left; font-size: 0.8em; font-weight: bold;">Customer	ID:</div>
+														</td>
+														<td>
+															<div style="font-size: 0.8em">${(invoiceHeader.customerId)!""}</div>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div style="text-align: left; font-size: 0.8em; font-weight: bold;">Statement #</div>
+														</td>
+														<td>
+															<div style="font-size: 0.8em">${(invoiceHeader.invoiceId)!""}</div>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div style="text-align: left; font-size: 0.8em; font-weight: bold;">License Plate:</div>
+														</td>
+														<td>
+															<div style="font-size: 0.8em">${(invoiceHeader.lpnumber)!""}</div>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div style="text-align: left; font-size: 0.8em; font-weight: bold;">Total Due:</div>
+														</td>
+														<td>
+															<div style="font-size: 0.8em">${(invoiceHeader.totalDue)!""}</div>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div style="text-align: left; font-size: 0.8em; font-weight: bold;">Due Date:</div>
+														</td>
+														<td>
+															<div style="font-size: 0.8em">${(invoiceHeader.dueDate)!""}</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table width="100%" bgcolor="#fff" border="0" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr title="null" bgcolor="#fff">
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<table width="100%" bgcolor="#fff" border="0" cellspacing="0" cellpadding="0">
+					<body>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td width="100%" colspan="2">
+								<div style="text-align: center; font-weight: bold;"></div>
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td	style="border: 1px solid black; border-collapse: collapse; padding: 5px; text-align: center; font-weight: bold; font-size: 0.8em">DATE</td>
+							<td	style="border: 1px solid black; border-collapse: collapse; padding: 5px; text-align: center; font-weight: bold; font-size: 0.8em">TRANS	ID#</td>
+							<td	style="border: 1px solid black; border-collapse: collapse; padding: 5px; text-align: center; font-weight: bold; font-size: 0.8em">PASS ID#</td>
+							<td	style="border: 1px solid black; border-collapse: collapse; padding: 5px; text-align: center; font-weight: bold; font-size: 0.8em">LICENSE#</td>
+							<td	style="border: 1px solid black; border-collapse: collapse; padding: 5px; text-align: center; font-weight: bold; font-size: 0.8em">TOTAL</td>
+						</tr>
+						<#list itemInvoiceDetails as itemInvoiceDetail>
+						<tr>
+							<td	style="border: 1px solid black; border-collapse: collapse; padding: 5px; text-align: center; font-weight: normal; font-size: 0.8em">${(itemInvoiceDetail.laneExitDate)!""}</td>
+							<td	style="border: 1px solid black; border-collapse: collapse; padding: 5px; text-align: center; font-weight: normal; font-size: 0.8em">${(itemInvoiceDetail.tripId)!""}</td>
+							<td	style="border: 1px solid black; border-collapse: collapse; padding: 5px; text-align: center; font-weight: normal; font-size: 0.8em">${(itemInvoiceDetail.passId)!""}</td>
+							<td	style="border: 1px solid black; border-collapse: collapse; padding: 5px; text-align: center; font-weight: normal; font-size: 0.8em">${(itemInvoiceDetail.lpnumber)!""}</td>
+							<td	style="border: 1px solid black; border-collapse: collapse; padding: 5px; text-align: center; font-weight: normal; font-size: 0.8em">${(itemInvoiceDetail.fareAmount?string.currency)!""}</td>
+						</tr>
+					    </#list>
+					    <tr>
+						    <td align="right">
+							    <div style="font-weight: bold;"></div>
+						    </td>
+						    <td align="right">
+							    <div	style="font-size: 0.6em; font-weight: bold;">TOTAL BALANCE	DUE: ${(invoiceHeader.totalDue?string.currency)!""}</div>
+						    </td>
+					    </tr>
+				    </body>
+			    </table>
+			    
+		    </center>
+	    </body>
+    </html>

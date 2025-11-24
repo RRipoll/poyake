@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>tr-toll</artifactId>
+	<packaging>pom</packaging>
+	<name>Testrunner Root</name>
+	<groupId>com.etantolling.toll</groupId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.2.4.RELEASE</version>
+	</parent>
+
+
+
+	<modules>
+		<module>TEST-FRAMEWORK</module>
+		<module>TESTSERVER-RS</module>
+		<module>TEST-CORE</module>
+		<module>TESTEVENTS</module>
+		<module>TEST-ZKWEB</module>
+		<module>TEST-UTILS</module>
+		<module>TESTRUNNER2</module>
+	</modules>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<slf4j.version>1.7.7</slf4j.version>
+		<logback.version>1.2.3</logback.version>
+		<zk.version>8.0.1.1</zk.version>
+		<zkeval.version>8.0.1.1</zkeval.version>
+		<kie.version>6.3.0.Final</kie.version>
+		<dbutils.version>1.6</dbutils.version>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyy-MMM-dd HH:mm:ss</maven.build.timestamp.format>
+		<cxf.version>3.1.6</cxf.version>
+		<mockito.version>1.10.19</mockito.version>
+		<powermock.version>1.6.2</powermock.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>artifactory</id>
+			<url>http://etandevartifacts.eastus2.cloudapp.azure.com:8090/artifactory/libs-release</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>ZK EE</id>
+			<name>ZK EE</name>
+			<url>http://etandevartifacts.eastus2.cloudapp.azure.com:8090/artifactory/zkeecache</url>
+		</repository>
+		<!-- <repository> <id>jasperreports_itext</id> <url>http://jasperreports.sourceforge.net/maven2/</url> 
+			</repository> -->
+		<repository>
+			<id>jasperreports_olap4j</id>
+			<url>http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/</url>
+		</repository>
+	</repositories>
+
+	<dependencyManagement>
+		<dependencies>
+			
+			<dependency>
+				<groupId>com.etantolling.toll</groupId>
+				<artifactId>tr-test-core</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.etantolling.toll</groupId>
+				<artifactId>tr-testevents</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.etantolling.toll</groupId>
+				<artifactId>tr-testframework</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.etantolling.toll</groupId>
+				<artifactId>tr-testrunner2</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.etantolling.toll</groupId>
+				<artifactId>tr-testserver-rs</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.etantolling.toll</groupId>
+				<artifactId>tr-test-zkweb</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.etantolling.toll</groupId>
+				<artifactId>tr-test-utils</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+
+
+
+
+
+			<dependency>
+				<groupId>com.h2database</groupId>
+				<artifactId>h2</artifactId>
+				<version>1.4.196</version>
+			</dependency>
+			
+			
+
+
+			<dependency>
+				<groupId>xml-apis</groupId>
+				<artifactId>xml-apis</artifactId>
+				<version>1.4.01</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.4</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>1.3.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-dbcp2</artifactId>
+				<version>2.0</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-dbutils</groupId>
+				<artifactId>commons-dbutils</artifactId>
+				<version>${dbutils.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-csv</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-net</groupId>
+				<artifactId>commons-net</artifactId>
+				<version>3.3</version>
+			</dependency>
+			
+			
+			
+			
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>4.5.2</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>1.1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>1.3.1</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>2.6</version>
+			</dependency>
+			<dependency>
+				<groupId>org.zkoss.zk</groupId>
+				<artifactId>zul</artifactId>
+				<version>${zk.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>slf4j-jdk14</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.zkoss.zk</groupId>
+				<artifactId>zkplus</artifactId>
+				<version>${zk.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.zkoss.zk</groupId>
+				<artifactId>zkbind</artifactId>
+				<version>${zk.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.zkoss.zk</groupId>
+				<artifactId>zhtml</artifactId>
+				<version>${zkeval.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>zsoup</artifactId>
+						<groupId>org.zkoss</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.zkoss.zk</groupId>
+				<artifactId>zkex</artifactId>
+				<version>${zkeval.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.zkoss.zk</groupId>
+				<artifactId>zkmax</artifactId>
+				<version>${zkeval.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.idcglobal.zk-theme-new</groupId>
+				<artifactId>atlantic</artifactId>
+				<version>1.1.4</version>
+			</dependency>
+			<dependency>
+				<groupId>org.zkoss.theme</groupId>
+				<artifactId>silvertail</artifactId>
+				<version>${zk.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-core-asl</artifactId>
+				<version>1.9.13</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-mapper-asl</artifactId>
+				<version>1.9.13</version>
+			</dependency>
+			<dependency>
+				<groupId>com.microsoft.azure</groupId>
+				<artifactId>azure-storage</artifactId>
+				<version>5.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.5</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.zkoss.zkforge</groupId>
+				<artifactId>ckez</artifactId>
+				<version>3.6.0.0</version>
+			</dependency>
+
+			
+			
+			
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>3.13</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>3.13</version>
+			</dependency>
+
+
+		
+			<dependency>
+				<groupId>net.sf.jxls</groupId>
+				<artifactId>jxls-core</artifactId>
+				<version>1.0.6</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>javax.validation</groupId>
+				<artifactId>validation-api</artifactId>
+				<version>1.1.0.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>5.1.3.Final</version>
+			</dependency>
+			<!-- API documentation -->
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>2.5.0</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>2.5.0</version>
+			</dependency>
+			<dependency>
+				<groupId>io.github.robwin</groupId>
+				<artifactId>swagger2markup</artifactId>
+				<version>0.8.0</version>
+			</dependency>
+			
+			
+			
+			<dependency>
+				<groupId>com.sun.xml.bind</groupId>
+				<artifactId>jaxb-impl</artifactId>
+				<version>2.2.11</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.xml.bind</groupId>
+				<artifactId>jaxb-core</artifactId>
+				<version>2.2.11</version>
+			</dependency>
+			<!-- SFTP Support -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-vfs2</artifactId>
+				<version>2.1</version>
+			</dependency>
+			
+			
+			<dependency>
+				<groupId>org.json</groupId>
+				<artifactId>json</artifactId>
+				<version>20160212</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-threadpool</groupId>
+				<artifactId>commons-threadpool</artifactId>
+				<version>20030513.073905</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.javaconfig</groupId>
+				<artifactId>spring-javaconfig</artifactId>
+				<version>1.0.0.m3</version>
+			</dependency>
+			
+			
+			<dependency>
+				<groupId>org.webjars</groupId>
+				<artifactId>bootstrap</artifactId>
+				<version>3.1.0</version>
+			</dependency>
+
+
+
+
+
+
+
+			
+
+			<!-- Logger -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+
+			<dependency>
+    			<groupId>ch.qos.logback</groupId>
+    			<artifactId>logback-classic</artifactId>
+    			<version>${logback.version}</version>
+			</dependency>
+			<dependency>
+    			<groupId>ch.qos.logback</groupId>
+    			<artifactId>logback-core</artifactId>
+    			<version>${logback.version}</version>
+			</dependency>
+			
+			
+			
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>1.9.3</version>
+			</dependency>
+
+
+			
+
+			<!-- <dependency> <groupId>net.sourceforge.jtds</groupId> <artifactId>jtds</artifactId> 
+				</dependency> <dependency> <groupId>com.microsoft.sqlserver</groupId> <artifactId>sqljdbc4</artifactId> 
+				<version>4.0</version> <scope>test</scope> </dependency> -->
+
+
+		</dependencies>
+	</dependencyManagement>
+	<scm>
+		<connection>scm:svn:svn://38.96.186.247/Cubic/maven/TOLL</connection>
+		<developerConnection>scm:svn:svn://38.96.186.247/Cubic/maven/TOLL</developerConnection>
+		<tag>HEAD</tag>
+		<url>scm:svn://38.96.186.247/Cubic/maven/TOLL</url>
+	</scm>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+						<manifestEntries>
+							<Build-Timestamp>${timestamp}</Build-Timestamp>
+							<!-- <Implementation-Build>${buildNumber}</Implementation-Build> -->
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

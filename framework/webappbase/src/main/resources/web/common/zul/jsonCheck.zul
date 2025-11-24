@@ -1,0 +1,94 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:z="zul">
+   <z:window border="0" closable="true" position="center,center" sizable="true" >
+		<style >
+    		#jsoneditor {
+      			width: 100%;
+      			height: 80%;
+    		}
+  		</style>
+  		<div class="container-fluid" style="margin:0px;min-width:400px">
+  			<div class="header bg-light-green" style="padding: 10px;">
+				<label id="CheckHEADER_LABEL" class="h5">Check values</label>
+					
+  				<div class="float-right bg-light-green" id="CheckHEADER_DIV">
+						<h:button class="float-left btn btn-primary ml-2 waves-effect pull-right" id="getExp">create Check Event</h:button>	
+							
+						<h:button id="CheckJSONEDITOR_CANCEL_BUTTON" class="btn btn-danger ml-2 waves-effect pull-right">${mtlabels.cancel}</h:button>
+						
+				</div>
+			</div>
+  			<div class="form-group" >
+				
+				<h:label>JSONPath Syntax</h:label> 
+				<h:span class="help-block"> --> Example '$.phoneNumbers[*].type' See also 
+                   <h:a href="http://goessner.net/articles/JsonPath/index.html#e2" target="_blank">JSONPath expressions</h:a>
+                </h:span>
+                
+                <textbox id="Checkexpression" style="width:100%;" />
+				
+				<textbox id="Checklabel"   visible="false" >
+  					<custom-attributes org.zkoss.zk.ui.updateByClient="true"/>
+  				</textbox>
+				
+				
+				
+				<div class="row" >
+					<div class="col-sm-6" >
+					 	<h:h2>Json Data</h:h2> 
+						<n:div id="Checkjsoneditor"></n:div>
+						<n:script  >
+  						var container = document.getElementById('Checkjsoneditor');
+  						var options = {
+  							mode: 'tree',
+    						modes: ['code', 'text', 'tree'], // allowed modes
+    						onError: function (err) {
+      						alert(err.toString());
+    						},
+    						onModeChange: function (newMode, oldMode) {
+      							console.log('Mode switched from', oldMode, 'to', newMode);
+    							}
+  							};
+  						var editor = new JSONEditor(container, options);
+						</n:script>	
+					</div>
+					<div class="col-sm-6">
+						<h:h2>Evaluation Results</h:h2>
+						<textbox id="Checklabelresult"   visible="false" >
+  							<custom-attributes org.zkoss.zk.ui.updateByClient="true"/>
+						</textbox>
+
+						<n:div id="Checkjsonresult"></n:div>
+	
+						<n:script  >
+  						var containerresult = document.getElementById('Checkjsonresult');
+  						var optionsresult = {
+  							mode: 'tree',
+    						modes: ['code', 'text', 'tree'], // allowed modes
+    						onError: function (err) {
+      							alert(err.toString());
+    							},
+    						onModeChange: function (newMode, oldMode) {
+      							console.log('Mode switched from', oldMode, 'to', newMode);
+    						}
+  						};
+  			
+  						var editorresult = new JSONEditor(containerresult, optionsresult);
+  		
+  						document.getElementById('getExp').onclick = function () {
+    					var json = editor.get();
+    					zk.Widget.$("$labelresult").setValue(json);
+    					zk.Widget.$("$labelresult").smartUpdate('value', json);
+    					zk.Widget.$("$labelresult").fire('onChange',{}, {toServer:true});
+  						};
+    			
+						</n:script>	
+					</div>
+				</div>
+				
+			</div>
+		</div>	
+	</z:window>
+</zk>

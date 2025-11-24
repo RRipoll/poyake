@@ -1,0 +1,9 @@
+TABLE ENTITY Unidad PATTERN auditada
+{
+	PK productoId INT
+	nombre VARCHAR (100)
+	comentariosId INT NOTNULL FKTO Comentarios
+	creado DATETIME
+	editado DATETIME
+	borrado DATETIME
+}

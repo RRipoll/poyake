@@ -1,0 +1,17 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+						
+					<div class="row clearfix">
+						
+						<div class="col-md-12 mb-2">
+							
+								    <label id="HTML_LABEL"/>
+									<ckeditor  id="HTML_EDITOR"/>
+								
+							
+						</div>
+							
+					</div>
+		
+</zk>			

@@ -1,0 +1,7 @@
+TABLE ENTITY tolling.CustomerVehicle{
+	PK customerVehicleId INT
+	customerId INT NOTNULL FKTO crm.CustomerPk
+	vehicleId INT NOTNULL FKTO tolling.Vehicle
+	effectiveStartDate DATETIME NOTNULL DEFAULT GETPOSTINGDATE
+	effectiveEndDate DATETIME NOTNULL DEFAULT MAXDATE
+}

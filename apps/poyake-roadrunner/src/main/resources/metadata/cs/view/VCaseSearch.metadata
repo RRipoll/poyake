@@ -1,0 +1,154 @@
+FROMSQLFILE '/poyake-roadrunner/src/main/resources/metadata/cs/view/VCaseSearch.sql'
+
+VIEW  ENTITY cs.VCaseSearch {
+	PK csCaseId INT SAMEAS cs.CSCase.csCaseId
+	subject VARCHAR(1024) SAMEAS cs.CSCase.subject
+	caseTypeId INT SAMEAS cs.CSCase.caseTypeId
+	caseStatusId INT SAMEAS cs.CSCase.caseStatusId
+	casePriorityId INT SAMEAS cs.CSCase.casePriorityId
+	startDate DATETIME SAMEAS cs.CSCase.startDate
+	manualReviewRequired BIT SAMEAS cs.CSCase.manualReviewRequired
+	inputUserId INT SAMEAS cs.CSCase.inputUserId
+	customers  MULTIPLEOBJECT NOTNULL MULTIREFTO cs.CustomerCase
+	documentation FILE_GROUP SAMEAS cs.CSCase.documentation
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: cs.VCaseSearch  
+VIEW NAME: VCaseSearch 
+VIEW SCHEMA: cs
+
+Tables:
+	TABLE: cs.CSCase Alias: c
+Output:
+	COLUMN: csCaseId -> cs.CSCase.csCaseId
+	COLUMN: subject -> cs.CSCase.subject
+	COLUMN: caseTypeId -> cs.CSCase.caseTypeId
+	COLUMN: caseStatusId -> cs.CSCase.caseStatusId
+	COLUMN: casePriorityId -> cs.CSCase.casePriorityId
+	COLUMN: startDate -> cs.CSCase.startDate
+	COLUMN: inputUserId -> cs.CSCase.inputUserId
+	EXPRESSION: customers -> ''
+
+
+================= Resolver Information ======================== 
+Entity List:
+	acc.Allocation ,audit.InputUser ,audit.InputSource ,acc.Ledger ,acc.LedgerItem ,acc.LedgerInfo ,acc.EnuTransactionType ,acc.EnuLedgerType ,acc.Annotation ,acc.EnuAnnotationType ,crm.CustomerPk ,acc.Balance ,acc.Cancellation ,acc.Repost ,acc.VAccountBalance ,acc.VCurrentLedger ,acc.VTransactionHistory ,tolling.Trip ,payment.Payment ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,acc.VTripPayment ,acc.VUnallocatedCredit ,acc.VUnpaidDebit ,crm.CustomerPaymentMethod ,payment.PaymentMethod ,crm.CustomerSuplementaryContact ,crm.PersonOrCompanyPk ,crm.EnuContactType ,crm.EmailAddressPk ,crm.EnuCountry ,crm.EnuCustomerType ,crm.EnuPhoneNumberType ,crm.EnuStateProvince ,crm.HCustomer ,crm.PostalAddressPk ,crm.HEmailAddress ,crm.HPersonOrCompany ,crm.PhoneNumberPK ,crm.HPhoneNumber ,crm.HPostalAddress ,crm.Turista ,crm.VCustomerHistory ,crm.VCustomerSearch ,inv.Invoice ,crm.VCustomerSearchEditor ,crm.VDetailPageCaseList ,cs.CSCase ,cs.CSCasePK ,cs.EnuCaseType ,cs.EnuCaseStatus ,cs.EnuCasePriority ,crm.VDetailPageVehicleList ,tolling.VehicleInfo ,tolling.Vehicle ,tolling.LicensePlate ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.CustomerVehicle ,cs.CustomerCase ,cs.VCaseSearch ,inv.InvoiceDocument ,common.FileGroup ,inv.InvoiceLedgerItem ,inv.VInvoiceableAccount ,inv.VdetailPageInvoiceList ,common.StorageFile ,inv.VinvoiceHeader ,inv.VitemInvoiceDetail ,tolling.TripInfo ,tolling.Gantry ,tolling.Pass ,multi.EnuRoomType ,multi.Home ,multi.HomeLink ,multi.Street ,multi.RoomLink ,multi.VHomeLink ,multi.VStreet ,multi.Vhome ,multi.VroomLink ,multi.Vhome2 ,payment.VPaymentMethods ,tolling.CustomerPass ,tolling.EnuProblematicPlateReason ,tolling.EnuPromoType ,tolling.ProblematicPlate ,tolling.Promo ,tolling.VFindVehicle ,tolling.VProblematicPlate ,tolling.VTripSearchColumns:
+	SOLVED csCaseId -> cs.CSCase.csCaseId
+	SOLVED subject -> cs.CSCase.subject
+	SOLVED caseTypeId -> cs.CSCase.caseTypeId
+	SOLVED caseStatusId -> cs.CSCase.caseStatusId
+	SOLVED casePriorityId -> cs.CSCase.casePriorityId
+	SOLVED startDate -> cs.CSCase.startDate
+	SOLVED inputUserId -> cs.CSCase.inputUserId
+	EXPRESSION customers -> 
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id cs
+              .
+              id 
+                simple_id VCaseSearch
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id csCaseId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id subject
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id caseTypeId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id caseStatusId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id casePriorityId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id startDate
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id inputUserId
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          primitive_expression 
+                            constant ''
+                        as_column_alias 
+                          column_alias 
+                            id 
+                              simple_id customers
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id cs
+                              .
+                              id 
+                                simple_id CSCase
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id c
+  <EOF>*/

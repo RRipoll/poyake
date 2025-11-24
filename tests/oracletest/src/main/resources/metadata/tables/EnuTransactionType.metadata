@@ -1,0 +1,11 @@
+ENTITY EnuTransactionType PATTERN Enumeration{
+	PK transactionTypeId INT
+	description VARCHAR(16)
+	UQ shortCode VARCHAR(8)
+	otraColumna INT FKTO Customer
+	
+	METADATA {
+		1, 'pepe','sc', 1;
+	}
+	
+}

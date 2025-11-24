@@ -1,0 +1,8 @@
+TABLE ENTITY Usuario EXTENDS Agente
+{
+	PK usuarioId INT FKTO Agente
+	username VARCHAR (100) NOTNULL
+	userpass VARCHAR (30) NOTNULL
+	direccionesId INT NOTNULL FKTO Direcciones
+	
+}

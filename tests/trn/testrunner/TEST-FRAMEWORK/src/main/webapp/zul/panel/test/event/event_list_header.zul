@@ -1,0 +1,19 @@
+<?page title="Home Page" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+
+
+	<h:table width="100%">
+		<h:tr>
+			<h:td align="left"><h:b>Test List:</h:b></h:td>
+			<h:td align="right">
+				<button label="Delete" id="BUTTON_DELETE" />
+				<button label="Create" id="BUTTON_CREATE" />
+				<button label="Copy to another test" id="BUTTON_COPY" />
+				<button label="Switch order" id="BUTTON_SWITCH" />
+			</h:td>
+		</h:tr>
+	</h:table>
+</zk>

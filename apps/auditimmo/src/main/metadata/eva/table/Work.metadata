@@ -1,0 +1,7 @@
+TABLE ENTITY eva.Work{
+	PK workId INT
+	folderId INT NOTNULL FKTO eva.FolderPK
+	workTypeId INT NOTNULL FKTO eva.EnuWorkType
+	title VARCHAR(255) NOTNULL
+	msgText VARCHAR(8000) NOTNULL
+}

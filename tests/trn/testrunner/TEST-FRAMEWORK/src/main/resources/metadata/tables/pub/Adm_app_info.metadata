@@ -1,0 +1,11 @@
+ENTITY pub.Adm_app_info  {
+	PK skey VARCHAR(255) 
+	svalue VARCHAR(255)
+	
+	METADATA{
+		'DATABASE_ID', 'TESTREPOSITORY';
+		'TEST_LIBRARY_URL', 'http://localhost:8085/tr-testserver-rs';
+		'AZURENAME', 'fastlanedevstorage';
+		'AZUREKEY', 'EzEiM2E6c+Q7RAIiDbK5+D36J4tXMid8OUqmNUQuggYwSG1FAFvff4hb6tvqreWaEyBDOF2vA4S1EkZ6NibZZQ==';
+	}
+}

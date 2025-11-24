@@ -1,0 +1,16 @@
+TABLE ENTITY testrunner.Folder  STEREOTYPES CONFIG{
+	PK folderUuid 		UUID NOTNULL STEREOTYPES FOLDER
+    parentfolderUuid 	UUID FKTO testrunner.Folder STEREOTYPES PARENTFOLDER
+    description 		VARCHAR(255)  STEREOTYPES DESCRIPTION
+    testUuid 			UUID FKTO testrunner.Test STEREOTYPES ITEM
+    
+    
+    
+    METADATA{
+  	'1', NULL, 'c:', NULL;
+	'2', '1', 'Tester', NULL;
+	'3', '1', 'Developers', NULL;
+	'4', '3', 'System', NULL;
+	
+  }  
+}

@@ -1,0 +1,12 @@
+TABLE ENTITY Telefono PATTERN auditada
+{
+	PK telefonoId INT
+	tipo INT FKTO TipoTelefono
+	telefonosId INT FKTO Telefonos
+	numero VARCHAR (15) NOTNULL
+	direccionesId INT NOTNULL FKTO Direcciones
+	comentariosId INT NOTNULL FKTO Comentarios
+	creado DATETIME
+	editado DATETIME
+	borrado DATETIME
+}

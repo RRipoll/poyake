@@ -1,0 +1,8 @@
+TABLE ENTITY crm.Turista{
+	PK turistaId INT
+	countryId INT FKTO crm.EnuCountry
+	
+	METADATA{
+		1, SHORTCODE 'US';
+	}
+}

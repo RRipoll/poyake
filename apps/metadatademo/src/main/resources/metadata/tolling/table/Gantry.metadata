@@ -1,0 +1,10 @@
+TABLE ENTITY tolling.Gantry{
+	PK gantryId INT
+	roadsideGantryUniqueId VARCHAR(128) NOTNULL
+	description VARCHAR(32) NOTNULL STEREOTYPES DESCRIPTION
+	
+	METADATA{
+		1, '1', 'M40';
+		2, '2', 'M50';
+	}
+}

@@ -1,0 +1,5 @@
+TABLE ENTITY inv.Invoice{
+	PK invoiceId INT
+	created DATE NOTNULL DEFAULT GETPOSTINGDATE
+	customerId INT NOTNULL FKTO crm.CustomerPk
+}

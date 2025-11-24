@@ -1,0 +1,12 @@
+TABLE ENTITY crm.EnuContactType PATTERN Enumeration{
+	PK contactTypeId INT
+	
+	//Enumeration fields
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, SECONDARY, 'Secondary Contact';
+		2, COMPANYCONTACT, 'Company Contact'; 
+	}
+}

@@ -1,0 +1,4 @@
+Meta files:
+platform:/resource/poyake-internationalization/src/main/resources/metadata/config/table/EnuLocale.metadata
+platform:/resource/poyake-internationalization/src/main/resources/metadata/configuration/configuration.metadata
+platform:/resource/poyake-internationalization/src/main/resources/metadata/label/table/MTlabel.metadata

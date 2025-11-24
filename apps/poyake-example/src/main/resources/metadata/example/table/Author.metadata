@@ -1,0 +1,23 @@
+TABLE ENTITY example.Author {
+	
+	PK authorId INT
+	fullName VARCHAR(256) NOTNULL STEREOTYPES DESCRIPTION
+	note HTML
+	
+	
+	METADATA {
+		
+	1,"Cervantes","";
+	2,"Vargas Llosa","";
+	3,"Raúl","";
+	4,"Javier","";
+	
+	
+	}
+	LABELS {
+		authorId {en_EN 'Author #' es_ES '# Autor'}
+		fullName {en_EN 'Name' es_ES 'Nombre'}
+		note {en_EN 'Note' es_ES 'Nota'}
+	}
+	
+}

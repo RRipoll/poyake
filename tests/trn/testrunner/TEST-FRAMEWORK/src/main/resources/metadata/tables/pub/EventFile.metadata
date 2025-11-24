@@ -1,0 +1,8 @@
+ENTITY pub.EventFile {
+	
+	PK  eventfileid INTEGER
+    eventid INTEGER FKTO pub.Event
+    startdate DATETIME DEFAULT  'CURRENT_TIMESTAMP'
+    enddate DATETIME DEFAULT  '2099-01-01'
+    filerefid INTEGER FKTO pub.FileRef
+}

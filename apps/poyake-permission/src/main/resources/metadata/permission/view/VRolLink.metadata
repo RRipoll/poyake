@@ -1,0 +1,191 @@
+FROMSQLFILE '/poyake-permission/src/main/resources/metadata/permission/view/VRolLink.sql'
+
+VIEW  ENTITY permission.VRolLink  STEREOTYPES CONFIG{
+	rolPermissionId INT SAMEAS permission.RolPermission.rolPermissionId
+	PK rolId INT SAMEAS permission.RolPermission.rolId
+	permissionId INT SAMEAS permission.RolPermission.permissionId
+	shortCode VARCHAR(16) SAMEAS permission.Rol.shortCode
+	description VARCHAR(32) SAMEAS permission.Rol.description STEREOTYPES DESCRIPTION
+	userGroups MULTIPLEOBJECT NOTNULL MULTIREFTO permission.UserGroupRol
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: permission.VRolLink  
+VIEW NAME: VRolLink 
+VIEW SCHEMA: permission
+
+Tables:
+	TABLE: permission.UserGroupRol Alias: ug
+	TABLE: permission.RolPermission Alias: rp
+	TABLE: permission.Rol Alias: r
+Output:
+	rp.* -> permission.RolPermission
+	COLUMN: shortCode -> permission.Rol.shortCode
+	COLUMN: description -> permission.Rol.description
+	EXPRESSION: userGroups -> (select*frompermission.UserGroupRolugwhereug.rolId=rp.rolIdforjsonPath)
+
+
+================= Resolver Information ======================== 
+Entity List:
+	audit.EnuInputUserGroup ,audit.InputUser ,audit.InputSource ,audit.UserGroup ,audit.VinputUser ,audit.VinputUserMulti ,audit.VuserGroup ,common.EnuTemplateType ,common.FileGroup ,common.StorageFile ,common.Template ,config.Enulocale ,config.AppInfo ,config.DatagridSetting ,config.PostingDate ,permission.EnuPermissionType ,permission.EnuPermissionValue ,permission.Permission ,permission.Rol ,permission.RolPermission ,permission.UserGroupRol ,permission.Vpermission ,recorder.EnuRecorderType ,recorder.RecorderData ,recorder.RecorderMasterColumns:
+	EXPANDED rolPermissionId -> permission.RolPermission.rolPermissionId
+	EXPANDED rolId -> permission.RolPermission.rolId
+	EXPANDED permissionId -> permission.RolPermission.permissionId
+	SOLVED shortCode -> permission.Rol.shortCode
+	SOLVED description -> permission.Rol.description
+	EXPRESSION userGroups -> 
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id permission
+              .
+              id 
+                simple_id VRolLink
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      asterisk 
+                        table_name 
+                          id 
+                            simple_id rp
+                        .*
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id r
+                        .
+                        id 
+                          simple_id shortCode
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id r
+                        .
+                        id 
+                          simple_id description
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          bracket_expression (
+                            subquery 
+                              select_statement 
+                                query_expression 
+                                  query_specification select
+                                    select_list 
+                                      select_list_elem 
+                                        asterisk *
+                                    from
+                                    table_sources 
+                                      table_source 
+                                        table_source_item_joined 
+                                          table_source_item 
+                                            table_name_with_hint 
+                                              table_name 
+                                                id 
+                                                  simple_id permission
+                                                .
+                                                id 
+                                                  simple_id UserGroupRol
+                                            as_table_alias 
+                                              table_alias 
+                                                id 
+                                                  simple_id ug
+                                    where
+                                    search_condition 
+                                      search_condition_and 
+                                        search_condition_not 
+                                          predicate 
+                                            expression 
+                                              full_column_name 
+                                                table_name 
+                                                  id 
+                                                    simple_id ug
+                                                .
+                                                id 
+                                                  simple_id rolId
+                                            comparison_operator =
+                                            expression 
+                                              full_column_name 
+                                                table_name 
+                                                  id 
+                                                    simple_id rp
+                                                .
+                                                id 
+                                                  simple_id rolId
+                                for_clause forjsonPath
+                            )
+                        as_column_alias as
+                          column_alias 
+                            id 
+                              simple_id userGroups
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id permission
+                              .
+                              id 
+                                simple_id RolPermission
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id rp
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id permission
+                                    .
+                                    id 
+                                      simple_id Rol
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id r
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id rp
+                                      .
+                                      id 
+                                        simple_id rolId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id r
+                                      .
+                                      id 
+                                        simple_id rolId
+  <EOF>*/

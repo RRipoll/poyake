@@ -1,0 +1,22 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+
+
+
+	<window style="width:1080px;height:660px;background:#E0E0E0;" >
+
+		<n:div class="general" style="padding: 0px 0px  0px  0px; width:1080px;position:relative;top:0px;left:0px;height:660px;background:#E0E0E0">
+<n:div class="headerdiv">MANAGING BUGSS</n:div>
+			<div id="activity"
+				style="position:absolute;top:75px;left:8px;" />
+			<h:button class="buttonmenu"
+				style="top:6px;left:952px;width:92px;" id="create" label="create">
+				Create
+			</h:button>
+		</n:div>
+	</window>
+</zk>

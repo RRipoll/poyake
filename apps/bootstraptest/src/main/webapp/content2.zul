@@ -1,0 +1,115 @@
+
+<?meta charset="UTF-8" ?>
+<?meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" ?>
+<?link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"?>
+<?link rel="stylesheet" href="resources/css/adminbsb.css" ?>
+
+
+<zk xmlns="native" xmlns:z="zul" xmlns:w="http://www.zkoss.org/2005/zk/client">
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>FORM EXAMPLES</h2>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-sm-6">
+	                                <div class="form-group form-float">
+	                                    <div class="form-line">
+		                                    <select class="form-control show-tick" >
+		                                        <option value="">-- Please select --</option>
+		                                        <option value="10">10</option>
+		                                        <option value="20">20</option>
+		                                        <option value="30">30</option>
+		                                        <option value="40">40</option>
+		                                        <option value="50">50</option>
+		                                    </select>
+							                <label class="form-label" w:onClick="$(this).parent().find('input').focus()">First Example</label>
+		                                </div>
+		                            </div>
+                                </div>
+                                <div class="col-sm-6">
+	                                <div class="form-group form-float">
+	                                    <z:div class="form-line">
+							                <z:selectbox class="form-control show-tick"  id="typesSelectbox" model="${win$composer.typesModel}" apply="org.zkoss.admin.Test">
+							                    <z:template name="model">
+							                        <z:label value="${each}" />
+							                    </z:template>
+							                </z:selectbox>		 
+							                <label class="form-label" w:onClick="$(this).parent().find('input').focus()">Selector</label>
+		                                </z:div>
+		                            </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <select class="form-control" disabled="true">
+                                        <option value="">Disabled</option>
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="40">40</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                VERTICAL LAYOUT
+                                <small>With floating label</small>
+                            </h2>
+                        </div>
+                        <div class="body">
+                            <form>
+                                <div class="form-group form-float">
+                                    <z:div class="form-line" >
+                                        <z:textbox id="email_address" class="form-control" apply="org.zkoss.admin.Test"/>
+                                        <label class="form-label" w:onClick="$(this).parent().find('input').focus()">Email Address</label>
+                                    </z:div>
+                                </div>
+                                <div class="form-group form-float">
+                                    <z:div class="form-line" >
+                                        <z:intbox class="form-control" apply="org.zkoss.admin.Test"/>
+                                        <label class="form-label" w:onClick="$(this).parent().find('input').focus()">Intbox</label>
+                                    </z:div>
+                                </div>
+
+                                <div class="form-group form-float">
+                                    <z:div class="form-line">
+                                        <z:textbox type="password" id="pass" class="form-control" apply="org.zkoss.admin.Test"/>
+                                        <label class="form-label" w:onClick="$(this).parent().find('input').focus()">Password</label>
+                                    </z:div>
+                                </div>
+
+                                <input type="checkbox" id="remember_me_2" class="filled-in" />
+                                <label for="remember_me_2">Remember Me</label>
+                                <br/>
+                                <z:checkbox id="remember_me_3" label="pepe"/>
+                                <br/>
+                                <z:radio id="remember_me_4" label="hola caracola"/>
+                                <br/>
+                                <z:button class="btn btn-primary m-t-15 waves-effect">LOGIN</z:button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+ </zk>
+ 
+ 

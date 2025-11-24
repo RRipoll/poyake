@@ -1,0 +1,8 @@
+Meta files:
+platform:/resource/poyake-recorder/src/main/resources/metadata/configuration/configuration.metadata
+platform:/resource/poyake-recorder/src/main/resources/metadata/recorder/table/EnuRecorderType.metadata
+platform:/resource/poyake-recorder/src/main/resources/metadata/recorder/table/RecorderData.metadata
+platform:/resource/poyake-recorder/src/main/resources/metadata/recorder/table/RecorderMaster.metadata
+platform:/resource/commondata/src/main/resources/metadata/config/functions.metadata
+platform:/resource/commondata/src/main/resources/metadata/config/reset.metadata
+platform:/resource/commondata/src/main/resources/metadata/configuration/configuration.metadata

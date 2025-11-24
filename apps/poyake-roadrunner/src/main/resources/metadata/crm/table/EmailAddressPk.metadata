@@ -1,0 +1,3 @@
+TABLE ENTITY crm.EmailAddressPk{
+	PK emailAddressId INT
+}

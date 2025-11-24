@@ -1,0 +1,1191 @@
+* {
+	margin: 0;padding: 0;
+}
+ 
+#menu p {margin: 0; padding: 0;cursor:pointer; }
+#menu p:hover{color:white;}
+
+
+.modal{
+	width:1000px;height:600px;background-color:#F2F2F2;
+}
+
+
+.pagingactive{
+	cursor: none;
+	color:black;
+	background-color:white;
+	
+}
+
+.paginggoolge{
+	float:right;
+	padding:5px;
+	
+	
+}
+
+.pagingnumber{
+	cursor: pointer;
+	color:blue;
+	font-weight: bold;
+	
+}
+
+.pagingnext{
+	cursor: pointer;
+	color:blue;
+	
+}
+.pagingnext:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+ .pagingnumber:hover{
+	cursor: pointer;
+	text-decoration: underline;
+} 
+
+
+
+	.headerselection{font-size:14px;color:#585858;font-weight: bold;font-family: Arial, Sans-serif;}
+	.blacklabel{font-size:14px;color:#000000;font-family: Arial, Sans-serif;}
+
+	.ft02{font-size:14px;color:#000000;font-family: Arial, Sans-serif;}
+	.ft03{font-size:11px;;color:#000000;font-family: Arial, Sans-serif;}
+	.ft04{font-size:11px;color:#0000ff;font-family: Arial, Sans-serif;}
+	.ft05{font-size:13px;;color:#000000;font-family: Arial, Sans-serif;}
+	
+	.modalbutton{font-size:16px;color:#000000;;cursor:pointer;font-family: Arial, Sans-serif;}
+	p.modalbutton:hover{color:#0000ff;font-family: Arial, Sans-serif;}
+	
+	.ft06{font-size:10px;color:#0000ff;font-family: Arial, Sans-serif;}
+	.greylabel{font-size:14px;color:#000000;font-family: Arial, Sans-serif;}
+	.ft08{font-size:12px;color:#0000ff;font-family: Arial, Sans-serif;}
+	.modaltitle{font-size:14px;color:black;font-family: Arial, Sans-serif;}
+	.headeritem{font-size:16px;color:#7e7e7e;font-weight: bold;cursor:pointer;font-family: Arial, Sans-serif;}
+	.headeriteminactive{font-size:16px;color:#FFFFFF;font-weight: bold;font-family: Arial, Sans-serif;}
+	
+	p.headeritem:hover{color:black;font-family: Arial, Sans-serif;}
+	.ft011{font-size:16px;color:#000000;font-family: Arial, Sans-serif;}
+	.ft012{font-size:16px;color:#0000ff;font-family: Arial, Sans-serif;}
+
+
+
+.headerdiv {
+position:absolute;left:380px;top:5px;
+font-size:16pt;
+font-family: Arial, Sans-serif;
+	font-weight: bold;
+		
+}
+
+.z-menu-content, .z-menuitem-content {
+    border: 0 solid transparent;
+    border-radius: 0;
+    color: #555;
+    cursor: pointer;
+    display: block;
+    line-height: 12px;
+    padding: 3px 6px;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    z-index: 20;
+}
+
+.z-menu-text, .z-menuitem-text {
+    display: inline-block;
+    font-family: Arial, Sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 16px;
+    text-shadow: 0 1px #fff;
+}
+
+
+.z-menubar {
+    background: none repeat scroll 0 0 #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    display: block;
+    padding: 3px 0;
+    position: relative;
+}
+
+.z-window-modal.z-window-shadow, .z-window-highlighted.z-window-shadow {
+    border-radius: 0;
+    box-shadow: 0 32px 1px #e0e0e0 inset, 0 0 4px rgba(0, 0, 0, 0.7);
+}
+.z-window-header {
+    color: #363636;
+    cursor: default;
+   font-family: Arial, Sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    margin-left: 10px;
+    overflow: hidden;
+    padding: 3px 0 5px;
+}
+
+.z-menupopup-separator {
+    border-color: #e0e0e0;
+    border-style: solid;
+    border-width: 3px 1px 3px 0;
+    height: 100%;
+    left: 31px;
+    position: absolute;
+    top: 0;
+    width: 2px;
+    z-index: 10;
+}
+
+.z-menupopup {
+    background: none repeat scroll 0 0 #e0e0e0;
+    border: 1px solid #e0e0e0;
+    left: 0;
+    padding: 3px;
+    top: 0;
+    white-space: nowrap;
+    z-index: 88000;
+}
+
+.z-window-icon {
+    background: linear-gradient(to bottom, #fefefe 0%, #eeeeee 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #cfcfcf;
+    border-radius: 0;
+    color: #636363;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+    margin: auto 1px;
+    overflow: hidden;
+    text-align: center;
+    width: 28px;
+}
+
+
+.z-textbox, .z-decimalbox, .z-intbox, .z-longbox, .z-doublebox {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #cfcfcf;
+    border-radius: 0;
+    color: #000;
+    font-family: Arial,Sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 14px;
+    margin: 0;
+    min-height: 24px;
+    padding: 4px 5px 3px;
+}
+
+
+
+
+.buttonsubmenu {
+	padding: 1px 4px 1px 4px;
+	font-size: 8pt;
+	background-color: #D1D1D1;
+	height:27px;	
+	position:absolute;
+	font-size:11px;;color:#000000;font-family: Arial, Sans-serif;
+}
+
+.detailright{
+background-color: #F2F2F2;
+    font-weight: bold;
+    padding: 0 6px 0 0;
+    text-align: right;
+    width: 30%;
+}
+
+
+.casedetailright{
+background-color: #F2F2F2;
+    font-weight: bold;
+    padding: 0 6px 0 0;
+    text-align: right;
+    width: 45%;
+}
+
+.casedetailrightr{
+background-color: #F2F2F2;
+    font-weight: bold;
+    padding: 0 6px 0 0;
+    text-align: right;
+    width: 39%;
+}
+
+.buttonmenu {
+	padding: 1px 4px 1px 4px;
+	font-size: 8pt;
+	background-color: #b2b2b2;
+	height:32px;	
+	position:absolute;
+	font-size:13px;;color:#000000;font-family: Arial, Sans-serif;
+}
+
+.buttonmodal {
+	padding: 1px 4px 1px 4px;
+	font-size: 8pt;
+	background-color: white;
+	height:22px;	
+	position:absolute;
+	font-size:13px;;color:#000000;font-family: Arial, Sans-serif;
+}
+
+.buttonedit {
+	padding: 1px 4px 1px 4px;
+	font-size: 8pt;
+	background-color: #D1D1D1;
+	height:20px;	
+	position:absolute;
+	font-size:13px;;color:#000000;font-family: Arial, Sans-serif;
+}
+
+
+.z-combobox-rounded, .z-bandbox-rounded, .z-datebox-rounded, .z-combobox, .z-bandbox, .z-datebox {
+   /* border: 1px solid #BCBCBC;*/
+    display: inline-block;
+    font-family: arial,sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.createcaselist {
+	border-collapse:collapse;
+	border-spacing:0px;
+	/*border-collapse: collapse;*/
+	border: 1px;
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+.createcaselist .row{
+      border:1px solid #e0e0e0;
+}
+
+.createcaselist .z-row .z-row-inner,.createcaselist .z-row .z-cell {
+	overflow: hidden;
+	border:1px solid #e0e0e0;
+	/*padding: 0 3px;*/
+}
+}
+
+.createcaselist .z-column-content,.createcaselist .z-row-content,.createcaselist .z-group-content,.createcaselist .z-groupfoot-content,.createcaselist .z-footer-content
+	{
+	color: #000;
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	line-height: 18px;
+}
+
+.createcaselist .z-combobox,.createcaselist .z-bandbox,.createcaselist .z-datebox,.createcaselist .z-timebox,.createcaselist .z-spinner,.createcaselist .z-doublespinner
+	{
+	display: inline-block;
+	min-height: 18px;
+	white-space: nowrap;
+}
+
+.createcaselist .z-grid-odd>.z-row-inner,.createcaselist .z-grid-odd>.z-cell {
+	background: none repeat scroll 0 0 #fff;
+}
+
+.createcaselist TR.trEven {
+	background-color: #fff;
+}
+
+.createcaselist .z-label,.createcaselist .z-radio-content,.createcaselist .z-checkbox-content,.createcaselist .z-loading
+	{
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+}
+
+.createcaselist .z-combobox-input,.createcaselist .z-bandbox-input,.createcaselist .z-datebox-input,.createcaselist .z-timebox-button,.createcaselist .z-spinner-button,.createcaselist .z-doublespinner-button
+	{
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 0 0px 0px 0;
+	color: #3c3bf1;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 8pt;
+	font-weight: normal;
+	height: 24px;
+	line-height: 14px;
+	min-width: 18px;
+	overflow: hidden;
+	padding: 0px;
+	vertical-align: middle;
+}
+
+.createcaselist .z-textbox,.createcaselist .z-decimalbox,.createcaselist .z-intbox,.createcaselist .z-longbox,.createcaselist .z-doublebox {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #e0e0e0;
+}
+
+
+.createcaselist .z-combobox-button,.createcaselist .z-bandbox-button,.createcaselist .z-datebox-button,.createcaselist .z-timebox-button,.createcaselist .z-spinner-button,.createcaselist .z-doublespinner-button {
+    border-radius: 0 0px 0px 0;
+    color: #636363;
+    cursor: pointer;
+    /*display: inline-block;*/
+    font-size: 10pt;
+    font-weight: normal;
+    line-height: 14px;
+    overflow: hidden;
+    padding: 4px;
+    text-align: left;
+    vertical-align: middle;
+     background: none repeat scroll 0 0 white;
+    border: 1px solid #e0e0e0;
+}
+
+
+.createcaselist .createcaselist .z-row .z-row-inner,.createcaselist .z-row .z-cell {
+	/*border-collapse: collapse;*/
+	/*border: 1px solid #000;*/
+	overflow: hidden;
+}
+
+.createcaselist .z-label,.createcaselist .z-radio-content,.createcaselist .z-checkbox-content,.createcaselist .z-loading
+	{
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+}
+
+.createcaselist .fieldValue {
+	color: black;
+	font-size: 8pt;
+	/*height: 16px;*/
+	padding: 0 3px;
+	font-weight: bold;
+}
+
+.createcaselist .clickField {
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	padding: 0 3px;
+	font-weight: bold;
+}
+
+.createcaselist table {
+	width: 100%;
+	border-spacing: 0;
+	border-width: 0;
+	border-collapse: collapse;
+	
+}
+
+.createcaselist table div {
+	padding: 0;
+	
+	font-family: Arial, Sans-serif;
+	color:black;
+	line-height: 14px;
+	overflow: hidden;
+}
+
+.createcaselist table tr {
+	border: 1px solid #e0e0e0;
+	padding: 0;
+	vertical-align:top;
+	
+}
+
+.createcaselist table TD .headerTD {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	border:1px solid #e0e0e0;
+	background-color: #FFFFFF;
+	vertical-align: middle;
+	
+}
+
+.createcaselist table TD .headerTDcheckbox {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	border:0;
+	background-color: #e0e0e0;
+	vertical-align: middle;
+	width:25px;
+	min-width:25px;
+	max-width:25px;
+}
+
+
+
+.createcaselist table TD .bodyTD {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	border:1px solid #e0e0e0;
+	background-color: #FFFFFF;
+	vertical-align: middle;
+}
+
+.createcaselist table TD .hederTDplain {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	vertical-align: middle;
+	border:1px solid #e0e0e0;
+	background-color: #FFFFFF;
+}
+
+.createcaselist table TD .hederTDplaincheckbox {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	vertical-align: middle;
+	border:1px solid #e0e0e0;
+	min-width:25px;
+	width:25px;
+	max-width:25px;
+}
+
+.createcaselist table .filter {
+	background: none repeat scroll 0 0 #f2f2f2;
+}
+
+.createcaselist table .vboxfilter {
+	/*background-color: #fff;*/
+	/*border-style: solid;*/
+	/*border-width: 1px*/
+}
+
+
+
+
+.showcaselist {
+	border-collapse:collapse;
+	border-spacing:0px;
+	/*border-collapse: collapse;*/
+	border: 1px;
+	font-family: Arial, Sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.showcaselist .row{
+      border:1px solid #e0e0e0;
+}
+
+.showcaselist .z-row .z-row-inner,.showcaselist .z-row .z-cell {
+	overflow: hidden;
+	border:1px solid #e0e0e0;
+	/*padding: 0 3px;*/
+}
+}
+
+.showcaselist .z-column-content,.showcaselist .z-row-content,.showcaselist .z-group-content,.showcaselist .z-groupfoot-content,.showcaselist .z-footer-content
+	{
+	color: #000;
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	line-height: 18px;
+}
+
+.showcaselist .z-combobox,.showcaselist .z-bandbox,.showcaselist .z-datebox,.showcaselist .z-timebox,.showcaselist .z-spinner,.showcaselist .z-doublespinner
+	{
+	display: inline-block;
+	min-height: 18px;
+	white-space: nowrap;
+}
+
+.showcaselist .z-grid-odd>.z-row-inner,.showcaselist .z-grid-odd>.z-cell {
+	background: none repeat scroll 0 0 #fff;
+}
+
+.showcaselist TR.trEven:hover {
+	background-color: #B2B2B2;
+}
+.showcaselist TR.trOdd:hover {
+	background-color: #B2B2B2;
+}
+
+.showcaselist TR.trEven {
+	background-color: #fff;
+}
+
+.showcaselist .z-label,.showcaselist .z-radio-content,.showcaselist .z-checkbox-content,.showcaselist .z-loading
+	{
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+}
+
+.showcaselist .z-combobox-input,.showcaselist .z-bandbox-input,.showcaselist .z-datebox-input,.showcaselist .z-timebox-button,.showcaselist .z-spinner-button,.showcaselist .z-doublespinner-button
+	{
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 0 0px 0px 0;
+	color: #3c3bf1;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 8pt;
+	font-weight: normal;
+	height: 24px;
+	line-height: 14px;
+	min-width: 18px;
+	overflow: hidden;
+	padding: 0px;
+	vertical-align: middle;
+}
+
+.showcaselist .z-textbox,.showcaselist .z-decimalbox,.showcaselist .z-intbox,.showcaselist .z-longbox,.showcaselist .z-doublebox {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #e0e0e0;
+}
+
+
+.showcaselist .z-combobox-button,.showcaselist .z-bandbox-button,.showcaselist .z-datebox-button,.showcaselist .z-timebox-button,.showcaselist .z-spinner-button,.showcaselist .z-doublespinner-button {
+    border-radius: 0 0px 0px 0;
+    color: #636363;
+    cursor: pointer;
+    /*display: inline-block;*/
+    font-size: 10pt;
+    font-weight: normal;
+    line-height: 14px;
+    overflow: hidden;
+    padding: 4px;
+    text-align: left;
+    vertical-align: middle;
+     background: none repeat scroll 0 0 white;
+    border: 1px solid #e0e0e0;
+}
+
+
+.showcaselist .showcaselist .z-row .z-row-inner,.showcaselist .z-row .z-cell {
+	/*border-collapse: collapse;*/
+	/*border: 1px solid #000;*/
+	overflow: hidden;
+}
+
+.showcaselist .z-label,.showcaselist .z-radio-content,.showcaselist .z-checkbox-content,.showcaselist .z-loading
+	{
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+}
+
+.showcaselist .fieldValue {
+	color: black;
+	font-size: 8pt;
+	/*height: 16px;*/
+	padding: 0 3px;
+	font-weight: bold;
+}
+
+.showcaselist .clickField {
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	padding: 0 3px;
+	font-weight: bold;
+}
+
+.showcaselist table {
+	width: 100%;
+	border-spacing: 0;
+	border-width: 0;
+	border-collapse: collapse;
+	
+}
+
+.showcaselist table div {
+	padding: 0;
+	
+	font-family: Arial, Sans-serif;
+	color:black;
+	overflow: hidden;
+}
+
+.showcaselist table tr {
+	
+	padding: 0;
+	
+	
+}
+
+.showcaselist TR.trOdd {
+	border: 1px solid #e0e0e0;
+	padding: 0;
+	vertical-align:top;
+	background-color: #ededed;
+}
+
+.showcaselist TR.trEven {
+	border: 1px solid #e0e0e0;
+	padding: 0;
+	vertical-align:top;
+	background-color: #d8d8d8;
+}
+
+
+.showcaselist table TD .headerTD {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	border:1px solid #e0e0e0;
+	padding: 3px 0;
+	vertical-align: middle;
+	
+}
+
+.showcaselist table TD .headerTDcheckbox {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	border:0;
+	
+	vertical-align: middle;
+	width:25px;
+	min-width:25px;
+	max-width:25px;
+	
+}
+
+
+
+.showcaselist table TD .bodyTD {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	border:1px solid #e0e0e0;
+	background-color: #FFFFFF;
+	vertical-align: middle;
+}
+
+.showcaselist table TD .hederTDplain {
+	color: white;
+	font-size: 8pt;
+	font-weight: bold;
+	
+	padding: 10px 0px;
+	text-align:center;
+	vertical-align: middle;
+	border:1px solid #e0e0e0;
+	background-color: #808080;
+}
+
+.showcaselist table TD .hederTDplaincheckbox {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	vertical-align: middle;
+	border:1px solid #f2f2f2;
+	background:#808080;
+	min-width:25px;
+	width:25px;
+}
+
+.showcaselist table .filter {
+	background: none repeat scroll 0 0 #F2F2F2;
+}
+
+.showcaselist table .vboxfilter {
+	/*background-color: #fff;*/
+	/*border-style: solid;*/
+	/*border-width: 1px*/
+}
+
+
+
+.tablelist {
+	border-collapse:collapse;
+	border-spacing:0px;
+	/*border-collapse: collapse;*/
+	border: 1;
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+.tablelist .row{
+      border:1px solid black;
+}
+
+.tablelist .z-row .z-row-inner,.tablelist .z-row .z-cell {
+	overflow: hidden;
+	border:1px solid black;
+	/*padding: 0 3px;*/
+}
+}
+
+.tablelist .z-column-content,.tablelist .z-row-content,.tablelist .z-group-content,.tablelist .z-groupfoot-content,.tablelist .z-footer-content
+	{
+	color: #000;
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	line-height: 18px;
+}
+
+.tablelist .z-combobox,.tablelist .z-bandbox,.tablelist .z-datebox,.tablelist .z-timebox,.tablelist .z-spinner,.tablelist .z-doublespinner
+	{
+	display: inline-block;
+	min-height: 18px;
+	white-space: nowrap;
+}
+
+.tablelist .z-grid-odd>.z-row-inner,.tablelist .z-grid-odd>.z-cell {
+	background: none repeat scroll 0 0 #fff;
+}
+
+.tablelist TR.trEven {
+	background-color: #fff;
+}
+
+.tablelist .z-label,.tablelist .z-radio-content,.tablelist .z-checkbox-content,.tablelist .z-loading
+	{
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+}
+
+.tablelist .z-combobox-input,.tablelist .z-bandbox-input,.tablelist .z-datebox-input,.tablelist .z-timebox-button,.tablelist .z-spinner-button,.tablelist .z-doublespinner-button
+	{
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #000;
+	border-radius: 0 0px 0px 0;
+	color: #3c3bf1;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 8pt;
+	font-weight: normal;
+	height: 14px;
+	line-height: 14px;
+	min-width: 18px;
+	overflow: hidden;
+	padding: 0px;
+	vertical-align: middle;
+}
+
+.tablelist .z-textbox,.tablelist .z-decimalbox,.tablelist .z-intbox,.tablelist .z-longbox,.tablelist .z-doublebox {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #000000;
+}
+
+
+.tablelist .z-combobox-button,.tablelist .z-bandbox-button,.tablelist .z-datebox-button,.tablelist .z-timebox-button,.tablelist .z-spinner-button,.tablelist .z-doublespinner-button {
+    border-radius: 0 0px 0px 0;
+    color: #636363;
+    cursor: pointer;
+    /*display: inline-block;*/
+    font-size: 10pt;
+    font-weight: normal;
+    line-height: 14px;
+    overflow: hidden;
+    padding: 4px;
+    text-align: left;
+    vertical-align: middle;
+     background: none repeat scroll 0 0 white;
+    border: 1px solid white;
+}
+
+
+.tablelist .tablelist .z-row .z-row-inner,.tablelist .z-row .z-cell {
+	/*border-collapse: collapse;*/
+	/*border: 1px solid #000;*/
+	overflow: hidden;
+}
+
+.tablelist .z-label,.tablelist .z-radio-content,.tablelist .z-checkbox-content,.tablelist .z-loading
+	{
+	font-family: Arial, Sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+.tablelist .fieldValue {
+	color: black;
+	font-size: 8pt;
+	/*height: 16px;*/
+	padding: 0 3px;
+	font-weight: bold;
+}
+
+.tablelist .clickField {
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	padding: 0 3px;
+	font-weight: bold;
+}
+
+.tablelist table {
+	width: 100%;
+	border-spacing: 0;
+	border-width: 0;
+	border-collapse: collapse;
+	
+}
+
+.tablelist table div {
+	padding: 0;
+	background-color: #f2f2f2;
+	font-family: Arial, Sans-serif;
+	color:blue;
+	line-height: 14px;
+	overflow: hidden;
+}
+
+.tablelist table tr {
+	/*border: 1px solid #2b2a29;*/
+	padding: 0;
+	vertical-align:top;
+	
+}
+
+.tablelist table TD .headerTD {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	border:1px solid #bcbcbc;
+	background-color: #FFFFFF;
+	vertical-align: middle;
+}
+
+.tablelist table TD .bodyTD {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	border:1px solid black;
+	background-color: #FFFFFF;
+	vertical-align: middle;
+}
+
+.tablelist table TD .hederTDplain {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	
+	vertical-align: middle;
+}
+
+.tablelist table .filter {
+	background: none repeat scroll 0 0 #d6d3ce;
+}
+
+.tablelist table .vboxfilter {
+	/*background-color: #fff;*/
+	/*border-style: solid;*/
+	/*border-width: 1px*/
+}
+
+/*buton*/
+}
+.z-combobox-rounded .z-combobox-rounded-btn, .z-bandbox-rounded .z-bandbox-rounded-btn, .z-datebox-rounded .z-datebox-rounded-btn, .z-timebox-rounded .z-timebox-rounded-btn, .z-spinner-rounded .z-spinner-rounded-btn, .z-doublespinner-rounded .z-doublespinner-rounded-btn, .z-combobox .z-combobox-btn, .z-bandbox .z-bandbox-btn, .z-datebox .z-datebox-btn, .z-timebox .z-timebox-btn, .z-spinner .z-spinner-btn, .z-doublespinner .z-doublespinner-btn {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("/latitudePanel/img/backoffice/combobtn2.gif") no-repeat scroll 0 -1px rgba(0, 0, 0, 0);
+    border-color: #B2B2B2 #E6E6E6 #E6E6E6 -moz-use-text-color;
+    border-image: none;
+    border-radius: 0 2px 2px 0;
+    border-right: 1px solid #E6E6E6;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px 0;
+    cursor: pointer;
+    display: inline-block;
+    
+    overflow: hidden;
+    vertical-align: top;
+    
+}
+
+.z-combobox .z-combobox-btn {
+    
+    width: 20px;
+    border: 1px solid #000000;
+    border-left: 0;
+    border-radius: 0 3px 3px 0;
+    box-shadow: inset 1px 1px 0 #585858, inset -1px -1px 0 #0F0F0F;
+}
+
+
+
+
+
+
+body {
+	 
+	margin: 0;
+	padding: 0;
+}
+
+
+.z-window {
+	background: none repeat scroll 0 0 #F2F2F2;
+	padding: 0;
+}
+
+.z-window>.z-window-content {
+	background: none repeat scroll 0 0 #F2F2F2;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+.z-window-embedded, .z-window-modal, .z-window-overlapped, .z-window-popup, .z-window-highlighted {
+    margin: 0;
+    overflow: inicial;
+    padding: 0;
+}
+
+.general {
+	font-family: Arial, Sans-serif;
+	height: 98%;
+	width: 100%;
+	margin-left:auto;margin-right:auto;
+	background-color: #F2F2F2;
+	font-size: 10pt;
+	color: #000;
+	
+	/*border-collapse: collapse;*/
+}
+
+
+
+
+
+.general input {
+	min-height: 16px;
+	height: 16px;
+	
+	
+	border: 1;
+	color: #3c3bf1;
+	font-weight: bold;
+	line-height: 16px;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	font- family: Arial, Sans-serif;
+
+
+}
+
+.general h2 {
+	width: 11px;
+	width: auto !important;
+	height: auto !important;
+	padding: 1px 20px 1px 20px;
+	
+	font-size: 12pt;
+}
+
+.general p {
+	padding: 5px 0 1px 0;
+	color: #000;
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+
+
+.alignright{
+	text-align:right;
+	padding:0px 4px 0px 0px;
+}
+
+
+.table4 {
+	border-collapse: collapse;
+}
+
+
+.table4 tr {
+line-height: 20px;
+	
+	}
+
+.table4 td {
+	border: 1px solid #BCBCBC;
+	background-color: white;
+	color: #3c3bf1;
+	padding:0 3px;
+	font-weight: bold;
+}
+
+
+.table4 .hederTDplain {
+	color: #000;
+	font-size: 8pt;
+	font-weight: normal;
+	height: 18px;
+	padding: 0 3px 0 0;
+	text-align:center;
+	vertical-align: middle;
+	background-color: #f2f2f2;
+    border: 0px none;
+    text-align:right;
+}
+
+
+.table4 .lptitle {
+	color: #000;
+	font-weight: bold;
+}
+
+
+.table4 .hederTDplain {
+	color: #000;
+	font-size: 10pt;
+	font-weight: normal;
+	height: 18px;
+	padding: 0 3px 0 0;
+	text-align:center;
+	vertical-align: middle;
+	background-color: #f2f2f2;
+    border: 0px none;
+    text-align:right;
+}
+
+
+
+
+.table2 {
+	border-collapse: collapse;
+	line-height: 18px;
+}
+
+
+ .table2 input {
+	border: 0 solid #bcbcbc;
+	font-weight: bold;
+}
+
+ .z-label, .z-radio-content, .z-checkbox-content, .z-loading {
+    font-family: Arial,Sans-serif;
+    font-size: 8pt;
+    font-weight: normal;
+}
+
+ .t2data {
+	border: 1px solid #bcbcbc;
+	background-color: white;
+	color: #3c3bf1;
+	width:50%;
+	padding:0 3px 0 3px;
+	font-weight: bold;
+	font-size:12px;
+}
+
+ .t2title {
+	text-align: right;
+	color: #000;
+	font-weight: bold;
+}
+
+
+ .t2datachart {
+ 	text-align: right;
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	width:50%;
+	padding:0 3px 0 3px;
+	font-weight: bold;
+	font-size:11px;
+}
+
+ .t2titlechart {
+	text-align: center;
+	border: 1px solid black;
+	
+	color: black;
+	width:50%;
+	padding:0 3px 0 3px;
+	font-weight: bold;
+	font-size:11px;
+}
+
+
+
+
+.z-menubar-ver .z-menuseparator {
+    background-image: url("");
+    background-position: left center;
+    background-repeat: repeat-x;
+}
+
+ .z-label,  .z-radio-cnt, .z-checkbox-cnt,.z-loading {
+    font-family: arial,sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+     padding: 0 0 0 5px;
+}
+
+
+.general input[type="radio"] {
+	-moz-appearance: none;
+	margin: 0 3px 0px;
+}
+
+.general input[type="checkbox"] {
+	-moz-appearance: none;
+	margin: 2px;
+}
+
+.z-menubar-hor .z-menu, .z-menubar-hor .z-menuitem, .z-menubar-hor .z-menu-btn, .z-menubar-hor .z-menuitem-btn, .z-menubar-hor span, .z-menubar-hor a, .z-menubar-hor div, .z-menubar-ver .z-menu, .z-menubar-ver .z-menuitem, .z-menubar-ver .z-menu-btn, .z-menubar-ver .z-menuitem-btn, .z-menubar-ver span, .z-menubar-ver a, .z-menubar-ver div, .z-menu-cnt, .z-menuitem-cnt {
+    color: #7E7E7E;
+    font-family: arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.z-menubar-hor, .z-menubar-ver {
+    background: url("/latitudePanel/zkau/web/ebc322ef/zul/img/menu/menu-bg.png") repeat-x scroll 0 0 #F5F5F5;
+    border-bottom: 1px solid #D8D8D8;
+    border-top: 1px solid #D8D8D8;
+    display: block;
+    padding: 0px 0;
+    position: relative;
+}

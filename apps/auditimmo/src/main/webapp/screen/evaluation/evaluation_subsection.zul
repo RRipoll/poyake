@@ -1,0 +1,33 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:z="zul"
+	xmlns="native" 
+	>
+	
+	<div >
+		<div>
+			<z:label class="h5" id="SECTION_LABEL">Section</z:label> <z:label class="h5 col-red" id="SUB_SECTION_LABEL">Sub Section</z:label>
+		</div>
+		<div style="width:100%">
+			<table class="mt-subsection-table">
+				<tr><td>N/A</td><td colspan="3" style="background-color:lightgreen"></td><td colspan="3" style="background-color:yellow"></td><td colspan="3" style="background-color:red"></td></tr>
+				<tr><td></td><td>a</td><td>b</td><td>c</td><td>a</td><td>b</td><td>c</td><td>a</td><td>b</td><td>c</td></tr>
+				<h:tr id="TR_LEVELS" />
+			</table>
+		</div>
+		<div>
+			Photos
+			<button class="btn btn-secondary">Delete</button>
+			<button class="btn btn-secondary">Add</button>
+		</div>	
+		<div>
+			Mesurments
+			<z:textbox multiline="true" rows="5" id="TEXTBOX_MEASUREMENT" width="100%"/>
+		</div>
+		<div>
+			Observations
+			<z:textbox multiline="true" rows="5" id="TEXTBOX_OBSERVATIONS"  width="100%"/>
+		</div>
+	</div>
+</zk>

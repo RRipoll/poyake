@@ -1,0 +1,17 @@
+ENTITY pub.Event {
+	
+	PK eventid INTEGER
+    eventdefinitionid INTEGER FKTO pub.EventDefinition
+    testid INTEGER FKTO pub.Test
+    postingdate DATETIME DEFAULT 'CURRENT_TIMESTAMP'
+    startdate DATETIME DEFAULT 'CURRENT_TIMESTAMP'
+    enddate DATETIME DEFAULT '2099-01-01' 
+    automaticdescription VARCHAR(255) 
+    manualdescription VARCHAR(255) 
+    deleted INTEGER DEFAULT '0'
+    eventorder INTEGER 
+    version INTEGER DEFAULT '0'
+    id INTEGER DEFAULT '(NEXT VALUE FOR pub.SEQ_ID)'
+    parameters VARCHAR(4000)
+	 
+}

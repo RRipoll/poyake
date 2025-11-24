@@ -1,0 +1,17 @@
+TABLE ENTITY eva.EnuFolderStatus PATTERN Enumeration{
+	PK folderStatusId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, OPEN, 'Open';
+		2, INPROGRESS, 'In Progress';
+		3, CLOSED, 'Closed';
+	}
+	
+	ENULABELS{
+		OPEN {en_EN 'Open' es_ES 'Abierto'}
+		INPROGRESS {en_EN 'In Progress' es_ES 'En Progreso'}
+		CLOSED {en_EN 'Closed' es_ES 'Cerrado'}
+	}
+}

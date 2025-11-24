@@ -1,0 +1,11 @@
+TABLE ENTITY cfg.EnuConfigDataType PATTERN Enumeration {
+	PK configurationDataType INT
+	UQ shortCode VARCHAR ( 16 ) NOTNULL
+	description VARCHAR ( 32 ) NOTNULL
+	
+	METADATA {
+		1, "INT", "Integer";
+		2, "STRING", "String";
+		3, "MONEY", "BigDecimal";
+	}
+}

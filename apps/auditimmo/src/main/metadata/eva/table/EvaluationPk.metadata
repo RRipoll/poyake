@@ -1,0 +1,3 @@
+TABLE ENTITY eva.EvaluationPk{
+	PK evaluationId INT
+}

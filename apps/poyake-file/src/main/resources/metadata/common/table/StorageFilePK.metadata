@@ -1,0 +1,3 @@
+TABLE ENTITY common.StorageFilePk{
+	PK storageFileId INT
+	}

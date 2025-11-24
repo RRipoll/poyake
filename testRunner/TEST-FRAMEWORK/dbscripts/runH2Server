@@ -1,0 +1,8 @@
+ we need h2-1.4.196.jar
+java -cp h2*.jar org.h2.tools.Server
+set testdb.mv.db and h2-1.4.196.jar in the same directory
+adding to the server.xml
+<Resource auth="Container" driverClassName="org.h2.Driver" maxActive="20" maxIdle="30" maxWait="10000" name="jdbc/testrepository" password="sa" type="javax.sql.DataSource" url="jdbc:h2:~/testdb;AUTO_SERVER=TRUE;" username="sa"/>
+<Resource auth="Container" driverClassName="org.h2.Driver" maxActive="20" maxIdle="30" maxWait="10000" name="jdbc/maindb" password="sa" type="javax.sql.DataSource" url="jdbc:h2:~/testdb;AUTO_SERVER=TRUE;" username="sa"/>
+     where
+      url="jdbc:h2:<myDirectiry>/testdb; point to the directory selected.

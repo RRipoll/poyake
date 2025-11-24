@@ -1,0 +1,164 @@
+account.details.customer_number=Customer #
+mainscreen.exit_to_app=exit to app
+mainscreen.Dashboard=Dashboard
+mainscreen.Home=Home
+mainscreen.Accounts=Accounts
+mainscreen.Trips=Trips
+mainscreen.Vehicles=Vehicles
+mainscreen.Cases=Cases
+mainscreen.System_Administration=System Administration
+mainscreen.Design=Design
+mainscreen.Test=Test
+mainscreen.Find_Account=Find Account
+mainscreen.Create_Account=Create Account
+mainscreen.Find_Trip=Find Trip
+mainscreen.Find_Vehicle=Find Vehicle
+mainscreen.Find_Case=Find Case
+mainscreen.Create_Case=Create Case
+mainscreen.Find_User=Find User
+mainscreen.Create_User=Create User
+mainscreen.Promos=Promos
+mainscreen.Create_Promocion=Create Promocion
+mainscreen.Forms=Forms
+mainscreen.Form_Elements=Form Elements
+mainscreen.Profile_page=Profile page
+mainscreen.Layout=Layout
+mainscreen.Icons=Icons
+mainscreen.Typography=Typography
+mainscreen.Generate_Test_Accounts=Generate Test Accounts
+mainscreen.Generate_Test_Trips=Generate Test Trips
+mainscreen.account_number=Account #
+
+standardlistscreen.filter=Filter
+standardlistscreen.search=Search
+
+createcustomerscreen.create_customer=Create Customer
+createcustomerscreen.customer_name=Customer Name
+createcustomerscreen.Address=Address
+createcustomerscreen.phone_number=Phone Number
+createcustomerscreen.email_address=Email Address
+createcustomerscreen.payment_methods=Payment Methods
+createcustomerscreen.save=Save
+
+account.details.modify=Modify
+account.details.phone_number=Phone Number
+account.details.email=email
+account.details.add=Add
+account.details.cases=Cases
+account.details.passes=Passes
+account.details.balance=Balance
+account.details.payment_methods=Payment Methods
+account.details.close=Close
+account.details.create_case=Create Case
+account.details.make_payment=Make Payment
+account.details.overview=Overview
+account.details.transaction_history=Transaction History
+account.details.history=History
+account.details.cases=Cases
+account.details.customer_name=Customer Name
+account.details.address=Address
+account.details.vehicles=Vehicles
+account.details.invoices=Invoices
+
+login.Sign_in_to_start_your_session=Sign in to start your session
+login.Username=User name
+login.Password=Password
+login.Remember_Me=Remember Me
+login.SIGN_IN=SIGN IN
+login.Register_Now=Register Now!
+login.Forgot_Password=Forgot Password?
+
+dashboard.customer_accounts=CUSTOMER ACCOUNTS
+dashboard.customer_cases=CUSTOMER CASES
+dashboard.trips=TRIPS
+dashboard.new_visitors=NEW VISITORS
+dashboard.title=DASHBOARD
+dashboard.task_infos=TASK INFOS                                            
+dashboard.task=Task
+dashboard.status=Status
+dashboard.manager=Manager
+dashboard.progress=Progres
+dashboard.answered_tickets=ANSWERED TICKETS
+dashboard.today=TODAY
+dashboard.yesterday=YESTERDAY
+dashboard.last_week=LAST WEEK
+dashboard.last_month=LAST MONTH
+dashboard.last_year=LAST YEAR
+dashboard.all=ALL
+dashboard.tickets=TICKETS
+
+ 
+filter.filter=Filter
+filter.save=Save
+filter.orderby=Order By
+filter.select=Select
+filter.filter_name=Filter name
+filter.filter_description=Filter Description
+filter.collapse=Collapse
+filter.configure_columns=Configure Columns
+filter.configure_filter=Configure Filter
+filter.configure_seleccion=Configure "Order By selection"
+filter.reset_filter=Reset Filter
+filter.configure_detail_columns=configure detail Columns
+filter.configure_edit_columns=configure edit Columns
+
+filter.Edit= Configuration Edit Screen
+filter.detail=Configuration Detail Screen
+filter.orderby=Configuration  "Order By" results 
+filter.select=Configuration Columns Shown
+
+editscreen.add_parameters=Add Parameters (+)
+editscreen.label_name=Label Name
+editscreen.add_paramenter=Add Parameter
+editscreen.reset_parameters=Reset Parameters
+editscreen.save=Save
+editscreen.cancel=Cancel
+
+accountdetail.customer=Customer #
+
+close=Close
+save=Save
+cancel=Cancel
+new=New
+create=Create
+modify=Modify
+reset=Reset
+balance=Balance 
+passes=Passes
+pass=Pass
+cases=Cases
+case=Case
+vehicles=Vehicles
+vehicle=Vehicle
+email=Email
+emails=Emails
+phone=Phone number
+address=Address
+customer_name=Customer Name
+feedback=Feedback
+history=History
+view_list=View List
+payment=Payment
+split_payment=Split Payments
+make_payment=Make Payment
+create_case=Create Case
+customer=Customer
+from=From
+to=To
+edit=Edit
+
+
+
+accountdetail.payment_methods=Payment Methods
+
+file.attach_document=Attach Documents (+)
+standardlistscreen.list=List
+
+pagination.format=Show {0} Rows
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+TABLE ENTITY example.BookAuthor STEREOTYPES LINKTABLE {
+	PK bookAuthorId INT
+	bookId INT NOTNULL FKTO example.Book STEREOTYPES LINK , DESCRIPTION
+	authorId INT NOTNULL FKTO example.Author STEREOTYPES LINK , DESCRIPTION
+	
+	LABELS {
+		bookId {en_EN 'Book #' es_ES '# Libro'}
+		authorId {en_EN 'Author #' es_ES '# Autor'}
+	}
+}

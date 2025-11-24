@@ -1,0 +1,29 @@
+TABLE ENTITY eva.EnuEvaluationSubsection PATTERN Enumeration{
+	PK evaluationSubsectionId INT
+	evaluationSectionId INT NOTNULL FKTO eva.EnuEvaluationSection
+	shortCode VARCHAR ( 64 )
+	description VARCHAR ( 64 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		101,  MICROFISSURES, 'MICROFISSURES_STRUCTURE', 'Microfissures structure';
+		102,  MICROFISSURES, 'MICROFISSURES_CLOISSON', 'Microfissures cloissons';
+		103,  MICROFISSURES, 'MICROFISSURES_PLAFONDS', 'Microfissures plafonds';
+		201,  FISSURES, 'FISSURES_1', 'Fissure 1 à 2 mm structure';
+		202,  FISSURES, 'FISSURES_2', 'Fissure 1 à 2 mm cloisons';
+		203,  FISSURES, 'FISSURES_3', 'Fissure 1 à 2 mm plafonds';
+		301,  LEZARDES, 'FISSURES_4', 'Lézarde plus de 2 mm structure';
+		302,  LEZARDES, 'FISSURES_5', 'Lézarde plus de 2 mm cloisons';
+		303,  LEZARDES, 'FISSURES_6', 'Lézarde plus de 2 mm plafond';
+		401,  DEFORMATIONS,'DEFORMATIONS_1','Cloisons déformées ou désolidarisées';
+		402,  DEFORMATIONS,'DEFORMATIONS_2','Cloisons effondrées en partie';
+		403,  DEFORMATIONS,'DEFORMATIONS_3','Cloisons effondrées en totalité';
+		404,  DEFORMATIONS,'DEFORMATIONS_4','Murs déformés, bombés';
+		405,  DEFORMATIONS,'DEFORMATIONS_5','Murs désolidarisés aux angles du bâti';
+		406,  DEFORMATIONS,'DEFORMATIONS_6','Murs effondrés en partie';
+		407,  DEFORMATIONS,'DEFORMATIONS_7','Murs effondrés en totalité';
+		500,  POUTRES,'POUTRES_1','Carbonatation des poteaux bétons';
+		501,  POUTRES,'POUTRES_2','Carbonatation des poutres bétons';
+		502,  POUTRES,'POUTRES_3','Microfissures poteaux béton';
+		
+	}
+}

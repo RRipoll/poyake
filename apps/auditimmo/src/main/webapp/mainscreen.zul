@@ -1,0 +1,46 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+		<div id="APPHEADER" class="mt-app-header pull-right" >
+			<div class="mt-app-header-element pr-3 pt-1" width="50px" id="LOG_OUT_BUTTON">
+				<h:i class="mt-log-out-button material-icons">exit_to_app</h:i>
+			</div>
+			<div class="mt-app-header-element pr-3 pt-1" >
+				<label class="h5 font-bold col-blue" id="USER_NAME">Pepito</label>
+			</div>
+			<h:div class="mt-app-header-element font-bold h5 pr-3 pl-3 pt-1">
+						<label class="h5 font-bold col-blue">lang</label>
+						<combobox value="en_EN" width="70px" >
+							<attribute name="onSelect"><![CDATA[
+				                String localeValue = self.getSelectedItem().getValue();
+				                Locale prefer_locale = localeValue.length() > 2 ? 
+				                        new Locale(localeValue.substring(0,2),localeValue.substring(3)) : new Locale(localeValue);
+				                session.setAttribute(org.zkoss.web.Attributes.PREFERRED_LOCALE, prefer_locale);
+				                session.setAttribute("Demo_Locale", self.getSelectedIndex());
+				                execution.sendRedirect(null);
+				            ]]></attribute>
+    						<comboitem label="fr_FR" value="fr_FR" />
+    						<comboitem label="en_EN" value="en_EN" />
+    						<comboitem label="es_ES" value="es_ES"/>
+						</combobox>
+			</h:div>
+		</div>
+		<div id="MAIN_MENU" class="mt-sidebar-container">
+			<h:nav class="my-navbar-background my-navbar h-100">
+				<div class="my-navbar-header">
+					<div align="right" height="25px" style="padding-right:5px;valign:top;"><div id="COLLAPSE_BUTTON" class="z-icon-toggle-left mt-collapse-button" /></div>
+				</div>
+				<navbar id="NAVBAR" orient="vertical" collapsed="false" vflex="true" width="200px" >
+					<navitem label="${labels.mainscreen.Home}" iconSclass="z-icon-home" id="DASHBOARD" />
+					<navitem label="${labels.mainscreen.Folders}" iconSclass="z-icon-home" id="FOLDERS"/>
+					<navitem label="${labels.mainscreen.Evaluations}" iconSclass="z-icon-home" id="EVALUATIONS"/>
+					<navitem label="${labels.mainscreen.Intervenants}" iconSclass="z-icon-home" id="INTERVENANTS"/>
+					<navitem label="${labels.mainscreen.Activities}" iconSclass="z-icon-home" id="ACTIVITIES"/>
+					<navitem label="${labels.mainscreen.KnowledgeBase}" iconSclass="z-icon-home" id="KNOWLEDGEBASE"/>
+					<navitem label="${labels.mainscreen.Administration}" iconSclass="z-icon-home" id="ADMINISTRATION"/>
+					<navitem label="video" iconSclass="z-icon-home" id="VIDEO"/>
+				</navbar>
+			</h:nav>
+		</div>
+		<div class="mt-main-container" id="MAIN_AREA"/>
+</zk>

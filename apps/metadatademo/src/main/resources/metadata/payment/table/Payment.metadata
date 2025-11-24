@@ -1,0 +1,11 @@
+TABLE ENTITY payment.Payment{
+	PK paymentId INT
+	amount MONEY NOTNULL
+	paymentTypeId INT NOTNULL FKTO payment.EnuPaymentType
+	postingDate DATE  DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	ledgerInfoId INT FKTO acc.LedgerInfo
+
+	LABELS{
+		paymentTypeId { en_EN 'Type' es_ES 'Tipo'}
+	}	
+}

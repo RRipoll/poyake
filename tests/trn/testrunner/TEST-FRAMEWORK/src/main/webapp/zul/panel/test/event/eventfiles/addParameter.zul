@@ -1,0 +1,33 @@
+<?page title="Home Page" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+	<window width="90%"  closable="true" title="Create" style="overflow:auto" border="normal" maximizable="true">
+		<groupbox title="Add Parameters">
+		
+		<hlayout  >
+			<label value="Label Name" /><textbox id="newlabelname"  width="300px" />
+			<space/>
+			<label value="Type" /><combobox id="newType" />
+			<space/>
+			<checkbox label="Input"  id="ISINPUTPARAMETER"/>
+			<space/>
+			<checkbox label="Output" id="ISOUTPUTPARAMETER"/>
+			
+			<button id="ADD_PAREMETERS" label="Add Paramenter" />
+			<button id="RESET_PAREMETERS" label="Reset Parameters" />
+		</hlayout>
+		</groupbox>
+		<groupbox title="Paramenters">
+			<div  >
+				<div id="EVENT_PARAMENTER_AREA">
+				</div>
+			</div>
+		</groupbox>
+		<hbox width="100%" pack="right">
+			<space/>
+			<button id="SAVE_BUTTON" label="Save" />
+		</hbox>
+	</window>
+</zk>

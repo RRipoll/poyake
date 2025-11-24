@@ -1,0 +1,11 @@
+<?page title="Home Page" ?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	<window width="99%" closable="true" title="Test Editor Styling">
+		<combobox id="pais2" name="pais2">
+			<comboitem value="España" label="España"/>
+			<comboitem value="Portugal" label="Portugal"/>
+		</combobox>
+	</window>
+</zk>

@@ -1,0 +1,32 @@
+<?page title="Demo" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<?link rel="stylesheet" href="~./common/css/bootstrap.min.css"?>
+	<?link rel="stylesheet" href="css/adminbsb.css"?>
+	<?link rel="stylesheet" href="css/demo.css"?>
+	<?link rel="stylesheet" href="css/datagrid41.css"?>
+	<?link rel="stylesheet" href="css/mt-tabbox.css"?>
+	<?link rel="stylesheet" href="css/login.css"?>
+	
+	<?link rel="stylesheet" href="css/variables.css"?>
+	<?link rel="stylesheet" href="css/zk-custom.css"?>
+	<?link rel="stylesheet" href="css/zk-iceblue-tabs.css"?>
+	<?link rel="stylesheet" href="css/materialize.css"?>
+	<?link rel="icon" href="/img/roadrunner_icon.png"?>
+	<?link rel="stylesheet" href="css/v4.css"?>
+	<?link rel="stylesheet" type="text/css" href="~./common/jsoneditor/dist/jsoneditor.css"?>
+	<?script src="~./common/jsoneditor/dist/jsoneditor.js"?>
+	<script src="~./common/css/bootstrap.min.js"></script>
+	
+    <!--  
+    <?script src="~./common/css/filereader.js"?>
+    <?script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min.js"?>
+	-->
+	<zscript>
+    	desktopScope.put("mtlabels",new com.jsantos.gui.zkutil.Zklabel());
+	</zscript>
+
+<?meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"?>
+	
+
+	<div class="container-fluid h-100 root-div" id="ROOT_COMPONENT"  apply="com.jsantos.demo.screen.IndexController"/>
+</zk>

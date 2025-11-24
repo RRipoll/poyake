@@ -1,0 +1,13 @@
+TABLE ENTITY testrunner.EventStatus PATTERN Enumeration {
+	PK eventStatusId INT
+	shortCode 	VARCHAR ( 16 ) NOTNULL
+	description VARCHAR ( 32 ) NOTNULL STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, NEW,'None';
+		2, WAITING, 'Waiting';
+		3, PROCESSING, 'Processing';
+		4, ERROR,'Error';
+		5, DONE, 'Done';
+	}
+} 

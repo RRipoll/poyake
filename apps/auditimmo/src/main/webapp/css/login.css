@@ -1,0 +1,16 @@
+	.j-login-parent {
+		text-align: center;
+		background-color:#210d2f;
+	}
+	
+	.j-login {
+		text-align: center;
+		background-color: white;
+		width: 250px;
+		height: 200px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);		
+		padding:20px;
+	}

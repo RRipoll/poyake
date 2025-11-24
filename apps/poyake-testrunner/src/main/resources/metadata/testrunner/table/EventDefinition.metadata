@@ -1,0 +1,107 @@
+TABLE ENTITY testrunner.EventDefinition PATTERN Audited STEREOTYPES CONFIG{
+	
+	PK eventDefinitionUuid 	UUID 
+	eventTypeId 			UUID NOTNULL STEREOTYPES DESCRIPTION
+    eventName 				VARCHAR(64) NOTNULL STEREOTYPES DESCRIPTION
+    description 			VARCHAR(255) STEREOTYPES DESCRIPTION
+	eventDefinition 		EVENT 
+	created 				DATETIME NOTNULL  DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	inputUserId 			INT NOTNULL FKTO audit.InputUser DEFAULT "1" STEREOTYPES NOGUIINPUT
+	inputSourceId 			INT NOTNULL FKTO audit.InputSource DEFAULT "1" STEREOTYPES NOGUIINPUT
+        
+    METADATA{
+    	 
+    '4c035182-361c-4db9-9e96-8fee1a5300de','REST_SERVICE','Get Table by PK','Get Table by PK','[ {
+  "eventTypeId" : "REST_SERVICE",
+  "eventName" : "Get Table by PK",
+  "description" : "Get Table by PK",
+  "selected" : 1,
+  "url" : "/rest/api/mt/table/{tableName}/get/{pK}",
+  "httpMethod" : 1,
+  "parameters" : [ {
+    "label" : "pK",
+    "trParameterTypeId" : 2,
+    "value" : ""
+  }, {
+    "label" : "tableName",
+    "trParameterTypeId" : 1,
+    "value" : ""
+  } ]
+} ]',DEFAULT,DEFAULT,DEFAULT;
+'ba02d76a-3d98-467b-a2e5-09a784893c58','REST_SERVICE','put Table','put Table','[ {
+  "eventTypeId" : "REST_SERVICE",
+  "eventName" : "put Table",
+  "description" : "put Table",
+  "selected" : 1,
+  "url" : "/rest/api/mt/table/{tableName}/put/{pK}",
+  "httpMethod" : 2,
+  "parameters" : [ {
+    "label" : "pK",
+    "trParameterTypeId" : 2,
+    "value" : ""
+  }, {
+    "label" : "tableName",
+    "trParameterTypeId" : 1,
+    "value" : ""
+  } ]
+} ]',DEFAULT,DEFAULT,DEFAULT;
+'1fff2521-8a4d-43cd-a4aa-bc0af122ea46','REST_SERVICE','Delete Table','Delete Table','[ {
+  "eventTypeId" : "REST_SERVICE",
+  "eventName" : "Delete Table",
+  "description" : "Delete Table",
+  "selected" : 1,
+  "url" : "/rest/api/table/{tableName}/delete/{pK}",
+  "httpMethod" : 4,
+  "parameters" : [ {
+    "label" : "pK",
+    "trParameterTypeId" : 2,
+    "value" : ""
+  }, {
+    "label" : "tableName",
+    "trParameterTypeId" : 1,
+    "value" : ""
+  } ]
+} ]',DEFAULT,DEFAULT,DEFAULT;
+'346f9ee3-610d-4e59-9f15-b4e24d5950b4','REST_SERVICE','Create Table','Create Table','[ {
+  "eventTypeId" : "REST_SERVICE",
+  "eventName" : "Create Table",
+  "description" : "Create Table",
+  "selected" : 1,
+  "url" : "/rest/api/table/{tableName}/insert",
+  "httpMethod" : 3,
+  "parameters" : [ {
+    "label" : "tableName",
+    "trParameterTypeId" : 1,
+    "value" : ""
+  } ]
+} ]',DEFAULT,DEFAULT,DEFAULT;
+'ed26e7e8-4a25-4d21-a429-d67ff3f65f76','REST_SERVICE','Search Table','Search Table','[ {
+  "eventTypeId" : "REST_SERVICE",
+  "eventName" : "Search Table",
+  "description" : "Search Table",
+  "selected" : 1,
+  "url" : "/rest/api/search/table/{tableName}?page={page}&size={size}&orderBy={orderBy}",
+  "httpMethod" : 3,
+  "parameters" : [ {
+    "label" : "tableName",
+    "trParameterTypeId" : 1,
+    "value" : ""
+  }, {
+    "label" : "page",
+    "trParameterTypeId" : 2,
+    "value" : "0"
+  }, {
+    "label" : "size",
+    "trParameterTypeId" : 2,
+    "value" : "15"
+  }, {
+    "label" : "orderBy",
+    "trParameterTypeId" : 1,
+    "value" : ""
+  } ],
+  "json" : "{\\"and\\":[{\\"parameters\\":[{\\"fieldName\\":\\"bookid\\",\\"operator\\":\\"EQUAL\\",\\"values\\":[1]}]}]}"
+} ]',DEFAULT,DEFAULT,DEFAULT;
+    	 
+ 	}
+
+}

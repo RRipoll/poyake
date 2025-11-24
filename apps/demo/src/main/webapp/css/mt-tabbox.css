@@ -1,0 +1,20 @@
+.mt-tabbox{
+	height:40px;
+}
+
+.mt-tab{
+	margin-left:10px;
+	cursor:pointer;
+}
+
+.mt-tab-content-panel{
+	position:absolute;
+	top:40px;
+	left:0px;
+	bottom:0px;
+	right:0px;
+}
+
+.mt-tab:hover >a>span{
+	color:black
+}

@@ -1,0 +1,5 @@
+VIEW ENTITY testrunner.TrParameter {
+	label 				UUID NOTNULL STEREOTYPES DESCRIPTION
+	trParameterTypeId 	INT NOTNULL FKTO config.AppDataType
+    value 				VARCHAR(MAX)	
+}

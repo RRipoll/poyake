@@ -1,0 +1,56 @@
+<?page title="Home Page" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+	<window width="90%"  closable="true" title="Create" style="overflow:auto" border="normal" maximizable="true">
+		<groupbox title="Event general information">
+			<div id="FIELD_LIST" />
+			<vlayout>
+			
+			<!--	
+				<zscript><![CDATA[
+					import java.util.*;
+					import java.text.*;
+            		void getToday(){ postingdate.setValue(new Date((new SimpleDateFormat("dd-MMM-yyyy")).format(new Date())));};
+            
+            
+            ]]></zscript>
+				-->
+				<h:table style="width:100%">
+					<h:tr>
+						
+						<h:td>
+							<label value="Event Folder" /></h:td><h:td><combobox id="folderevent" width="50%" readonly="true"/>
+							<button id="createFolderEvent" label="New"/>
+						</h:td>
+
+					</h:tr>
+					<h:tr>
+					
+						<h:td>
+							<label value="Event Type" /></h:td><h:td><combobox id="eventtype" info="@MT(field=EVENT.EVENTDEFINITIONID)" width="50%" disabled="true" readonly="true"/>
+							<button id="createEventType" disabled="true" label="New Event Type"/><space/><space/><button id="editEventType" disabled="true" label="Edit Event Type Definition" visible="false"/>
+					
+						</h:td>
+					</h:tr>
+					<h:tr>
+					<!--	
+						<h:td>	<label value="Posting Date" /></h:td><h:td><datebox id="postingdate"  info="@MT(field=EVENT.POSTINGDATE)" width="200px" cols="18" format="yyyy/MM/dd HH:mm:ss" /></h:td>
+					-->	
+					</h:tr>
+					
+					<h:tr>
+						<h:td><label value="Description" /></h:td><h:td><textbox multiline="true" width="500px" height="100px" info="@MT(field=EVENT.MANUALDESCRIPTION)"/></h:td>
+					</h:tr>
+				</h:table>
+			</vlayout>
+		</groupbox>
+		<div id="EVENT_FILES_AREA" />
+			<div id="EVENT_DATA_AREA" />
+		<hbox width="100%" pack="right">
+			<space/>
+			<button id="SAVE_BUTTON" label="Save" />
+		</hbox>
+	</window>
+</zk>

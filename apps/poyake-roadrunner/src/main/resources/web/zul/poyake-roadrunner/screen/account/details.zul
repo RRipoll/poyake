@@ -1,0 +1,127 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	<window width="90%" height="90%" style="padding:0px" >
+	    <h:div class="card h-100 v-100">
+	    	<h:div class="header bg-light-green">
+	    		<label class="h4">${mtlabels.account_details_customer_number}</label><label class="h4" id="CUSTOMER_NUMBER_LABEL">XXX</label>
+	    	</h:div>
+	    	<h:div class="card h-100" style="margin-bottom:0px;background-color:var(--j-window-background)" >
+			    <h:div height="50px" style="background-color:white;border-bottom:1px solid #eeeeee">
+			    	<div class="row"  style="margin:auto;width:300px;margin-top:10px">
+			    		<div class="col" >
+				    		<h:i class="material-icons col-blue">feedback</h:i>
+			    			<a id="CREATE_CASE" class="col-blue font-bold">${mtlabels.account_details_create_case}</a>
+			    		</div>
+			    		<div class="col" >
+				    		<h:i class="material-icons col-blue">payment</h:i>
+			    			<a id="ADD_PAYMENT" class="col-blue font-bold">${mtlabels.account_details_make_payment}</a>
+			    		</div>
+			    	</div>
+			    </h:div>
+			    <h:div class="body h-100" style="padding:0px;background-color:white;position:relative" >
+				        <mt-tabs id="tabs" class="nav nav-tabs tab-nav-right mt-tabbox">
+				            <mt-tab contentPanelId="DIV_CUSTOMER" label="${mtlabels.account_details_overview}" style="font-size:20px;margin-left:10px"></mt-tab>
+				            <mt-tab contentPanelId="DIV_THISTORY" label="${mtlabels.account_details_transaction_history}" style="font-size:20px;margin-left:10px"></mt-tab>
+				            <mt-tab contentPanelId="DIV_CHISTORY" label="${mtlabels.account_details_history}" style="font-size:20px;margin-left:10px"></mt-tab>
+				            <mt-tab contentPanelId="DIV_CASES" label="${mtlabels.account_details_cases}" style="font-size:20px;margin-left:10px"></mt-tab>
+				        </mt-tabs>		
+				        	<div id="DIV_CUSTOMER" class="h-100">
+								<h:div class="container-fluid w-100 h-100" style="padding:5px;padding-top:20px;background-color:var(--j-window-background)">
+									<h:div class="row h-100">
+										<h:div class="col-3 h-100">
+											<h:div class="card" >
+												<h:div class="header detail-header">${mtlabels.account_details_customer_name}</h:div>
+												<div class="body detail-body">
+													<label id="FIRST_NAME" /> <label id="LAST_NAME"/>
+												</div>
+											</h:div>
+											<h:div class="card" >
+												<h:div class="header detail-header" hflex="true">${mtlabels.account_details_address}</h:div>
+												<h:div class="body detail-body">
+													<label id="ADDRESS_LINE1"/>
+													<label id="ADDRESS_LINE2"/>
+													<hbox hflex="true"><label id="ADDRESS_CITY" /> <label id="ADDRESS_STATE" /></hbox>
+													<label id="ADDRESS_CP" />
+													<div style="position:absolute;right:20px;"><a id="MODIFY_ADDRESS">${mtlabels.account_details_modify}</a></div>
+												</h:div>
+											</h:div>
+											<h:div class="card" >
+												<div sclass="header detail-header">${mtlabels.account_details_phone_number}</div>
+												<h:div class="body detail-body">
+													<label id="PHONE_NUMBER_TYPE"/>
+													<label id="PHONE_NUMBER"/>
+													<label id="PHONE_NUMBER_EXTENSION"/>
+													<div style="position:absolute;right:20px;"><a id="MODIFY_PHONE_NUMBER">${mtlabels.account_details_modify}</a></div>
+												</h:div>
+											</h:div>
+											<h:div class="card" >
+												<div sclass="header detail-header">${mtlabels.account_details_email}</div>
+												<h:div class="body detail-body">
+													<label id="EMAIL_ADDRESS"/>
+													<div style="position:absolute;right:20px;"><a id="MODIFY_EMAIL_ADDRESS">${mtlabels.account_details_modify}</a></div>
+												</h:div>
+											</h:div>
+									    </h:div>
+										<h:div class="col-6 h-100 pl-0 pr-0">
+											<h:div class="card " >
+												<div sclass="header detail-header"><h:table width="100%"><h:tr><h:td>${mtlabels.account_details_vehicles}</h:td><h:td align="right"><a id="ADD_VEHICLE">${mtlabels.account_details_add}</a></h:td></h:tr></h:table></div>
+												<div id="VEHICLE_LIST" />
+											</h:div>
+											<h:div class="card" >
+												<div sclass="header detail-header">${mtlabels.account_details_cases}</div>
+												<div id="CASE_LIST" />
+											</h:div>
+											<h:div class="card" >
+												<div sclass="header detail-header">${mtlabels.account_details_passes}</div>
+											</h:div>
+									    </h:div>
+										<h:div class="col-3 h-100">
+											<h:div class="card" >
+												<div sclass="header detail-header">${mtlabels.account_details_balance}</div>
+												<h:div class="body detail-body ">
+													<label id="BALANCE" style="float:right"/>
+												</h:div>
+											</h:div>
+											<h:div class="card" >
+												<div sclass="header detail-header">${mtlabels.account_details_payment_methods}</div>
+												<div id="PAYMENT_METHOD_LIST" />
+											</h:div>
+											<h:div class="card " >
+												<div sclass="header detail-header"><h:table width="100%"><h:tr><h:td>${mtlabels.account_details_invoices}</h:td></h:tr></h:table></div>
+												<div id="INVOICE_LIST" />
+											</h:div>
+									    </h:div>
+									</h:div>									    
+								</h:div>
+							</div>
+							<div id="DIV_THISTORY" visible="false" class="mt-tab-content-panel">
+								<h:div class="container-fluid w-100 h-100" style="padding:5px;padding-top:20px;background-color:var(--j-window-background)">
+									<h:div class="card h-100" >
+										<div id="TRANSACTION_HISTORY_GRID" />
+									</h:div>
+								</h:div>
+							</div>
+							<div id="DIV_CHISTORY" visible="false" class="mt-tab-content-panel">
+								<h:div class="container-fluid w-100 h-100" style="padding:5px;padding-top:20px;background-color:var(--j-window-background)">
+									<h:div class="card h-100" >
+										<div id="HISTORY_GRID" />
+									</h:div>
+								</h:div>
+							</div>
+							<div id="DIV_CASES" visible="false" class="mt-tab-content-panel">
+								<h:div class="container-fluid w-100 h-100" style="padding:5px;padding-top:20px;background-color:var(--j-window-background)">
+									<h:div class="card h-100" >
+										<div id="CASES_GRID" />
+									</h:div>
+								</h:div>
+							</div>
+				</h:div>
+			</h:div>
+			<button id="DETAILS_BUTTON_CLOSE" class="btn bg-orange ml-2 waves-effect" style="position:absolute;top:10px;right:10px">${mtlabels.account_details_close}</button>
+		</h:div>
+	</window>
+</zk>
+
+
+

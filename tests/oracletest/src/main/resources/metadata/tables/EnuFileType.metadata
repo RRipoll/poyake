@@ -1,0 +1,19 @@
+TABLE ENTITY EnuFileType {
+	PK fileTypeId INT
+	UQ shortCode VARCHAR(16)
+	description VARCHAR(32)
+
+	METADATA {
+		1, 'WEBFILE', 'A File From The web';
+		2, 'FILESYSTEM', 'A File from local computer';
+	}
+	
+	LABELS {
+		shortCode {
+			SHORTLABEL es_ES 'Identificador'
+			SHORTLABEL en_EN 'Short Code'
+		}
+	}
+	
+	
+}

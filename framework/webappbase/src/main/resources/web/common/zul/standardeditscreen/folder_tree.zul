@@ -1,0 +1,52 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:z="zul">
+
+	<z:window border="0" closable="true" position="center,center" sizable="true" >
+		<style>
+			.h-inline-block {
+			display: inline-block;
+			_display: inline;
+			}
+		</style>
+		<h:section class="content" style="margin:0px;min-width:400px">
+			<div class="card" style="margin-bottom:0px" >
+				<div class="header bg-light-green">
+					<label id="HEADER_LABEL" class="h5"></label>
+					<div id="DROPDOWN_MENU" style="float:right;width:33px;text-align:right">
+						<h:i class="material-icons mt-dropdown-menu">more_vert</h:i>
+						<popup id="DROPDOWN_MENU_POPUP">
+							<div  id="CONF_EDITABLE">
+								<label class="dropdown-item" style="cursor:pointer" id="CONF_FOLDER_BUTTON" >${mtlabels.filter_configure_folder_json}</label>
+								<label class="dropdown-item" style="cursor:pointer" id="CONF_ITEM_BUTTON" >${mtlabels.filter_configure_item_json}</label>
+							</div>
+							<div id="PERMISSIONS" visible="false">
+								<label class="dropdown-item" style="cursor:pointer" id="PERMISSIONS_BUTTON" >${mtlabels.filter_configure_permissions} </label>
+							</div>
+							<div id="LABELS" visible="false">
+								<label class="dropdown-item" style="cursor:pointer" id="LABELS_BUTTON" >${mtlabels.filter_configure_labels} </label>
+							</div>
+							<div id="METADATA" visible="false">
+							<label class="dropdown-item"  style="cursor:pointer" id="METADATA_BUTTON" >${mtlabels.filter_configure_metadata} </label>
+						</div>
+						</popup>
+					</div>
+					<div class="float-right bg-light-green" id="HEADER_DIV">
+						
+					
+					</div>
+				</div>
+				<div class="body h-100 v-100" >
+					<tree id="tree" >
+						<treecols>
+							<treecol label="Folder Tree" />		
+						</treecols>
+					</tree>
+					<div id="EXTRA_DIV" style="position:relative;flex-direction: inherit !important;" />
+					<div id="BUTTON_DIV" />
+				</div>
+			</div>
+		</h:section>
+	</z:window>
+</zk>

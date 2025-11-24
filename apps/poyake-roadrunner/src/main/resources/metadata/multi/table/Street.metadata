@@ -1,0 +1,11 @@
+TABLE ENTITY multi.Street {
+	PK streetId INT
+	address VARCHAR(255) NOTNULL STEREOTYPES DESCRIPTION
+	
+
+	METADATA{
+		1,"Antonio Concha";
+		2,"Severiano";
+		3,"Alcala";
+	}
+}

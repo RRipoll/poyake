@@ -1,0 +1,27 @@
+TABLE ENTITY cs.CSCase PATTERN AutoHistory{
+	csCaseId INT NOTNULL FKTO cs.CSCasePK STEREOTYPES AUTOHISTORYMAINFK,DESCRIPTION
+	subject VARCHAR(1024) NOTNULL STEREOTYPES DESCRIPTION 
+	caseTypeId INT NOTNULL FKTO cs.EnuCaseType DEFAULT "1"
+	caseStatusId INT NOTNULL FKTO cs.EnuCaseStatus DEFAULT "0"
+	casePriorityId INT NOTNULL FKTO cs.EnuCasePriority DEFAULT "1"
+	manualReviewRequired BIT NOTNULL DEFAULT "1"
+	expectedStatusTransitionDate DATE
+	documentation FILE_GROUP FKTO common.FileGroup
+	
+	//autohistory fields
+	PK revisionId INT STEREOTYPES NOGUIINPUT
+	startDate DATETIME NOTNULL DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	endDate DATETIME NOTNULL DEFAULT MAXDATE STEREOTYPES NOGUIINPUT
+	inputUserId INT NOTNULL FKTO audit.InputUser DEFAULT "1" STEREOTYPES NOGUIINPUT
+	inputSourceId INT NOTNULL FKTO audit.InputSource DEFAULT "1" STEREOTYPES NOGUIINPUT
+	
+	LABELS{
+		ENTITY {SHORTLABEL en_EN 'Case' es_ES 'Caso'}
+		csCaseId {SHORTLABEL en_EN 'Case #' es_ES '# Caso'}
+		subject{SHORTLABEL en_EN 'Subject' es_ES 'Asunto'}
+		caseTypeId {SHORTLABEL en_EN 'Case Type' es_ES 'Tipo'}
+		caseStatusId {SHORTLABEL en_EN 'Status' es_ES 'Estatus'}
+		casePriorityId {SHORTLABEL en_EN 'Priority' es_ES 'Prioridad'}
+		manualReviewRequired {SHORTLABEL en_EN 'Needs manual review' es_ES 'Necesita revisi??n'}
+	}
+}

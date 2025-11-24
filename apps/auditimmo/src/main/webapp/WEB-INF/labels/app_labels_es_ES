@@ -1,0 +1,14 @@
+mainscreen.Home=Home
+mainscreen.Folders=Carpetas
+mainscreen.Evaluations=Evaluaciones
+mainscreen.Intervenants=Intervinientes
+mainscreen.Activities=Actividades
+mainscreen.KnowledgeBase=Base de conocimiento
+mainscreen.Administration=Administracion
+login.Sign_in_to_start_your_session=Haz login para comenzar
+login.Username=Nombre de Usuario
+login.Password=Clave
+login.Remember_Me=Recuerdame
+login.SIGN_IN=Entrar
+login.Register_Now=Registrarse
+login.Forgot_Password=Olvidaste tu clave?

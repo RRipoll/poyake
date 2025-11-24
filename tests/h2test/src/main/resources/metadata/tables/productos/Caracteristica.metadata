@@ -1,0 +1,15 @@
+TABLE ENTITY Caracteristica PATTERN auditada
+{
+	PK caracteristicaId INT
+	nombre VARCHAR (256) NOTNULL
+	descripcion VARCHAR (256) NOTNULL
+	creado DATETIME
+	editado DATETIME
+	borrado DATETIME
+	
+	METADATA{
+		1, "Caracteristica 1", "Descripcion de caracteristica 1", '2001-01-01', '2001-01-01', '2001-01-01'; 
+		2, "Caracteristica 2", "Descripcion de caracteristica 2", '2001-01-01', '2001-01-01', '2001-01-01'; 
+	}
+	
+}

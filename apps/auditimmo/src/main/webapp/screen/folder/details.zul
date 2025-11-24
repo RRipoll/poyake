@@ -1,0 +1,189 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	<window width="90%" style="padding:0px" >
+	    <h:div class="card h-100 v-100">
+	    	<h:div class="header">
+	    		<h:span class="h4">Folder #</h:span>
+	    		<div class="pull-right">
+					<button id="BUTTON_CREATE_LINK" class="btn btn-primary ml-2 waves-effect" >Create Link</button>
+					<button id="BUTTON_CREATE_EVALUATION" class="btn btn-primary ml-2 waves-effect" >Create Evaluation</button>
+					<button id="BUTTON_CREATE_SERVICE" class="btn btn-primary ml-2 waves-effect" >Service</button>
+					<button id="BUTTON_CREATE_APPOINTMENT" class="btn btn-primary ml-2 waves-effect" >Appointment</button>
+					<button id="BUTTON_CREATE_NOTE" class="btn btn-primary ml-2 waves-effect" >Note</button>
+					<button id="BUTTON_CREATE_MESSAGE" class="btn btn-primary ml-2 waves-effect" >Message</button>
+					<button id="DETAILS_BUTTON_CLOSE" class="btn btn-danger ml-2 waves-effect" >Close</button>
+
+	    		</div>
+	    	</h:div>
+	    	<h:div class="card h-100" style="margin-bottom:0px;background-color:var(--j-window-background)" >
+			    <h:div class="body h-100" style="padding:0px;background-color:white;position:relative" >
+				        <mt-tabs id="tabs" class="nav nav-tabs tab-nav-right mt-tabbox">
+				            <mt-tab contentPanelId="DIV_CUSTOMER" label="${folder.details.Overview}" style="font-size:20px;margin-left:10px"></mt-tab>
+				            <mt-tab contentPanelId="DIV_CHISTORY" label="${folder.details.History}" style="font-size:20px;margin-left:10px"></mt-tab>
+				        </mt-tabs>		
+				        	<div id="DIV_CUSTOMER" class="h-100">
+								<h:div class="container-fluid w-100 h-100" style="padding:5px;padding-top:20px;background-color:var(--j-window-background)">
+									<h:div class="row h-100">
+										<h:div class="col-4 h-100">
+											<h:div class="card" >
+												<h:div class="header detail-header">Folder Details</h:div>
+												<h:div class="body detail-body">
+													<div class="row">
+														<h:div class="col"><mt-fieldlabel field="FOLDER.FOLDERSTATUSID" /></h:div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="FOLDER.FOLDERID" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="FOLDER.CREATED" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col">Created By</div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="FOLDER.STARTDATE" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="FOLDER.INPUTUSERID" /></div>
+														<div class="col">value</div>
+													</div>
+												</h:div>
+											</h:div>
+											<h:div class="card" >
+												<div sclass="header detail-header">Third Party Service Providers</div>
+												<h:div class="body detail-body">
+												</h:div>
+											</h:div>
+									    </h:div>
+										<h:div class="col-4 h-100 pl-0 pr-0">
+											<h:div class="card " >
+												<div sclass="header detail-header">Latest Evaluation<div style="float:right"><a id="ADD_VEHICLE">Details</a></div></div>
+												<div id="VEHICLE_LIST" />
+											</h:div>
+											<h:div class="card" >
+												<div sclass="header detail-header">Link to Other Folder</div>
+											</h:div>
+									    </h:div>
+										<h:div class="col-4 h-100">
+											<h:div class="card" >
+												<div sclass="header detail-header">Applicant</div>
+												<h:div class="body detail-body">
+													<div class="row">
+														<h:div class="col"><mt-fieldlabel field="CONTACT.LASTNAME" /></h:div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="CONTACT.FIRSTNAME" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="CONTACT.COMPANYNAME" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col">Category</div>
+														<div class="col">value</div>
+													</div>
+												</h:div>
+											</h:div>
+											<h:div class="card" >
+												<div sclass="header detail-header">Evaluator</div>
+												<h:div class="body detail-body">
+													<div class="row">
+														<h:div class="col"><mt-fieldlabel field="CONTACT.LASTNAME" /></h:div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="CONTACT.FIRSTNAME" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="CONTACT.COMPANYNAME" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col">Category</div>
+														<div class="col">value</div>
+													</div>
+												</h:div>
+											</h:div>
+											<h:div class="card" >
+												<div sclass="header detail-header">Building<div style="float:right"><a id="MODIFY_BUILDING">Modify</a></div></div>
+												<h:div class="body detail-body">
+													<div class="row">
+														<h:div class="col">Address</h:div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.BUILDINGTYPEID" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col">Geolocalization</div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col">Cadastre /Parcel Lots</div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.BUILDINGS" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.PARCELSURFACE" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.BUILDINGSURFACE" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.CONSTRUCTIONDATE" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.FLOORS" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.APPARTMENTS" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.LOTS" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.ACCESSINFO" /></div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.DESCRIPTION" /></div>
+														<div class="col">value</div>
+													</div>
+												</h:div>
+												
+											</h:div>
+									    </h:div>
+									</h:div>									    
+								</h:div>
+							</div>
+							<div id="DIV_CHISTORY" visible="false" class="mt-tab-content-panel">
+								<h:div class="container-fluid w-100 h-100" style="padding:5px;padding-top:20px;background-color:var(--j-window-background)">
+									<h:div class="card h-100" style="padding:10px">
+										<div id="HISTORY_GRID" />
+									</h:div>
+								</h:div>
+							</div>
+				</h:div>
+			</h:div>
+		</h:div>
+	</window>
+</zk>

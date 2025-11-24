@@ -1,0 +1,6 @@
+VIEW ENTITY testrunner.CheckParameterItem {
+	valueName				VARCHAR(256) NOTNULL
+	operator 				INT NOTNULL FKTO testrunner.Operator
+	checkValueTypeId 		INT  FKTO config.AppDataType
+    checkValue 				VARCHAR(256)  
+}

@@ -1,0 +1,10 @@
+TABLE ENTITY GrupoAgente PATTERN auditada
+{
+	PK grupoAtenteId INT
+	tipo INT FKTO TipoGrupoAgente
+	nombre VARCHAR (256) NOTNULL
+	 
+	creado DATETIME
+	editado DATETIME
+	borrado DATETIME
+}

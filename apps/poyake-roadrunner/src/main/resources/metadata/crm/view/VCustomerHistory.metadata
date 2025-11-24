@@ -1,0 +1,295 @@
+FROMSQLFILE '/poyake-roadrunner/src/main/resources/metadata/crm/view/VCustomerHistory.sql'
+
+VIEW  ENTITY crm.VCustomerHistory {
+	startDate DATETIME 
+	objectType VARCHAR(64)
+	action VARCHAR(64)
+	inputUserId INT FKTO audit.InputUser
+	id INT
+	revisionId INT 
+	prevRevisionId INT
+	mtTable VARCHAR(64)
+	PK customerId INT
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: crm.VCustomerHistory  
+VIEW NAME: VCustomerHistory 
+VIEW SCHEMA: crm
+
+Tables:
+	TABLE: crm.HPhoneNumber Alias: thisRecord
+	TABLE: crm.HPhoneNumber Alias: prevRecord
+	TABLE: crm.HPhoneNumber Alias: nextRecord
+Output:
+	COLUMN: startDate -> crm.HPhoneNumber.startDate
+	EXPRESSION: objectType -> 'Phone Number'
+	EXPRESSION: Action -> casewhenprevRecord.revisionIdisnullthen'Created'whennextRecord.revisionIdisnullandthisRecord.endDate<getDate()then'Deleted'else'Modified'end
+	COLUMN: inputUserId -> crm.HPhoneNumber.inputUserId
+	COLUMN: id -> crm.HPhoneNumber.phoneNumberId
+	COLUMN: revisionId -> crm.HPhoneNumber.revisionId
+	COLUMN: prevRevisionId -> crm.HPhoneNumber.revisionId
+	EXPRESSION: mtTable -> 'HPHONENUMBER'
+
+
+================= Resolver Information ======================== 
+Entity List:
+	audit.InputSource ,audit.InputUser ,crm.CustomerPk ,crm.CustomerSuplementaryContact ,crm.PersonOrCompanyPk ,crm.EnuContactType ,crm.EmailAddressPk ,crm.EnuCountry ,crm.EnuCustomerType ,crm.EnuPhoneNumberType ,crm.EnuStateProvince ,crm.HCustomer ,crm.PostalAddressPk ,crm.HEmailAddress ,crm.HPersonOrCompany ,crm.PhoneNumberPK ,crm.HPhoneNumber ,crm.HPostalAddress ,VCustomerSearch ,cs.CSCase ,cs.CSCasePK ,cs.EnuCaseType ,CustomerTicketColumns:
+	SOLVED startDate -> crm.HPhoneNumber.startDate
+	EXPRESSION objectType -> 
+	EXPRESSION Action -> 
+	SOLVED inputUserId -> crm.HPhoneNumber.inputUserId
+	SOLVED id -> crm.HPhoneNumber.phoneNumberId
+	SOLVED revisionId -> crm.HPhoneNumber.revisionId
+	SOLVED prevRevisionId -> crm.HPhoneNumber.revisionId
+	EXPRESSION mtTable -> 
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id crm
+              .
+              id 
+                simple_id VCustomerHistory
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id thisRecord
+                        .
+                        id 
+                          simple_id startDate
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          primitive_expression 
+                            constant 'Phone Number'
+                        as_column_alias as
+                          column_alias 
+                            id 
+                              simple_id objectType
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          case_expression case
+                            switch_search_condition_section when
+                              search_condition 
+                                search_condition_and 
+                                  search_condition_not 
+                                    predicate 
+                                      expression 
+                                        full_column_name 
+                                          table_name 
+                                            id 
+                                              simple_id prevRecord
+                                          .
+                                          id 
+                                            simple_id revisionId
+                                      is
+                                      null_notnull null
+                              then
+                              expression 
+                                primitive_expression 
+                                  constant 'Created'
+                            switch_search_condition_section when
+                              search_condition 
+                                search_condition_and 
+                                  search_condition_not 
+                                    predicate 
+                                      expression 
+                                        full_column_name 
+                                          table_name 
+                                            id 
+                                              simple_id nextRecord
+                                          .
+                                          id 
+                                            simple_id revisionId
+                                      is
+                                      null_notnull null
+                                  and
+                                  search_condition_not 
+                                    predicate 
+                                      expression 
+                                        full_column_name 
+                                          table_name 
+                                            id 
+                                              simple_id thisRecord
+                                          .
+                                          id 
+                                            simple_id endDate
+                                      comparison_operator <
+                                      expression 
+                                        function_call getDate()
+                              then
+                              expression 
+                                primitive_expression 
+                                  constant 'Deleted'
+                            else
+                            expression 
+                              primitive_expression 
+                                constant 'Modified'
+                            end
+                        as_column_alias as
+                          column_alias 
+                            id 
+                              simple_id Action
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id thisRecord
+                        .
+                        id 
+                          simple_id inputUserId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id thisRecord
+                        .
+                        id 
+                          simple_id phoneNumberId
+                        as_column_alias as
+                          column_alias 
+                            id 
+                              simple_id id
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id thisRecord
+                        .
+                        id 
+                          simple_id revisionId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id prevRecord
+                        .
+                        id 
+                          simple_id revisionId
+                        as_column_alias as
+                          column_alias 
+                            id 
+                              simple_id prevRevisionId
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          primitive_expression 
+                            constant 'HPHONENUMBER'
+                        as_column_alias 
+                          column_alias 
+                            id 
+                              simple_id mtTable
+                  FROM
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id crm
+                              .
+                              id 
+                                simple_id HPhoneNumber
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id thisRecord
+                        join_part leftjoin
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id HPhoneNumber
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id prevRecord
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id prevRecord
+                                      .
+                                      id 
+                                        simple_id endDate
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id thisRecord
+                                      .
+                                      id 
+                                        simple_id startDate
+                        join_part leftjoin
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id HPhoneNumber
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id nextRecord
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id nextRecord
+                                      .
+                                      id 
+                                        simple_id startDate
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id thisRecord
+                                      .
+                                      id 
+                                        simple_id endDate
+  <EOF>*/

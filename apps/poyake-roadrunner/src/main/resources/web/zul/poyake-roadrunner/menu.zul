@@ -1,0 +1,117 @@
+<?page title="Demo" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+	<zscript>
+    	desktopScope.put("mtlabels",new com.jsantos.gui.zkutil.Zklabel());
+	</zscript>
+ 		    
+        	
+        	
+        	
+        	<h:li class="nav-item ">
+           		<a class="nav-link " id="ROADDASHBOARD" iconSclass="z-icon-home"   >
+           		 ${mtlabels.mainscreen_Control_panel}</a>
+        	</h:li>
+        	<h:li class="nav-item ">
+           		<a class="nav-link " id="FIND_ACCOUNTCRUD" iconSclass="z-icon-address-card" >
+           		 ${mtlabels.mainscreen_Accounts}</a>
+        	</h:li>
+         	<h:li class="nav-item ">
+           		<a class="nav-link " id="FIND_CASE" iconSclass="z-icon-comment-dots">
+           		${mtlabels.mainscreen_Cases} </a>
+        	</h:li>
+         	<h:li class="nav-item ">
+           		<a class="nav-link " id="FIND_VEHICLE" iconSclass="z-icon-ambulance" >
+           		 ${mtlabels.mainscreen_Vehicles}</a>
+        	</h:li>
+         	<h:li class="nav-item ">
+           		<a class="nav-link " id="FIND_TRIP"   iconSclass="z-icon-project-diagram">
+           		  ${mtlabels.mainscreen_Trips}</a>
+        	</h:li>
+          	<h:li class="nav-item " visible="false">
+           		<a class="nav-link " id="SEARCH_PROMO" iconSclass="z-icon-money-bill" >
+           		 ${mtlabels.mainscreen_Promos}</a>
+        	</h:li>
+        	
+        	
+        	<h:li class="nav-item " visible="false" >
+           		<a class="nav-link " id="SEARCH_PP" iconSclass="z-icon-bug" >
+           		 Problematic Plates</a>
+        	</h:li>
+         	
+         	  
+        	<h:li class="nav-item dropdown" visible="false">
+        		  
+        		<custom-attributes permissionId="ADMIN_MENU"/>
+				<custom-attributes permissionValueId="1"/>
+           		
+           		
+           		<h:a class="nav-link dropdown-toggle" id="roaddropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" iconSclass="z-icon-wrench" >
+           		${mtlabels.mainscreen_examples}</h:a>
+           		<n:ul class="dropdown-menu" aria-labelledby="roaddropdown1">
+               		<n:div class="dropdown-divider"></n:div>
+               		<a class="dropdown-item"  id="FIND_ACCOUNT" 	iconSclass="z-icon-user">${mtlabels.mainscreen_Find_Account}</a>
+            		<a class="dropdown-item"  id="CREATE_ACCOUNT" 	iconSclass="z-icon-user">${mtlabels.mainscreen_Create_Account}</a>
+            		<a class="dropdown-item"  id="MULTIUSERGROUP" visible="false"	iconSclass="z-icon-user">${mtlabels.mainscreen_multigroup}</a>
+            		<a class="dropdown-item"  id="MULTIUSERGROUP2" visible="false"	iconSclass="z-icon-user">${mtlabels.mainscreen_multigroup2}</a>
+            		<a class="dropdown-item"  id="MULTIOBJECT" visible="false"	iconSclass="z-icon-user">${mtlabels.mainscreen_multiObject}</a>
+            		<a class="dropdown-item"  id="CREATE_CASE" 	iconSclass="z-icon-user">${mtlabels.mainscreen_Create_Case}</a>
+            		<a class="dropdown-item"  id="CREATE_PROMO" 	iconSclass="z-icon-user">${mtlabels.mainscreen_Create_Promocion}</a>
+           			<a class="dropdown-item"  id="CREATE_PP" 	iconSclass="z-icon-user">Add Problematic Plate</a>
+           			<a class="dropdown-item"  id="ROLLINK" visible="false"	iconSclass="z-icon-user">${mtlabels.mainscreen_Permissions_Rol}</a>
+           			<a class="dropdown-item"  id="USER" 	visible="false" iconSclass="z-icon-user">${mtlabels.mainscreen_User}</a>
+           			<n:div class="dropdown-divider"></n:div>
+           		</n:ul>
+        	</h:li>
+         	
+         	
+        	<h:li class="nav-item dropdown" visible="false">
+        		 
+        		<custom-attributes permissionId="ADMIN_MENU"/>
+				<custom-attributes permissionValueId="1"/>
+           		
+           		<h:a class="nav-link dropdown-toggle" id="roaddropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" iconSclass="z-icon-wrench" >
+           		${mtlabels.mainscreen_Design}</h:a>
+           		<n:ul class="dropdown-menu" aria-labelledby="roaddropdown3">
+               		<n:div class="dropdown-divider"></n:div>
+               		<a class="dropdown-item"  id="DESIGN1" 	iconSclass="z-icon-user">${mtlabels.mainscreen_Forms}</a>
+            		<a class="dropdown-item"  id="DESIGN2" 	iconSclass="z-icon-user">${mtlabels.mainscreen_Form_Elements}</a>
+            		<a class="dropdown-item"  id="DESIGN3" 	iconSclass="z-icon-user">${mtlabels.mainscreen_Profile_page}</a>
+            		<a class="dropdown-item"  id="DESIGN_LAYOUT" 	iconSclass="z-icon-user">${mtlabels.mainscreen_Layout}</a>
+            		<a class="dropdown-item"  id="DESIGN5" 	iconSclass="z-icon-user">${mtlabels.mainscreen_Icons}</a>
+            		<a class="dropdown-item"  id="DESIGN_TYPOGRAPHY" 	iconSclass="z-icon-user">${mtlabels.mainscreen_Typography}</a>
+            		<n:div class="dropdown-divider"></n:div>
+           		</n:ul>
+        	</h:li>
+  	 
+ 	 		<h:li class="nav-item dropdown">
+        		<!--  
+        		<custom-attributes permissionId="ADMIN_MENU"/>
+				<custom-attributes permissionValueId="1"/>
+           		-->
+           		<h:a class="nav-link dropdown-toggle" id="roaddropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" iconSclass="z-icon-wrench" >
+           		${mtlabels.mainscreen_Test}</h:a>
+           		<n:ul class="dropdown-menu" aria-labelledby="roaddropdown2">
+               		<n:div class="dropdown-divider"></n:div>
+               		<a class="dropdown-item"  id="GENERATE_TEST_ACCOUNTS" 	iconSclass="z-icon-user"> Generate Test Accounts</a>
+            		<a class="dropdown-item"  id="GENERATE_TEST_TRIPS" 	iconSclass="z-icon-user">Generate Test Trips</a>
+            		<a class="dropdown-item"  id="RUN_ESCALATION" 	iconSclass="z-icon-user">Run escalation</a>
+            		
+            		<n:div class="dropdown-divider"></n:div>
+           		</n:ul>
+        	</h:li>
+  	  </zk>
+ 		
+           
+            
+  			
+         
+         
+     
+          
+     
+  
+  
+  

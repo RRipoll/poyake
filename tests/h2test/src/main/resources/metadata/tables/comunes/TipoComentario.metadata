@@ -1,0 +1,16 @@
+TABLE ENTITY TipoComentario PATTERN auditada
+{
+	PK tipoComentarioId INT
+	tipo VARCHAR (50)
+	descripcion VARCHAR (256) NOTNULL
+	creado DATETIME
+	editado DATETIME
+	borrado DATETIME
+	METADATA
+	{
+		1,"Interno","Solo comentarios para la empresa","2020-01-01 00:00:00","2020-01-01 00:00:00","2020-01-01 00:00:00";
+		2,"Para factura zona1","Se incluirá en la zona1 de comentarios de la fáctura","2020-01-01 00:00:00","2020-01-01 00:00:00","2020-01-01 00:00:00";
+		3,"Para factura zona2","Se incluirá en la zona1 de comentarios de la fáctura","2020-01-01 00:00:00","2020-01-01 00:00:00","2020-01-01 00:00:00";
+	}
+	
+}

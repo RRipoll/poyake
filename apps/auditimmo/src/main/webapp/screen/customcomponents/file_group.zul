@@ -1,0 +1,31 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+>					
+					<div class="row clearfix">
+										
+						
+						
+						<div class="col-md-2 mb-2">
+							<div class="form-group">
+								<div class="form-line">
+									<button id="UPLOAD_BUTTON" label="Attach Document(s):" upload="true,maxsize=3000" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-2">
+							<div class="form-group">
+								<div class="form-line">
+									<div id="UPLOADED_FILE_LIST"  style="overflow:auto;"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+		
+</zk>				
+					
+					
+					
+					
+					

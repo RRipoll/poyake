@@ -1,0 +1,21 @@
+<?page title="Demo" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	
+
+	<zscript>
+    	desktopScope.put("mtlabels",new com.jsantos.gui.zkutil.Zklabel());
+	</zscript>
+		    <h:li class="nav-item dropdown">
+                		<h:a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" iconSclass="z-icon-compass" >${mtlabels.mainscreen_examples}</h:a>
+                		<n:ul class="dropdown-menu" aria-labelledby="dropdown4">
+                    		<n:div class="dropdown-divider"></n:div>
+                    		<a class="dropdown-item" id="BOOK" > ${mtlabels.mainscreen_book}</a>
+                   			<a class="dropdown-item" id="AUTHOR" iconSclass="">${mtlabels.mainscreen_author}</a>
+                   			<n:div class="dropdown-divider"></n:div>
+                		</n:ul> 
+            		</h:li>
+	  </zk>
+	
+	

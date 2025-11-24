@@ -1,0 +1,13 @@
+<?page title="Home Page" ?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	<window apply="com.etantilling.testrunner.test.framework.toll.testframework.panel.screens.testcheck.TestCheckController" width="90%"  closable="true" title="Test Runner" style="overflow:auto" border="normal" maximizable="true">
+		<vbox>
+			<hbox><label>testId</label><textbox id="TEST_ID"/></hbox>
+			<button id="CHECK" label="check test"/>
+			<textbox id="CHECK_RESULTS" multiline="true"  width="1000px" height="300px"/>
+			<button id="FIX_SEQUENCE_NUMBERS" label="fix Excel Host File sequence numbers" disabled="true"/>
+		</vbox>
+	</window>
+</zk>

@@ -1,0 +1,14 @@
+TABLE ENTITY audit.EnuInputUserGroup PATTERN Enumeration{
+	PK inputUserGroupId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	
+	ENUMETADATA{
+		0, SYSTEM, "System";
+		1, SA, 'Admin'; 
+		2, USER,'User';
+	}
+	
+	
+}

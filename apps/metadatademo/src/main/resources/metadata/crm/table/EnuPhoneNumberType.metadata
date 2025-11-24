@@ -1,0 +1,17 @@
+TABLE ENTITY crm.EnuPhoneNumberType PATTERN Enumeration{
+	PK phoneNumberTypeId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, HOME, 'Home';
+		2, WORK, 'Work';
+		3, MOBILE, 'Mobile';
+	}
+	
+	ENULABELS{
+		HOME {es_ES 'Domicilio'}
+		WORK {es_ES 'Trabajo'}
+		MOBILE {es_ES 'M??vil'}
+	}
+}

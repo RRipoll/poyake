@@ -1,0 +1,383 @@
+METADATA FOR config.DatagridSetting {
+	
+'6','VBook','{
+  "dataTableName" : "example.VBook",
+  "aSName" : "VBook",
+  "columnConfigurations" : [ {
+    "name" : "bookId",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "title",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "authorId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "description",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "doc",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "otherAuthor",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  } ],
+  "orderByConfigurations" : [ {
+    "name" : "bookId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "VBook.bookId"
+  }, {
+    "name" : "title",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Title"
+  }, {
+    "name" : "authorId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Author #"
+  }, {
+    "name" : "description",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Description"
+  }, {
+    "name" : "doc",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Docs"
+  }, {
+    "name" : "otherAuthor",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Other Autors"
+  } ],
+  "filterConfigurations" : [ {
+    "hidden" : true,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "bookId"
+  }, {
+    "hidden" : false,
+    "operator" : "LIKE",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "title"
+  }, {
+    "hidden" : true,
+    "operator" : "IN",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "authorId"
+  }, {
+    "hidden" : false,
+    "operator" : "LIKE",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "description"
+  }, {
+    "hidden" : true,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "doc"
+  }, {
+    "hidden" : false,
+    "operator" : "IN",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "otherAuthor"
+  } ],
+  "detailScreenConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "bookId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "title"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "authorId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "description"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-12",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "doc"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-12",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "otherAuthor"
+  } ],
+  "editConfigurations" : [ {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "bookId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "title"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "authorId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-12",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "description"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-12",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "otherAuthor"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-12",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "doc"
+  } ]
+}',DEFAULT,'1',DEFAULT,DEFAULT;
+'7','Author','{
+  "dataTableName" : "example.Author",
+  "aSName" : "Author",
+  "columnConfigurations" : [ {
+    "name" : "authorId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "fullName",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "note",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  } ],
+  "orderByConfigurations" : [ {
+    "name" : "authorId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Author #"
+  }, {
+    "name" : "fullName",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Full Name"
+  }, {
+    "name" : "note",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Author.note"
+  } ],
+  "filterConfigurations" : [ {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "authorId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "fullName"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "note"
+  } ],
+  "detailScreenConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "authorId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "fullName"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "note"
+  } ],
+  "editConfigurations" : [ {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "authorId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-12",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "fullName"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-12",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "note"
+  } ]
+}',DEFAULT,'1',DEFAULT,DEFAULT;
+	
+	
+}

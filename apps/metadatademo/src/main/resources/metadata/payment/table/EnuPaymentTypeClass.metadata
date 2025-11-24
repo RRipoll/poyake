@@ -1,0 +1,14 @@
+TABLE ENTITY payment.EnuPaymentTypeClass PATTERN Enumeration{
+	PK paymentTypeClassId INT
+	
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, CREDITCARD, 'Credit Card';
+		2, CASH, 'Cash';
+		3, DIRECTDEBIT, 'Direct Debit';
+		4, CHECK, 'Check';
+		
+	}
+}

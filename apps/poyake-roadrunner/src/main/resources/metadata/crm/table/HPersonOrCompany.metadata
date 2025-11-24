@@ -1,0 +1,37 @@
+TABLE ENTITY crm.HPersonOrCompany PATTERN AutoHistory{
+	personOrCompanyId INT FKTO crm.PersonOrCompanyPk STEREOTYPES AUTOHISTORYMAINFK
+	isCompany BIT NOTNULL DEFAULT "0"
+	salutation VARCHAR(6)
+	firstName VARCHAR(64) STEREOTYPES DESCRIPTION
+	middleName VARCHAR(64)
+	lastNameOrCompanyName VARCHAR(64) NOTNULL STEREOTYPES DESCRIPTION
+	suffix VARCHAR(6)
+	designation VARCHAR(64)
+	doingBusinessAs VARCHAR(128)
+	phoneNumberId INT FKTO crm.PhoneNumberPK
+	emailAddressId INT FKTO crm.EmailAddressPk
+	
+	
+	
+	// Autohistory fields
+	PK revisionId INT STEREOTYPES NOGUIINPUT
+	startDate DATETIME NOTNULL DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	endDate DATETIME NOTNULL DEFAULT MAXDATE STEREOTYPES NOGUIINPUT
+	inputUserId INT NOTNULL FKTO audit.InputUser DEFAULT "1" STEREOTYPES NOGUIINPUT
+	inputSourceId INT NOTNULL FKTO audit.InputSource DEFAULT "1" STEREOTYPES NOGUIINPUT
+	
+	METADATA{
+		1, 0, NULL, 'Pepe', NULL, 'Perez', NULL, "Mr", NULL, NULL, NULL, 1, DEFAULT, DEFAULT, DEFAULT, DEFAULT;
+		2, 0, NULL, 'Manuel', NULL, 'González', NULL, "Mr", NULL, NULL, NULL, 2, DEFAULT, DEFAULT, DEFAULT, DEFAULT;
+		3, 0, NULL, 'John', NULL, 'Doe', NULL, "Mr", NULL, NULL, NULL, 3, DEFAULT, DEFAULT, DEFAULT, DEFAULT;
+	}
+	
+	LABELS{
+		firstName {SHORTLABEL en_EN 'First Name' es_ES 'Nombre'}
+		lastNameOrCompanyName {SHORTLABEL en_EN 'Last Name' es_ES 'Apellido'}
+		salutation {SHORTLABEL es_ES 'Saludo'}
+		middleName {SHORTLABEL es_ES 'Segundo Nombre'}
+		lastNameOrCompanyName {SHORTLABEL es_ES 'Apellido o Nombre de Empresa'}
+		suffix { SHORTLABEL es_ES 'Sufijo'}
+	}
+}

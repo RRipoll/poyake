@@ -1,0 +1,15 @@
+TABLE ENTITY eva.EnuEvaluationStatus PATTERN Enumeration{
+	PK evaluationStatusId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, INPROGRESS,  'In Progress';
+		2, COMPLETED, 'Completed';
+		3, VALIDATED, 'Validated';
+	}
+	
+	LABELS {
+		evaluationStatusId {SHORTLABEL en_EN 'Status'}
+	}
+}

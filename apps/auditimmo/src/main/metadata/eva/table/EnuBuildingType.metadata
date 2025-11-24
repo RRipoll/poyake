@@ -1,0 +1,25 @@
+TABLE ENTITY eva.EnuBuildingType PATTERN Enumeration{
+	PK buildingTypeId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, HOUSE, 'House';
+		2, FIRM, 'Firm, Barn';
+		3, APPARTMENT, 'Appartment';
+		4, COMMERCIAL, 'Commercial Space';
+		5, OFFICE, 'Office';
+		6, GARAGE, 'Garage';
+		7, HISTORICAL, 'Historical Building';
+	}
+	
+	ENULABELS{
+		HOUSE {es_ES 'Casa'}
+		FIRM {es_ES 'Covertizo'}
+		APPARTMENT {es_ES 'Piso'}
+		COMMERCIAL {es_ES 'Local Comercial'}
+		OFFICE {es_ES 'Oficina'}
+		GARAGE {es_ES 'Garage'}
+		HISTORICAL {es_ES 'Edificio Histórico'}
+	}
+}

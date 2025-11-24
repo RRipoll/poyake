@@ -1,0 +1,15 @@
+TABLE ENTITY Caracteristicas  PATTERN auditada{
+	PK caracteristicasId INT NOTNULL
+	productId INT NOTNULL FKTO Producto
+	caracteristicaId INT NOTNULL FKTO Caracteristica
+	valor VARCHAR(64)
+	creado DATETIME NOTNULL DEFAULT "now()"
+	editado DATETIME NOTNULL DEFAULT "now()"
+	borrado DATETIME NOTNULL DEFAULT "now()"
+	
+	METADATA{
+		1, 1, 1, 'Un valor cualquiera', '2001-01-01', '2001-01-01', '2001-01-01'; 
+		2, 1, 2, 'Otro valor cualquiera', '2001-01-01', '2001-01-01', '2001-01-01'; 
+		3, 2, 1, 'mas', '2001-01-01', '2001-01-01', '2001-01-01'; 
+	}
+}

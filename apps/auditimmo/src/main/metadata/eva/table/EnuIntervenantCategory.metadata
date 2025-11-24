@@ -1,0 +1,18 @@
+TABLE ENTITY eva.EnuIntervenantCategory PATTERN Enumeration{
+	PK intervenantCategoryId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, SUPPORT, 'Support';
+		2, EVALUATOR, 'Evaluator';
+		3, EXPERT, 'Expert / Consultant';
+		4, ENTERPRENEUR, 'Entrepreneur';
+		5, OWNER, 'Owner';
+		6, REAL_STATE_AGENT, 'Real estate agent';
+		7, PRIVATE_BUYER, 'Private buyer';
+		8, BAILIFF, 'Bailiff';
+		9, PROPERTY_MANAGER, 'Property Manager';
+		10, LAWYER, 'Lawyer';
+	}
+}

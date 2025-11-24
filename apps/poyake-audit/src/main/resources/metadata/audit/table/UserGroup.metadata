@@ -1,0 +1,20 @@
+TABLE ENTITY audit.UserGroup PATTERN Audited STEREOTYPES LINKTABLE,CONFIG{
+	PK userGroupId INT NOTNULL
+	inputUserGroupId INT NOTNULL FKTO audit.InputUserGroup STEREOTYPES LINK
+	userId INT NOTNULL FKTO audit.InputUser STEREOTYPES LINK
+	created DATETIME NOTNULL DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	inputUserId INT NOTNULL FKTO audit.InputUser DEFAULT "1" STEREOTYPES NOGUIINPUT
+	inputSourceId INT NOTNULL FKTO audit.InputSource DEFAULT "1" STEREOTYPES NOGUIINPUT
+	
+	METADATA{
+		1,'1','1',DEFAULT,DEFAULT,DEFAULT;
+		2,'2','2',DEFAULT,DEFAULT,DEFAULT;
+	}
+
+	LABELS {
+		inputUserId{en_EN 'User #' es_ES '# Usuario'}
+		created{en_EN 'Created By' es_ES 'Creado por'}
+		inputSourceId{en_EN 'Source #' es_ES '# Origen'}
+		inputUserId{en_EN 'User #' es_ES '# Usuario'}
+	}
+}

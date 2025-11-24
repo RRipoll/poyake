@@ -1,0 +1,9 @@
+TABLE ENTITY crm.ContactPk{
+	PK contactId INT
+	
+	METADATA{
+		1;
+		2;
+		3;
+	}
+} 

@@ -1,0 +1,71 @@
+<zk xmlns="xhtml" xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:z="zul"
+	>
+	<?link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"?>
+	<?link rel="stylesheet" href="css/adminbsb.css"?>
+	<?link rel="stylesheet" href="css/demo.css"?>
+	<?link rel="stylesheet" href="css/login.css"?>
+	<?link rel="stylesheet" href="css/navbar.css"?>
+	<?link rel="stylesheet" href="css/variables.css"?>
+	<?link rel="stylesheet" href="css/zk-custom.css"?>
+	<?link rel="stylesheet" href="css/materialize.css"?>
+	
+	<?link rel="stylesheet" type="text/css" href="common/jsoneditor/dist/jsoneditor.css"?>
+	<?script src="common/jsoneditor/dist/jsoneditor.js"?>
+	
+	<?script src="https://bgrins.github.io/filereader.js/filereader.js"?>
+    <?script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min.js"?>
+	
+	<div style="background-image:url('img/login-background.jpg');witdh:100%;height:100%">
+			<div class="row" style="height:100%">
+		<div class="container my-login-page align-self-center">	
+		    <div class="login-box align-self-center"  >
+		        <div class="card ">
+		        	<div class="header">
+		        		<img src="img/roadrunner.jpg"  width="325px"/>
+		        	</div>
+		            <div class="body">
+		                    <div class="msg">${mtlabels.login_Sign_in_to_start_your_session}</div>
+		                    <z:div class="form-group form-float">
+		                        <span class="input-group-addon">
+		                            <i class="material-icons">person</i>
+		                        </span>
+		                        <z:div class="form-line focused">
+		                        	<z:mt-textbox label="Username" id="USER_LOGIN" value="dmartin"/>
+		                        </z:div>
+		                    </z:div>
+		                    <z:div class="form-group form-float">
+		                        <span class="input-group-addon">
+		                            <i class="material-icons">lock</i>
+		                        </span>
+		                        <z:div class="form-line focused">
+		                        	<z:mt-textbox label="${mtlabels.login_Password}" type="password" id="PASSWORD" value="dubidubidu"/>
+		                        </z:div>
+		                    </z:div>
+		                   
+		                    <div class="row">
+		                        <div class="col-8 p-t-5">
+		                            <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-pink" />
+		                            <label for="rememberme">${mtlabels.login_Remember_Me}</label>
+		                        </div>
+		                        <div class="col-4">
+		                            <button class="btn btn-block bg-pink waves-effect" id="OK_BUTTON">${mtlabels.login_SIGN_IN}</button>
+		                        </div>
+		                    </div>
+		                    <div class="row m-t-15 m-b--20">
+		                        <div class="col-6">
+		                            <a href="sign-up.html">${mtlabels.login_Register_Now}</a>
+		                        </div>
+		                        <div class="col-6 align-right">
+		                            <a href="forgot-password.html">${mtlabels.login_Forgot_Password}</a>
+		                        </div>
+		                    </div>
+		            </div>
+		        </div>
+		    </div>
+		    </div>
+		</div>
+	</div>	
+</zk>

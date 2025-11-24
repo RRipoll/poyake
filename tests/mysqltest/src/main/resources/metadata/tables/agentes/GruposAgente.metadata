@@ -1,0 +1,8 @@
+TABLE ENTITY GruposAgente PATTERN auditada{
+	PK gruposAgenteId INT
+	prioridad INT
+	
+	creado DATETIME
+	editado DATETIME
+	borrado DATETIME
+}

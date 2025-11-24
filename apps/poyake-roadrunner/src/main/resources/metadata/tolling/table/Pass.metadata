@@ -1,0 +1,4 @@
+TABLE ENTITY tolling.Pass{
+	PK passId INT
+	fullPassNumber VARCHAR(128)
+}

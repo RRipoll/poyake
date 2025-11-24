@@ -1,0 +1,10 @@
+TABLE ENTITY eva.EnuNetwork PATTERN Enumeration{
+	PK networkId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, ORPI, 'ORPI';
+		2, ENGVOLK, 'Eng & Volkers';
+	}
+}

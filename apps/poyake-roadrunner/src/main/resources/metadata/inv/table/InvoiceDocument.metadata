@@ -1,0 +1,7 @@
+TABLE ENTITY inv.InvoiceDocument{
+	PK invoiceDocumentId INT 
+	invoiceId INT NOTNULL FKTO inv.Invoice
+	amountDue MONEY NOTNULL DEFAULT "0"
+	sentToPostalAddressRevisionId INT FKTO crm.HPostalAddress
+	fileGroupId FILE_GROUP FKTO common.FileGroup 
+}

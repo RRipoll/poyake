@@ -1,0 +1,1201 @@
+METADATA FOR config.DatagridSetting {
+
+'eae710f8-dd57-4ea2-886a-8b30a56b8886','VCustomerHistory','{
+  "dataTableName" : "crm.VCustomerHistory",
+  "aSName" : "VCustomerHistory",
+  "columnConfigurations" : [ {
+    "name" : "startDate",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "objectType",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "action",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "inputUserId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "id",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "revisionId",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "prevRevisionId",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "mtTable",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "customerId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  } ],
+  "orderByConfigurations" : [ {
+    "name" : "startDate",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Fecha Inicio"
+  }, {
+    "name" : "objectType",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "VCustomerHistory.objectType"
+  }, {
+    "name" : "action",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "VCustomerHistory.action"
+  }, {
+    "name" : "inputUserId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "# Usuario"
+  }, {
+    "name" : "id",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "VCustomerHistory.id"
+  }, {
+    "name" : "revisionId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "VCustomerHistory.revisionId"
+  }, {
+    "name" : "prevRevisionId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "VCustomerHistory.prevRevisionId"
+  }, {
+    "name" : "mtTable",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "VCustomerHistory.mtTable"
+  }, {
+    "name" : "customerId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "# Factura"
+  } ],
+  "filterConfigurations" : [ {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "startDate"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "objectType"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "action"
+  }, {
+    "hidden" : false,
+    "operator" : "IN",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "inputUserId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "id"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "revisionId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "prevRevisionId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "mtTable"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "customerId"
+  } ],
+  "detailScreenConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "startDate"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "objectType"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "action"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "inputUserId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "id"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "revisionId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "prevRevisionId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "mtTable"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "customerId"
+  } ],
+  "editConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "startDate"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "objectType"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "action"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "inputUserId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "id"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "revisionId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "prevRevisionId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "mtTable"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "customerId"
+  } ]
+}',DEFAULT,'1',DEFAULT,DEFAULT;
+'3f879c5d-3d85-4eb0-9f6a-643f148a2c0e','VFindVehicle','{
+  "dataTableName" : "tolling.VFindVehicle",
+  "aSName" : "VFindVehicle",
+  "columnConfigurations" : [ {
+    "name" : "vehicleId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "shortCode",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "lpnumber",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "make",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "model",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "modelYear",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "color",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "axles",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "vehicleClassId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "customerId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "licensePlateId",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  } ],
+  "orderByConfigurations" : [ {
+    "name" : "vehicleId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "# Vehiculo"
+  }, {
+    "name" : "shortCode",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Etiqueta"
+  }, {
+    "name" : "lpnumber",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Matrícula"
+  }, {
+    "name" : "make",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "VFindVehicle.make"
+  }, {
+    "name" : "model",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Modelo"
+  }, {
+    "name" : "modelYear",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Año Modelo"
+  }, {
+    "name" : "color",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Color"
+  }, {
+    "name" : "axles",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Ejes"
+  }, {
+    "name" : "vehicleClassId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Clase Vehículo"
+  }, {
+    "name" : "customerId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "# Factura"
+  }, {
+    "name" : "licensePlateId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Matricula"
+  } ],
+  "filterConfigurations" : [ {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "vehicleId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "shortCode"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "lpnumber"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "make"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "model"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "modelYear"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "color"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "axles"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "vehicleClassId"
+  }, {
+    "hidden" : false,
+    "operator" : "IN",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "customerId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "licensePlateId"
+  } ],
+  "detailScreenConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "vehicleId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "shortCode"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "lpnumber"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "make"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "model"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "modelYear"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "color"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "axles"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "vehicleClassId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "customerId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "licensePlateId"
+  } ],
+  "editConfigurations" : [ {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "vehicleId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "shortCode"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "lpnumber"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "make"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "model"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "modelYear"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "color"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "axles"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "vehicleClassId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "customerId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "licensePlateId"
+  } ]
+}',DEFAULT,'1',DEFAULT,DEFAULT;
+'a43aa8cc-0154-4756-918d-9533a6e4fec9','Promo','{
+  "dataTableName" : "tolling.Promo",
+  "aSName" : "Promo",
+  "columnConfigurations" : [ {
+    "name" : "promoId",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "customerId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "promoTypeId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  } ],
+  "orderByConfigurations" : [ {
+    "name" : "promoId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Promo.promoId"
+  }, {
+    "name" : "customerId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "# Factura"
+  }, {
+    "name" : "promoTypeId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Promo.promoTypeId"
+  } ],
+  "filterConfigurations" : [ {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "promoId"
+  }, {
+    "hidden" : false,
+    "operator" : "IN",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "customerId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "promoTypeId"
+  } ],
+  "detailScreenConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "promoId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "customerId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "promoTypeId"
+  } ],
+  "editConfigurations" : [ {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "promoId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "customerId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "promoTypeId"
+  } ]
+}',DEFAULT,'1',DEFAULT,DEFAULT;
+'8d33abd5-50d4-4d6c-bb11-5567b34fb5d3','CustomerCase','{
+  "dataTableName" : "cs.CustomerCase",
+  "aSName" : "CustomerCase",
+  "columnConfigurations" : [ {
+    "name" : "customercaseId",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "customerId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "csCaseId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "created",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "inputUserId",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "inputSourceId",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  } ],
+  "orderByConfigurations" : [ {
+    "name" : "customercaseId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "CustomerCase.customercaseId"
+  }, {
+    "name" : "customerId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "# Factura"
+  }, {
+    "name" : "csCaseId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "# Caso"
+  }, {
+    "name" : "created",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Creado"
+  }, {
+    "name" : "inputUserId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "# Usuario"
+  }, {
+    "name" : "inputSourceId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "# Origen"
+  } ],
+  "filterConfigurations" : [ {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "customercaseId"
+  }, {
+    "hidden" : false,
+    "operator" : "IN",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "customerId"
+  }, {
+    "hidden" : false,
+    "operator" : "IN",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "csCaseId"
+  }, {
+    "hidden" : true,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "created"
+  }, {
+    "hidden" : true,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "inputUserId"
+  }, {
+    "hidden" : true,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "inputSourceId"
+  } ],
+  "detailScreenConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "customercaseId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "customerId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "csCaseId"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "created"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "inputUserId"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "inputSourceId"
+  } ],
+  "editConfigurations" : [ {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "customercaseId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "customerId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "csCaseId"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "created"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "inputUserId"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "inputSourceId"
+  } ]
+}',DEFAULT,'1',DEFAULT,DEFAULT;
+
+
+}

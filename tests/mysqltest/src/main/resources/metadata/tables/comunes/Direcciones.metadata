@@ -1,0 +1,4 @@
+TABLE ENTITY Direcciones{
+	PK direccionesId INT
+	prioridad INT
+}

@@ -1,0 +1,10 @@
+TABLE ENTITY Book{
+	PK bookId INT
+	title VARCHAR(64)
+	authorId INT FKTO Author
+	
+	LABELS{
+		title {es_ES 'Titulo' en_EN 'Title'}
+	}
+	
+}

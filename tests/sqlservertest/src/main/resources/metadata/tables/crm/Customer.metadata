@@ -1,0 +1,26 @@
+ENTITY crm.Customer {
+	PK customerId INT
+	firstName VARCHAR(64)
+	lastName VARCHAR(64)
+	vatNumberCode VARCHAR(8)
+	taxCode3 VARCHAR(10)
+
+	METADATA{
+		1, "Pepe", "Gotera", "111", '222';
+		2, "Cersei", "Lannister", "111", '222';
+		3, "David", "Martin","333", "4444";
+	}
+	
+	LABELS{
+		ENTITY {SHORTLABEL es_ES "Cliente"}
+		firstName {
+			SHORTLABEL en_EN "First Name"
+			SHORTLABEL es_ES "Nombre"
+			LONGLABEL es_ES "El Puto Nombre"
+			LONGLABEL en_EN "Thre fucking name"
+			}
+		lastName{
+			SHORTLABEL en_EN "Last Name"
+		}
+	}
+}

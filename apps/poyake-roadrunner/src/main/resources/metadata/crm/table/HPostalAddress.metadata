@@ -1,0 +1,29 @@
+TABLE ENTITY crm.HPostalAddress PATTERN AutoHistory{
+	postalAddressId INT FKTO crm.PostalAddressPk STEREOTYPES AUTOHISTORYMAINFK
+	address1  VARCHAR(256)
+	address2  VARCHAR(256)
+	city  VARCHAR(64)
+	stateProvinceId INT NOTNULL FKTO crm.EnuStateProvince STEREOTYPES DESCRIPTION
+	postalCode  VARCHAR(10) STEREOTYPES DESCRIPTION
+	barcode  VARCHAR(20)
+	coordinates  VARCHAR(64)
+	
+	//autohistory
+	PK revisionId INT STEREOTYPES NOGUIINPUT
+	startDate DATETIME NOTNULL DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	endDate DATETIME NOTNULL DEFAULT MAXDATE STEREOTYPES NOGUIINPUT
+	inputUserId INT NOTNULL FKTO audit.InputUser DEFAULT "1" STEREOTYPES NOGUIINPUT
+	inputSourceId INT NOTNULL FKTO audit.InputSource DEFAULT "1" STEREOTYPES NOGUIINPUT
+	
+	METADATA{
+		3, "1 Picadilly Sq", "2G", 'New York', 1, '01010', NULL, NULL, 3, DEFAULT, DEFAULT, DEFAULT, DEFAULT;
+	}
+	
+	LABELS {
+		address1 {es_ES 'Dirección'}
+		address2 {es_ES 'Piso y letra'}
+		city {es_ES 'Ciudad'}
+		stateProvinceId {en_EN 'State' es_ES 'Provincia'}
+		postalCode {en_EN 'Postal Code' es_ES 'Código Postal'}
+	}
+}

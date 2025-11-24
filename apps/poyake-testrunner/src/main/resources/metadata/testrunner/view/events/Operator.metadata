@@ -1,0 +1,24 @@
+TABLE ENTITY testrunner.Operator PATTERN Enumeration{
+	PK operatorId 	INT
+	shortCode 		VARCHAR ( 16 )
+	description 	VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	
+	ENUMETADATA{
+		 1		,EQUAL		, 'EQUAL';
+		 2		,NOT_EQUAL	, 'NOT EQUAL';
+		 3		,LT			, 'LOWER THAN'; 
+		 4		,LE			, 'LOWER OR EQUAL';
+		 5		,GE			, 'GREATER OR EQUAL';
+		 6		,GT			, 'GREATER THAN';
+		 7		,IN			, 'IN';
+		 8		,NOT_IN		, 'NOT IN';
+		 9		,BETWEEN	, 'BETWEEN';
+		 10		,LIKE		, 'LIKE';
+		 11		,ILIKE		, 'ILIKE';
+		 12		,_NULL		, 'NULL';
+		 13		,NOT_NULL	, 'NOT NULL';
+		 14		,CHECK		, 'CHECK';
+		 
+	}
+}

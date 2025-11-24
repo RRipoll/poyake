@@ -1,0 +1,339 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+body, html {
+	height: 100%;
+	margin: 0;
+	font: 400 15px/1.8 "Lato", sans-serif;
+	color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+	position: relative;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg-1 {
+	background-image: url("img/madrid.webp");
+	min-height: 100%;
+}
+
+.bgimg-2 {
+	background-image: url("img/trigo.webp");
+	min-height: 70%;
+}
+
+.bgimg-3 {
+	background-image: url("img/techo-urbano.webp");
+	min-height: 400px;
+}
+
+.caption {
+	position: absolute;
+	left: 0px;
+	color: #000;
+	top:0px;
+	bottom:0px;
+	background-color:#000033;
+	opacity:0.5;
+	width:45%;
+}
+
+.caption-span-0 {
+	top:20%;
+	color: white;
+	font-weight:bold;
+	letter-spacing: 0.6vw;
+	position:absolute;
+	right:60%;
+	font-style: italic;
+	font-family: raleway, sans-serif;	
+	line-height:normal;	
+}
+
+.caption-span-2 {
+	color: white;
+	position:absolute;
+	top:40%;
+	right:60%;
+	font-family: "open sans", sans-serif;
+	line-height: normal;
+	width:30%;		
+	font-size:30px;
+}
+
+
+.header{
+	position:fixed;
+	top:0px;
+	right:0px;
+	left:0px;
+	height:120px;
+	background-color:white;
+	z-index:99;
+}
+
+.header-logo{
+	background-image: url("img/recuperamadrid-logo.png");
+	width:200px;
+	height:80px;
+	top:30px;
+	position:fixed;
+	left:15%
+}
+
+.header-menu{
+	position:absolute;
+	top:40px;
+	left:30%;
+	height:100px;
+}
+
+.vertical-center{
+	position:relative;
+	width:100%;
+	height:100%;
+	vertical-align:center;
+}
+
+.menu-link{
+	padding-left:25px;
+}
+
+.second-text-block-right{
+	width:55%;
+	background-color:#FAFAFA;
+}
+
+.second-text-block-left{
+	width:45%;
+	background-color:#EAF4F6;
+	display: inline;
+}
+
+.font_2 {
+    font: normal normal normal 42px/1.4em raleway,sans-serif;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 42px;
+    line-height: 1.4em;
+    font-family: raleway, sans-serif;
+}
+
+.font_6 {
+    font: normal normal normal 20px/1.4em 'open sans',sans-serif;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 20px;
+    line-height: 1.4em;
+    font-family: "open sans", sans-serif;
+}
+
+.font_8 {
+    font: normal normal normal 16px/1.4em 'open sans',sans-serif;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 16px;
+    line-height: 1.4em;
+    font-family: "open sans", sans-serif;
+}
+
+.middle-grid-block{
+	padding:20px;
+}
+
+
+.vision-block{
+	background-color:#00305B;
+	text-align:center;
+	color:white;
+	padding:40px;
+}
+
+.founders-block{
+	background-color:#EAF4F6;
+	padding:1%;
+}
+
+.contact-block-opacity {
+	position: absolute;
+	left: 0px;
+	color: #000;
+	top:0px;
+	bottom:0px;
+	background-color:#000033;
+	opacity:0.5;
+	width:100%;
+}
+
+
+.contact-block{
+}
+
+.contact-block-left{
+	width:45%;
+	display: inline;
+}
+
+.contact-block-right{
+	width:55%;
+	color:white;
+}
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+	.bgimg-1, .bgimg-2, .bgimg-3 {
+		background-attachment: scroll;
+	}
+}
+</style>
+</head>
+<body>
+
+
+
+
+	<div class="header">
+		<div class="header-logo" />
+		</div>
+		<div class="header-menu navbar-nav ">
+			<ul>
+				<il><a class="menu-link">INICIO</a></il>
+				<il><a class="menu-link">MENUS</a></il>
+				<il><a class="menu-link">ENTIDADES COLABORADORAS</a></il>
+				<il><a class="menu-link">SUBSCRIPCIONES, DONACIONES</a></il>
+				<il><a class="menu-link">More</a></il>
+			</ul>
+		</div>
+	</div>
+
+
+
+
+	<div class="bgimg-1">
+		<div class="caption">
+		</div>
+		<div class="caption-span-0"><h1>Recupera<br />&nbsp;&nbsp;&nbsp;&nbsp;Madrid</h1></div>
+		<div class="caption-span-2"><h3>Asociación sin animo de lucro, Obejtivo, Recuperar Madrid, que a todos los hogares en dificultades  llegue una comida y cena.</h3></div>
+	</div>
+
+	<div>
+		<div class="row">
+			<div class="second-text-block-left">Hola</div>
+			<div class="second-text-block-right col font_6 p-0">
+				<div class="row">
+					<div class="col font-6 middle-grid-block">
+						1ºBUSQUEDA TU CIUDAD.<br/> 
+						2ºELIGE BAR.<br/>
+						3ºHAZ TU PEDIDO.<br/>
+					</div>
+					<div class="col middle-grid-block">
+						ELIGE MENU
+					</div>
+				</div>
+				<div class="row">
+					<div class="col middle-grid-block">SOCIOS</div>
+					<div class="col middle-grid-block">BARES, RESTAURANTES DE TU CIUDAD</div>
+				</div>
+				<div class="row">
+					<div class="col middle-grid-block">COLABORADORES</div>
+					<div class="col middle-grid-block">DONACIONES Y APADRINA.</div>
+				</div>
+				<br style="clear:both" />
+			</div>
+		</div>
+		<div class="vision-block font_8">
+			<p class="font_2">NUESTRA VISIÓN</p>
+			Párrafo. Haz clic aquí para agregar tu propio texto y editar. Es fácil. Haz clic en Editar Texto o doble clic aquí para agregar tu contenido y cambiar la fuente. Puedes arrastrar y soltar este texto donde sea que quieras en tu página. Aquí puedes contar tu historia y permitir a tus usuarios saber más sobre ti.
+			Este es un buen espacio para extenderte sobre tu compañía y servicios. Puedes usar este espacio para incorporar más detalles sobre tu empresa. Escribe sobre tu personal y los servicios que ofreces. Cuéntales a los visitantes la historia sobre cómo se te ocurrió la idea de tu negocio y diles qué te diferencia de tus competidores. Haz que tu empresa se destaque y muestra a tus visitantes quién eres. Consejo: Agrega tu propia imagen haciendo clic en la imagen y luego en Cambiar Imagen.
+			En Wix nos apasiona crear plantillas que te permiten construir geniales páginas web ¡y esto es gracias a los comentarios de usuarios como tú! Mantente informado sobre los nuevos lanzamientos y lo que viene en Nuevas Funciones en el Centro de Ayuda. Siéntete libre de darnos tu opinión en el foro de Wix. 
+		</div>
+	</div>
+
+	<div class="bgimg-2">
+		<div class="caption">
+		</div>
+	</div>
+
+	<div style="position: relative;">
+		<div class="founders-block text-center">
+			<span class="font_2">NUESTROS PROMOTORES Y COLABORADORES</span>
+			<div class="row mt-5 font_6">
+				<div class="col">
+					<img src="img/juan-carlos.webp" />
+					<div><br />JUAN CARLOS<br>FUNDADOR </div>
+					
+				</div>
+				<div class="col">
+					<img src="img/javi.webp" />
+					<div><br />JAVIER SANTOS<br />FUNDADOR</div>
+				</div>
+				<div class="col">
+					<img src="img/recuperamadrid-logo.png" />
+					<div><br />EMPRESAS COLABORADORAS</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bgimg-3">
+		<div class="contact-block-opacity" ></div>
+		<div class="contact-block">
+			<div class="row">
+				<div class="contact-block-left">
+					Left
+				</div>
+				<div class="contact-block-right p-5">
+					<div>
+						NUESTRA DIRECCIÓN
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="form-line" >
+								<label for="nombre">Nombre</label>
+								<input type=text id="nombre" class="form-control" placeholder="Nombre" />
+							</div>
+							<div class="form-line" >
+								<label for="email">e-mail</label>
+								<input type=text id="email" class="form-control"  placeholder="email" />
+							</div>
+							<div class="form-line" >
+								<label for="telefono">Teléfono</label>
+								<input type=text id="telefono" class="form-control"  placeholder="Teléfono" />
+							</div>
+						</div>
+						<div class="col">
+							<label for="message">Message</label>
+							<textarea id="message" class="form-control" rows="4" ></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

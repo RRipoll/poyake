@@ -1,0 +1,92 @@
+<wsdl:definitions
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:tns="http://correction.trip.wsdl.tcs.sandag.fastlane.etantolling.com"
+xmlns:types="http://correction.trip.wsdl.tcs.sandag.fastlane.etantolling.com"
+xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+name="TripTransactionCorrection"
+targetNamespace="http://correction.trip.wsdl.tcs.sandag.fastlane.etantolling.com">
+
+	<!-- wsdl:import location="TripTransactionCorrection.xsd" namespace="urn:TripTransactionCorrection" /-->
+	
+	<wsdl:types>
+		<xsd:schema	xmlns:cmn="http://correction.trip.wsdl.tcs.sandag.fastlane.etantolling.com"			
+			targetNamespace="http://correction.trip.wsdl.tcs.sandag.fastlane.etantolling.com">
+				<xsd:element name="TripTransactionCorrection">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="tripSequenceNumber" type="xsd:long"/>
+							<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="oldFareAmount" type="cmn:OldFareAmountType"/>
+							<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="newFareAmount" type="cmn:NewFareAmountType"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				
+				<xsd:simpleType name="OldFareAmountType">
+					<xsd:restriction base="xsd:decimal">
+						<xsd:minInclusive value="0.00" />
+						<xsd:maxInclusive value="99999.99" />
+					</xsd:restriction>
+				</xsd:simpleType>
+				
+				<xsd:simpleType name="NewFareAmountType">
+					<xsd:restriction base="xsd:decimal">
+						<xsd:minInclusive value="0.00" />
+						<xsd:maxInclusive value="99999.99" />
+					</xsd:restriction>
+				</xsd:simpleType>
+				
+				<xsd:element name="ReturnCode">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Code" type="xsd:nonNegativeInteger" />
+							<xsd:element minOccurs="0" nillable="true" name="Description" type="xsd:string" />
+							<xsd:element minOccurs="0" nillable="true" name="SeverityCode" type="xsd:string" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:schema>
+	</wsdl:types>
+	
+	<!-- Begin Messages -->
+	<wsdl:message name="sendTripTransactionCorrectionRequest">
+		<wsdl:part name="request" element="tns:TripTransactionCorrection"/>
+	</wsdl:message>
+	<wsdl:message name="sendTripTransactionCorrectionResponse">
+		<wsdl:part name="response" element="tns:ReturnCode"/>
+	</wsdl:message>
+	<!-- End Messages -->
+	
+	<!-- Begin PortType-->
+	<wsdl:portType name="TripTransactionCorrectionInterfacePortType">
+		<wsdl:operation name="sendTripTransactionCorrection">
+			<wsdl:input name="sendTripTransactionCorrectionRequest" message="tns:sendTripTransactionCorrectionRequest"/>
+			<wsdl:output name="sendTripTransactionCorrectionResponse" message="tns:sendTripTransactionCorrectionResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<!-- End PortType-->
+	
+	<!-- Begin Binding -->
+	<wsdl:binding name="TripTransactionCorrectionInterfaceHttpBinding" type="tns:TripTransactionCorrectionInterfacePortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="sendTripTransactionCorrection">
+			<soap:operation soapAction="http://correction.trip.wsdl.tcs.sandag.fastlane.etantolling.com/sendTripTransactionCorrection"/>
+			<wsdl:input name="sendTripTransactionCorrectionRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="sendTripTransactionCorrectionResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<!-- End Binding -->
+	
+	<!-- Begin Service -->
+	<wsdl:service name="TripTransactionCorrectionInterface">
+		<wsdl:port name="TripTransactionCorrectionInterfaceHttpPort" binding="tns:TripTransactionCorrectionInterfaceHttpBinding">
+			<soap:address location="http://localhost:8080/ws"/>
+		</wsdl:port>
+	</wsdl:service>
+	<!-- End Service -->
+
+</wsdl:definitions>

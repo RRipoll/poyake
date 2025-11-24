@@ -1,0 +1,23 @@
+METADATA FOR config.AppInfoTree {
+	
+	'FILE_FOLDER','1','Folder Info',NULL;
+	'FILE_LOG','FILE_FOLDER',NULL,'FILE_LOG';
+	'FILE_TMP','FILE_FOLDER',NULL,'FILE_TMP';
+	'FILE_DOCEXAMPLE','FILE_FOLDER',NULL,'FILE_DOCEXAMPLE';
+	'FILE_PATH','FILE_FOLDER',NULL,'FILE_PATH';
+		
+		
+}
+
+METADATA FOR config.AppInfo {
+	
+	'FILE_LOG','LOG',1,'logs/', DEFAULT
+	;
+	'FILE_TMP','TMP',1,'tmp/', DEFAULT
+	;
+	'FILE_DOCEXAMPLE','DOCEXAMPLE',1,'example/input/documents/', DEFAULT
+	;
+	'FILE_PATH','PATH',1,'', DEFAULT
+	;
+}
+

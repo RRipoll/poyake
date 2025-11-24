@@ -1,0 +1,14 @@
+mainscreen.Home=Home
+mainscreen.Folders=Folders
+mainscreen.Evaluations=Evaluations
+mainscreen.Intervenants=Intervenants
+mainscreen.Activities=Activities
+mainscreen.KnowledgeBase=KnowledgeBase
+mainscreen.Administration=Administration
+login.Sign_in_to_start_your_session=Sign in to start your session
+login.Username=User name
+login.Password=Password
+login.Remember_Me=Remember Me
+login.SIGN_IN=SIGN IN
+login.Register_Now=Register Now!
+login.Forgot_Password=Forgot Password?

@@ -1,0 +1,11 @@
+TABLE ENTITY payment.PaymentMethod{
+	PK paymentMethodId INT
+	paymentTypeId INT NOTNULL FKTO payment.EnuPaymentType
+	ccNumber VARCHAR(16)
+	accountNumber VARCHAR(32)
+	checkNumber VARCHAR(32)
+	
+	LABELS{
+		paymentTypeId { en_EN 'Type' es_ES 'Tipo'}		
+	}
+}

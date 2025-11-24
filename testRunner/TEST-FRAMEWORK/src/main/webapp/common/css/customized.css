@@ -1,0 +1,947 @@
+TD.summaryHeader
+{
+    PADDING-LEFT: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    BACKGROUND-IMAGE: url(/common/img/list_hdr_bg.gif);
+    PADDING-BOTTOM: 2px;
+    COLOR: #ffffff;
+    PADDING-TOP: 2px;
+    HEIGHT: 26px
+}
+
+TD.SummaryLblBold
+{
+    font-size: 8pt;
+    color: #454440;
+    font-weight: bold;
+    font-family : Arial, sans-serif;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+
+TD.SummaryValue
+{
+    font-size: 8pt;
+    color: #333333;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+
+TD.CoverG
+{
+    FONT-SIZE: 10pt;
+    COLOR: #808080;
+    FONT-FAMILY: Arial
+}
+TD.CoverG1
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12pt;
+    COLOR: #808080;
+    FONT-FAMILY: Arial
+}
+TD.CoverRedS
+{
+    FONT-SIZE: 9pt;
+    COLOR: #b5555a;
+    FONT-FAMILY: Arial
+}
+TD.CoverRed2
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    COLOR: #a51029;
+    FONT-FAMILY: Arial
+}
+TD.CoverRedL
+{
+    FONT-SIZE: 12pt;
+    COLOR: #b5555a;
+    FONT-FAMILY: Arial
+}
+TD.CoverRedLnm
+{
+    FONT-SIZE: 12pt;
+    COLOR: #ff0033;
+    FONT-FAMILY: Arial
+}
+TD.Cover
+{
+    FONT-SIZE: 12pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial
+}
+
+.Subprop
+{
+    BORDER-RIGHT: 0px;
+    BORDER-TOP: 0px;
+    BORDER-LEFT: 0px;
+    WIDTH: 7.8in;
+    BORDER-BOTTOM: 0px;
+    HEIGHT: 8.8in;
+    TEXT-ALIGN: center
+}
+TD.subhead
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14pt;
+    FONT-FAMILY: Arial;
+    HEIGHT: 50px
+}
+
+SPAN.grdtitrearial
+{
+    FONT-WEIGHT: bold;
+    COLOR: #3c5959;
+    FONT-FAMILY: Arial
+}
+TD.sublab
+{
+    PADDING-RIGHT: 15px;
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: Arial
+}
+TD.subval
+{
+    PADDING-LEFT: 15px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: Arial
+}
+P.Noparagraphstyle
+{
+    FONT-SIZE: 12pt;
+    MARGIN: 0in 0in 0pt;
+    COLOR: black;
+    LINE-HEIGHT: 120%;
+    FONT-FAMILY: Times;
+    mso-style-parent: ""
+}
+P.titre
+{
+    FONT-SIZE: 11pt;
+    MARGIN: 0in 0in 5.65pt;
+    COLOR: black;
+    LINE-HEIGHT: 14pt;
+    FONT-FAMILY: Arial
+}
+SPAN.Titreptemaj
+{
+    FONT-WEIGHT: bold;
+    FONT-FAMILY: Arial;
+    FONT-VARIANT: small-caps
+}
+P.TEXTElg
+{
+    TEXT-JUSTIFY: inter-ideograph;
+    FONT-SIZE: 12pt;
+    MARGIN: 0in 0in 0pt;
+    COLOR: #3C5959;
+    LINE-HEIGHT: 120%;
+    FONT-FAMILY: Arial;
+    TEXT-ALIGN: justify
+}
+SPAN.txt1
+{
+    COLOR: black;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial;
+    HEIGHT: 20px;
+    mso-style-parent: ""
+}
+P.txt
+{
+    TEXT-JUSTIFY: inter-ideograph;
+    FONT-SIZE: 11pt;
+    MARGIN: 0in 0in 2.85pt;
+    COLOR: #3C5959;
+    LINE-HEIGHT: 120%;
+    FONT-FAMILY: Arial;
+    TEXT-ALIGN: justify
+}
+SPAN.txtbas
+{
+    FONT-WEIGHT: bold;
+    FONT-FAMILY: Arial;
+    mso-style-parent: ""
+}
+SPAN.txt3
+{
+    FONT-FAMILY: Arial;
+    HEIGHT: 19px;
+}
+SPAN.carafilet
+{
+    FONT-WEIGHT: bold;
+    COLOR: #e50033;
+    FONT-FAMILY: Arial
+}
+SPAN.grdtitrearial
+{
+    FONT-WEIGHT: bold;
+    COLOR: #3c5959;
+    FONT-FAMILY: Arial
+}
+SPAN.pub
+{
+    FONT-WEIGHT: bold;
+    COLOR: #e50033;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial;
+    FONT-VARIANT: small-caps
+}
+DIV.redline
+{
+    BORDER-RIGHT: medium none;
+    PADDING-RIGHT: 0in;
+    BORDER-TOP: medium none;
+    PADDING-LEFT: 0in;
+    PADDING-BOTTOM: 3pt;
+    BORDER-LEFT: medium none;
+    PADDING-TOP: 1pt;
+    BORDER-BOTTOM: #e50033 1pt solid;
+    mso-border-bottom-alt: solid #E50033 .75pt
+}
+SPAN.fontred
+{
+    FONT-SIZE: 10pt;
+    COLOR: #e50033;
+    FONT-FAMILY: Arial
+}
+SPAN.font1
+{
+    FONT-WEIGHT: 500;
+    FONT-SIZE: 10pt;
+    COLOR: #3C5959;
+    FONT-FAMILY: Arial
+}
+SPAN.font2black
+{
+    FONT-WEIGHT: 500;
+    FONT-SIZE: 10pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial
+}
+P.filet
+{
+    BORDER-RIGHT: medium none;
+    PADDING-RIGHT: 0in;
+    BORDER-TOP: medium none;
+    PADDING-LEFT: 0in;
+    TEXT-JUSTIFY: inter-ideograph;
+    FONT-SIZE: 10pt;
+    PADDING-BOTTOM: 0in;
+    MARGIN: 0in 0in 5.65pt;
+    BORDER-LEFT: medium none;
+    COLOR: #e50033;
+    LINE-HEIGHT: 12pt;
+    PADDING-TOP: 0in;
+    BORDER-BOTTOM: medium none;
+    FONT-FAMILY: Arial;
+    TEXT-ALIGN: justify
+}
+SPAN.titre1
+{
+    FONT-WEIGHT: bold;
+    FONT-FAMILY: Arial;
+    mso-style-parent: ""
+}
+SPAN.Styledecaractre1
+{
+    FONT-WEIGHT: 500;
+    FONT-SIZE: 11pt;
+    COLOR: #3C5959;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial
+}
+SPAN.Styledecaractre_black
+{
+    FONT-WEIGHT: 500;
+    FONT-SIZE: 11pt;
+    COLOR: #000000;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial
+}
+P.CHAPEAUTITRE
+{
+    TEXT-JUSTIFY: inter-ideograph;
+    FONT-SIZE: 14pt;
+    MARGIN: 0in 0in 0pt;
+    COLOR: black;
+    LINE-HEIGHT: 20pt;
+    FONT-FAMILY: Arial;
+    TEXT-ALIGN: justify
+}
+DIV.grnline
+{
+    BORDER-RIGHT: medium none;
+    PADDING-RIGHT: 0in;
+    BORDER-TOP: medium none;
+    PADDING-LEFT: 0in;
+    PADDING-BOTTOM: 3pt;
+    BORDER-LEFT: medium none;
+    PADDING-TOP: 0in;
+    BORDER-BOTTOM: #17ff2b 1pt solid;
+    mso-border-bottom-alt: solid #17FF2B .75pt
+}
+SPAN.fontgrn
+{
+    FONT-SIZE: 13pt;
+    COLOR: #17ff2b;
+    FONT-FAMILY: Arial
+}
+DIV.brnline
+{
+    BORDER-RIGHT: medium none;
+    PADDING-RIGHT: 0in;
+    BORDER-TOP: medium none;
+    PADDING-LEFT: 0in;
+    PADDING-BOTTOM: 3pt;
+    BORDER-LEFT: medium none;
+    PADDING-TOP: 0in;
+    BORDER-BOTTOM: #ff7021 1pt solid;
+    mso-border-bottom-alt: solid #FF7021 .75pt
+}
+DIV.bgnline
+{
+    BORDER-RIGHT: medium none;
+    PADDING-RIGHT: 0in;
+    BORDER-TOP: medium none;
+    PADDING-LEFT: 0in;
+    PADDING-BOTTOM: 3pt;
+    BORDER-LEFT: medium none;
+    PADDING-TOP: 0in;
+    BORDER-BOTTOM: #ff0f00 1pt solid;
+    mso-border-bottom-alt: solid #FF0F00 .75pt
+}
+SPAN.fontbgn
+{
+    FONT-SIZE: 13pt;
+    COLOR: #ff0f00;
+    FONT-FAMILY: Arial
+}
+SPAN.fontText
+{
+    FONT-WEIGHT: 500;
+    FONT-SIZE: 12pt;
+    COLOR: #3C5959;
+    FONT-FAMILY: 'Helvetica', 'Helvetica 45 Light', 'Helvetica 55 Roman';
+    BACKGROUND-COLOR: #FFFFFF;
+    TEXT-ALIGN: center;
+    border:0;
+    overflow:hidden;
+}
+SPAN.fontText_black
+{
+    FONT-WEIGHT: 500;
+    FONT-SIZE: 12pt;
+    COLOR: #000000;
+    FONT-FAMILY: 'Helvetica', 'Helvetica 45 Light', 'Helvetica 55 Roman';
+    BACKGROUND-COLOR: #FFFFFF;
+    TEXT-ALIGN: center;
+    border:0;
+    overflow:hidden;
+}
+DIV.editable
+{
+    FONT-WEIGHT: 550;
+    FONT-SIZE: 12pt;
+    COLOR: #3C5959;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #EEEEEE;
+    TEXT-ALIGN: justify;
+    border:0;
+    overflow:hidden;
+}
+DIV.editable_black
+{
+    FONT-WEIGHT: 550;
+    FONT-SIZE: 12pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #EEEEEE;
+    TEXT-ALIGN: justify;
+    border:0;
+    overflow:hidden;
+}
+P.TEXTEsm
+{
+    TEXT-JUSTIFY: inter-ideograph;
+    FONT-SIZE: 9pt;
+    MARGIN: 0in 0in 0pt;
+    COLOR: #3C5959;
+    LINE-HEIGHT: 120%;
+    FONT-FAMILY: Arial;
+    TEXT-ALIGN: justify
+}
+SPAN.fontsmall
+{
+    FONT-WEIGHT: 500;
+    FONT-SIZE: 9pt;
+    COLOR: #3C5959;
+    FONT-FAMILY: Arial
+}
+SPAN.fontredsm
+{
+    FONT-WEIGHT: 500;
+    FONT-SIZE: 9pt;
+    COLOR: #e50033;
+    FONT-FAMILY: Arial
+}
+SPAN.fontgrn
+{
+    FONT-SIZE: 13pt;
+    COLOR: #17ff2b;
+    FONT-FAMILY: Arial
+}
+SPAN.fontbrn
+{
+    FONT-SIZE: 13pt;
+    COLOR: #ff7021;
+    FONT-FAMILY: Arial
+}
+TD.subtit
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    FONT-FAMILY: Arial;
+    HEIGHT: 50px
+}
+TD.CompLabC
+{
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial;
+    HEIGHT: 10px;
+    TEXT-ALIGN: center
+}
+TD.CompLab
+{
+    PADDING-LEFT: 0px;
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial;
+    HEIGHT: 10px;
+    TEXT-ALIGN: left
+}
+.splDiv
+{
+    DISPLAY: none
+}
+.bodyFrame
+{
+    BORDER-RIGHT: #000000 1px solid;
+    BORDER-TOP: #000000 1px solid;
+    BORDER-LEFT: #000000 1px solid;
+    BORDER-BOTTOM: #000000 1px solid
+}
+.detailInfo{
+	font-family : Arial, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	padding: 2px;
+	font-weight: bold;
+}
+.indentLeft
+{
+    PADDING-LEFT: 5px
+}
+.groupHeading
+{
+    PADDING-LEFT: 0px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+.detailLabelLeft
+{
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+
+.detailLabelLeft10
+{
+    FONT-SIZE: 10pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+.detailLabel
+{
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+.detailInfoLeft
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+.divControl{
+		PADDING-LEFT: 0px;
+		font-size: 8pt;
+		FONT-FAMILY: Arial, sans-serif
+		color: #000000;
+		OVERFLOW: hidden;
+		width: 400px;
+		height: 90px;
+}
+TD.CompLabBg
+{
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    BACKGROUND-COLOR: #C0C0C0;
+    FONT-FAMILY: Arial;
+    HEIGHT: 10px;
+    TEXT-ALIGN: left
+}
+TD.CompLabR
+{
+    PADDING-RIGHT: 0px;
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial;
+    HEIGHT: 10px;
+    TEXT-ALIGN: left
+}
+.detailInfo
+{
+    PADDING-LEFT: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+.listCbold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    COLOR: #333333
+}
+.detailBox
+{
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+.detailBoxColoured
+{
+    FONT-SIZE: 8pt;
+    FONT-FAMILY: Arial, sans-serif;
+    BACKGROUND-COLOR: #96bbd5
+}
+.blueHeading
+{
+    PADDING-LEFT: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, sans-serif;
+    BACKGROUND-COLOR: #336699
+}
+.gridThin
+{
+    BORDER-RIGHT: #000000 1px solid;
+    BORDER-TOP: #000000 1px solid;
+    BORDER-LEFT: #000000 1px solid;
+    BORDER-BOTTOM: #000000 1px solid
+}
+.largeBold
+{
+    PADDING-LEFT: 0px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+TD.tdInfo28
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 28pt;
+    BORDER-LEFT: black 1px solid;
+    COLOR: #000000;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial, sans-serif
+}
+TD.tdInfo18
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 18pt;
+    BORDER-LEFT: black 1px solid;
+    COLOR: #000000;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial, sans-serif
+}
+TD.tdInfo20
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 20pt;
+    BORDER-LEFT: black 1px solid;
+    COLOR: #000000;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial, sans-serif
+}
+TD.tdInfo16
+{
+    FONT-SIZE: 16pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+TD.tdInfo24
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 24pt;
+    BORDER-LEFT: black 1px solid;
+    COLOR: #000000;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial, sans-serif
+}
+TD.tdInfo
+{
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 8pt;
+    PADDING-BOTTOM: 2px;
+    COLOR: #333333;
+    FONT-FAMILY: Arial, sans-serif;
+    HEIGHT: 20px
+}
+
+TD.tdInfoFiche
+{
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 8pt;
+    PADDING-BOTTOM: 2px;
+    COLOR: #333333;
+    FONT-FAMILY: Arial, sans-serif;
+    HEIGHT: 18px
+}
+
+TD.tdInfo8
+{
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 8pt;
+    COLOR: #333333;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.tdInfo9
+{
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 9pt;
+    PADDING-BOTTOM: 2px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif;
+    HEIGHT: 20px
+}
+.agencyInfo
+{
+    FONT-SIZE: 10pt;
+    COLOR: #555555;
+    FONT-FAMILY: Arial, sans-serif;
+    BACKGROUND-COLOR: #ffffff
+}
+.agencyHeader
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14pt;
+    COLOR: #ff0000;
+    FONT-FAMILY: Arial, sans-serif;
+    BACKGROUND-COLOR: #ffffff
+}
+.bigHeading
+{
+    PADDING-LEFT: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+.bigHeading1
+{
+    PADDING-LEFT: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+.propertytitle {
+	font-family: Arial, Helvetica, sans-serif;          
+	font-size: 12px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: bolder;
+	text-align: left;
+	color: #333333;
+}
+.territory {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+.groupheadings {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: bolder;
+	/*text-align: right;*/
+	text-align: center;
+	color: #333333;
+}
+.groupCopy {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: normal;
+	text-align: right;
+	color: #333333;
+}
+.propertystatus {
+	font-family: Arial, Helvetica, sans-serif;                    
+	font-size: 13px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: bold;
+	text-align: left;
+	color: #FFFFFF;
+	background-position: center;
+	vertical-align: middle;
+}
+.bluegroupcopy1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: bold;
+	text-align: left;
+	color: #003399;
+}
+.bluedescriptioncopy1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 13px;
+	font-weight: bold;
+	text-align: left;
+	color: #003399;
+}
+
+.bluedescriptioncopy2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 13px;
+	font-weight: bold;
+	color: #003399;
+}
+.groupCopy1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: normal;
+	text-align: left;
+	color: #333333;
+}
+.groupCopy2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: normal;
+	color: #333333;
+}
+.groupheadings1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: bolder;
+	text-align: left;
+	color: #333333;
+}
+.groupheadings2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 13px;
+	font-weight: bolder;
+	text-align: right;
+	color: #333333;
+}
+.detailInfoBig
+{
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 10pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+.groupHeadingDisplayHD
+{
+    PADDING-LEFT: 0px;
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    COLOR: #ff0000;
+    BACKGROUND-IMAGE: url(/common/img/title_bar.gif);
+    PADDING-TOP: 2px;
+    HEIGHT: 22px;
+    /*BACKGROUND-COLOR: #bebeb8;*/
+    FONT-FAMILY: Arial, sans-serif;
+}
+.groupHeadingDisplayHDLarge
+{
+    PADDING-LEFT: 0px;
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 17pt;
+    COLOR: #ff0000;
+    BACKGROUND-IMAGE: url(/common/img/title_bar.gif);
+    PADDING-TOP: 2px;
+    HEIGHT: 28px;
+    /*BACKGROUND-COLOR: #bebeb8;*/
+    FONT-FAMILY: Arial, sans-serif;
+    vertical-align: bottom;
+}
+.veryLargeDisplayHD
+{
+    PADDING-LEFT: 0px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 17pt;
+    BACKGROUND-IMAGE: url(/common/img/img/list_hdr_bg.gif);
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, sans-serif
+}
+.largeBold1
+{
+    PADDING-LEFT: 0px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 17pt;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif
+}
+TD.tdInfo11
+{
+    FONT-SIZE: 11pt;
+    PADDING-BOTTOM: 2px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, sans-serif;
+    HEIGHT: 20px
+}
+
+TR.trManual
+{
+   background-color:#99CC99;
+}
+.redHeading
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    COLOR: #ff0000;
+    FONT-FAMILY: Arial, sans-serif;
+    BACKGROUND-COLOR: #ffffff
+}
+
+/* Format A4 Report */
+
+.title
+{
+    font-face: Arial;
+	font-weight:bold;
+    font-size: 40pt; 
+    color: #CC0033;
+}
+.fld24
+{
+    font-face: Arial; 
+    font-size: 24pt;    	
+    color: #D3556A;    
+}
+.fld22
+{
+    font-face: Arial; 
+    font-size: 20pt;           		    
+    color:#565A5C;	
+}   
+.fld17
+{
+    font-face: Arial; 
+    font-size: 17pt; 
+    color: #565A5C;    
+}
+.fld18
+{
+    font-face: Arial; 
+    font-size: 18pt; 
+    color: #d20024;    
+}
+.fld13
+{
+    font-face: Arial; 
+    font-size:13pt;      	
+    color:#565A5C;      
+}
+.fld9
+{
+    font-face: Arial; 
+    font-size: 9pt; 
+    color: #565A5C;
+}
+.fld17R
+{
+    font-face: Arial; 
+    font-size:17pt; 
+    color:#DD6775;
+}
+.fld12R
+{
+    font-face: Arial; 
+    font-size:12pt; 
+    color:#D01623;
+}
+.fld34
+{
+   font-face: Arial; 
+   font-size: 34pt; 
+   color:#D01623;
+   font-weight:bold;
+}
+.fld34sign
+{
+   font-face: Arial; 
+   font-size: 34pt; 
+   color:#D01623;   
+}
+.officeInfo
+ {
+   font-face: Arial; 
+   font-size: 10pt;  
+   color: #565A5C;
+ }
+.fld8
+  {
+    font-face: Arial; 
+    font-size: 8pt;  
+    color: #565A5C;
+  } 
+.orpi
+{
+  font-size:9pt ;
+  font-family:Arial;
+  font-weight:bold;
+   color:#565A5C;
+}

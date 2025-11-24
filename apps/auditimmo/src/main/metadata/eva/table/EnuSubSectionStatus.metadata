@@ -1,0 +1,12 @@
+TABLE ENTITY eva.EnuSubSectionstatus PATTERN Enumeration{
+	PK subSectionStatusId INT 
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 128 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, O, 'The Element has not been assessed';
+		2, Em, 'The Element has been assessed but one or more mandatory fields are missing';
+		3, Ev, 'The Element has been assessed and all mandatory fields have been entered';
+		4, NA, 'The Element has been marked N/A';
+	}
+}

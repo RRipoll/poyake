@@ -1,0 +1,23 @@
+<taglib>
+    <function>
+        <name>getFKvalue</name>
+        <function-class>com.etantolling.testrunner.test.core.taglib.GetFKValue</function-class>
+        <function-signature>
+    		Object getFKvalue(java.lang.String, java.lang.Integer)
+        </function-signature>
+    </function>
+    <function>
+        <name>getColumnValueFromPK</name>
+        <function-class>com.etantolling.testrunner.test.core.taglib.GetColumnValueFromPK</function-class>
+        <function-signature>
+    		Object getColumnValueFromPK(java.lang.String, java.lang.String, java.lang.String, java.lang.Integer)
+        </function-signature>
+    </function>
+    <function>
+        <name>formatMonthAndYear</name>
+        <function-class>com.etantolling.testrunner.test.core.taglib.ZKTagUtils</function-class>
+        <function-signature>
+    		String formatMonthAndYear(java.lang.String)
+        </function-signature>
+    </function>
+</taglib>

@@ -1,0 +1,25 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:z="zul">
+
+	<z:window border="0" position="center,center" id="EDIT_TEST" width="90%" height="90%">
+		<h:section class="content" style="margin:0px;min-width:300px">
+			<div class="card" style="margin-bottom:0px" >
+				<div class="header bg-light-green">
+					<label id="HEADER_LABEL" class="h5"></label>
+				</div>
+				<div class="body" >
+					<div id="TEST_LIST" style="margin:0px;min-width:300px"/>
+					<div id="HEADER_LIST" />
+					<div id="EVENTS_LIST" />
+					<div id="BUTTON_DIV" />
+					<div height="50px" />
+				</div>
+			</div>
+		</h:section>
+	</z:window>
+</zk>
+
+
+	

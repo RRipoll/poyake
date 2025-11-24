@@ -1,0 +1,15 @@
+FROMSQLFILE '/poyake-testrunner/src/main/resources/metadata/testrunner/view/TestTree.sql'
+//SQLFILEDEPENDENCY '/poyake-testrunner/src/main/resources/metadata/testrunner/view/FGetFolderPaths.sql'
+
+VIEW ENTITY testrunner.TestTree PATTERN Audited STEREOTYPES CONFIG{
+    PK testUuid 	UUID NOTNULL SAMEAS testrunner.Test.testUuid
+    testname 		VARCHAR(64) NOTNULL  STEREOTYPES DESCRIPTION
+    description 	VARCHAR(255)  STEREOTYPES DESCRIPTION
+    keywords 		VARCHAR(255)  STEREOTYPES DESCRIPTION
+    events 			PARAMETER MULTIREFTO testrunner.EventParameter
+	inputUserId 	INT NOTNULL FKTO audit.InputUser DEFAULT "1" STEREOTYPES NOGUIINPUT
+	inputSourceId 	INT NOTNULL FKTO audit.InputSource DEFAULT "1" STEREOTYPES NOGUIINPUT
+    created 		DATETIME NOTNULL  DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	FOLDERPATH  VARCHAR(255) 
+	
+}

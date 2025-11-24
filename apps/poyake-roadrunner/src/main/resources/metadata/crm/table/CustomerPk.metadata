@@ -1,0 +1,13 @@
+TABLE ENTITY crm.CustomerPk{
+	PK customerId INT
+	
+	METADATA{
+		1;
+		2;
+		3;
+	}
+	
+	LABELS {
+		customerId {en_EN 'Customer #' es_ES '# Cuenta'}
+	}	
+}

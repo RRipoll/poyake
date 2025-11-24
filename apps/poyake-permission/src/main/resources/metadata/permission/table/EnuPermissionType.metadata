@@ -1,0 +1,20 @@
+TABLE ENTITY permission.EnuPermissionType PATTERN Enumeration{
+	PK permissionTypeId INT NOTNULL 
+	shortCode VARCHAR ( 16 ) NOTNULL 
+	description VARCHAR ( 32 )  NOTNULL STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, MENU, 'Menu';
+		//2, MTFIELD,'Field';
+		3, MTTABLE,'Table';
+		//4, REST,'Rest';
+		//5, ITEM, 'item';
+	}
+		ENULABELS{
+		MENU {es_ES 'Menu'}
+		MTTABLE {es_ES 'Pantalla'}
+		
+		
+	}
+	
+}

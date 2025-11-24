@@ -1,0 +1,26 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:z="zul">
+
+	<z:window border="0" position="center,center" closable="false" style="min-width:300px;min-height:300px">
+		<h:section class="content" style="margin:0px;min-width:300px">
+			<div class="card" style="margin-bottom:0px" >
+				<div class="header bg-light-green">
+					<label id="HEADER_LABEL" class="h5"></label>
+				</div>
+				<div class="body" >
+					Account #: 00001
+					Amount: <mt-decimalbox />
+					<radiogroup>
+					<radio label="Use existing payment method"/>
+					<radio label="Use one off payment method" />
+					</radiogroup>
+					
+					<h:button id="SAVE_BUTTON" class="btn btn-primary ml-2 waves-effect pull-right">${mtlabels.save}</h:button>
+					<h:button id="CANCEL_BUTTON" class="btn bg-orange ml-2 waves-effect pull-right">${mtlabels.cancel}</h:button>
+				</div>
+			</div>
+		</h:section>
+	</z:window>
+</zk>

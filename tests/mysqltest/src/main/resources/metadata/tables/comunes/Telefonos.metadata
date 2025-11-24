@@ -1,0 +1,4 @@
+TABLE ENTITY Telefonos{
+	PK telefonosId INT 
+	prioridad INT
+}

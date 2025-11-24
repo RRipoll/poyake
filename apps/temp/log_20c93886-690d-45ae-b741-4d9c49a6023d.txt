@@ -1,0 +1,31 @@
+--------
+log
+/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/../temp/log_20c93886-690d-45ae-b741-4d9c49a6023d.txt
+
+--------
+*** ------------------------------------------ --------------------------------------- ***
+*** -------------------------- EVENT RestWebService START --------------- ***
+*** ---------------------------------- ----------------------------------------------- ***
+*** Request = Http://localHost:8081/rest/api/mt/table/BOOK/get/1
+*** parameters [Original Values: {label=pK, trParameterTypeId=1, value=1}
+Updates: {}, Original Values: {label=tableName, trParameterTypeId=2, value=BOOK}
+Updates: {}]
+*** JSON null
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Http://localHost:8081/rest/api/mt/table/BOOK/get/1
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*** Response.getStatusCode = 200 OK
+*** Response = {"bookId":1,"title":"El Quijote","authorId":1,"description":null,"doc":null,"genreId":1}
+*** ---------------------------------------------------------------------------------- ***
+*** -----------------------------EVENT RestWebService END -------------- ***
+*** ---------------------------------------------------------------------------------- ***
+--------
+data
+{"bookId":1,"title":"El Quijote","authorId":1,"description":null,"doc":null,"genreId":1}
+
+--------
+--------
+eventName
+Get Author of book 1
+
+--------

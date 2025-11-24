@@ -1,0 +1,4 @@
+TABLE ENTITY inv.InvoiceLedgerItem{
+	PK invoiceId INT NOTNULL FKTO inv.Invoice
+	PK ledgerItemId INT NOTNULL FKTO acc.LedgerItem
+}

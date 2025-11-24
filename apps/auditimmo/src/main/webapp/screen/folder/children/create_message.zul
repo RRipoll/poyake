@@ -1,0 +1,53 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+>
+<window width="90%" style="padding:0px" >
+<h:div class="card h-100 v-100">
+
+	<h:div class="content m-0">
+			<div class="card m-0">
+				<div class="header bg-light">
+					<n:h2>
+						Create Message
+					</n:h2>
+				</div>
+				<div class="body p-3 pt-5">
+					<div class="row clearfix">
+						<div class="col-5">
+							<div class="form-group">
+								<div class="form-line">
+									<mt-textbox info="@MT(field=MESSAGE.TITLE)" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row clearfix">
+						
+						<div class="col-2">
+							<div class="form-group">
+								<div class="form-line">
+									<mt-textbox info="@MT(field=MESSAGE.MSGTEXT)"  rows="3" cols="42"  value="" maxlength="2000"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+
+					<button id="CANCEL_BUTTON" class="btn btn-danger ml-2 waves-effect pull-right">Cancel</button>
+					<button id="SAVE_BUTTON" class="btn btn-primary ml-2 waves-effect pull-right">Save</button>
+				</div>
+			</div>
+	</h:div>
+	
+	
+	
+	
+	
+	
+	</h:div>
+</window>	
+	
+</zk>

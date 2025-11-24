@@ -1,0 +1,59 @@
+FROMSQLFILE '/poyake-file/src/main/resources/metadata/common/view/File.sql'
+
+VIEW  ENTITY common.Fileshow {
+	PK fileGroupId FILE_GROUP SAMEAS common.FileGroup.fileGroupId STEREOTYPES GUIINPUT
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: common.Fileshow  
+VIEW NAME: Fileshow 
+VIEW SCHEMA: common
+
+Tables:
+	TABLE: common.FileGroup
+Output:
+	COLUMN: fileGroupId -> NOT FOUND
+
+
+================= Resolver Information ======================== 
+Entity List:
+	audit.InputSource ,audit.InputUser ,audit.InputUserGroup ,audit.UserGroup ,audit.VgroupRol ,permission.UserGroupRol ,permission.Rol ,audit.VinputUser ,audit.VinputUserMulti ,audit.VuserGroup ,common.EnuTemplateType ,common.FileGroup ,common.StorageFile ,common.StorageFilePk ,common.Template ,config.Enulocale ,common.Fileshow ,config.AppInfo ,config.DatagridSetting ,config.PostingDate ,label.MTlabel ,permission.EnuPermissionType ,permission.EnuPermissionValue ,permission.Permission ,permission.RolPermission ,permission.VPermissionRol ,permission.VRolLink ,permission.Vpermission ,recorder.EnuRecorderType ,recorder.RecorderData ,recorder.RecorderMasterColumns:
+	SOLVED fileGroupId -> common.FileGroup.fileGroupId
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id common
+              .
+              id 
+                simple_id Fileshow
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id fileGroupId
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id common
+                              .
+                              id 
+                                simple_id FileGroup
+  <EOF>*/

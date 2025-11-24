@@ -1,0 +1,29 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+						
+					<div class="row clearfix">
+						<vbox>	
+						<div class="col-md-2 mb-2">
+						
+								
+									<button  autodisable="self" id="UPLOAD_BUTTON"  class="btn btn-primary ml-2 waves-effect z-button" upload="true,maxsize=3000" />
+								
+							
+						</div>
+						<div class="col-md-12 mb-2">
+							
+								
+									<div class="card-columns" id="UPLOADED_FILE_LIST"/>
+								
+							
+						</div>
+						</vbox>	
+					</div>
+		
+</zk>				
+					
+					
+					
+					
+					

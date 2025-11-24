@@ -1,0 +1,17 @@
+ENTITY pub.EventDefinition {
+	
+	PK eventdefinitionid INTEGER
+    eventtypeid INTEGER FKTO pub.EnuEventType
+    creator INTEGER
+    folderid INTEGER FKTO pub.Folder
+    eventname VARCHAR(255) 
+    startdate DATETIME DEFAULT 'CURRENT_TIMESTAMP'
+    enddate DATETIME DEFAULT  '2099-01-01'
+    created DATETIME DEFAULT  'CURRENT_TIMESTAMP'
+    deleted INTEGER DEFAULT  '0'
+    description VARCHAR(255) 
+    restevent NUMERIC(1) DEFAULT  '1'
+    version INTEGER DEFAULT  '0'
+    id INTEGER DEFAULT  '(NEXT VALUE FOR pub.SEQ_ID)'
+    parameters VARCHAR(4000)
+}

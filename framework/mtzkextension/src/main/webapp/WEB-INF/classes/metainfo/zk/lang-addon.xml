@@ -1,0 +1,77 @@
+<language-addon>
+	<addon-name>styledcomponents</addon-name>
+	<language-name>xul/html</language-name>
+
+	<component>
+		<component-name>fieldcontainer</component-name>
+		<component-class>com.jsantos.zk.extensions.MTFieldContainer</component-class>
+		<widget-class>zul.wgt.Div</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/div.js</mold-uri>
+		</mold>
+		<property>
+			<property-name>field</property-name>
+			<property-value></property-value>
+		</property>
+	</component>
+
+	<component>
+		<component-name>mtcombobox</component-name>
+		<component-class>com.jsantos.zk.extensions.MTCombobox</component-class>
+		<widget-class>zul.inp.Combobox</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/combobox-modern.js</mold-uri>
+			<css-uri>css/combo.css.dsp</css-uri>
+		</mold>
+		<property>
+			<property-name>label</property-name>
+			<property-value></property-value>
+		</property>
+		<property>
+			<property-name>field</property-name>
+			<property-value></property-value>
+		</property>
+	</component>
+	
+	<component>
+		<component-name>mttextbox</component-name>
+		<component-class>com.jsantos.zk.extensions.MTTextbox</component-class>
+		<widget-class>zul.inp.Textbox</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/textbox-modern.js</mold-uri>
+			<css-uri>css/field.css.dsp</css-uri>
+			<property>
+				<property-name>label</property-name>
+				<property-value>label</property-value>
+			</property>
+			<property>
+				<property-name>field</property-name>
+				<property-value></property-value>
+			</property>
+		</mold>
+	</component>
+
+	<component>
+		<component-name>mtdatebox</component-name>
+		<component-class>com.jsantos.zk.extensions.MTDatebox</component-class>
+		<widget-class>zul.db.Datebox</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/datebox-modern.js</mold-uri>
+			<css-uri>css/calendar.css.dsp</css-uri><!-- not combo.css.dsp -->
+			<property>
+				<property-name>label</property-name>
+				<property-value>label</property-value>
+			</property>
+			<property>
+				<property-name>field</property-name>
+				<property-value></property-value>
+			</property>
+		</mold>
+	</component>
+
+
+</language-addon>

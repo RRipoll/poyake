@@ -1,0 +1,18 @@
+TABLE ENTITY crm.EnuCustomerType PATTERN Enumeration{
+	PK customerTypeId INT NOTNULL
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		0, SYSTEM, 'System Internal Account';
+		1, CUSTOMER, 'Customer';
+		3, PROSPECT, 'Prospect';
+	}
+	
+	ENULABELS{
+		SYSTEM {es_ES 'Cuenta Interna'}
+		CUSTOMER {es_ES 'Cuenta de Cliente'}
+		PROSPECT {es_ES 'Cliente Potencial'}
+		
+	}
+}

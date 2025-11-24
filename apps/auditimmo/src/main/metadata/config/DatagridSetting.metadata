@@ -1,0 +1,13 @@
+TABLE ENTITY config.DatagridSetting {
+	
+	PK dataGridSettingId INT NOTNULL
+		searchName VARCHAR(250) NOTNULL
+		inputUserId INT 
+		updatedAt DATETIME DEFAULT "getDate()" STEREOTYPES NOGUIINPUT
+		startTime DATETIME DEFAULT "getDate()" STEREOTYPES NOGUIINPUT
+		endTime DATETIME DEFAULT "getDate()" STEREOTYPES NOGUIINPUT
+		isDefunct INT 
+		data  VARCHAR(8000) 		
+		
+		
+}

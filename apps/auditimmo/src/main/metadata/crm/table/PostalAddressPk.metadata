@@ -1,0 +1,9 @@
+TABLE ENTITY crm.PostalAddressPk{
+	PK postalAddressId INT 
+	
+	METADATA{
+		1;
+		2;
+		3;
+	}
+}

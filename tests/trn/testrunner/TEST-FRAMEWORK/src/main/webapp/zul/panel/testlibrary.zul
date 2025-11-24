@@ -1,0 +1,57 @@
+<?page title="Test Library v3.0" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:zk="http://www.zkoss.org/2005/zk"
+	xmlns:n="http://www.zkoss.org/2005/zk/native">
+	
+    <?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"?>
+    <?script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js" ?>
+  
+    <?link rel="stylesheet" type="text/css" href="../../common/js/dist/jsoneditor.css"?>
+	<?script src="../../common/js/dist/jsoneditor.js"?>
+	
+	<?script src="https://bgrins.github.io/filereader.js/filereader.js"?>
+    <?script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min.js"?>
+	
+	<window  apply="com.testrunner.test.framework.toll.testframework.login.LoginController">
+	<h:div id="login_box" style="margin-top: 20%;" align="center" >
+		<n:div  width="25%" height="25%" id="login" >
+			<n:form   id="form1" name="form1" method="post" action="comprobar.asp">
+				<label style="font-family:Arial, Helvetica, sans-serif; font-size:24px;">TEST LIBRARY</label>
+	            <n:table>
+	            	<n:tr>
+	            	    <n:td width="30px"></n:td>
+						<n:td>
+							<n:p class="headeritem">
+								<span style="text-align: right;">Login Name</span>
+								<n:br/>
+								<textbox id="USER_TEXTBOX" value="sa" class="inputlogin" width="255px"/>
+							</n:p>
+						</n:td>
+					</n:tr>
+					<n:tr>
+	            	    <n:td ></n:td>
+						<n:td>
+							<n:p class="headeritem">
+								<span style="text-align: right;">Password</span>
+								<n:br/>
+								<textbox id="PASSWORD_TEXTBOX" type="password" value="idc" class="inputlogin"  width="255px"/>
+							</n:p>
+						</n:td>	
+						<n:td>
+						<span style="text-align: right;"></span>
+								<n:br/>
+							<button id="OK_BUTTON">></button>
+						</n:td>	
+					</n:tr>
+				</n:table>
+			</n:form>
+			<div id="DIV_ERRORMESSAGE" visible="false" align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:red;width:500px; height:26px; ">
+				 <n:b> Bad username or password  Please try again </n:b>
+			</div>
+			<div  align="center" visible="${'true' == param.sessiontimeout}" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:red;width:500px; height:26px; ">
+				<n:span class="z-label" style="color:red"> Your session has timed out, please log in again </n:span>
+			</div>
+		</n:div>
+	</h:div>	
+	</window>	
+</zk>

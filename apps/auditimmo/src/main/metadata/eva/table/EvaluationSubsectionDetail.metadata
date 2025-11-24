@@ -1,0 +1,10 @@
+TABLE ENTITY eva.EvaluationSubsectionDetail{
+	PK evaluationSubsectionDetailId INT
+	evaluationId INT NOTNULL FKTO eva.EvaluationPk
+	evaluationSubsectionId INT NOTNULL FKTO eva.EnuEvaluationSubsection
+	level INT
+	measurements VARCHAR(2000)
+	observations VARCHAR(2000) 
+	subSectionStatus INT NOTNULL FKTO eva.EnuSubSectionstatus DEFAULT "1"
+	
+}

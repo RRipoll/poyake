@@ -1,0 +1,12 @@
+METADATA FOR label.MTlabel  {
+	
+	158,'Book.bookId','Book','Book #','# Libro';
+159,'authorId','author','Author #','# Autor';
+160,'otherAuthor','VBook','Other Autors','Otros Autores';
+161,'title','VBook','Title','Titulo';
+162,'doc','VBook','Docs','Documentos';
+163,'VBook','VBook','Books','Libros';
+164,'mainscreen_book','mainscreen','Book','Libro';
+165,'mainscreen_author','mainscreen','Author','Autor';
+166,'Author.fileGroup','Author','File','Archivo';
+}

@@ -1,0 +1,13 @@
+TABLE ENTITY permission.Rol  STEREOTYPES CONFIG{
+	PK rolId INT
+	shortCode VARCHAR ( 16 ) NOTNULL
+	description VARCHAR ( 32 ) NOTNULL STEREOTYPES DESCRIPTION
+	
+	METADATA{
+		1,'USER','User Rol';
+		2,'SYS_ADMIN','Admin Rol';
+		3,'ACCOUNTANT','Accountant Rol';
+		4,'TR_ROL','Test Runner Rol';
+		5,'CONF_EDITABLE','Conf Editable';
+	}
+}

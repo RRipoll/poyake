@@ -1,0 +1,22 @@
+Meta files:
+platform:/resource/poyake-file/src/main/resources/metadata/common/table/FileGroup.metadata
+platform:/resource/poyake-file/src/main/resources/metadata/common/table/StorageFile.metadata
+platform:/resource/poyake-file/src/main/resources/metadata/common/table/StorageFilePK.metadata
+platform:/resource/poyake-file/src/main/resources/metadata/common/view/Fileshow.metadata
+platform:/resource/poyake-file/src/main/resources/metadata/configuration/AppInfoMD.metadata
+platform:/resource/poyake-file/src/main/resources/metadata/configuration/configuration.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/audit/table/InputSource.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/audit/table/InputUser.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/audit/table/InputUserGroup.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/audit/table/UserGroup.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/audit/view/VUserMultiGroup.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/audit/view/VinputUser.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/audit/view/VinputUserMulti.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/audit/view/VuserGroup.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/config/table/AppDataType.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/config/table/AppInfo.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/config/table/AppInfoTree.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/config/table/PostingDate.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/configuration/configuration.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/configuration/inputUserMD.metadata
+platform:/resource/poyake-audit/src/main/resources/metadata/configuration/userGroupMD.metadata

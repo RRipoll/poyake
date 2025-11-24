@@ -1,0 +1,17 @@
+TABLE ENTITY acc.EnuAnnotationType PATTERN Enumeration{
+	PK annotationTypeId INT
+	shortCode VARCHAR ( 16 ) NOTNULL
+	description VARCHAR ( 32 ) NOTNULL STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, NEWDEBIT, 'New Debit';
+		2, NEWCREDIT, 'New Credit';
+		3, DEBITCANCEL, 'Debit Cancellation';
+		4, CREDITCANCEL, 'Credit Cancellation';
+		5, DEBITADJUST, 'Debit Adjustment';
+		6, CREDITADJUST, 'Credit Adjustment';
+		7, DEBITREALLOC, 'Debit Reallocation';
+		8, CREDITREALLOC, 'Credit Reallocation';
+		9, DEBITTYPECHANGE, 'Debit Reclassification'; 
+	}
+}

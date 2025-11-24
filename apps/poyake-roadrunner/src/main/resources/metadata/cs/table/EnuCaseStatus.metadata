@@ -1,0 +1,10 @@
+TABLE ENTITY cs.EnuCaseStatus PATTERN Enumeration{
+	PK caseStatusId INT 
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		0, NEW, 'New';
+		1, CLOSED, 'Closed';
+	}
+}

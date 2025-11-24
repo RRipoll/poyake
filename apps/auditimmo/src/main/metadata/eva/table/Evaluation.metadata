@@ -1,0 +1,22 @@
+TABLE ENTITY eva.Evaluation PATTERN AutoHistory{
+	evaluationId INT FKTO eva.EvaluationPk STEREOTYPES AUTOHISTORYMAINFK
+	evaluationStatusId INT NOTNULL FKTO eva.EnuEvaluationStatus DEFAULT "1"
+	folderId INT NOTNULL FKTO eva.FolderPK
+	applicantId INT NOTNULL FKTO eva.Intervenant
+	evaluatorId INT NOTNULL FKTO eva.Intervenant
+	mandateTypeId INT NOTNULL FKTO eva.EnuMandateType
+	habitabilityId INT NOTNULL FKTO eva.EnuInteriorExterior
+	sanitaryStateId INT NOTNULL FKTO eva.EnuInteriorExterior
+	reEvaluationOfEvaluationId INT FKTO eva.EvaluationPk
+	
+	PK revisionId INT STEREOTYPES NOGUIINPUT
+	startDate DATETIME NOTNULL DEFAULT "getDate()" STEREOTYPES NOGUIINPUT
+	endDate DATETIME NOTNULL DEFAULT "\'01-Jan-2099\'" STEREOTYPES NOGUIINPUT
+	inputUserId INT NOTNULL FKTO audit.InputUser DEFAULT "1" STEREOTYPES NOGUIINPUT
+	inputSourceId INT NOTNULL FKTO audit.InputSource DEFAULT "1" STEREOTYPES NOGUIINPUT
+	
+	LABELS {
+		evaluationStatusId {SHORTLABEL en_EN 'Status'}
+	}
+	
+}

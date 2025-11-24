@@ -1,0 +1,15 @@
+TABLE ENTITY permission.RolPermission  STEREOTYPES LINKTABLE ,CONFIG{
+	PK rolPermissionId INT NOTNULL 
+	rolId INT NOTNULL FKTO permission.Rol DEFAULT '2'  STEREOTYPES LINK
+	permissionId INT NOTNULL  FKTO permission.Permission  STEREOTYPES LINK 
+	
+	METADATA{
+		1,'2','1';
+		2,'4','2';
+		3,'5','3';
+		4,'2','5';
+		5,'2','6';
+		6,'2','7';
+		7,'2','8';
+	}
+}

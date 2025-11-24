@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language-addon>
+	<addon-name>bos</addon-name>
+	<language-name>xul/html</language-name>
+	<component>
+		<component-name>checkboxgroup</component-name>
+		<component-class>com.etantolling.testrunner.test.zkweb.macro.Checkboxgroup</component-class>
+		<macro-uri>/zul/macro/checkboxgroup.zul</macro-uri>
+	</component>
+	<component>
+        <component-name>decimalbox</component-name>
+        <extends>decimalbox</extends>
+        <property>
+            <property-name>format</property-name>
+            <property-value>#,##0.00</property-value>
+        </property>
+    </component>
+    <component>
+      <component-name>button</component-name>
+      <extends>button</extends>
+      <property>
+          <property-name>autodisable</property-name>
+          <property-value>self</property-value>
+      </property>
+	</component>
+	<component>
+        <component-name>a</component-name>
+        <extends>a</extends>
+        <property>
+            <property-name>autodisable</property-name>
+            <property-value>self</property-value>
+        </property>
+    </component>
+</language-addon>

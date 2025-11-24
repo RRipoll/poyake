@@ -1,0 +1,14 @@
+cd framework/dbjavamap
+mvn clean install
+cd ../..
+cd framework/commondata
+mvn clean install
+cd ../..
+cd framework/search
+mvn clean install
+cd ../..
+cd framework/webappbase
+mvn clean install
+cd ../..
+cd apps/demo
+mvn clean install

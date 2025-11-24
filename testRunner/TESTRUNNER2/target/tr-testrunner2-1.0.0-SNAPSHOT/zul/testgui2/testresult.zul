@@ -1,0 +1,44 @@
+<?page title="Test Runner Tool"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client" xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	
+<?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"?>
+
+	<window width="30%" closable="true" title="Test Result" maximizable="false">
+		<vlayout hflex="1" vflex="1">
+			<vbox align="start">
+				<groupbox>
+					<caption>
+						Test ID:
+						<label id="TEST_ID" />
+					</caption>
+					<hbox>
+						Status:
+						<label id="TEST_STATUS" style="font-weight: bold;" />
+					</hbox>
+					<hbox id="hboxWarning" visible="false">
+						Warning:
+						<label id="TEST_WARNING" style="font-weight: bold;" />
+					</hbox>
+					<hbox id="hboxError" visible="false">
+						Error:
+						<textbox id="TEST_ERROR" style="font-weight: bold;"  multiline="true" height="300px" width="400px"/>
+					</hbox>
+					<hbox visible="false">
+						Current System Date:
+						<label id="SYSTEM_DATE" style="font-weight: bold;" />
+					</hbox>
+				</groupbox>
+			</vbox>
+			<separator height="30px" />
+			<vbox hflex="1" align="center">
+				<hbox>
+					<button id="btnViewLog" label="View Log"></button><button id="btnDownloadLog" label="Download Log"></button><button id="btnViewWarnings" label="View Warnings"></button>
+				</hbox>
+				<separator height="20px" />
+				<button id="btnOk" label="Ok"></button>
+				<separator height="20px" />
+			</vbox>
+		</vlayout>
+	</window>
+</zk>

@@ -1,0 +1,8 @@
+TABLE ENTITY eva.Note{
+	PK noteId INT
+	folderId INT NOTNULL FKTO eva.FolderPK
+	noteTypeId INT NOTNULL FKTO eva.EnuNoteType 
+	title VARCHAR(255) NOTNULL
+	msgText VARCHAR(8000) NOTNULL
+	fileGroupId FILE_GROUP FKTO general.FileGroup
+}

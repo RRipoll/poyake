@@ -1,0 +1,23 @@
+TABLE ENTITY testrunner.EventDefFolder  STEREOTYPES CONFIG{
+	
+	PK eventdeffolderUuid UUID NOTNULL STEREOTYPES FOLDER
+    parentfolderUuid UUID FKTO testrunner.EventDefFolder STEREOTYPES PARENTFOLDER
+    description VARCHAR(255) STEREOTYPES DESCRIPTION 
+    eventDefinitionUuid UUID FKTO testrunner.EventDefinition STEREOTYPES ITEM
+       
+    METADATA{
+    	
+  	'0',NULL,'.',NULL;
+	'2','0','Input Files',NULL;
+	'3','0','Checks',NULL;
+	'4','0','System',NULL;
+	'REST','4','REST',NULL;
+	'cf8e47d2-5859-4a7a-8fd8-637ad2aae4ad','REST',NULL,'4c035182-361c-4db9-9e96-8fee1a5300de';
+	'f35dae7d-11c2-4ddf-9423-96f85bc2d5db','REST',NULL,'ba02d76a-3d98-467b-a2e5-09a784893c58';
+	'e50f4276-7b61-49b7-b56e-ba97311d0c00','REST',NULL,'1fff2521-8a4d-43cd-a4aa-bc0af122ea46';
+	'75a33fe6-d22d-48ab-a19d-3b158ab8fd5f','REST',NULL,'346f9ee3-610d-4e59-9f15-b4e24d5950b4';
+	'4a302b1f-742b-45f0-ba43-4cf4691e34fe','REST',NULL,'ed26e7e8-4a25-4d21-a429-d67ff3f65f76';
+	
+    
+    }
+}

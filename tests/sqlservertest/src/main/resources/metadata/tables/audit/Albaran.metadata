@@ -1,0 +1,5 @@
+TABLE ENTITY Albaran EXTENDS acc.PurchaseOrder{
+	PK albaranId INT FKTO acc.PurchaseOrder
+	amount NUMBER(9,2)
+	albaranNumber VARCHAR(16) STEREOTYPES DESCRIPTION
+}

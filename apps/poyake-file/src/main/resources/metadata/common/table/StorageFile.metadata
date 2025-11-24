@@ -1,0 +1,29 @@
+TABLE ENTITY common.StorageFile PATTERN Audited,AutoHistory{
+	storageFileId INT NOTNULL FKTO common.StorageFilePk STEREOTYPES AUTOHISTORYMAINFK
+	location URL NOTNULL
+	provider VARCHAR(70)  
+	mimeType VARCHAR(70) NOTNULL
+	fileName  VARCHAR(255) NOTNULL
+	fileGroupId INT NOTNULL FKTO common.FileGroup 
+	originalFileName   VARCHAR(255) STEREOTYPES DESCRIPTION
+    tags VARCHAR(255) 
+    description VARCHAR(255) 
+    created DATETIME NOTNULL  DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	inputUserId INT NOTNULL FKTO audit.InputUser DEFAULT "1" STEREOTYPES NOGUIINPUT
+	inputSourceId INT NOTNULL FKTO audit.InputSource DEFAULT "1" STEREOTYPES NOGUIINPUT
+    
+    PK revisionId INT STEREOTYPES NOGUIINPUT
+	startDate DATETIME NOTNULL DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	endDate DATETIME NOTNULL DEFAULT MAXDATE  STEREOTYPES NOGUIINPUT
+		
+		
+	LABELS {
+		inputUserId{en_EN 'User #' es_ES '# Usuario'}
+		created{en_EN 'Created By' es_ES 'Creado por'}
+		fileName{en_EN 'File Name' es_ES 'Nombre Archivo'}
+		originalFileName{en_EN 'Original Name' es_ES 'Nombre Original'}
+		description{en_EN 'Description' es_ES 'Descripción'}
+		
+	}	
+		
+}

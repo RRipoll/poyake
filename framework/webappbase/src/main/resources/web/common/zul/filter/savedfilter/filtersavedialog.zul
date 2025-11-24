@@ -1,0 +1,20 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+	<window closable="true" title="create filter" >
+		<h:table >
+			<h:tr>
+				<h:td>${mtlabels.filter_filter_name}: </h:td><h:td><textbox id="FILTER_NAME" width="400px"/></h:td>
+			</h:tr>
+			<h:tr>
+				<h:td>${mtlabels.filter_filter_description}</h:td><h:td><textbox id="FILTER_DESCRIPTION" width="400px"/></h:td>
+			</h:tr>
+			<h:tr>
+				<h:td colspan="2" align="right"><button  autodisable="self" id="SAVE_BUTTON" label="${mtlabels.filter_save}" /></h:td>
+			</h:tr>
+		
+		
+		</h:table>
+	</window>
+</zk>

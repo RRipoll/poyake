@@ -1,0 +1,20 @@
+TABLE ENTITY audit.InputUser{
+	PK inputUserId INT
+	loginName VARCHAR(64) NOTNULL STEREOTYPES DESCRIPTION
+	passwd VARCHAR(64) 
+	postingDate DATE NOTNULL DEFAULT "getDate()"
+	fullName VARCHAR(128)
+    
+	
+	METADATA{
+		1, 'system', NULL,DEFAULT, NULL;
+		2, 'sa', 'jjsoft',DEFAULT, NULL;
+		3, 'jfavre', 'dubidubidu',DEFAULT, 'John Favre';	
+		4, 'jsantos', 'dubidubidu',DEFAULT, 'Javier Santos';
+	}
+	
+	LABELS {
+		fullName { SHORTLABEL en_EN 'Full Name'}
+	}
+	
+}

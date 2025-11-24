@@ -1,0 +1,43 @@
+<zk
+	xmlns:h="xhtml"
+	>
+	
+	<?link rel="stylesheet" href="~./common/css/bootstrap.min.css"?>
+	<?link rel="stylesheet" href="css/adminbsb.css"?>
+	<?link rel="stylesheet" href="css/demo.css"?>
+	<?link rel="stylesheet" href="css/datagrid4.css"?>
+	<?link rel="stylesheet" href="css/login.css"?>
+	<?link rel="stylesheet" href="css/navbar.css"?>
+	<?link rel="stylesheet" href="css/mt-tabbox.css"?>
+	<?link rel="stylesheet" href="css/variables.css"?>
+	<?link rel="stylesheet" href="css/zk-custom.css"?>
+	<?link rel="stylesheet" href="css/zk-iceblue-tabs.css"?>
+	<?link rel="stylesheet" href="css/materialize.css"?>
+	
+	<div>
+	
+    <menupopup id="editPopup">
+        <menuitem label="View" />
+        <menuitem label="Edit" />
+        <menuitem label="Delete" />
+    </menupopup>
+    
+      
+    <image src="~./zul/poyake-roadrunner/widgets/getting_started/img/car5.png" width="140px" sclass="icon"
+        tooltiptext="Right click to show menu" context="editPopup" />
+      
+    <image src="~./zul/poyake-roadrunner/widgets/getting_started/img/car6.png" width="140px" sclass="icon"
+        tooltiptext="on click to show menu" popup="editPopup" />	
+	
+	
+	
+		<mt-tabs selectedIndex="1" class="nav nav-tabs tab-nav-right mt-tabbox">	
+				<mt-tab contentPanelId="HOLA" label="Hola" />
+				<mt-tab contentPanelId="CARACOLA" label="Caracola" />
+		</mt-tabs>
+		<div id="CONTAINER">
+			<div id="HOLA">Hola content</div>
+			<div id="CARACOLA" visible="false">Caracola content</div>
+		</div>
+	</div>	
+</zk>

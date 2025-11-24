@@ -1,0 +1,16 @@
+<window title="Error ${requestScope['javax.servlet.error.status_code']}"
+width="800px" border="normal" mode="modal" closable="true">
+    <vbox>
+Audit Immo Application encounters an error: ${requestScope['javax.servlet.error.message']}
+        <hbox style="margin-left:auto; margin-right:auto">
+            <button label="${error.Continue}" onClick="spaceOwner.detach()"/>
+            <button label="${error.Reload}" onClick="Executions.sendRedirect(null)"/>
+        </hbox>
+    </vbox>
+ 
+    <!-- optional: record the error for improving the app -->
+    <zscript>
+    org.zkoss.util.logging.Log.lookup("Fatal").error(
+        requestScope.get("javax.servlet.error.exception"));
+    </zscript>
+</window>

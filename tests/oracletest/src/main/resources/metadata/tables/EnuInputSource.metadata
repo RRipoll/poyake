@@ -1,0 +1,11 @@
+ENTITY EnuInputSource {
+	PK inputSourceId INT 
+	UQ shortCode VARCHAR ( 8 )
+	description VARCHAR(64)
+	patatin VARCHAR(10)
+	
+	METADATA{
+		1, "BOS", "Back Office System", "PATATIN";
+		2, "WEB", "Web Site", "PATATIN";
+	}
+}

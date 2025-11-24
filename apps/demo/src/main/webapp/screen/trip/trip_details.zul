@@ -1,0 +1,117 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	<window width="90%" style="padding:0px" >
+	    <h:div class="card h-100 v-100">
+	    	<h:div class="header bg-light-green">
+	    		<h:h2>Trip </h:h2>
+	    	</h:div>
+	    	<h:div class="card h-100" style="margin-bottom:0px;background-color:var(--j-window-background)" >
+	    		<div class="row p-4">
+	    			<div class="col col-8">
+			    		<div class="card">
+			    			<div class="header">
+			    				<h:h5>Trip Details</h:h5>
+			    			</div>
+			    			<div class="body">
+					    		<div class="row">
+						    		<div class="col">
+						    			<mt-fieldlabel field="TripInfo.tripId" />
+						    		</div>
+						    		
+						    		<div class="col text-right">
+						    			<mt-cellbuilder field="TripInfo.tripId" />
+						    		</div>
+					    		</div>
+					    		<div class="row">
+						    		<div class="col">
+						    			<mt-fieldlabel field="TripInfo.fareAmount" />
+						    		</div>
+						    		<div class="col text-right">
+						    			<mt-fieldvalue field="TripInfo.fareAmount" />
+						    		</div>
+						    		
+					    		</div>
+					    		<div class="row">
+						    		<div class="col">
+						    			<mt-fieldlabel field="TripInfo.laneExitDate" />
+						    		</div>
+						    		
+						    		<div class="col text-right">
+						    			<mt-cellbuilder field="TripInfo.laneExitDate" />
+						    		</div>
+					    		</div>
+					    		<div class="row">
+						    		<div class="col">
+						    			<mt-fieldlabel field="TripInfo.laneExitDate" />
+						    		</div>
+						    		
+						    		<div class="col text-right">
+						    			<mt-cellbuilder field="TripInfo.laneExitDate" />
+						    		</div>
+					    		</div>
+					    		<div class="row">
+						    		<div class="col">
+						    			<mt-fieldlabel field="TripInfo.gantryId" />
+						    		</div>
+						    		
+						    		<div class="col text-right">
+						    			<mt-cellbuilder field="TripInfo.gantryId" />
+						    		</div>
+					    		</div>
+					    		<div class="row">
+						    		<div class="col">
+						    			<mt-fieldlabel field="TripInfo.laneEntryDate" />
+						    		</div>
+						    		
+						    		<div class="col text-right">
+						    			<mt-cellbuilder field="TripInfo.laneEntryDate" />
+						    		</div>
+					    		</div>
+					    		<div class="row">
+						    		<div class="col">
+						    			<mt-fieldlabel field="TripInfo.licensePlateId" />
+						    		</div>
+						    		
+						    		<div class="col text-right">
+						    			<mt-cellbuilder field="TripInfo.licensePlateId" />
+						    		</div>
+					    		</div>
+					    		<div class="row">
+						    		<div class="col">
+						    			<mt-fieldlabel field="TripInfo.passId" />
+						    		</div>
+						    		
+						    		<div class="col text-right">
+						    			<mt-cellbuilder field="TripInfo.passId" />
+						    		</div>
+					    		</div>
+					    	</div>
+					    </div>
+			    	</div>
+			    	<div class="col col-4">
+			    		<div class="card">
+			    			<div class="body">
+			    				<h:img src="/img/car.jpeg" height="300px" width="300px"/>
+			    			</div>
+			    		</div>
+			    	</div>
+			    </div>
+			    <div class="row p-4">
+			    	<div class="col col-12">
+			    		<div class="card">
+			    			<div class="header">
+			    				<h:h5>Payments</h:h5>
+			    			</div>
+			    			<div class="body">
+			    				<div id="PAYMENTS_GRID" />
+			    			</div>
+			    		</div>
+			    	</div>
+			    
+			    </div>
+			</h:div>
+			<button id="DETAILS_BUTTON_CLOSE" class="btn bg-orange ml-2 waves-effect" style="position:absolute;top:10px;right:10px">${mtlabels.close}</button>
+		</h:div>
+	</window>
+</zk>

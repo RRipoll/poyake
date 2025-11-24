@@ -1,0 +1,11 @@
+TABLE ENTITY eva.EnuEvaluationSectionType PATTERN Enumeration{
+	PK evaluationSectiontype INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, HABITABILITY, 'Habitability';
+		2, SANITARY, 'Sanitary State';
+	}
+	
+}

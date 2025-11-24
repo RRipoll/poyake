@@ -1,0 +1,138 @@
+TABLE ENTITY tolling.EnuLicensePlateJurisdiction PATTERN Enumeration{
+	PK licensePlateJurisdictionId INT
+	shortCode VARCHAR ( 16 ) 
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	stateOrProviceId INT FKTO crm.EnuStateProvince
+	countryId INT NOTNULL FKTO crm.EnuCountry
+	
+	ENUMETADATA{
+		0,xx,'Unknown',0,0;
+		1,AL,'Alabama',1,1;
+		2,AK,'Alaska',2,1;
+		3,AZ,'Arizona',3,1;
+		4,AR,'Arkansas',4,1;
+		5,CA,'California',5,1;
+		6,CO,'Colorado',6,1;
+		7,CT,'Connecticut',7,1;
+		8,DE,'Delaware',8,1;
+		9,FL,'Florida',9,1;
+		10,GA,'Georgia',10,1;
+		11,HI,'Hawaii',11,1;
+		12,IDH,'Idaho',12,1;
+		13,IL,'Illinois',13,1;
+		14,IN,'Indiana',14,1;
+		15,IA,'Iowa',15,1;
+		16,KS,'Kansas',16,1;
+		17,KY,'Kentucky',17,1;
+		18,LA,'Lousiana',18,1;
+		19,ME,'Maine',19,1;
+		20,MD,'Maryland',20,1;
+		21,MA,'Massachusetts',21,1;
+		22,MI,'Michigan',22,1;
+		23,MN,'Minnesota',23,1;
+		24,MS,'Mississippi',24,1;
+		25,MO,'Missouri',25,1;
+		26,MT,'Montana',26,1;
+		27,NE,'Nebraska',27,1;
+		28,NV,'Nevada',28,1;
+		29,NH,'New Hampshire',29,1;
+		30,NJ,'New Jersey',30,1;
+		31,NM,'New Mexico',31,1;
+		32,NY,'New York',32,1;
+		33,NC,'North Carolina',33,1;
+		34,ND,'North Dakota',34,1;
+		35,OH,'Ohio',35,1;
+		36,OK,'Oklahoma',36,1;
+		37,OR,'Oregon',37,1;
+		38,PA,'Pennsylvania',38,1;
+		39,RI,'Rhode Island',39,1;
+		40,SC,'South Carolina',40,1;
+		41,SD,'South Dakota',41,1;
+		42,TN,'Tennessee',42,1;
+		43,TX,'Texas',43,1;
+		44,UT,'Utah',44,1;
+		45,VT,'Vermont',45,1;
+		46,VA,'Virginia',46,1;
+		47,WA,'Washington',47,1;
+		48,WV,'West Virginia',48,1;
+		49,WI,'Wisconsin',49,1;
+		50,WY,'Wyoming',50,1;
+		51,AB,'Alberta',51,2;
+		52,BC,'British Columbia',52,2;
+		53,MB,'Manitoba',53,2;
+		54,NB,'New Brunswick',54,2;
+		55,NL,'Newfoundland and Labrador',55,2;
+		56,NS,'Nova Scotia',56,2;
+		57,NT,'Nortwest Territories',57,2;
+		58,NU,'Nunavut',58,2;
+		59,ON,'Ontario',59,2;
+		60,PE,'Prince Edward Island',60,2;
+		61,QC,'Quebec',61,2;
+		62,SK,'Saskatchewan',62,2;
+		63,YT,'Yukon',63,2;
+		64,AGU,'Aguascalientes',64,3;
+		65,BCN,'Baja California Norte',65,3;
+		66,BCS,'Baja California Sur',66,3;
+		67,CAM,'Campeche',67,3;
+		68,CHP,'Chiapas',68,3;
+		69,CHH,'Chihuahua',69,3;
+		70,COA,'Coahuila',70,3;
+		71,COL,'Colima',71,3;
+		72,CMX,'Distrito Federal',72,3;
+		73,DUR,'Durango',73,3;
+		74,GUA,'Guanajuato',74,3;
+		75,GRO,'Guerrero',75,3;
+		76,HID,'Hidalgo',76,3;
+		77,JAL,'Jalisco',77,3;
+		78,MEX,'Mexico',78,3;
+		79,MIC,'Michoacan',79,3;
+		80,MOR,'Morelos',80,3;
+		81,NAY,'Nayarit',81,3;
+		82,NLE,'Nuevo Leon',82,3;
+		83,OAX,'Oaxaca',83,3;
+		84,PUE,'Puebla',84,3;
+		85,QUE,'Queretaro',85,3;
+		86,ROO,'Quintana Roo',86,3;
+		87,SLP,'San Luis Potosi',87,3;
+		88,SIN,'Sinaloa',88,3;
+		89,SON,'Sonora',89,3;
+		90,TAB,'Tabasco',90,3;
+		91,TAM,'Tamaulipas',91,3;
+		92,TLA,'Tiaxcala',92,3;
+		93,VER,'Veracruz',93,3;
+		94,YUC,'Yucatan',94,3;
+		95,ZAC,'Zacatecas',95,3;
+		96,DC,'Washington DC',96,1;
+		97,AS,'American Samoa',97,1;
+		98,FM,'Federated States of Micronesia',98,1;
+		99,GU,'Guam',99,1;
+		100,MH,'Marshal Islands',100,1;
+		101,MP,'Northern Mariana Islands',101,1;
+		102,PW,'Palau',102,1;
+		103,PR,'Puerto Rico',103,1;
+		104,VI,'Virgin Islands',104,1;
+		105,LB,'Labrador',105,2;
+		106,PQ,'Province du Quebec',106,2;
+		108,AA,'Armed Forces Americas',108,1;
+		109,AE,'Armed Forces (Other;',109,1;
+		110,AP,'Armed Forces Pacific',110,1;
+		111,II,'International',111,4;
+		1000,DHS,'Department of Homeland Security',NULL,1;
+		1001,FD,'Federal or Military',NULL,1;
+		1002,GSA,'General Services Administration',NULL,1;
+		1003,DL,'Diplomat ',NULL,1;
+		1004,FC,'Foreign Consul',NULL,1;
+		1005,PUY,'Puyallup',NULL,1;
+		1006,CLV,'Colville',NULL,1;
+		1007,LUM,'Lummi',NULL,1;
+		1008,SPK,'Spokane Tribe',NULL,1;
+		1009,QIN,'Quinault Indian Nation',NULL,1;
+		1010,MCK,'Muckleshoot',NULL,1;
+		1011,TUL,'Tulalip Tribes',NULL,1;
+		1012,YAK,'Yakama Nation',NULL,1;
+	}
+	
+	LABELS{
+		shortCode {SHORTLABEL en_EN 'Jurisdiction' es_ES 'Jurisdicci??n'}
+	}
+}

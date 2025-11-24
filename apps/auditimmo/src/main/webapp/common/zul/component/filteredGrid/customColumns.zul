@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="ZK Test" language="xul/html"?>
+<!--
+messagebox.zul
+	Purpose:
+		
+	Description:
+	History:
+		Wed Jul 7 12:00:12     2010, Created by simon
+Copyright (C) 2010 Potix Corporation. All Rights Reserved.
+-->
+<window sclass="${arg.sclass}"
+ border="0" width="400px" closable="false"
+ use="org.zkoss.zul.impl.MessageboxDlg" xmlns:h="xhtml">
+	<div sclass="custom-message-dlg" >
+		<div sclass="${arg.icon}"/>
+		<div sclass="custom-messagebox-dlg-title" ><h:h5>${arg.title}</h:h5></div>
+		<div sclass="custom-messagebox-dlg-body">
+			<label value="${arg.message}" multiline="true" />
+		</div>
+		<hlayout id="buttons" sclass="z-messagebox-buttons" spacing="auto">
+			<custom-attributes button.sclass="btn btn-primary"/><!-- CSS class for buttons -->
+		</hlayout>
+	</div>
+</window>

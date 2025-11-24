@@ -1,0 +1,14 @@
+TABLE ENTITY acc.EnuLedgerType PATTERN Enumeration{
+	PK ledgerTypeId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 64 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, DEBIT, 'Debit';
+		2, CREDIT, 'Credit';
+		3, DC, 'Debit Cancellation';
+		4, CC, 'Credit Cancellation';
+		5, DR, 'Debit Repost';
+		6, CR, 'Credit Repost';
+	}
+}

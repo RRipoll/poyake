@@ -1,0 +1,162 @@
+mainscreen.exit_to_app=salir de la Aplicacion
+mainscreen.Dashboard=Bandeja de Entrada
+
+
+mainscreen.Home=Inicio
+mainscreen.Accounts=Cuentas
+mainscreen.Trips=Tránsitos
+mainscreen.Vehicles=Vehículos
+mainscreen.Cases=Casos
+mainscreen.System_Administration=Administración
+mainscreen.Design=Diseño
+mainscreen.Test=Test
+
+
+account.details.customer_number=Cuenta #
+account.details.modify=Modificar
+account.details.phone_number=Telefono
+account.details.email=Email
+account.details.add=Añadir
+account.details.cases=Casos
+account.details.passes=Pases
+account.details.balance=Balance
+account.details.payment_methods=Métodos de Pago
+account.details.close=Cerrar
+account.details.create_case=Crear Caso
+account.details.make_payment=Pagar
+account.details.overview=Detalles
+account.details.transaction_history=Historial de Transacciones
+account.details.history=Historia
+account.details.cases=Casos
+account.details.customer_name=Detalles del Cliente
+account.details.address=Dirección
+account.details.vehicles=Vehículos
+account.details.invoices=Facturas
+
+
+
+mainscreen.Find_Account=Buscar Cuenta
+mainscreen.Create_Account=Crear Cuenta
+mainscreen.Find_Trip=Buscar Tránsito
+mainscreen.Find_Vehicle=Buscar Vehículo
+mainscreen.Find_Case=Buscar Caso
+mainscreen.Create_Case=Crear Caso
+mainscreen.Find_User=Buscar Usuario
+mainscreen.Create_User=Crear Usuario
+mainscreen.Promos=Promos
+mainscreen.Create_Promocion=Create Promoción
+mainscreen.Forms=Formularios
+mainscreen.Form_Elements=Elementos de formularios
+mainscreen.Profile_page=Perfíl
+mainscreen.Layout=Layout
+mainscreen.Icons=Icons
+mainscreen.Typography=Tipografía
+mainscreen.Generate_Test_Accounts=Generar Test de Cuentas
+mainscreen.Generate_Test_Trips=Generar Test de Viajes
+mainscreen.account_number=# Cuenta
+
+standardlistscreen.filter=Filtro
+standardlistscreen.search=Buscar
+
+login.Sign_in_to_start_your_session=Inicia tu Sesión
+login.Username=Nombre de usuario
+login.Password=Password
+login.Remember_Me=Recuérdame
+login.SIGN_IN=Entrar
+login.Register_Now=Regístrate ahora!
+login.Forgot_Password=Olvidastes el password?
+
+createcustomerscreen.create_customer=Crear Cuenta
+createcustomerscreen.customer_name=Nombre
+createcustomerscreen.Address=Dirección
+createcustomerscreen.phone_number=Teléfono
+createcustomerscreen.email_address=Email
+createcustomerscreen.payment_methods=Métodos de Pago
+createcustomerscreen.save=Guardar
+
+
+dashboard.customer_accounts=CUENTAS
+dashboard.customer_cases=CASOS
+dashboard.trips=PEAJES
+dashboard.new_visitors=VISITAS
+dashboard.title=PANEL DE CONTROL
+dashboard.task_infos=TAREAS
+dashboard.task=Tarea
+dashboard.status=Estatus
+dashboard.manager=Manager
+dashboard.progress=Progreso
+dashboard.answered_tickets=CASOS GESTIONADOS
+dashboard.today=HOY
+dashboard.yesterday=AYER
+dashboard.last_week=SEMANA PASADA
+dashboard.last_month=MES PASADO
+dashboard.last_year=AÑO PASADO
+dashboard.all=TODOS
+dashboard.tickets=CASOS
+
+
+filter.filter=Filter
+filter.save=Save
+filter.orderby=Order By
+filter.select=Select
+filter.filter_name=Filter name
+filter.filter_description=Filter Description
+filter.collapse=Collapse
+filter.configure_columns=Configure Columns
+filter.configure_filter=Configure Filter
+filter.configure_seleccion=Configure "Order By selection"
+filter.reset_filter=Reset Filter
+
+filter.Edit= Configuration Editor
+filter.detail=Configuration Detalle
+filter.orderby=Configuration ordenacion 
+filter.select=Configuration Columnas
+
+editscreen.add_parameters=Añade Parametros (+)
+editscreen.label_name=Nombre de la Etiqueta
+editscreen.add_paramenter=Añade Parametro
+editscreen.reset_parameters=Reinicia Parametros
+editscreen.save=Guardar
+editscreen.cancel=Cancelar
+
+accountdetail.customer=Cliente #
+
+close=Cerrar
+save=Guardar
+cancel=Cancelar
+new=Nuevo
+create=Crear
+modify=Modifica
+reset=reinicia
+balance=Balance 
+passes=Passes
+pass=Pass
+cases=Casos
+case=Caso
+vehicles=Vehiculos
+vehicle=Vehiculo
+email=Email
+emails=Emails
+phone=Numero de Telefono
+address=Direccion
+customer_name=Nombre Cliente
+feedback=Deshacer
+history=Historia
+view_list=Listado
+payment=Pago
+split_payment=Dividir Pagos
+make_payment=Hacer Pagos
+create_case=Crear un Caso
+customer=Cliente
+from=Desde
+to=A
+edit=Editar
+
+accountdetail.payment_methods=Metodos de Pago
+
+file.attach_document=Adjunta Documentos (+)
+standardlistscreen.list=Lista
+
+pagination.format={0} Filas/Pag.
+
+

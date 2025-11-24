@@ -1,0 +1,73 @@
+package com.jsantos.custom.extendedFieldMapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import com.jsantos.common.fieldMapper.IFieldMapper;
+import com.jsantos.common.util.ListValues;
+import com.jsantos.common.util.MTMapValues;
+import com.jsantos.common.util.MapValues;
+import com.jsantos.custom.extendeddto.FileGroupExtDTO;
+import com.jsantos.metadata.MTFileData;
+import com.jsantos.metadata.MTDataTypes;
+import com.jsantos.metadata.common.StorageFileDTO;
+import com.jsantos.orm.dbstatement.IDetachedRecord;
+import com.jsantos.orm.mt.MTDataType;
+import com.jsantos.orm.mt.MTField;
+import com.jsantos.orm.mt.MTHelper;
+
+public class FileMapper implements IFieldMapper{
+
+	
+	@Override
+	public Object loadValue(IDetachedRecord dr, MTField field) {
+		return IFieldMapper.super.loadValue(dr, field);
+	}
+
+	@Override
+	public MTDataType forModelType() {
+		return MTDataTypes.FILE_GROUP;
+	}
+	
+	@Override
+	public FileGroupExtDTO loadRawValue(Object rawValue, MTField field)  {
+		Integer value= (Integer) rawValue;
+		if(null!=value)
+			return new FileGroupExtDTO(value);
+		return null;
+	}
+	
+	@Override
+	public  Object unloadValue(MTField field,IDetachedRecord detachedRecord) {
+		Object value=detachedRecord.get(field);
+		if(null==value || value instanceof Integer)return value;
+		FileGroupExtDTO fileGroupExtDTO=null;
+		if(value instanceof Map) {
+			fileGroupExtDTO= new FileGroupExtDTO();
+			LinkedHashMap<String,Object>lmValues=(LinkedHashMap<String,Object>)value;
+			ArrayList<LinkedHashMap<String,Object>> storageFiles=  (ArrayList<LinkedHashMap<String, Object>>) lmValues.get("storageFiles");
+			ListValues<StorageFileDTO> arsf=new ListValues<StorageFileDTO>();
+			for (LinkedHashMap<String, Object> sf : storageFiles) {
+				MTMapValues<Object> mtm=MTHelper.getValues(new MapValues<Object>().add(sf),MTFileData.STORAGEFILE.getTableName());
+				arsf.add((StorageFileDTO) new StorageFileDTO().setValues(mtm));
+			}
+			fileGroupExtDTO.setStorageFiles(arsf);
+			MTMapValues<Object > mtValues= MTHelper.getValues(new MapValues<Object>().add(lmValues),MTFileData.FILEGROUP.getTableName());
+			fileGroupExtDTO.setValues(mtValues);
+		}
+		else fileGroupExtDTO=(FileGroupExtDTO) value;
+		if(null!=fileGroupExtDTO && null!=fileGroupExtDTO.getStorageFiles() && !fileGroupExtDTO.getStorageFiles().isEmpty()) {
+			fileGroupExtDTO.insertOrUpdate();
+			for (StorageFileDTO element : fileGroupExtDTO.getStorageFiles()) {
+				element.setFileGroupId(fileGroupExtDTO.getFileGroupId());
+			    element.insertOrUpdate();
+			}
+			detachedRecord.set(field, fileGroupExtDTO.getFileGroupId());
+			return fileGroupExtDTO.getFileGroupId();
+		}
+		return null;
+	}
+}

@@ -1,0 +1,194 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:z="zul">
+
+	<z:window border="0" closable="true" position="center,center" sizable="true" >
+		<h:section class="content" style="margin:0px;min-width:400px">
+			<div class="card" style="margin-bottom:0px" >
+				<div class="header bg-light-green">
+					<label id="HEADER_LABEL" class="h5">
+						${mtlabels.createcustomerscreen_create_customer}
+					</label>
+				<div class="float-right bg-light-green" id="HEADER_DIV">
+						<button id="CANCEL_BUTTON" class="btn btn-danger ml-2 waves-effect pull-right">${mtlabels.cancel}</button>
+						<button id="EDIT_BUTTON" visible="false" class="btn btn-primary ml-2 waves-effect pull-right">${mtlabels.edit}</button>
+						<button id="SAVE_BUTTON" visible="true" class="btn btn-primary ml-2 waves-effect pull-right">${mtlabels.save}</button>
+					</div>
+				</div>
+				<div class="body" >
+				<!-- Customer Name -->
+					<div class="row clearfix">
+					
+						<div class="col-md-2 form-control-label">
+                             <label class="font-bold">${mtlabels.createcustomerscreen_customer_name}</label>
+                        </div>					
+						<div class="col-md-1">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="HPERSONORCOMPANY.SALUTATION" />
+								</z:div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="HPERSONORCOMPANY.FIRSTNAME" />
+								</z:div>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="HPERSONORCOMPANY.MIDDLENAME" />
+								</z:div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="HPERSONORCOMPANY.LASTNAMEORCOMPANYNAME" />
+								</z:div>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="HPERSONORCOMPANY.SUFFIX" />
+								</z:div>
+							</div>
+						</div>
+					</div>
+
+				<!-- Address -->
+					<div class="row clearfix">
+						<div class="col-md-2 col-sm-4 col-xs-5 form-control-label">
+                             <label class="font-bold" >${mtlabels.createcustomerscreen_Address}</label>
+                        </div>					
+						<div class="col-md-5">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="HPOSTALADDRESS.ADDRESS1" />
+								</z:div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="HPOSTALADDRESS.ADDRESS2" />
+								</z:div>
+							</div>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-2 col-sm-4 col-xs-5 form-control-label">
+                             <label ></label>
+                        </div>					
+						<div class="col-md-2">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="HPOSTALADDRESS.CITY" />
+								</z:div>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-selectbox field="HPOSTALADDRESS.STATEPROVINCEID"/>
+								</z:div>
+							</div>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-2 col-sm-4 col-xs-5 form-control-label">
+                             <label ></label>
+                        </div>					
+						<div class="col-md-2">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="HPOSTALADDRESS.POSTALCODE" />
+								</z:div>
+							</div>
+						</div>
+					</div>
+
+				<!-- Phone Number -->
+					<div class="row clearfix">
+						<div class="col-md-2 form-control-label">
+                             <label class="font-bold" >${mtlabels.createcustomerscreen_phone_number}</label>
+                        </div>					
+						<div class="col-md-2">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-selectbox field="HPHONENUMBER.PHONETYPEID" />
+								</z:div>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="HPHONENUMBER.NUMBER" />
+								</z:div>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="HPHONENUMBER.EXTENSION" />
+								</z:div>
+							</div>
+						</div>
+					</div>
+				<!-- Email Address -->
+					<div class="row clearfix">
+						<div class="col-md-2 form-control-label">
+                             <label class="font-bold" >${mtlabels.createcustomerscreen_email_address}</label>
+                        </div>					
+						<div class="col-md-3">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="HEMAILADDRESS.ADDRESS" />
+								</z:div>
+							</div>
+						</div>
+					</div>
+				<!-- Payment -->
+					<div class="row clearfix">
+						<div class="col-md-2 form-control-label">
+                             <label class="font-bold" >${mtlabels.createcustomerscreen_payment_methods}</label>
+                        </div>					
+						<div class="col-md-2">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-selectbox field="PAYMENTMETHOD.PAYMENTTYPEID" id="PAYMENT_TYPE_SELECTOR"/>
+								</z:div>
+							</div>
+						</div>
+						<div class="col-md-2"  visible="false" id="CREDIT_CARD_NUMBER">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="PAYMENTMETHOD.CCNUMBER"  />
+								</z:div>
+							</div>
+						</div>
+						<div class="col-md-2"  visible="false" id="ACCOUNT_NUMBER">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="PAYMENTMETHOD.ACCOUNTNUMBER" />
+								</z:div>
+							</div>
+						</div>
+						<div class="col-md-2"  visible="false" id="CHECK_NUMBER">
+							<div class="form-group">
+								<z:div class="form-line">
+									<z:mt-textbox field="PAYMENTMETHOD.CHECKNUMBER" />
+								</z:div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</h:section>
+	</z:window>
+</zk>

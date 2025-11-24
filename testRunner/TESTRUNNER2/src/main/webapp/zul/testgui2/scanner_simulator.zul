@@ -1,0 +1,19 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window border="normal" width="600px" title="Scanner Simulator" apply="com.etantolling.testrunner.testrunner2.file.FileUploader">
+	<label>supported locations:</label><combobox id="supported_locations" />
+    <grid hflex="1"> 
+        <columns visible="false">
+            <column/>
+            <column/>
+        </columns>       
+        <rows>
+             <row spans="2" align="center">
+                <hlayout>                    
+                    <button id="UPLOAD" upload="true" label="Upload" />                                    
+                </hlayout>                 
+            </row>
+        </rows>
+    </grid>
+</window>
+</zk>

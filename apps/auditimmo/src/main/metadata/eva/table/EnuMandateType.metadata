@@ -1,0 +1,10 @@
+TABLE ENTITY eva.EnuMandateType PATTERN Enumeration{
+	PK mandateTypeId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, EXISTING, 'Existing Mandate';
+		2, SPECIFIC, 'Specific Mandate';
+	}
+}

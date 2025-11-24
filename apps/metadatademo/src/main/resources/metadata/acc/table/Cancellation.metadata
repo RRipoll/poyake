@@ -1,0 +1,4 @@
+TABLE ENTITY acc.Cancellation{
+	PK cancelledRevisionId INT NOTNULL FKTO acc.Ledger
+	PK cancellingRevisionId INT NOTNULL FKTO acc.Ledger
+}

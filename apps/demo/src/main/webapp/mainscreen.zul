@@ -1,0 +1,116 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+		<div id="APPHEADER" class="mt-app-header pull-right" >
+			<div class="mt-app-header-element pr-3 pt-1" width="50px" id="LOG_OUT_BUTTON">
+				<h:i class="mt-log-out-button material-icons">exit_to_app</h:i>
+			</div>
+			<div class="mt-app-header-element pr-3 pt-1" >
+				<label class="h5 font-bold col-blue" id="USER_NAME">Pepito</label>
+			</div>
+			<h:div class="mt-app-header-element font-bold h5 pr-3 pl-3 pt-1 row">
+					<div id="DROPDOWN_LANG_MENU">
+						<image width="30px" height="20px" src="/img/us-flag.png" style="margin-left:30px;margin-right:30px" id="SELECTED_LANG"/>
+						<popup id="DROPDOWN_LANG_MENU_POPUP">
+							<div >
+								<div id="LANG_EN" style="cursor:pointer"><image width="30px" height="20px" src="/img/us-flag.png" style="margin:10px" /><span>English</span></div>
+								<div id="LANG_ES" style="cursor:pointer"><image width="30px" height="20px" src="/img/spanish-flag.jpg" style="margin:10px" /><span>Spanish</span></div>
+							</div >
+						</popup>
+					</div>
+			</h:div>
+			<div class="input-group mt-app-header-element" width="200px">
+					<textbox class="form-control form-control-height bg-light small border border-primary pl-1" zclass="" placeholder="${mtlabels.mainscreen_account_number}" id="SEARCH_ACCOUNT"/>
+					<h:div class="input-group-append">
+						<h:button class="btn btn-primary form-control-height" id="SEARCH_ACCOUNT_BUTTON">
+							<h:i class="material-icons">search</h:i>
+						</h:button>
+					</h:div>
+			</div>
+		</div>
+		<div id="MAIN_MENU" class="mt-sidebar-container">
+			<h:nav class="my-navbar-background my-navbar h-100">
+				<div class="my-navbar-header">
+					<!--
+					<div id="MENU_PERMISSION" visible="false">
+						<h:i class="material-icons mt-dropdown-menu " >more_vert</h:i>
+					</div>
+					-->
+					<div align="right" height="25px" style="padding-right:5px;valign:top;"><div id="COLLAPSE_BUTTON" class="z-icon-toggle-left mt-collapse-button" /></div>
+				</div>
+				<navbar id="NAVBAR" orient="vertical" collapsed="false" vflex="true" width="200px" >
+					<navitem label="${mtlabels.mainscreen_Home}" iconSclass="z-icon-home" id="DASHBOARD">
+					</navitem>
+					<navitem label="${mtlabels.mainscreen_Accounts}" iconSclass="z-icon-magnet" id="FIND_ACCOUNTCRUD">
+					</navitem>
+					<navitem label="${mtlabels.mainscreen_Trips}"  iconSclass="z-icon-road"  id="FIND_TRIP">
+					</navitem>
+					<navitem label="${mtlabels.mainscreen_Vehicles}" iconSclass="z-icon-truck"  id="FIND_VEHICLE">
+					</navitem>				
+					<navitem label="${mtlabels.mainscreen_Cases}" iconSclass="z-icon-pencil"  id="FIND_CASE">
+					</navitem>
+					<navitem label="${mtlabels.mainscreen_Promos}" iconSclass="z-icon-microphone" id="SEARCH_PROMO">
+					</navitem>
+					<navitem label="Problematic Plates" iconSclass="z-icon-inbox"  id="SEARCH_PP">
+					</navitem>
+					<nav label="${mtlabels.mainscreen_System_Administration} " iconSclass="z-icon-wrench" >
+						<custom-attributes permissionId="ADMIN_MENU"/>
+						<custom-attributes permissionValueId="1"/>
+						<navitem label="${mtlabels.mainscreen_User}" iconSclass="z-icon-user" id="USERMULTIGROUP"/>
+						<navitem label="${mtlabels.mainscreen_UserGroup}"  iconSclass="z-icon-group" id="USERGROUP"/>
+						<navitem label="${mtlabels.mainscreen_Datagrid}" iconSclass="z-icon-edit" id="CONFIGURATION"/>
+						<nav label="${mtlabels.mainscreen_Permission} " iconSclass="z-icon-key" >
+							<navitem label="${mtlabels.mainscreen_Permissions_Permission}" id="PERMISSION"/>
+							<navitem label="${mtlabels.mainscreen_Permissions_Rol}" id="ROL"/>
+						</nav>
+						<navitem label="${mtlabels.mainscreen_Label}" iconSclass="z-icon-book" id="LABEL"/>
+					</nav>
+					<nav label="${mtlabels.mainscreen_examples}" iconSclass="z-icon-list" >
+							<navitem label="${mtlabels.mainscreen_Find_Account}" id="FIND_ACCOUNT"/>
+							<navitem label="${mtlabels.mainscreen_Create_Account}" id="CREATE_ACCOUNT"/>
+							<navitem label="multigroup" id="MULTIUSERGROUP"/>
+							<navitem label="multigroup2" id="MULTIUSERGROUP2"/>
+							<navitem label="multiObject" id="MULTIOBJECT"/>
+							<navitem label="${mtlabels.mainscreen_Create_Case}"  id="CREATE_CASE"/>
+							<navitem label="${mtlabels.mainscreen_Create_Promocion}" id="CREATE_PROMO"/>
+							<navitem label="Add Problematic Plate" id="CREATE_PP"/>
+							<navitem label="${mtlabels.mainscreen_Permissions_Rol}" id="ROLLINK"/>
+							<navitem label="${mtlabels.mainscreen_User}" id="USER"/>
+						</nav>
+					<nav label="${mtlabels.mainscreen_Design}" iconSclass="z-icon-compass" >
+						<navitem label="${mtlabels.mainscreen_Forms}" id="DESIGN1"/>
+						<navitem label="${mtlabels.mainscreen_Form_Elements}" id="DESIGN2"/>
+						<navitem label="${mtlabels.mainscreen_Profile_page}" id="DESIGN3"/>
+						<navitem label="${mtlabels.mainscreen_Layout}" id="DESIGN_LAYOUT"/>
+						<navitem label="${mtlabels.mainscreen_Icons}" id="DESIGN5"/>
+						<navitem label="${mtlabels.mainscreen_Typography}" id="DESIGN_TYPOGRAPHY"/>
+					</nav>
+					
+					<nav label="${mtlabels.mainscreen_example}" iconSclass="z-icon-compass" >
+						<navitem label="${mtlabels.mainscreen_book}" id="BOOK"/>
+						<navitem label="${mtlabels.mainscreen_author}" id="AUTHOR"/>
+					
+					</nav>
+					
+					
+					<nav label="${mtlabels.mainscreen_Test}" iconSclass="z-icon-code" >
+						<navitem label="Generate Test Accounts" id="GENERATE_TEST_ACCOUNTS"/>
+						<navitem label="Generate Test Trips" id="GENERATE_TEST_TRIPS"/>
+						<navitem label="Run escalation" id="RUN_ESCALATION"/>
+						<nav label="${mtlabels.mainscreen_TestRunner}" iconSclass="z-icon-user" >
+							<custom-attributes permissionId="TESTRUNNER"/>
+							<custom-attributes permissionValueId="1"/>
+							<navitem label="${mtlabels.mainscreen_Test}" id="TEST"/>
+							<navitem label="${mtlabels.mainscreen_Event}" id="EVENT"/>
+							<navitem label="${mtlabels.mainscreen_EventDefinition}" id="EVENTDEFINITION"/>
+							<navitem label="${mtlabels.mainscreen_EventDefFolder}" id="EVENTDEFFOLDER"/>
+							<navitem label="${mtlabels.mainscreen_EventType}" id="EVENTTYPE"/>
+							<navitem label="${mtlabels.mainscreen_Folder}" id="FOLDER"/>
+						</nav>
+					</nav>
+				</navbar>
+			</h:nav>
+		</div>
+		<div class="mt-main-container" id="MAIN_AREA">
+		</div>
+</zk>

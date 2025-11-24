@@ -1,0 +1,4 @@
+TABLE ENTITY acc.Balance{
+	PK customerId INT NOTNULL FKTO crm.CustomerPk
+	balanceAmount MONEY NOTNULL
+}

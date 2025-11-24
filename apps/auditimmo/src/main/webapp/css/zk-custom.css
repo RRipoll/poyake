@@ -1,0 +1,81 @@
+		.z-grid{
+			border:0px;
+		}
+
+		.z-column{
+			background:white;
+		}
+
+		.z-grid-odd>.z-row-inner{
+			background:none;
+		}
+		
+		.z-row{
+			border-bottom:1px solid #f0f7f0;
+		}
+
+		.z-hbox-separator{
+			width:0px;
+		}
+		.z-vbox-separator{
+			height:0px;
+		}
+		
+		.z-window{
+			background:var(--j-window-background);
+			box-shadow:var(--j-box-shadow);
+		}
+
+		.z-window-header{
+			border-bottom:1px solid lightgrey;
+		}
+
+		.z-window-content{
+			background:var(--j-window-background);
+		}
+
+		.z-modal-mask{
+			background:#210d2f;
+			opacity:.8;
+		}
+		
+		.z-combobox-input, .z-bandbox-input, .z-datebox-input, .z-timebox-input, .z-spinner-input, .z-doublespinner-input{
+			border:0px;
+		}		
+
+		.z-combobox-button, .z-bandbox-button, .z-datebox-button, .z-timebox-button, .z-spinner-button, .z-doublespinner-button{
+			border:0px;
+		}		
+		
+		.z-datebox-input{
+			height:32px;	
+			font-size: 1rem;
+			color:#495057;
+		}
+		
+		.z-combobox-input:focus,.z-bandbox-input:focus,.z-datebox-input:focus,.z-timebox-input:focus,.z-spinner-input:focus,.z-doublespinner-input:focus{
+			-webkit-box-shadow:inset 0px 0px 0px rgba(210,210,210,0.75);
+			-moz-box-shadow:inset 0px 0px 0px rgba(210,210,210,0.75);
+			-o-box-shadow:inset 0px 0px 0px rgba(210,210,210,0.75);
+			-ms-box-shadow:inset 0px 0px 0px rgba(210,210,210,0.75);
+			box-shadow:inset 0px 0px 0px rgba(210,210,210,0.75)
+		}
+		
+		.z-window-content{
+			padding:0px;
+		}
+		
+		.z-button{
+			background:none;
+		}
+
+		.z-button:hover{
+			background:none;
+		}
+
+		.z-button:focus{
+			background:none;
+		}
+
+		
+		

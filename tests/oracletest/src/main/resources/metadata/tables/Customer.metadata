@@ -1,0 +1,29 @@
+ENTITY Customer PATTERN AutoHistory{
+	customerId INT NOTNULL FKTO CustomerPk
+	firstName VARCHAR(64)
+	lastName VARCHAR(64)
+	vatNumberCode VARCHAR(8)
+	taxCode3 VARCHAR(10)
+	PK revisionId INT
+	startDate DATETIME NOTNULL DEFAULT "sysdate"
+	endDate DATETIME NOTNULL DEFAULT "\'01-Jan-2099\'"
+
+	METADATA{
+		1, "Pepe", "Gotera", "111", '222', 1, DEFAULT, DEFAULT;
+		2, "Cersei", "Lannister", "111", '222', 2, DEFAULT, DEFAULT;
+		3, "David", "Martin","333", "4444", 3, DEFAULT, DEFAULT;
+	}
+	
+	LABELS{
+		ENTITY {SHORTLABEL es_ES "Cliente"}
+		firstName {
+			SHORTLABEL en_EN "First Name"
+			SHORTLABEL es_ES "Nombre"
+			LONGLABEL es_ES "El Puto Nombre"
+			LONGLABEL en_EN "Thre fucking name"
+			}
+		lastName{
+			SHORTLABEL en_EN "Last Name"
+		}
+	}
+}

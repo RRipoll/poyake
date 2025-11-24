@@ -1,0 +1,163 @@
+package com.jsantos.custom.details;
+
+
+import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Executions;
+import org.zkoss.zk.ui.UiException;
+import org.zkoss.zk.ui.event.Event;
+import org.zkoss.zk.ui.event.Events;
+import org.zkoss.zul.Window;
+
+import com.jsantos.common.model.EditMode;
+import com.jsantos.common.util.MapValues;
+import com.jsantos.custom.detail.IDetailContainer;
+import com.jsantos.factory.DTOFactory;
+import com.jsantos.gui.datagrid4.EntityGrid;
+import com.jsantos.gui.detail.DefaultDetailContainer;
+import com.jsantos.gui.form.IFormSerializer;
+import com.jsantos.gui.zkutil.ZulDataWirer;
+import com.jsantos.metadata.MTExampleData;
+
+import com.jsantos.metadata.example.MTTableVBOOK;
+import com.jsantos.orm.dbstatement.DetachedQueryResult;
+import com.jsantos.orm.dbstatement.IDetachedRecord;
+import com.jsantos.orm.mt.MTTable;
+
+/**
+ * @author javier santos
+ * @author raul ripoll
+ */
+
+public class AuthorDetails  implements IDetailContainer{
+
+	Window window;
+	
+	//Integer pk;
+	Component parent;
+	MTTable mTTable= MTExampleData.AUTHOR;
+	MapValues<Object> initialParameter;
+	String searchName;
+	String uri="~./screen/examples/authorDetail.zul";
+	IDetachedRecord dr;
+
+	private boolean isCancelled=false;
+	
+	public void buildScreen(Integer authorId, Component parent) throws  Exception {
+		//pk=authorId;
+		dr= DTOFactory.get(mTTable);if(null!=authorId)dr.findByPk(authorId);
+		this.parent=parent;
+		buildAndShowComponent(null);
+	}
+		
+	@Override
+	public IDetailContainer buildAndShowComponent(EditMode mode) {
+        
+		buildComponent( mode);
+		return showComponent();
+	}
+
+	public void closeWindow(Event evt) {
+		window.detach();
+	}
+	
+	public void cancelWindow(Event evt) {
+		 closeWindow( evt);
+		isCancelled=true;
+	}
+	
+	public void saveNote(Event evt) {
+		ZulDataWirer.readFormFieldValues(dr, parent);
+		dr.insertOrUpdate();
+	}
+	
+	@Override
+	public IDetailContainer setmTTable(MTTable table) {
+		mTTable=table;
+		return this;
+	}
+	@Override
+	public IDetailContainer setParent(Component parent) {
+		this.parent = parent;
+		return this;
+	}
+
+	@Override
+	public MTTable getmTTable() {
+		return mTTable;
+	}
+	@Override
+	public IDetailContainer setInitialParameters(MapValues<Object> initialParameter) {
+		this.initialParameter=initialParameter;
+		return this;
+	}
+
+	@Override
+	public IDetailContainer setSearchName(String searchName) {
+		this.searchName=searchName;
+		return this;
+	}
+
+	@Override
+	public IDetailContainer setDetachedRecord(IDetachedRecord dr) {this.dr=dr; return this;}
+
+	@Override
+	public IDetachedRecord getDetachedRecord() {
+		return dr;
+	}
+
+	@Override
+	public Component getFormComponent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IDetailContainer buildComponent(EditMode mode) {
+		 if (mode.equals(EditMode.INSERT)) {
+				
+		    	IDetailContainer dc= new DefaultDetailContainer();
+		    	dc.setmTTable(mTTable);
+		    	dc.setParent(parent);
+		    	dc.setInitialParameters(initialParameter);
+		    	dc.buildAndShowComponent(mode);
+		    	return dc;
+		    	
+			}
+		 try {
+			 window= (Window) Executions.createComponents(uri, parent, null);
+			} catch (UiException e) {
+				return null;
+			}
+		    
+		    window.getFellow("EXAMPLE_BUTTON_CLOSE").addEventListener(		Events.ON_CLICK, this::cancelWindow);
+		    window.getFellow("EXAMPLE_BUTTON_SAVENOTE").addEventListener(	Events.ON_CLICK, this::saveNote);
+			    
+		    //dr= DTOFactory.get(mTTable).findByPk(pk);
+		    ZulDataWirer.initializeFieldValues(dr, parent);
+
+		    MapValues<Object> parameters= new MapValues<Object>().add(MTTableVBOOK.AUTHORID.getName(), dr.getPk());
+		    DetachedQueryResult dqr= new DetachedQueryResult(MTExampleData.VBOOK, parameters);
+		    EntityGrid grid= new EntityGrid(dqr, null);
+		    grid.setPageSize(10);
+		    grid.init();
+		    grid.buildGrid().setParent(window.getFellow("BOOKS"));
+		    return this;
+	}
+	
+	@Override
+	public IDetailContainer showComponent() {
+		if(null!=window)window.doModal();
+		 return this;
+	}
+
+	@Override
+	public boolean isCancelled() {
+		return isCancelled;
+	}
+
+	@Override
+	public IDetailContainer setFormSerialize(IFormSerializer serializer) {
+		
+		return this;
+	}
+}

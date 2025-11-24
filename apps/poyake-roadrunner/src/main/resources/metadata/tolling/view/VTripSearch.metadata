@@ -1,0 +1,173 @@
+FROMSQLFILE '/poyake-roadrunner/src/main/resources/metadata/tolling/view/VTripSearch.sql'
+
+VIEW  ENTITY tolling.VTripSearch {
+	PK tripId INT SAMEAS tolling.TripInfo.tripId
+	fareAmount MONEY SAMEAS tolling.TripInfo.fareAmount
+	laneEntryDate DATE SAMEAS tolling.TripInfo.laneEntryDate
+	laneExitDate DATE SAMEAS tolling.TripInfo.laneExitDate
+	licencePlateJurisdictionId INT SAMEAS tolling.LicensePlate.licencePlateJurisdictionId
+	lpnumber VARCHAR(16) SAMEAS tolling.LicensePlate.lpnumber
+	licensePlatetypeId INT SAMEAS tolling.LicensePlate.licensePlatetypeId
+	passId INT  SAMEAS tolling.TripInfo.passId
+	
+	LABELS{
+		ENTITY {en_EN 'Trip' es_ES 'Tránsito'}
+	}
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: tolling.VTripSearch  
+VIEW NAME: VTripSearch 
+VIEW SCHEMA: tolling
+
+Tables:
+	TABLE: tolling.TripInfo Alias: ti
+	TABLE: tolling.LicensePlate Alias: lp
+Output:
+	COLUMN: tripId -> NOT FOUND
+	COLUMN: fareAmount -> NOT FOUND
+	COLUMN: laneEntryDate -> NOT FOUND
+	COLUMN: laneExitDate -> NOT FOUND
+	COLUMN: licencePlateJurisdictionId -> tolling.LicensePlate.licencePlateJurisdictionId
+	COLUMN: lpnumber -> tolling.LicensePlate.lpnumber
+	COLUMN: licensePlatetypeId -> tolling.LicensePlate.licensePlatetypeId
+	COLUMN: passId -> NOT FOUND
+
+
+================= Resolver Information ======================== 
+Entity List:
+	acc.Allocation ,audit.InputUser ,audit.InputSource ,acc.Ledger ,acc.LedgerItem ,acc.LedgerInfo ,acc.EnuTransactionType ,acc.EnuLedgerType ,acc.Annotation ,acc.EnuAnnotationType ,crm.CustomerPk ,acc.Balance ,acc.Cancellation ,acc.Repost ,acc.VTransactionHistory ,crm.CustomerSuplementaryContact ,crm.PersonOrCompanyPk ,crm.EnuContactType ,crm.EmailAddressPk ,crm.EnuCountry ,crm.EnuCustomerType ,crm.EnuPhoneNumberType ,crm.EnuStateProvince ,crm.HCustomer ,crm.PostalAddressPk ,crm.HEmailAddress ,crm.HPersonOrCompany ,crm.PhoneNumberPK ,crm.HPhoneNumber ,crm.HPostalAddress ,crm.VCustomerHistory ,VCustomerSearch ,crm.VDetailPageVehicleList ,tolling.LicensePlate ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.VehicleInfo ,tolling.Vehicle ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,cs.CSCase ,cs.CSCasePK ,cs.EnuCaseType ,cs.EnuCaseStatus ,cs.CustomerCase ,cs.VCaseSearch ,payment.EnuPaymentType ,payment.Payment ,payment.PaymentCredit ,tolling.CustomerPass ,tolling.Pass ,tolling.CustomerVehicle ,tolling.Gantry ,tolling.Trip ,tolling.TripInfo ,tolling.VFindVehicleColumns:
+	SOLVED tripId -> tolling.TripInfo.tripId
+	SOLVED fareAmount -> tolling.TripInfo.fareAmount
+	SOLVED laneEntryDate -> tolling.TripInfo.laneEntryDate
+	SOLVED laneExitDate -> tolling.TripInfo.laneExitDate
+	SOLVED licencePlateJurisdictionId -> tolling.LicensePlate.licencePlateJurisdictionId
+	SOLVED lpnumber -> tolling.LicensePlate.lpnumber
+	SOLVED licensePlatetypeId -> tolling.LicensePlate.licensePlatetypeId
+	SOLVED passId -> tolling.TripInfo.passId
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id tolling
+              .
+              id 
+                simple_id VTripSearch
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id tripId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id fareAmount
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id laneEntryDate
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id laneExitDate
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id lp
+                        .
+                        id 
+                          simple_id licencePlateJurisdictionId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id lp
+                        .
+                        id 
+                          simple_id lpnumber
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id lp
+                        .
+                        id 
+                          simple_id licensePlatetypeId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id passId
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id tolling
+                              .
+                              id 
+                                simple_id TripInfo
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id ti
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id tolling
+                                    .
+                                    id 
+                                      simple_id LicensePlate
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id lp
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id lp
+                                      .
+                                      id 
+                                        simple_id licensePlateId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id ti
+                                      .
+                                      id 
+                                        simple_id licensePlateId
+  <EOF>*/

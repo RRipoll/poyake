@@ -1,0 +1,11 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+	<window closable="true" title="create">
+		
+		<div id="FIELD_LIST">
+		</div>
+		<button id="SAVE_BUTTON" label="Save" />
+	</window>
+</zk>

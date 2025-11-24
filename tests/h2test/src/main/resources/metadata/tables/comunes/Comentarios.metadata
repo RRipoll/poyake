@@ -1,0 +1,8 @@
+TABLE ENTITY Comentarios{
+	PK comentariosId INT 
+	
+	METADATA{
+		1;
+		2;
+	}
+}

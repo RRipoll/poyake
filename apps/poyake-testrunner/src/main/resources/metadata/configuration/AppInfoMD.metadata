@@ -1,0 +1,15 @@
+METADATA FOR config.AppInfoTree {
+	
+	'TESTRUNNER'				,'1'		,'Test Runner'	,NULL;
+	'App_Url'					,'TESTRUNNER',NULL			,'APP_API_URL';
+	'Job_Url'					,'TESTRUNNER',NULL			,'JOB_API_URL';
+	'testRunner_Url'			,'TESTRUNNER',NULL			,'TESTRUNNER_API_URL';
+	'sendEmailwhenError'		,'TESTRUNNER',NULL			,'sendEmailwhenError';
+}
+
+METADATA FOR config.AppInfo {
+	'TESTRUNNER_API_URL'	,'TESTRUNNER_API_URL'	,1,'Http://localHost:8081', DEFAULT	;
+	'APP_API_URL'			,'APP_API_URL'			,1,'Http://localHost:8081', DEFAULT	;
+	'JOB_API_URL'			,'JOB_API_URL'			,1,'Http://localHost:8081', DEFAULT	;
+	'sendEmailwhenError'	,'Send Email When Error',3,'true', DEFAULT	;
+}

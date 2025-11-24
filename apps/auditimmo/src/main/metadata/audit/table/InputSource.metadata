@@ -1,0 +1,10 @@
+TABLE ENTITY audit.InputSource{
+	PK inputSourceId INT
+	shortCode VARCHAR(16) NOTNULL
+	description VARCHAR(64) NOTNULL STEREOTYPES DESCRIPTION
+	
+	METADATA{
+		1, 'SYSTEM', 'System';
+		2, 'APP', 'Back Office Application';
+	}
+}

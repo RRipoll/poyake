@@ -1,0 +1,5 @@
+TABLE ENTITY AuditedTable {
+	PK auditedTableId INT
+	inputUserId INT NOTNULL FKTO InputUser
+	created DATE NOTNULL DEFAULT "'01-Jan-2099'"
+}

@@ -1,0 +1,20 @@
+<?page title="Home Page" ?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	
+	<window width="50%" height="50%" closable="true" title="Folder editor " border="normal">
+		<div id="FIELD_LIST" width="100%">
+				<h:table width="100%" border="0">
+					<h:tr>
+						<h:td><label>Parent Folder:</label></h:td><h:td><combobox info="@MT(field=FOLDER.PARENTFOLDERID)" readonly="true" /></h:td>
+					</h:tr>
+					<h:tr>
+						<h:td ><label>Name:</label></h:td><h:td><textbox   info="@MT(field=FOLDER.DESCRIPTION)" width="95%"/></h:td>
+					</h:tr>
+				</h:table>
+		</div>
+		<div><button id="SAVE_BUTTON" label="save" /></div>
+		<div height="50px" />
+	</window>
+</zk>

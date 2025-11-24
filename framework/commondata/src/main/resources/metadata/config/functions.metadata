@@ -1,0 +1,45 @@
+SQLNATIVE FILESTART{
+	DBTYPE H2  
+		<SQLNATIVESTART>
+			CREATE FORCE ALIAS GETPOSTINGDATE AS STRINGDECODE('
+			java.sql.Timestamp getPostingDate(java.sql.Connection con) 
+			throws Exception {
+			    java.sql.ResultSet rs = con.createStatement().executeQuery(" SELECT CURRENT_TIMESTAMP()"); 
+			    if(rs.next()){ 
+			        return rs.getTimestamp(1);}
+			    return null;}'
+			);
+		</SQLNATIVEEND>
+
+	DBTYPE POSTGRESQL 
+		<SQLNATIVESTART>
+    	create   function getPostingDate()
+				returns timestamp 
+				as $$
+				begin
+		            return current_timestamp;
+				end	
+				$$ 
+			LANGUAGE plpgsql;
+		</SQLNATIVEEND>
+		
+	DBTYPE SQLSERVER
+		<SQLNATIVESTART>
+			create   function getPostingDate()
+			                returns datetime
+			                as
+			                begin
+			                        declare @retValue datetime
+			                        declare @sysdatetime datetime
+			                        declare @lastUpdated datetime
+			            declare @msValue BIGINT
+			
+			            set @retValue = (select postingDate from config.PostingDate where postingDateId=1)
+			            set @sysdatetime = sysdatetime()
+			            set @lastUpdated = (select lastUpdated from config.PostingDate where postingDateId=1)
+			            set @retValue = dateadd(ms, DATEDIFF_BIG(ms, @lastUpdated, @sysdatetime), @retValue)
+			            return (coalesce(@retValue, getDate()))
+			end
+		</SQLNATIVEEND>
+		
+}

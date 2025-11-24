@@ -1,0 +1,381 @@
+METADATA FOR config.DatagridSetting {
+
+'CHECK_PARAMETER','CheckParamEventDefinition','{
+  "dataTableName" : "testrunner.CheckParamEventdefinition",
+  "aSName" : "CheckParamEventDefinition",
+  "columnConfigurations" : [ {
+    "name" : "eventTypeId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "eventName",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "description",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "parameters",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "eventDefinitionUuid",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  } ],
+  "orderByConfigurations" : [ {
+    "name" : "eventTypeId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "eventDefinition.eventTypeId"
+  }, {
+    "name" : "eventName",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "eventDefinition.eventName"
+  }, {
+    "name" : "description",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Descripción"
+  }, {
+    "name" : "parameters",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Parametros"
+  }, {
+    "name" : "eventDefinitionUuid",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "eventDefinition.eventDefinitionUuid"
+  } ],
+  "filterConfigurations" : [ {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "eventName"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "eventTypeId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "description"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "parameters"
+  }, {
+    "hidden" : true,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "eventDefinitionUuid"
+  } ],
+  "detailScreenConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "eventName"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "eventTypeId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "description"
+  }, {
+    "hidden" : false,
+    "newLine" : true,
+    "sClass" : "col-md-12",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "parameters"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "eventDefinitionUuid"
+  } ],
+  "editConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "eventName"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "eventTypeId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-8",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "description"
+  }, {
+    "hidden" : false,
+    "newLine" : true,
+    "sClass" : "col-md-12",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "parameters"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "eventDefinitionUuid"
+  } ]
+}',DEFAULT,'1',DEFAULT,DEFAULT;
+'c7c3533e-d0eb-459f-8b3e-6ea58ea7ba03','CheckParameterItem','{
+  "dataTableName" : "testrunner.CheckParameterItem",
+  "aSName" : "CheckParameterItem",
+  "columnConfigurations" : [ {
+    "name" : "valueName",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "operator",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "checkValueTypeId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "checkValue",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  } ],
+  "orderByConfigurations" : [ {
+    "name" : "valueName",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "CheckParameterItem.value"
+  }, {
+    "name" : "operator",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "CheckParameterItem.operator"
+  }, {
+    "name" : "checkValueTypeId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "CheckParameterItem.checkValueTypeId"
+  }, {
+    "name" : "checkValue",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "CheckParameterItem.checkValue"
+  } ],
+  "filterConfigurations" : [ {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "valueName"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "operator"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "checkValueTypeId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "checkValue"
+  } ],
+  "detailScreenConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "valueName"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "operator"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "checkValueTypeId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "checkValue"
+  } ],
+  "editConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "valueName"
+  }, {
+    "hidden" : false,
+    "newLine" : true,
+    "sClass" : "col-md-12",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.CheckParameterAction", "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "operator"
+  }, {
+    "hidden" : false,
+    "newLine" : true,
+    "sClass" : "col-md-12",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ ],
+    "available" : true,
+    "active" : true,
+    "name" : "checkValueTypeId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-12",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "checkValue"
+  } ]
+}',DEFAULT,'1',DEFAULT,DEFAULT;
+}

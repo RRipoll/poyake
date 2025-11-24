@@ -1,0 +1,379 @@
+<?page title="Demo" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	
+	<?link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"?>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<?link rel="stylesheet" href="css/adminbsb.css"?>
+	
+	<?link rel="stylesheet" href="css/demo.css"?>
+	
+	<?link rel="stylesheet" href="css/login.css"?>
+	
+	<?link rel="stylesheet" href="css/navbar.css"?>
+	
+	<?link rel="stylesheet" href="css/variables.css"?>
+	
+	<?link rel="stylesheet" href="css/zk-custom.css"?>
+	
+	<?link rel="stylesheet" href="css/materialize.css"?>
+<?link rel="stylesheet" href="css/v4.css"?>
+<zscript>
+    	desktopScope.put("mtlabels",new com.jsantos.gui.zkutil.Zklabel());
+	</zscript>
+
+  <div id="wrapper" class="animate" >
+    <n:nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
+      <h:span class="navbar-toggler-icon leftmenutrigger" id="leftmenutrigger"></h:span>
+      <n:a class="navbar-brand" href="#">ROAD RUNNER</n:a>
+      <n:button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <n:span class="navbar-toggler-icon"></n:span>
+      </n:button>
+      <h:div class="collapse navbar-collapse" id="navbarText">
+        
+        <n:ul class="navbar-nav ml-md-auto d-md-flex">
+          
+         <n:li class="nav-item" >
+         	<div class="mt-app-header-element pr-3 pt-1" width="50px" id="LOG_OUT_BUTTON">
+				<h:i class="mt-log-out-button material-icons">exit_to_app</h:i>
+			</div>
+			
+
+			<div class="mt-app-header-element pr-3 pt-1" >
+				<label class="h5 font-bold col-blue" id="USER_NAME">Pepito</label>
+			</div>
+         	<h:div class="mt-app-header-element font-bold h5 pr-3 pl-3 pt-1 row">
+					<div id="DROPDOWN_LANG_MENU">
+						<image width="30px" height="20px" src="/img/us-flag.png" style="margin-left:30px;margin-right:30px" id="SELECTED_LANG"/>
+						<popup id="DROPDOWN_LANG_MENU_POPUP">
+							<div >
+								<div id="LANG_EN" style="cursor:pointer"><image width="30px" height="20px" src="/img/us-flag.png" style="margin:10px" /><span>English</span></div>
+								<div id="LANG_ES" style="cursor:pointer"><image width="30px" height="20px" src="/img/spanish-flag.jpg" style="margin:10px" /><span>Spanish</span></div>
+							</div >
+						</popup>
+					</div>
+			</h:div>
+         
+         	<div class="input-group mt-app-header-element" width="150px" style="margin-bottom: 0px;">
+					<textbox class="form-control form-control-height bg-light small border border-primary pl-1" zclass="" placeholder="${mtlabels.mainscreen_account_number}" id="SEARCH_ACCOUNT"/>
+					<h:div class="input-group-append">
+						<h:button class="btn btn-primary form-control-height" id="SEARCH_ACCOUNT_BUTTON">
+							<h:i class="material-icons">search</h:i>
+						</h:button>
+					</h:div>
+			</div>
+		
+          
+            
+           
+          </n:li>
+        </n:ul>
+        <h:ul class="navbar-nav animate side-nav" id="side-nav" >
+          
+          <n:li class="nav-item"><div class="d-md-flex" >
+            <a class="nav-link" id="DASHBOARD" iconSclass="z-icon-home" > ${mtlabels.mainscreen_Home}</a>
+          </div></n:li>
+          
+          <n:li class="nav-item"><div class="d-md-flex" >
+            <a class="nav-link" iconSclass="z-icon-magnet"  id="FIND_ACCOUNTCRUD"><space/><space/> ${mtlabels.mainscreen_Accounts}</a>
+          </div></n:li>
+             
+          <n:li class="nav-item"><div class="d-md-flex">
+            <a class="nav-link" id="FIND_TRIP" iconSclass="z-icon-road"><space/><space/> ${mtlabels.mainscreen_Trips}</a>
+          </div></n:li>
+             
+          <n:li class="nav-item"><div class="d-md-flex">
+            <a class="nav-link" id="FIND_VEHICLE" iconSclass="z-icon-truck"><space/><space/> ${mtlabels.mainscreen_Vehicles}</a>
+          </div></n:li>
+             
+          <n:li class="nav-item"><div class="d-md-flex">
+            <a class="nav-link" id="FIND_CASE" iconSclass="z-icon-pencil">
+            	<space/><space/> ${mtlabels.mainscreen_Cases}</a>
+          </div></n:li>
+             
+          <n:li class="nav-item"><div class="d-md-flex">
+            <a class="nav-link" id="SEARCH_PROMO" iconSclass="z-icon-microphone">
+            	<space/><space/> ${mtlabels.mainscreen_Promos}</a>
+          </div></n:li>
+ 
+          <n:li class="nav-item"><div class="d-md-flex">
+            <a class="nav-link" id="SEARCH_PP" iconSclass="z-icon-inbox">
+            	<space/><space/> Problematic Plates</a>
+          </div></n:li>
+ 
+          <h:li class="nav-item dropdown">
+          		<custom-attributes permissionId="ADMIN_MENU"/>
+				<custom-attributes permissionValueId="1"/>
+                <h:a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" iconSclass="z-icon-wrench" >${mtlabels.mainscreen_System_Administration}</h:a>
+                <n:ul class="dropdown-menu" aria-labelledby="dropdown1">
+                    <n:li class="dropdown-item" >
+                    	<div class="d-md-flex">
+            				<a class="" id="USERMULTIGROUP" iconSclass="z-icon-user">
+            				<space/><space/> ${mtlabels.mainscreen_User}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="USERGROUP" iconSclass="z-icon-group">
+            				<space/><space/>${mtlabels.mainscreen_UserGroup}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="CONFIGURATION" iconSclass="z-icon-edit">
+            				<space/><space/>${mtlabels.mainscreen_Datagrid}</a>
+          				</div>
+                    </n:li>
+                    
+                    
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="PERMISSION" iconSclass="z-icon-key">
+            				<space/><space/>${mtlabels.mainscreen_Permissions_Permission}</a>
+          				</div>
+                    </n:li>
+                    
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="ROL" iconSclass="z-icon-key">
+            				<space/><space/>${mtlabels.mainscreen_Permissions_Rol}</a>
+          				</div>
+                    </n:li>
+                    
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="LABEL" iconSclass="z-icon-book">
+            				<space/><space/>${mtlabels.mainscreen_Label}</a>
+          				</div>
+                    </n:li>
+                    
+                </n:ul>
+            
+            </h:li>
+            <h:li class="nav-item dropdown">
+          		
+                <h:a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" iconSclass="z-icon-list" >${mtlabels.mainscreen_examples}</h:a>
+                <n:ul class="dropdown-menu" aria-labelledby="dropdown2">
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class=""  id="FIND_ACCOUNT" iconSclass="">
+            				<space/><space/> ${mtlabels.mainscreen_Find_Account}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="CREATE_ACCOUNT" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_Create_Account}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="MULTIUSERGROUP" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_multigroup}</a>
+          				</div>
+                    </n:li>
+                    
+                    
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="MULTIUSERGROUP2" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_multigroup2}</a>
+          				</div>
+                    </n:li>
+                    
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="MULTIOBJECT" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_multiObject}</a>
+          				</div>
+                    </n:li>
+                    
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="CREATE_CASE" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_Create_Case}</a>
+          				</div>
+                    </n:li>
+                    
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="CREATE_PROMO" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_Create_Promocion}</a>
+          				</div>
+                    </n:li>
+                    
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="CREATE_PP" iconSclass="">
+            				<space/><space/>Add Problematic Plate</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="ROLLINK" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_Permissions_Rol}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="USER" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_User}</a>
+          				</div>
+                    </n:li>
+                </n:ul>
+            
+           </h:li> 
+           <h:li class="nav-item dropdown">
+          		
+                <h:a class="nav-link dropdown-toggle" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" iconSclass="z-icon-wrench" >${mtlabels.mainscreen_Design}</h:a>
+                <n:ul class="dropdown-menu" aria-labelledby="dropdown3">
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="DESIGN1" iconSclass="">
+            				<space/><space/> ${mtlabels.mainscreen_Forms}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="DESIGN2" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_Form_Elements}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="DESIGN3" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_Profile_page}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="DESIGN_LAYOUT" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_Layout}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="DESIGN5" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_Icons}</a>
+          				</div>
+                    </n:li>
+                   <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="DESIGN_TYPOGRAPHY" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_Typography}</a>
+          				</div>
+                    </n:li>
+                    
+                </n:ul> 
+            
+            </h:li>
+            
+            
+            
+            <h:li class="nav-item dropdown">
+          		<custom-attributes permissionId="TESTRUNNER"/>
+				<custom-attributes permissionValueId="1"/>
+                <h:a class="nav-link dropdown-toggle" id="dropdown5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" iconSclass="z-icon-code" >${mtlabels.mainscreen_Test}</h:a>
+                <n:ul class="dropdown-menu" aria-labelledby="dropdown5">
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="GENERATE_TEST_ACCOUNTS" iconSclass="">
+            				<space/><space/> Generate Test Accounts</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="GENERATE_TEST_TRIPS" iconSclass="">
+            				<space/><space/>Generate Test Trips</a>
+          				</div>
+                    </n:li>
+                     <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="RUN_ESCALATION" iconSclass="">
+            				<space/><space/>Run escalation</a>
+          				</div>
+                    </n:li>
+                </n:ul> 
+            </h:li>
+            
+  			
+            <h:li class="nav-item dropdown">
+          		<custom-attributes permissionId="TESTRUNNER"/>
+				<custom-attributes permissionValueId="1"/>
+                <h:a class="nav-link dropdown-toggle" id="dropdown6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" iconSclass="z-icon-user" >${mtlabels.mainscreen_TestRunner}</h:a>
+                <n:ul class="dropdown-menu" aria-labelledby="dropdown6">
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="TEST" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_Test}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="EVENT" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_Event}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="EVENTDEFINITION" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_EventDefinition}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="EVENTDEFFOLDER" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_EventDefFolder}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="EVENTTYPE" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_EventType}</a>
+          				</div>
+                    </n:li>
+                    <n:li class="dropdown-item">
+                    	<div class="d-md-flex">
+            				<a class="" id="FOLDER" iconSclass="">
+            				<space/><space/>${mtlabels.mainscreen_Folder}</a>
+          				</div>
+                    </n:li>
+                    
+                </n:ul> 
+            </h:li>
+            
+  			
+         
+         
+     
+          
+        </h:ul>
+      </h:div>
+    </n:nav>
+    <h:div class="mt-main-container mt-main-container-collapsed" id="MAIN_AREA">
+      <n:div class="row">
+        <n:div class="col">
+          <n:div class="card">
+            <n:div class="card-body">
+              <n:h5 class="card-title">Try Other</n:h5>
+              <n:h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</n:h6>
+              <n:p class="card-text">You can also try different version of Bootstrap V4 side menu. Click below link to view all Bootstrap Menu versions.</n:p>
+              <n:a href="https://bootsnipp.com/pradeep330" class="card-link">link</n:a>
+              <n:a href="http://websitedesigntamilnadu.com" class="card-link">Another link</n:a>
+            </n:div>
+          </n:div>
+        </n:div>
+      </n:div>
+    </h:div>
+  </div>
+  </zk>
+  
+  
+  
+  

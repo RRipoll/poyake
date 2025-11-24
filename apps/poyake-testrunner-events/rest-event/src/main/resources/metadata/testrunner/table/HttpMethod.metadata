@@ -1,0 +1,13 @@
+TABLE ENTITY testrunner.HttpMethod PATTERN Enumeration {
+	PK httpMethodId INT
+	shortCode 		VARCHAR ( 16 ) NOTNULL
+	description 	VARCHAR ( 32 ) NOTNULL STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		2,PUT		,'PUT'		;
+		4,DELETE	,'DELETE'	;
+		3,POST		,'POST'		;
+		1,GET		,'GET'		;
+		
+	}
+}

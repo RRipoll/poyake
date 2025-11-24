@@ -1,0 +1,421 @@
+FROMSQLFILE '/auditimmo/src/main/metadata/eva/view/VEvaluationSearch.sql'
+
+VIEW  ENTITY eva.VEvaluationSearch {
+	evaluationId INT SAMEAS eva.Evaluation.evaluationId
+	folderId INT SAMEAS eva.Evaluation.folderId
+	evaluationStatusId INT SAMEAS eva.Evaluation.evaluationStatusId
+	applicant VARCHAR(64) 
+	evaluator VARCHAR(64) 
+	startDate DATETIME SAMEAS eva.Evaluation.startDate
+	city VARCHAR(64) SAMEAS crm.PostalAddress.city
+	endDate DATETIME SAMEAS eva.Evaluation.endDate
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: eva.VEvaluationSearch  
+VIEW NAME: VEvaluationSearch 
+VIEW SCHEMA: eva
+
+Tables:
+	TABLE: eva.Evaluation Alias: e
+	TABLE: eva.Intervenant Alias: intEvaluator
+	TABLE: eva.Intervenant Alias: intApplicant
+	TABLE: crm.Contact Alias: cEvaluator
+	TABLE: crm.Contact Alias: cApplicant
+	TABLE: eva.Folder Alias: f
+	TABLE: crm.PostalAddress Alias: p
+Output:
+	COLUMN: evaluationId -> eva.Evaluation.evaluationId
+	COLUMN: folderId -> eva.Evaluation.folderId
+	COLUMN: evaluationStatusId -> eva.Evaluation.evaluationStatusId
+	EXPRESSION: applicant -> cApplicant.firstName+' '+cApplicant.lastName
+	EXPRESSION: evaluator -> cEvaluator.firstName+' '+cEvaluator.lastName
+	COLUMN: startDate -> eva.Evaluation.startDate
+	COLUMN: city -> crm.PostalAddress.city
+	COLUMN: endDate -> eva.Evaluation.endDate
+
+
+================= Resolver Information ======================== 
+Entity List:
+	audit.EnuInputUserGroup ,audit.InputUser ,audit.InputSource ,audit.InputUserGroup ,config.DatagridSetting ,crm.Contact ,crm.ContactPk ,crm.PostalAddressPk ,crm.EnuCountry ,crm.EnuStateProvince ,crm.PostalAddress ,eva.Appointment ,eva.FolderPK ,eva.Building ,eva.EnuBuildingType ,eva.EnuEvaluationStatus ,eva.EnuFolderStatus ,eva.EnuIntervenantCategory ,eva.EnuNetwork ,eva.EnuNoteType ,eva.EnuWorkType ,eva.Evaluation ,eva.EvaluationPk ,eva.Intervenant ,eva.Folder ,eva.Message ,eva.Note ,eva.Work ,eva.VFolderSearch ,eva.VIntervenantSearchColumns:
+	SOLVED evaluationId -> eva.Evaluation.evaluationId
+	SOLVED folderId -> eva.Evaluation.folderId
+	SOLVED evaluationStatusId -> eva.Evaluation.evaluationStatusId
+	EXPRESSION applicant -> 
+	EXPRESSION evaluator -> 
+	SOLVED startDate -> eva.Evaluation.startDate
+	SOLVED city -> crm.PostalAddress.city
+	SOLVED endDate -> eva.Evaluation.endDate
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id eva
+              .
+              id 
+                simple_id VEvaluationSearch
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id e
+                        .
+                        id 
+                          simple_id evaluationId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id e
+                        .
+                        id 
+                          simple_id folderId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id e
+                        .
+                        id 
+                          simple_id evaluationStatusId
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          expression 
+                            expression 
+                              full_column_name 
+                                table_name 
+                                  id 
+                                    simple_id cApplicant
+                                .
+                                id 
+                                  simple_id firstName
+                            +
+                            expression 
+                              primitive_expression 
+                                constant ' '
+                          +
+                          expression 
+                            full_column_name 
+                              table_name 
+                                id 
+                                  simple_id cApplicant
+                              .
+                              id 
+                                simple_id lastName
+                        as_column_alias as
+                          column_alias 
+                            id 
+                              simple_id applicant
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          expression 
+                            expression 
+                              full_column_name 
+                                table_name 
+                                  id 
+                                    simple_id cEvaluator
+                                .
+                                id 
+                                  simple_id firstName
+                            +
+                            expression 
+                              primitive_expression 
+                                constant ' '
+                          +
+                          expression 
+                            full_column_name 
+                              table_name 
+                                id 
+                                  simple_id cEvaluator
+                              .
+                              id 
+                                simple_id lastName
+                        as_column_alias as
+                          column_alias 
+                            id 
+                              simple_id evaluator
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id e
+                        .
+                        id 
+                          simple_id startDate
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id p
+                        .
+                        id 
+                          simple_id city
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id e
+                        .
+                        id 
+                          simple_id endDate
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id eva
+                              .
+                              id 
+                                simple_id Evaluation
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id e
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id eva
+                                    .
+                                    id 
+                                      simple_id Intervenant
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id intEvaluator
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id intEvaluator
+                                      .
+                                      id 
+                                        simple_id intervenantId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id e
+                                      .
+                                      id 
+                                        simple_id evaluatorId
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id eva
+                                    .
+                                    id 
+                                      simple_id Intervenant
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id intApplicant
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id intApplicant
+                                      .
+                                      id 
+                                        simple_id intervenantId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id e
+                                      .
+                                      id 
+                                        simple_id applicantId
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id Contact
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id cEvaluator
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id cEvaluator
+                                      .
+                                      id 
+                                        simple_id contactId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id intEvaluator
+                                      .
+                                      id 
+                                        simple_id contactId
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id Contact
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id cApplicant
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id cApplicant
+                                      .
+                                      id 
+                                        simple_id contactId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id intEvaluator
+                                      .
+                                      id 
+                                        simple_id contactId
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id eva
+                                    .
+                                    id 
+                                      simple_id Folder
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id f
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id f
+                                      .
+                                      id 
+                                        simple_id folderId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id e
+                                      .
+                                      id 
+                                        simple_id folderId
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id PostalAddress
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id p
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id f
+                                      .
+                                      id 
+                                        simple_id postalAddressId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id p
+                                      .
+                                      id 
+                                        simple_id postalAddressId
+  <EOF>*/

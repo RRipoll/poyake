@@ -1,0 +1,15 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+	<window closable="true" title="create filter" >
+		<h:table >
+			<h:tr>
+				<h:td>Table Name: </h:td><h:td><textbox id="TABLE_NAME" width="400px"/></h:td>
+			</h:tr>
+			<h:tr>
+				<h:td colspan="2" align="right"><button  autodisable="self" id="SAVE_BUTTON" label="OK" /></h:td>
+			</h:tr>
+		</h:table>
+	</window>
+</zk>

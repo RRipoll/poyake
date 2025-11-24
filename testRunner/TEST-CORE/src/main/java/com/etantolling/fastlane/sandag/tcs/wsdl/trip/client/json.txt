@@ -1,0 +1,5 @@
+[{ 
+   "tripSequenceNumber": "30",
+   "oldFareAmount": "5.0",
+   "newFareAmount": "8"
+}]

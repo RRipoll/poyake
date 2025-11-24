@@ -1,0 +1,25 @@
+METADATA FOR testrunner.Test{
+	
+	'JSONEXAMPLE','Get Json Example','','','[ {
+  "eventDefinitionUuid" : "1",
+  "eventTypeId" : "REST_SERVICE",
+  "eventName" : "Reset Db",
+  "description" : "Reset Db",
+  "selected" : 1,
+  "url" : "/rest/api/development/system/reset-db",
+  "httpMethod" : 1,
+  "parameters" : [ {
+    "label" : "tableName",
+    "trParameterTypeId" : 2,
+    "value" : "$.tableName"
+  } ]
+} ]',DEFAULT,DEFAULT,DEFAULT;
+
+}
+
+METADATA FOR testrunner.Folder{
+
+
+'6', '2', NULL, 'JSONEXAMPLE';
+
+}

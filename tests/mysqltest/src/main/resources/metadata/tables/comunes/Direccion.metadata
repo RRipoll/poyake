@@ -1,0 +1,13 @@
+TABLE ENTITY Direccion PATTERN auditada
+{
+	PK direccionId INT
+	tipo INT FKTO TipoDireccion
+	prioridad INT
+	direccion VARCHAR (256) NOTNULL
+	codPostal INT FKTO CodPostal
+	direccionesId INT NOTNULL FKTO Direcciones
+	comentariosId INT NOTNULL FKTO Comentarios
+	creado DATETIME
+	editado DATETIME
+	borrado DATETIME
+}

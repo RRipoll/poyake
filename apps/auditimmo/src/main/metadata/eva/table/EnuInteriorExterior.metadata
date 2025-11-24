@@ -1,0 +1,10 @@
+TABLE ENTITY eva.EnuInteriorExterior PATTERN Enumeration{
+	PK interiorExteriorId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, EXTERIOR, 'Exterior';
+		2, BOTH, 'Interior and Exterior';
+	}
+}

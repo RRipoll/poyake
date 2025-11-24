@@ -1,0 +1,12 @@
+TABLE ENTITY multi.EnuRoomType PATTERN Enumeration{
+	PK roomTypeId INT
+	shortCode VARCHAR ( 16 ) NOTNULL
+	description VARCHAR ( 32 ) NOTNULL STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, KICHEN, 'KICHEN';
+		2, DINER, 'DINNER';
+		3, ROOM, 'ROOM';
+		4, SERVICE, 'SERVICE';
+	}
+}

@@ -1,0 +1,15 @@
+TABLE ENTITY TipoTelefono PATTERN auditada
+{
+	PK tipoTelefonoId INT
+	tipo VARCHAR (50) NOTNULL
+	descripcion VARCHAR (256)
+	
+	creado DATETIME
+	editado DATETIME
+	borrado DATETIME
+	METADATA
+	{
+		1,"Móvil","Móvil","2020-01-01 00:00:00","2020-01-01 00:00:00","2020-01-01 00:00:00";
+		2,"Fijo","Fijo","2020-01-01 00:00:00","2020-01-01 00:00:00","2020-01-01 00:00:00";
+	}
+}

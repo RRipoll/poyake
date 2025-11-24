@@ -1,0 +1,7 @@
+TABLE ENTITY eva.FolderPK{
+	PK folderId INT
+	
+	METADATA{
+		1;
+	}
+}

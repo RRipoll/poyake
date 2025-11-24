@@ -1,0 +1,462 @@
+* {
+	margin: 0
+}
+
+body {
+	padding: 0
+}
+
+
+.z-window {
+	background: none repeat scroll 0 0 #d6d3ce;
+	
+	padding: 0;
+}
+
+.z-window>.z-window-content {
+	background: none repeat scroll 0 0 #d6d3ce;
+	margin: 0;
+	overflow: hidden;
+	padding: 0
+}
+
+.headerdiv {
+position:absolute;right:30px;top:5px;
+font-size:12pt;
+font-family: Arial, Sans-serif;
+	font-weight: bold;
+		
+}
+
+
+.pagingactive{
+	cursor: none;
+	color:black;
+	font-weight: bold;
+}
+
+.paginggoolge{
+	float:right;
+	padding:5px;
+	
+	
+}
+
+.pagingnumber{
+	cursor: pointer;
+	color:blue;
+	font-weight: bold;
+	
+}
+
+.pagingnext{
+	cursor: pointer;
+	color:blue;
+font-weight: bold;	
+}
+.pagingnext:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+ .pagingnumber:hover{
+	cursor: pointer;
+	text-decoration: underline;
+} 
+
+.headerfulldiv {
+position:absolute;left:230px;top:5px;
+font-size:12pt;
+	font-family: Arial, Sans-serif;
+		font-weight: bold;
+}
+
+
+.buttondiv {
+position:absolute;right:30px;bottom:10px;float: right;
+}
+
+.buttonsearchdiv {
+position:absolute;right:30px;bottom:240px;float: right;
+}
+
+.general {
+	font-family: Arial, Sans-serif;
+	height: 100%;
+	width: 100%;
+	min-height: 310px;
+	max-height: 310px;
+	max-width: 705px;
+	min-width: 705px;
+	background-color: #d6d3ce;
+	font-size: 8pt;
+	color: #000;
+	position: relative;
+	/*border-collapse: collapse;*/
+}
+
+.alignright{
+	text-align:right;
+	padding:0px 4px 0px 0px;
+}
+
+.general h2 {
+	width: 11px;
+	width: auto !important;
+	height: auto !important;
+	padding: 1px 20px 1px 20px;
+	
+	font-size: 10pt
+}
+
+.general p {
+	padding: 5px 0 1px 0;
+	color: #000;
+	font-weight: bold;
+	font-size: 10pt
+}
+
+.general input {
+	min-height: 16px;
+	height: 16px;
+	
+	
+	border: 1;
+	color: #3c3bf1;
+	font-size: 8pt;
+	font-weight: bold;
+	line-height: 16px;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	font-family: Arial, Sans-serif
+
+
+}
+
+.general button {
+	padding: 1px 4px 1px 4px;
+	width: 100px;
+	font-size: 8pt;
+	background-color: #d6d3ce;
+	
+}
+
+.z-window-header {
+    color: #363636;
+    cursor: default;
+    font-family: Arial, Sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    margin-left: 10px;
+    overflow: hidden;
+    padding: 3px 0 5px;
+}
+.z-window-modal.z-window-shadow, .z-window-highlighted.z-window-shadow {
+    border-radius: 0;
+    box-shadow: 0 1px 1px #ffffff inset, 0 0 4px rgba(0, 0, 0, 0.7);
+}
+.z-window-icon {
+    background: linear-gradient(to bottom, #fefefe 0%, #eeeeee 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #cfcfcf;
+    border-radius: 0;
+    color: #636363;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+    margin: auto 1px;
+    overflow: hidden;
+    text-align: center;
+    width: 28px;
+}
+
+footer {
+	vertical-align: middle;
+	text-align: right;
+	color: #000;
+	padding: 5px 0 0 0
+}
+
+.table1 {
+	min-height: 310px;
+	max-height: 310px;
+	height: 310px;
+	width: 100%;
+	padding: 0;
+	
+}
+
+.table1 div {
+	padding: 0
+}
+
+.table1 .table4 {
+	border-collapse: collapse;
+}
+
+.table1 .table4 td {
+	border: 1px solid #000;
+	background-color: white;
+	color: #3c3bf1;
+	padding:0 3px;
+	font-weight: bold;
+}
+
+
+.table1 .table4 .hederTDplain {
+	color: #000;
+	font-size: 8pt;
+	font-weight: normal;
+	height: 18px;
+	padding: 0 3px 0 0;
+	text-align:center;
+	vertical-align: middle;
+	background-color: #d6d3ce;
+    border: 0px none;
+    text-align:right;
+}
+
+
+.table1 .table4 .lptitle {
+	color: #000
+}
+
+.table1 .table2 {
+	border-collapse: collapse
+}
+
+.table1 .table2 input {
+	border: 0 solid #000;
+	font-weight: bold;
+}
+
+.table1 .z-label,.table1 .z-radio-content,.table1 .z-checkbox-content,.table1 .z-loading {
+    font-family: Arial,Sans-serif;
+    font-size: 8pt;
+    font-weight: normal;
+}
+
+.table1 .t2data {
+	border: 1px solid #000;
+	background-color: white;
+	color: #3c3bf1;
+	width:50%;
+	padding:0 3px 0 3px;
+	font-weight: bold;
+}
+
+.table1 .t2title {
+	text-align: right;
+	color: #000;
+	font-weight: bold;
+}
+
+
+
+.table1 .z-label, .table1 .z-radio-cnt,.table1  .z-checkbox-cnt,.table1  .z-loading {
+    font-family: arial,sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+.tablelist {
+	border-collapse:collapse;
+	border-spacing:0px;
+	/*border-collapse: collapse;*/
+	border: 1;
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+.tablelist .row{
+      border:1px solid black;
+}
+
+.tablelist .z-row .z-row-inner,.tablelist .z-row .z-cell {
+	overflow: hidden;
+	border:1px solid black;
+	/*padding: 0 3px;*/
+}
+
+
+.tablelist .z-column-content,.tablelist .z-row-content,.tablelist .z-group-content,.tablelist .z-groupfoot-content,.tablelist .z-footer-content
+	{
+	color: #000;
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	line-height: 18px
+}
+
+.tablelist .z-combobox,.tablelist .z-bandbox,.tablelist .z-datebox,.tablelist .z-timebox,.tablelist .z-spinner,.tablelist .z-doublespinner
+	{
+	display: inline-block;
+	min-height: 18px;
+	white-space: nowrap
+}
+
+.tablelist .z-grid-odd>.z-row-inner,.tablelist .z-grid-odd>.z-cell {
+	background: none repeat scroll 0 0 #fff
+}
+
+.tablelist TR.trEven {
+	background-color: #fff
+}
+
+.tablelist .z-label,.tablelist .z-radio-content,.tablelist .z-checkbox-content,.tablelist .z-loading
+	{
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	font-weight: normal
+}
+
+.tablelist .z-combobox-input,.tablelist .z-bandbox-input,.tablelist .z-datebox-input,.tablelist .z-timebox-button,.tablelist .z-spinner-button,.tablelist .z-doublespinner-button
+	{
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #000;
+	border-radius: 0 0px 0px 0;
+	color: #3c3bf1;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 8pt;
+	font-weight: normal;
+	height: 14px;
+	line-height: 14px;
+	min-width: 18px;
+	overflow: hidden;
+	padding: 0px;
+	vertical-align: middle
+}
+
+.tablelist .z-textbox,.tablelist .z-decimalbox,.tablelist .z-intbox,.tablelist .z-longbox,.tablelist .z-doublebox {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #000000;
+}
+
+
+.tablelist .z-combobox-button,.tablelist .z-bandbox-button,.tablelist .z-datebox-button,.tablelist .z-timebox-button,.tablelist .z-spinner-button,.tablelist .z-doublespinner-button {
+    border-radius: 0 0px 0px 0;
+    color: #636363;
+    cursor: pointer;
+    /* display: inline-block;*/
+    font-size: 10pt;
+    font-weight: normal;
+    line-height: 14px;
+    overflow: hidden;
+    padding: 4px;
+    text-align: left;
+    vertical-align: middle;
+     background: none repeat scroll 0 0 white;
+    border: 1px solid white;
+}
+
+
+.tablelist .tablelist .z-row .z-row-inner,.tablelist .z-row .z-cell {
+	/*border-collapse: collapse;*/
+	/*border: 1px solid #000;*/
+	overflow: hidden
+}
+
+.tablelist .z-label,.tablelist .z-radio-content,.tablelist .z-checkbox-content,.tablelist .z-loading
+	{
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	font-weight: normal
+}
+
+.tablelist .fieldValue {
+	color: #3c3bf1;
+	font-size: 8pt;
+	/*height: 16px;*/
+	padding: 0 3px;
+	font-weight: bold;
+}
+
+.tablelist .clickField {
+	font-family: Arial, Sans-serif;
+	font-size: 8pt;
+	padding: 0 3px;
+	font-weight: bold;
+}
+
+.tablelist table {
+	width: 100%;
+	border-spacing: 0;
+	border-width: 0;
+	border-collapse: collapse;
+	
+}
+
+.tablelist table div {
+	padding: 0;
+	background-color: #fff;
+	font-family: Arial, Sans-serif;
+	color:black;
+	line-height: 14px;
+	overflow: hidden;
+}
+
+.tablelist table tr {
+	/*border: 1px solid #2b2a29;*/
+	padding: 0;
+	vertical-align:top;
+	
+}
+
+.tablelist table TD .headerTD {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	border:1px solid black;
+	background-color: #FFFFFF;
+	vertical-align: middle;
+}
+
+.tablelist table TD .bodyTD {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	border:1px solid black;
+	background-color: #FFFFFF;
+	vertical-align: middle;
+}
+
+.tablelist table TD .hederTDplain {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 18px;
+	padding: 0;
+	text-align:center;
+	vertical-align: middle;
+}
+
+.tablelist table .filter {
+	background: none repeat scroll 0 0 #d6d3ce
+}
+
+.tablelist table .vboxfilter {
+	/*background-color: #fff;*/
+	/*border-style: solid;*/
+	/*border-width: 1px*/
+}
+
+.general input[type="radio"] {
+	-moz-appearance: none;
+	margin: 0 3px 0px;
+}
+
+.general input[type="checkbox"] {
+	-moz-appearance: none;
+	margin: 2px;
+}

@@ -1,0 +1,17 @@
+TABLE ENTITY permission.Permission  STEREOTYPES CONFIG{
+	PK permissionId INT NOTNULL 
+	shortCode VARCHAR ( 255 ) NOTNULL 
+	description VARCHAR ( 255 ) NOTNULL  STEREOTYPES DESCRIPTION
+	permissionTypeId INT NOTNULL FKTO permission.EnuPermissionType DEFAULT '1'
+	permissionValueId INT  NOTNULL FKTO permission.EnuPermissionValue DEFAULT '2'
+	METADATA{
+	1,'ADMIN_MENU'					,'Admin Menu'						,'1','2';
+	2,'TESTRUNNER'					,'Test Runner Permission'			,'1','1';
+	3,'CONF_EDITABLE'				,'Conf Editable'					,'3','2';
+	4,'example.VBook'				,'no edit for book'					,'3','1';
+	5,'testrunner.TestTree'			,'testTree'							,'3','2';
+	6,'testrunner.StoreValuesEvent'	,'StoreValuesEvent are not editable','3','2';
+	7,'audit.UserGroup'				,'not editable'						,'3','2';
+	8,'permission.UserGroupRol'		,'not editable'						,'3','2';
+	}
+}

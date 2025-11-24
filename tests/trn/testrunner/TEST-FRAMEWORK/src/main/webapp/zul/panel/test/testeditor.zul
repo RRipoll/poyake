@@ -1,0 +1,65 @@
+<?page title="Home Page" ?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	<window width="90%"  closable="true" title="Test Runner" style="overflow:auto" border="normal" maximizable="true">
+	
+		<vbox vflex="1">
+			<div id="FIELD_LIST" width="100%">
+				<h:table width="100%" border="0">
+					<h:tr>
+						<h:td width="200px"><label>Owner:</label></h:td>
+						<h:td ><combobox info="@MT(field=TEST.OWNER)" readonly="true" /></h:td>
+					</h:tr>
+					<h:tr>
+						<h:td><label>Folder:</label></h:td><h:td><combobox info="@MT(field=TEST.FOLDERID)" readonly="true"/></h:td>
+					</h:tr>
+					<h:tr>
+						<h:td><label>Test Name:</label></h:td><h:td><textbox info="@MT(field=TEST.TESTNAME)" width="95%"/></h:td>
+					</h:tr>
+					<h:tr>
+						<h:td ><label>Description:</label></h:td><h:td><textbox   info="@MT(field=TEST.DESCRIPTION)" width="95%"/></h:td>
+					</h:tr>
+					<h:tr>
+						<h:td><label>Keywords:</label></h:td><h:td><textbox width="95%"  info="@MT(field=TEST.KEYWORDS)"/></h:td>
+					</h:tr>
+					
+					
+					<h:tr visible="false">
+						<h:td>
+							<label>Flags:</label>
+						</h:td>
+						<h:td visible="false">
+							<label>Regression test?:</label>
+							<combobox info="@MT(field=TEST.REGRESSIONTEST)" width="60px" readonly="true"/>
+							
+							<label>Run AIG tasks?:</label>
+							<combobox info="@MT(field=TEST.RUNNIGHTLYSCRIPTS)" width="60px" readonly="true"/>
+						</h:td>
+					</h:tr>
+					<h:tr>
+						<h:td>
+							<label>Notes:</label>
+						</h:td>
+						<h:td>
+							<textbox multiline="true" width="95%" height="100px" info="@MT(field=TEST.NOTES)"/>
+						</h:td>
+					</h:tr>
+				</h:table>
+			</div>
+			<div>
+				<button id="SAVE_BUTTON" label="save" />
+				<div id="HEADER_LIST" />
+			</div>
+			<div id="EVENTS_LIST" height="400px" >
+				<custom-attributes EVENTID="hflex:min"/>
+				<!--
+				<custom-attributes POSTINGDATE="hflex:min;format:datetime"/>
+				-->
+				<custom-attributes DESCRIPTION="hflex:max"/>
+				<custom-attributes FILES="hflex:min"/>
+			</div>
+			<div height="50px" />
+		</vbox>
+	</window>
+</zk>

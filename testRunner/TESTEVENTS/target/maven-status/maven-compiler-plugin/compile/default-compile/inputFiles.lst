@@ -1,0 +1,17 @@
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/RunATest.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/CheckValueNull.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/CicleTestParallelWaiting.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/CicleOfTests.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/CheckValues.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/TransactionPort_Client.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/AddStoreValues.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/RestErrorMessage.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/RemoveStoreValues.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/RestWebService.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/RestJobWebService.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/TestEventFactory.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/JobService.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/FileService.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/CicleTestParallel.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/PostingDateService.java
+/home/raulito/git/testrunner/TESTEVENTS/src/main/java/com/etantolling/testrunner/testevents/eventprocessors/webservices/RunATestConditional.java

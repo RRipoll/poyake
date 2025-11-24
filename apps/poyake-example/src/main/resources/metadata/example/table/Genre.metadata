@@ -1,0 +1,9 @@
+TABLE ENTITY example.Genre PATTERN Enumeration{
+	PK genreId INT NOTNULL 
+	shortCode VARCHAR ( 16 ) NOTNULL
+	description VARCHAR ( 32 ) NOTNULL STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, SF, 'Science Fiction';
+	}
+}

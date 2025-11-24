@@ -1,0 +1,136 @@
+FROMSQLFILE '/tr-testframework/src/main/resources/metadata/views/VeventFolderPaths.sql'
+SQLFILEDEPENDENCY '/tr-testframework/src/main/resources/metadata/functions/FGetEventFolderPath.sql'
+
+VIEW  ENTITY pub.EVENTFOLDERPATHS {
+	parentfolderid INTEGER SAMEAS pub.EventDefFolder.parentFolderId
+	eventdeffolderId INTEGER SAMEAS pub.EventDefFolder.eventDefFolderId
+	description VARCHAR(255) SAMEAS pub.EventDefFolder.description
+	deleted INTEGER SAMEAS pub.EventDefFolder.deleted
+	FolderPath VARCHAR(1000)
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: pub.EVENTFOLDERPATHS  
+VIEW NAME: EVENTFOLDERPATHS 
+VIEW SCHEMA: pub
+
+Tables:
+	TABLE: pub.eventdeffolder Alias: e
+Output:
+	COLUMN: parentfolderid -> pub.eventdeffolder.parentfolderid
+	COLUMN: eventdeffolderId -> pub.eventdeffolder.eventdeffolderId
+	COLUMN: description -> pub.eventdeffolder.description
+	COLUMN: deleted -> pub.eventdeffolder.deleted
+	EXPRESSION: FolderPath -> pub.GetEventFolderPath(e.eventdeffolderId)
+
+
+================= Resolver Information ======================== 
+Entity List:
+	demo.DemoTable ,pub.Adm_app_info ,pub.EnuEventType ,pub.Event ,pub.EventDefinition ,pub.Folder ,pub.Test ,pub.EventDefFolder ,pub.Step ,pub.EventFile ,pub.FileRef ,pub.InputUser ,DUBUDU ,pub.EVENTFOLDERPATHSColumns:
+	SOLVED parentfolderid -> pub.EventDefFolder.parentFolderId
+	SOLVED eventdeffolderId -> pub.EventDefFolder.eventDefFolderId
+	SOLVED description -> pub.EventDefFolder.description
+	SOLVED deleted -> pub.EventDefFolder.deleted
+	EXPRESSION FolderPath -> 
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view CREATEVIEW
+            simple_name 
+              id 
+                simple_id pub
+              .
+              id 
+                simple_id EVENTFOLDERPATHS
+            AS
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id e
+                        .
+                        id 
+                          simple_id parentfolderid
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id e
+                        .
+                        id 
+                          simple_id eventdeffolderId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id e
+                        .
+                        id 
+                          simple_id description
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id e
+                        .
+                        id 
+                          simple_id deleted
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          function_call 
+                            scalar_function_name 
+                              func_proc_name_server_database_schema 
+                                func_proc_name_database_schema 
+                                  func_proc_name_schema 
+                                    id 
+                                      simple_id pub
+                                    .
+                                    id 
+                                      simple_id GetEventFolderPath
+                            (
+                            expression_list 
+                              expression 
+                                full_column_name 
+                                  table_name 
+                                    id 
+                                      simple_id e
+                                  .
+                                  id 
+                                    simple_id eventdeffolderId
+                            )
+                        as_column_alias as
+                          column_alias 
+                            id 
+                              simple_id FolderPath
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id pub
+                              .
+                              id 
+                                simple_id eventdeffolder
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id e
+  <EOF>*/

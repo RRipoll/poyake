@@ -1,0 +1,5 @@
+TABLE ENTITY testrunner.EventType  STEREOTYPES CONFIG{
+	PK eventTypeId UUID 
+    shortCode 	VARCHAR ( 16 )
+	description VARCHAR ( 255 ) STEREOTYPES DESCRIPTION
+}

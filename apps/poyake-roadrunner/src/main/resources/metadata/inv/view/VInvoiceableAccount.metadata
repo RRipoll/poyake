@@ -1,0 +1,147 @@
+FROMSQLFILE '/poyake-roadrunner/src/main/resources/metadata/inv/view/VInvoiceableAccount.sql'
+
+VIEW  ENTITY inv.VInvoiceableAccount {
+	PK customerId INT
+	balance MONEY SAMEAS acc.VAccountBalance.balance
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: inv.VInvoiceableAccount  
+VIEW NAME: VInvoiceableAccount 
+VIEW SCHEMA: inv
+
+Tables:
+	TABLE: acc.vaccountBalance Alias: ab
+	TABLE: inv.Invoice
+Output:
+	COLUMN: customerId -> NOT FOUND
+	COLUMN: balance -> NOT FOUND
+
+
+================= Resolver Information ======================== 
+Entity List:
+	acc.Allocation ,audit.InputUser ,audit.InputSource ,acc.Ledger ,acc.LedgerItem ,acc.LedgerInfo ,acc.EnuTransactionType ,acc.EnuLedgerType ,acc.Annotation ,acc.EnuAnnotationType ,crm.CustomerPk ,acc.Annotation ,acc.Balance ,acc.Cancellation ,acc.EnuAnnotationType ,acc.EnuLedgerType ,acc.EnuTransactionType ,acc.Ledger ,acc.LedgerInfo ,acc.LedgerItem ,acc.Repost ,acc.VAccountBalance ,acc.VTransactionHistory ,tolling.Trip ,payment.Payment ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,acc.VTripPayment ,acc.Allocation ,acc.VUnallocatedCredit ,acc.VUnpaidDebit ,audit.EnuInputUserGroup ,audit.InputSource ,audit.InputUser ,audit.InputUserGroup ,audit.EnuInputUserGroup ,common.EnuTemplateType ,common.FileGroup ,common.StorageFile ,common.Template ,config.Enulocale ,config.DatagridSetting ,config.Enulocale ,config.AppInfo ,crm.CustomerPaymentMethod ,payment.PaymentMethod ,crm.CustomerPk ,crm.CustomerSuplementaryContact ,crm.PersonOrCompanyPk ,crm.EnuContactType ,crm.EmailAddressPk ,crm.EnuContactType ,crm.EnuCountry ,crm.EnuCustomerType ,crm.EnuPhoneNumberType ,crm.EnuStateProvince ,crm.EnuCountry ,crm.HCustomer ,crm.PostalAddressPk ,crm.EnuCustomerType ,crm.HEmailAddress ,crm.EmailAddressPk ,crm.HPersonOrCompany ,crm.PhoneNumberPK ,crm.HPhoneNumber ,crm.EnuPhoneNumberType ,crm.HPostalAddress ,crm.EnuStateProvince ,crm.PersonOrCompanyPk ,crm.PhoneNumberPK ,crm.PostalAddressPk ,crm.VCustomerHistory ,VCustomerSearch ,crm.HCustomer ,crm.HPersonOrCompany ,crm.HPhoneNumber ,crm.HEmailAddress ,crm.VDetailPageCaseList ,cs.CSCase ,cs.CSCasePK ,cs.EnuCaseType ,cs.EnuCaseStatus ,cs.EnuCasePriority ,crm.VDetailPageVehicleList ,tolling.LicensePlate ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.VehicleInfo ,tolling.Vehicle ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.CustomerVehicle ,cs.CSCase ,cs.CSCasePK ,cs.CustomerCase ,cs.EnuCasePriority ,cs.EnuCaseStatus ,cs.EnuCaseType ,cs.VCaseSearch ,cs.CustomerCase ,inv.Invoice ,inv.InvoiceDocument ,inv.Invoice ,crm.HPostalAddress ,inv.InvoiceLedgerItem ,inv.VinvoiceHeader ,inv.InvoiceDocument ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,payment.Payment ,payment.PaymentMethod ,payment.VPaymentMethods ,crm.CustomerPaymentMethod ,tolling.CustomerPass ,tolling.Pass ,tolling.CustomerVehicle ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.EnuPromoType ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.Gantry ,tolling.LicensePlate ,tolling.Pass ,tolling.Promo ,tolling.EnuPromoType ,tolling.Trip ,tolling.TripInfo ,tolling.Gantry ,tolling.Vehicle ,tolling.VehicleInfo ,tolling.VFindVehicle ,tolling.VTripSearch ,tolling.TripInfoColumns:
+	ATTRIBUTE_NOT_FOUND customerId -> 
+	SOLVED balance -> acc.VAccountBalance.balance
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id inv
+              .
+              id 
+                simple_id VInvoiceableAccount
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id customerId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id balance
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id acc
+                              .
+                              id 
+                                simple_id vaccountBalance
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id ab
+                  where
+                  search_condition 
+                    search_condition_and 
+                      search_condition_not 
+                        predicate 
+                          expression 
+                            full_column_name 
+                              id 
+                                simple_id balance
+                          comparison_operator <
+                          expression 
+                            primitive_expression 
+                              constant 0
+                      and
+                      search_condition_not not
+                        predicate exists(
+                          subquery 
+                            select_statement 
+                              query_expression 
+                                query_specification select
+                                  select_list 
+                                    select_list_elem 
+                                      column_elem 
+                                        id 
+                                          simple_id invoiceId
+                                  from
+                                  table_sources 
+                                    table_source 
+                                      table_source_item_joined 
+                                        table_source_item 
+                                          table_name_with_hint 
+                                            table_name 
+                                              id 
+                                                simple_id inv
+                                              .
+                                              id 
+                                                simple_id Invoice
+                                  where
+                                  search_condition 
+                                    search_condition_and 
+                                      search_condition_not 
+                                        predicate 
+                                          expression 
+                                            full_column_name 
+                                              id 
+                                                simple_id customerId
+                                          comparison_operator =
+                                          expression 
+                                            full_column_name 
+                                              table_name 
+                                                id 
+                                                  simple_id ab
+                                              .
+                                              id 
+                                                simple_id customerId
+                                      and
+                                      search_condition_not 
+                                        predicate 
+                                          expression 
+                                            full_column_name 
+                                              id 
+                                                simple_id created
+                                          comparison_operator >
+                                          expression 
+                                            function_call dateadd(MONTH,
+                                              expression 
+                                                primitive_expression 
+                                                  constant 
+                                                    sign -
+                                                    1
+                                              ,
+                                              expression 
+                                                function_call getDate()
+                                              )
+                          )
+  <EOF>*/

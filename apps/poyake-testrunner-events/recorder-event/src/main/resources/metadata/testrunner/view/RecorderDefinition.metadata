@@ -1,0 +1,9 @@
+VIEW ENTITY testrunner.RecorderDefinition {
+    PK eventDefinitionUuid UUID  FKTO testrunner.EventDefinition
+    eventTypeId 		UUID NOTNULL SAMEAS testrunner.EventDefinition.eventTypeId 
+    eventName 			VARCHAR(64) NOTNULL STEREOTYPES DESCRIPTION 
+    description 		VARCHAR(255) SAMEAS testrunner.EventDefinition.description
+	selected 			EVENTSELECTED DEFAULT "1"
+    //parameters 			PARAMETER MULTIREFTO testrunner.TrParameter
+	files 				PARAMETER  MULTIREFTO common.StorageFile 	
+		}

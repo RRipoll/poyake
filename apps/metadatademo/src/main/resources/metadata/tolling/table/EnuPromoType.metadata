@@ -1,0 +1,10 @@
+TABLE ENTITY tolling.EnuPromoType PATTERN Enumeration{
+	PK enuPromoTypeId INT 
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, FREE, 'All Tolls Free';
+		2, D20PC, '20% discount on Monday';	
+	}
+}

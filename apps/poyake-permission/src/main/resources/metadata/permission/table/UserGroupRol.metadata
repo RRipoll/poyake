@@ -1,0 +1,15 @@
+TABLE ENTITY permission.UserGroupRol  STEREOTYPES LINKTABLE, CONFIG {
+	PK userGroupRolId INT  NOTNULL 
+	rolId INT NOTNULL FKTO permission.Rol STEREOTYPES LINK
+	inputUserGroupId INT NOTNULL  FKTO audit.InputUserGroup STEREOTYPES LINK 
+	METADATA{
+	
+	1,'2','1';
+	2,'4','5';
+	3,'5','1';
+	4,'2','2';
+	5,'5','2';
+	6,'4','2';
+	
+	}
+}

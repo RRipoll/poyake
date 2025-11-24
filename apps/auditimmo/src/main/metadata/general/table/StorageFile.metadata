@@ -1,0 +1,9 @@
+TABLE ENTITY general.StorageFile{
+	PK storageFileId INT
+	url VARCHAR(255) NOTNULL
+	mimeType VARCHAR(70) NOTNULL
+	fileName  VARCHAR(255) NOTNULL
+	fileGroupId INT NOTNULL FKTO general.FileGroup 
+	postingDate DATETIME NOTNULL DEFAULT "getDate()"
+	originalFileName   VARCHAR(255) 
+}

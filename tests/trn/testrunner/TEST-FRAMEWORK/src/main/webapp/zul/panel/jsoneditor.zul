@@ -1,0 +1,106 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+  
+   
+	<window  width= "80%"      height= "80%" closable="true" title="Edit Json"  maximizable="true" >
+	
+	<style >
+	body {
+      font: 10.5pt arial;
+      color: #4d4d4d;
+      line-height: 150%;
+      width: 500px;
+    }
+
+    code {
+      background-color: #f5f5f5;
+    }
+	
+    #jsoneditor {
+      width: 100%;
+      height: 80%;
+    }
+    
+  </style>
+  
+  
+  <textbox id="label"   visible="false" >
+  	<custom-attributes org.zkoss.zk.ui.updateByClient="true"/>
+  </textbox>
+  
+		<hbox >
+			Load a JSON File-> <n:input type="file" id="loadDocument" value="Load Document"/>
+			<space/>
+  			Export JSON to a File-> <n:input type="button" id="saveDocument" value="Save Document" />
+  			<space/><space/><space/><space/><space/><space/><space/>
+			<n:button id="getJSON">Update JSON into the TR event</n:button>	
+  			
+		</hbox>
+		
+		
+		<n:div id="jsoneditor"></n:div>
+	
+		<n:script  >
+  			var container = document.getElementById('jsoneditor');
+  			var options = {
+  				mode: 'tree',
+    			modes: ['code', 'text', 'tree'], // allowed modes
+    			onError: function (err) {
+      				alert(err.toString());
+    			},
+    			onModeChange: function (newMode, oldMode) {
+      				console.log('Mode switched from', oldMode, 'to', newMode);
+    			}
+  			};
+  			
+  			
+  			var editor = new JSONEditor(container, options);
+  		
+  		
+  		document.getElementById('getJSON').onclick = function () {
+    		var json = editor.get();
+    		zk.Widget.$("$label").setValue(json);
+    		alert(JSON.stringify(json, null, 2));
+    		zk.Widget.$("$label").smartUpdate('value', json);
+    		zk.Widget.$("$label").fire('onChange',{}, {toServer:true});
+  			};
+		
+		
+		FileReaderJS.setupInput(document.getElementById('loadDocument'), {
+    readAsDefault: 'Text',
+    on: {
+      load: function (event, file) {
+        editor.setText(event.target.result);
+        editor.expandAll();
+      }
+    }
+  });
+
+  // Save a JSON document
+  document.getElementById('saveDocument').onclick = function () {
+    // Save Dialog
+    fname = window.prompt("Save as...");
+    
+    // Check json extension in file name
+    if(fname.indexOf(".")==-1){
+      fname = fname + ".json";
+    }else{
+      if(fname.split('.').pop().toLowerCase() == "json"){
+        // Nothing to do
+      }else{
+        fname = fname.split('.')[0] + ".json";
+      }
+    } 
+    var blob = new Blob([editor.getText()], {type: 'application/json;charset=utf-8'});
+    saveAs(blob, fname);
+  };
+		
+		
+		</n:script>		
+		
+	</window>
+	
+	
+</zk>

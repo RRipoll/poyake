@@ -1,0 +1,8 @@
+TABLE ENTITY acc.Allocation{
+	PK allocationId INT
+	creditRevisionId INT NOTNULL FKTO acc.Ledger
+	debitRevisionId INT NOTNULL FKTO acc.Ledger
+	amount MONEY NOTNULL
+	startAnnotationId INT NOTNULL FKTO acc.Annotation
+	endAnnotationId INT FKTO acc.Annotation    
+}

@@ -1,0 +1,167 @@
+FROMSQLFILE '/auditimmo/src/main/metadata/eva/view/VResultCalculation.sql'
+
+VIEW  ENTITY eva.VResultCalculation {
+	evaluationId INT SAMEAS eva.EvaluationSubsectionDetail.evaluationId
+	level INT SAMEAS eva.EvaluationSubsectionDetail.level
+	evaluationSectionTypeId INT SAMEAS eva.EnuEvaluationSection.evaluationSectionTypeId
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: eva.VResultCalculation  
+VIEW NAME: VResultCalculation 
+VIEW SCHEMA: eva
+
+Tables:
+	TABLE: eva.EvaluationSubsectionDetail Alias: d
+	TABLE: eva.EnuEvaluationSubsection Alias: ss
+	TABLE: eva.EnuEvaluationSection Alias: s
+Output:
+	COLUMN: evaluationId -> eva.EvaluationSubsectionDetail.evaluationId
+	COLUMN: level -> eva.EvaluationSubsectionDetail.level
+	COLUMN: evaluationSectionTypeId -> eva.EnuEvaluationSection.evaluationSectionTypeId
+
+
+================= Resolver Information ======================== 
+Entity List:
+	audit.EnuInputUserGroup ,audit.InputUser ,audit.InputSource ,audit.InputUserGroup ,config.DatagridSetting ,crm.Contact ,crm.ContactPk ,crm.PostalAddressPk ,crm.EnuCountry ,crm.EnuStateProvince ,crm.PostalAddress ,eva.Appointment ,eva.FolderPK ,eva.Building ,eva.EnuBuildingType ,eva.EnuEvaluationSection ,eva.EnuEvaluationSectionType ,eva.EnuEvaluationStatus ,eva.EnuEvaluationSubsection ,eva.EnuFolderStatus ,eva.EnuInteriorExterior ,eva.EnuIntervenantCategory ,eva.EnuMandateType ,eva.EnuNetwork ,eva.EnuNoteType ,eva.EnuWorkType ,eva.Evaluation ,eva.EvaluationPk ,eva.Intervenant ,eva.EvaluationSubsectionDetail ,eva.Folder ,eva.Message ,eva.Note ,general.FileGroup ,eva.Work ,eva.VEvaluationSearch ,eva.VFolderSearch ,eva.VIntervenantSearch ,general.StorageFileColumns:
+	SOLVED evaluationId -> eva.EvaluationSubsectionDetail.evaluationId
+	SOLVED level -> eva.EvaluationSubsectionDetail.level
+	SOLVED evaluationSectionTypeId -> eva.EnuEvaluationSection.evaluationSectionTypeId
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id eva
+              .
+              id 
+                simple_id VResultCalculation
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id d
+                        .
+                        id 
+                          simple_id evaluationId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id d
+                        .
+                        id 
+                          simple_id level
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id s
+                        .
+                        id 
+                          simple_id evaluationSectionTypeId
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id eva
+                              .
+                              id 
+                                simple_id EvaluationSubsectionDetail
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id d
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id eva
+                                    .
+                                    id 
+                                      simple_id EnuEvaluationSubsection
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id ss
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id d
+                                      .
+                                      id 
+                                        simple_id evaluationSubsectionId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id ss
+                                      .
+                                      id 
+                                        simple_id evaluationSubsectionId
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id eva
+                                    .
+                                    id 
+                                      simple_id EnuEvaluationSection
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id s
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id s
+                                      .
+                                      id 
+                                        simple_id evaluationSectionId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id ss
+                                      .
+                                      id 
+                                        simple_id evaluationSectionId
+  <EOF>*/

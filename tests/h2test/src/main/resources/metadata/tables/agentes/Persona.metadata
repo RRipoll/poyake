@@ -1,0 +1,9 @@
+TABLE ENTITY Persona EXTENDS Agente
+{
+	PK personaId INT FKTO Agente
+	nombre VARCHAR (100) NOTNULL
+	nif VARCHAR (10) NOTNULL
+	direccionesId INT NOTNULL FKTO Direcciones
+	
+
+}

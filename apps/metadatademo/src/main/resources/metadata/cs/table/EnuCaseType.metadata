@@ -1,0 +1,10 @@
+TABLE ENTITY cs.EnuCaseType PATTERN Enumeration{
+	PK caseTypeId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, GENERAL, 'General Enquiry';
+		2, DISPUTE, 'Dispute';
+	}
+}

@@ -1,0 +1,10 @@
+TABLE ENTITY audit.SourceFile PATTERN Audited, AutoHistory{
+	sourceFileId INT
+	fileName VARCHAR(64)
+	fileTypeId INT FKTO audit.EnuFileType
+inputUserId INT NOTNULL FKTO audit.InputUser
+	inputSourceId INT NOTNULL FKTO audit.EnuInputSource
+	PK revisionId INT
+	startDate DATETIME NOTNULL
+	endDate DATETIME NOTNULL DEFAULT "\'01-Jan-2099\'"
+}

@@ -1,0 +1,7 @@
+TABLE ENTITY Empleado EXTENDS Persona
+{
+	PK personaId INT FKTO Persona
+	cargo VARCHAR (100) NOTNULL
+	
+		
+}

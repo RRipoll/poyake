@@ -1,0 +1,19 @@
+<?page title="Test Runner Tool"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client" xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	
+<?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"?>
+
+	<window width="90%" closable="true" title="Test Runner v3.0"
+		maximizable="true" maximized="true">
+		<div vflex="1" style="overflow:auto;">
+			<groupbox>
+				<caption>
+					<label>History</label>
+				</caption>
+				<div id="EVENT_LIST" height="40%" style="overflow:auto;height:40%;" />
+			</groupbox>
+		</div>
+
+	</window>
+</zk>

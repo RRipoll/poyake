@@ -1,0 +1,168 @@
+<?page title="Test Library v3.0"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	
+<?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"?>
+
+	<zscript><![CDATA[  
+		if (!com.etantolling.testrunner.test.zkweb.DesktopHelper.isUserLogged()) {
+			Executions.getCurrent().sendRedirect("testlibrary.zul");   
+		}
+    ]]>
+    </zscript>
+
+	<window   apply="com.etantilling.testrunner.test.framework.toll.testframework.panel.screens.Main">
+				<style>
+	.h-inline-block {
+		display: inline-block;
+		_display: inline;
+	}
+	</style>
+				<borderlayout height="100px">
+					<west border="none" width="300px">
+						<h:h1>Test Library v3.1</h:h1>
+					</west>
+					<center border="none" >
+					</center>
+					<east border="none" width="500px">
+						<hbox>
+							<menubar>
+								<menu label="Tools" >
+									<menupopup>
+										<menuitem label="File Converter" href="file_converter.zul" target="blank_"/>
+										<menuitem label="Copy events"  href="copy_events.zul" target="blank_"/>
+										
+									</menupopup>
+								</menu>
+								<menuitem label="Documentation" href="https://confluence.etantolling.com/display/DEVOPS/TestRunner" target="blank_" />
+							</menubar>
+						</hbox>
+					</east>
+				</borderlayout>
+
+				<div style="overflow:auto;overflow-x: hidden;" zindex="100">
+					<div id="filterContent" >
+						<div>
+							<div id="filter" style="float:left;padding:2px 10px;">
+								
+								<div style="float:left;padding:2px 10px;">
+								<label value="ID"/>
+								<intbox id="TESTID" width="80px" >
+									<custom-attributes type="FILTER"/>
+									<custom-attributes field="TESTID" />
+								</intbox>
+								</div>
+								
+								<div style="float:left;padding:2px 10px;">
+								<label value="Owner"/>
+								<textbox id="OWNER" width="100px">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes where=" like " />
+									<custom-attributes field="USERNAME" />
+								</textbox>
+								</div>
+								
+								<div style="float:left;padding:2px 10px;">
+								<label value="Folder"/>
+								<combobox id="FOLDERID" width="150px" autocomplete="true" autodrop="true" readonly="true" >
+									<custom-attributes type="FILTER"/>
+									<custom-attributes field="FOLDERID" />
+									<custom-attributes enumerationsql="select folderid value,folderpath label from folderpaths where deleted=0 order by folderpath asc " />
+								</combobox>
+								</div>
+								
+								<!--
+								<div style="float:left;padding:2px 10px;">
+								<label value="Start Date"/>
+								<datebox format="MM/dd/yyyy" id="STARTDATE" width="100px">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes where=" ge " />
+									<custom-attributes field="STARTDATE" />
+								</datebox>
+								</div>
+								-->
+								
+								<!--
+								<div style="float:left;padding:2px 10px;">
+								<label value="End Date"/>
+								<datebox format="MM/dd/yyyy" id="ENDDATE" width="100px">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes where=" le " />
+									<custom-attributes field="ENDDATE" />
+								</datebox>
+								</div>
+								-->
+								<div style="float:left;padding:2px 10px;">
+								<label value="KeyWords"/>
+								<textbox id="KEYWORDS" width="150px">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes where=" like " />
+									<custom-attributes field="KEYWORDS" />
+								</textbox>
+							    </div>
+							
+								<div style="float:left;padding:2px 10px;">
+								<button label="Filter">
+									<custom-attributes type="FILTER"/>
+								</button>
+							    </div>
+							</div>
+							<div id="listbutton"  style="float:left;padding:2px 10px;">
+
+								<button label="Delete" id="BUTTON_DELETE" />
+								<button label="Create" id="BUTTON_CREATE" />
+								<button label="Copy Test" id="BUTTON_COPY"/>
+							</div>
+							<div id="treebutton"  style="float:left;padding:2px 10px;"  visible="false" >
+								<button id="bt_delete" label="Delete" />
+								<button id="bt_addtest" label="add Test" visible="false"/>
+								<button id="bt_addfolder" label="add Folder" />
+						 
+							</div>
+							<div id="eventtreebutton"  style="float:left;padding:2px 10px;"  visible="false" >
+								<button id="ebt_delete" label="Delete" />
+								<button id="ebt_addevent" label="add Event" visible="false"/>
+								<button id="ebt_addfolder" label="add Folder" />
+						 
+							</div>
+						</div>
+					</div>
+<tabbox id="tb" >
+    <tabs id="tabs">
+        <tab id="listtab" label="Test List" />
+        <tab id="treetab" label="Test Tree" />
+        <tab id="eventtab" label="Event Definition" />
+    </tabs>
+    <tabpanels>
+		<tabpanel>
+					<div id="content" style="overflow-x: hidden;float:right; ">
+						<custom-attributes TESTID="hflex:min"/>
+						<!--
+						<custom-attributes STARTDATE="hflex:min"/>
+						<custom-attributes ENDDATE="hflex:min"/>
+						-->
+						<custom-attributes DESCRIPTION="hflex:2"/>
+						<custom-attributes NOTES="hflex:2"/>
+						<custom-attributes USERNAME="hflex:min"/>
+						<custom-attributes KEYWORDS="hflex:min"/>
+						<custom-attributes FOLDERID="hide:true"/>
+						<custom-attributes FOLDERNAME="hide:true"/>
+						<custom-attributes PARENTFOLDERID="hide:true"/>
+					</div>
+		</tabpanel>
+		<tabpanel>
+					<div style="float:left;padding:2px 10px;" >
+						<tree id="tree"   visible="false" />
+					</div>
+		</tabpanel>
+		<tabpanel>
+					<div style="float:left;padding:2px 10px;" >
+						<tree id="eventtree"   visible="false" />
+					</div>
+		</tabpanel>
+		</tabpanels>
+		</tabbox>
+				</div>
+</window>
+</zk>

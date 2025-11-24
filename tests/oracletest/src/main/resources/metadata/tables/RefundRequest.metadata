@@ -1,0 +1,6 @@
+ENTITY RefundRequest{
+	PK refundRequestId INT
+	nombre VARCHAR(10)
+	customerId INT FKTO Customer
+	
+}

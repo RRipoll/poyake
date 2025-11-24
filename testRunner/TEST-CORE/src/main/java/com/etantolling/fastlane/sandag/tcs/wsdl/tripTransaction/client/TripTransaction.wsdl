@@ -1,0 +1,348 @@
+<wsdl:definitions name="TripTransaction" targetNamespace="http://tripTransaction.wsdl.tcs.sandag.fastlane.etantolling.com" 
+xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:tns="http://tripTransaction.wsdl.tcs.sandag.fastlane.etantolling.com" 
+xmlns:types="http://tripTransaction.wsdl.tcs.sandag.fastlane.etantolling.com"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <wsdl:types>
+      <xsd:schema targetNamespace="http://tripTransaction.wsdl.tcs.sandag.fastlane.etantolling.com"
+      xmlns:cmn="http://tripTransaction.wsdl.tcs.sandag.fastlane.etantolling.com">
+		<xsd:element name="TripTransaction">
+			<xsd:complexType>
+				<xsd:sequence>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="exitFacilityCode" type="cmn:FacilityCodeType"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="exitPlazaCode" type="cmn:PlazaCodeType"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="exitLaneNumber" type="cmn:ExitLaneNumberType"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="exitTransactionDateTime" type="xsd:dateTime"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="entryFacilityCode" type="cmn:FacilityCodeType"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="entryPlazaCode" type="cmn:PlazaCodeType"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="entryLaneNumber" type="cmn:EntryLaneNumberType"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="entryTransactionDateTime" type="xsd:dateTime"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="tripSequenceNumber" type="xsd:long"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="transactionType" type="cmn:TransactionType"/>
+					<xsd:element minOccurs="0" maxOccurs="1" name="preAVCclassification" type="cmn:ClassificationTypeCodesType"/>
+					<xsd:element minOccurs="0" maxOccurs="1" name="postAVCclassification" type="cmn:ClassificationTypeCodesType"/>
+					<xsd:element minOccurs="0" maxOccurs="1" name="indicatedClassification" type="cmn:ClassificationTypeCodesType"/>
+					<xsd:element minOccurs="0" maxOccurs="1" nillable="false" name="transponder" type="cmn:TransponderType"/>
+					<xsd:element minOccurs="0" maxOccurs="1" nillable="false" name="tripPlateNumber" type="xsd:string"/>
+					<xsd:element minOccurs="0" maxOccurs="1" nillable="false" name="tripPlateState" type="xsd:string"/>
+					<xsd:element minOccurs="0" maxOccurs="1" nillable="false" name="tripPlateType" type="xsd:string"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="transactionList" type="cmn:TransactionListType"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="expectedFareAmount" type="cmn:ExpectedFareAmountType"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="fareAmount" type="cmn:FareAmountType"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="currency" type="cmn:CurrencyType"/>
+					<xsd:element minOccurs="0" maxOccurs="1" nillable="false" name="ccReferenceNumber" type="xsd:string"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="nonRevenue" type="xsd:boolean"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="repeatViolator" type="xsd:boolean"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="repeatViolatorNotificationSent" type="xsd:boolean"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="reverseDirectionFlag" type="xsd:boolean"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="HOVviolationFlag" type="xsd:boolean"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="laneMode" type="cmn:LaneModeType"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="degradedMode" type="xsd:boolean"/>
+					<xsd:element minOccurs="0" maxOccurs="1" nillable="false" name="degradedPayment" type="xsd:boolean"/>
+					<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="nonRevenuePresent" type="xsd:boolean"/>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:element>
+		
+		<xsd:simpleType name="FacilityCodeType">
+			<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="01" />
+			<xsd:enumeration value="02" />
+			<xsd:enumeration value="03" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="PlazaCodeType">
+			<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="8016" />
+			<xsd:enumeration value="8017" />
+			<xsd:enumeration value="8018" />
+			<xsd:enumeration value="8019" />
+			<xsd:enumeration value="8020" />
+			<xsd:enumeration value="8021" />
+			<xsd:enumeration value="8022" />
+			<xsd:enumeration value="8023" />
+			<xsd:enumeration value="8024" />
+			<xsd:enumeration value="8025" />
+			<xsd:enumeration value="8026" />
+			<xsd:enumeration value="8027" />
+			<xsd:enumeration value="8028" />
+			<xsd:enumeration value="8029" />
+			<xsd:enumeration value="8030" />
+			<xsd:enumeration value="8031" />
+			<xsd:enumeration value="8032" />
+			<xsd:enumeration value="8033" />
+			<xsd:enumeration value="8034" />
+			<xsd:enumeration value="8035" />
+			<xsd:enumeration value="8036" />
+			<xsd:enumeration value="8037" />
+			<xsd:enumeration value="8039" />
+			<xsd:enumeration value="8040" />
+			<xsd:enumeration value="8041" />
+			<xsd:enumeration value="8042" />
+			<xsd:enumeration value="8044" />
+			<xsd:enumeration value="8045" />
+			<xsd:enumeration value="8046" />
+			<xsd:enumeration value="8047" />
+			<xsd:enumeration value="8048" />
+			<xsd:enumeration value="8049" />
+			<xsd:enumeration value="8050" />
+			<xsd:enumeration value="8051" />
+			<xsd:enumeration value="8052" />
+			<xsd:enumeration value="8053" />
+			<xsd:enumeration value="8054" />
+			<xsd:enumeration value="8055" />
+			<xsd:enumeration value="8056" />
+			<xsd:enumeration value="8057" />
+			<xsd:enumeration value="8058" />
+			<xsd:enumeration value="8059" />
+			<xsd:enumeration value="8060" />
+			<xsd:enumeration value="8061" />
+			<xsd:enumeration value="9001" />
+			<xsd:enumeration value="9002" />
+			<xsd:enumeration value="9003" />
+			<xsd:enumeration value="9004" />
+			<xsd:enumeration value="9005" />
+			<xsd:enumeration value="9006" />
+			<xsd:enumeration value="9010" />
+			<xsd:enumeration value="9011" />
+			<xsd:enumeration value="9012" />
+			<xsd:enumeration value="9013" />
+			<xsd:enumeration value="9014" />
+			<xsd:enumeration value="9015" />
+			<xsd:enumeration value="9016" />
+			<xsd:enumeration value="9002" />
+			<xsd:enumeration value="9003" />
+			<xsd:enumeration value="9020" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="ExitLaneNumberType">
+			<xsd:restriction base="xsd:int">
+				<xsd:minInclusive value="1" />
+				<xsd:maxInclusive value="99" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="EntryLaneNumberType">
+			<xsd:restriction base="xsd:int">
+				<xsd:minInclusive value="1" />
+				<xsd:maxInclusive value="99" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="TransactionType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="CASH" />
+				<xsd:enumeration value="CC" />
+				<xsd:enumeration value="AVI" />
+				<xsd:enumeration value="IMG" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="ClassificationTypeCodesType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="2" />
+				<xsd:enumeration value="3" />
+				<xsd:enumeration value="5" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:complexType name = "TransponderType">
+			<xsd:sequence>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="transponderId" type="cmn:TransponderIdType"/>
+				<xsd:element minOccurs="1" maxOccurs="unbounded" nillable="false" name="tag" type="xsd:string"/>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="issuingAgencyCode" type="xsd:string" /> <!-- type="cmn:TransponderAgencyCodeType" />-->
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="transponderProtocol" type="cmn:TransponderProtocolCodesType"/>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="transponderTypeCode" type="cmn:TransponderTypeCodesType"/>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="TransponderStatusCode" type="cmn:TransponderStatusCodesType"/>
+				<xsd:element minOccurs="0" maxOccurs="1" nillable="false" name="SecondaryTransponderStatusCode" type="cmn:TransponderStatusCodesType"/>
+				<xsd:element minOccurs="0" maxOccurs="1" nillable="false" name="DeclarationState" type="cmn:DeclarationStateType"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		
+		<xsd:simpleType name = "TransponderIdType">
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="10" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="TransponderProtocolCodesType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="T21" />
+				<xsd:enumeration value="6C" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="TransponderStatusCodesType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="N" />
+				<xsd:enumeration value="L" />
+				<xsd:enumeration value="S" />
+				<xsd:enumeration value="B" />
+				<xsd:enumeration value="H" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:complexType name = "TransactionListType">
+			<xsd:sequence>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="facilityCode" type="cmn:FacilityCodeType"/>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="plazaCode" type="cmn:PlazaCodeType"/>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="laneNumber" type="cmn:LaneNumberType"/>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="transactionTimestamp" type="xsd:dateTime"/>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="transactionId" type="xsd:int"/>
+				<xsd:element minOccurs="0" maxOccurs="1" name="tagId" type="cmn:TransponderType"/>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="imageList" type="cmn:ImageListType"/>
+				<xsd:element minOccurs="0" maxOccurs="1" name="vehicleSpeed" type="cmn:VehicleSpeedType"/>
+				<xsd:element minOccurs="0" maxOccurs="1" name="aviClassification" type="xsd:integer"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		
+		<xsd:simpleType name = "VehicleSpeedType">
+			<xsd:restriction base="xsd:int">
+				<xsd:minInclusive value="0" />
+				<xsd:maxInclusive value="999" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:complexType name = "ImageListType">
+			<xsd:sequence>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="imageLocation" type="xsd:string"/>
+				<xsd:element minOccurs="1" maxOccurs="unbounded" nillable="false" name="image" type="cmn:Image"/>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="imageName" type="xsd:string"/>
+				<xsd:element minOccurs="1" maxOccurs="1" nillable="false" name="imageAttribute" type="xsd:string"/>
+				<xsd:element minOccurs="0" maxOccurs="1" name="plateNumber" type="xsd:string"/>
+				<xsd:element minOccurs="0" maxOccurs="1" name="plateState" type="xsd:string"/>
+				<xsd:element minOccurs="0" maxOccurs="1" name="plateType" type="xsd:string"/>
+				<xsd:element minOccurs="0" maxOccurs="1" name="plateNumberConfidence" type="xsd:int"/>
+				<xsd:element minOccurs="0" maxOccurs="1" name="plateStateConfidence" type="xsd:int"/>
+				<xsd:element minOccurs="0" maxOccurs="1" name="plateTypeConfidence" type="xsd:int"/>
+				<xsd:element minOccurs="1" maxOccurs="1" name="primeImage" type="xsd:boolean"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		
+		<xsd:complexType name = "Image">
+			<xsd:sequence>
+				<xsd:element name="imageName" type="xsd:string" />
+				<xsd:element name="imageType" type="xsd:string" />
+				<xsd:element minOccurs="0" name="ocrPlateNumber" type="xsd:string" />
+				<xsd:element minOccurs="0" name="ocrPlateNumberConfidence" type="xsd:int" />
+				<xsd:element minOccurs="0" name="ocrPlateState" type="xsd:string" />
+				<xsd:element minOccurs="0" name="ocrPlateStateConfidence" type="xsd:int" />
+				<xsd:element minOccurs="0" name="ocrPlateType" type="xsd:string" />
+				<xsd:element minOccurs="0" name="ocrPlateTypeConfidence" type="xsd:int" />
+			</xsd:sequence>
+		</xsd:complexType>
+		
+		<xsd:simpleType name="LaneNumberType">
+			<xsd:restriction base="xsd:int">
+				<xsd:minInclusive value="1" />
+				<xsd:maxInclusive value="99" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="DeclarationStateType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="0" />
+				<xsd:enumeration value="1" />
+				<xsd:enumeration value="2" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="ExpectedFareAmountType">
+			<xsd:restriction base="xsd:decimal">
+				<xsd:minInclusive value="0.00" />
+				<xsd:maxInclusive value="99999.99" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="FareAmountType">
+			<xsd:restriction base="xsd:decimal">
+				<xsd:minInclusive value="0.00" />
+				<xsd:maxInclusive value="99999.99" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="CurrencyType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="USD" />
+				<xsd:enumeration value="MXN" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="LaneModeType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="1" />
+				<xsd:enumeration value="2" />
+				<xsd:enumeration value="3" />
+				<xsd:enumeration value="4" />
+				<xsd:enumeration value="5" />
+				<xsd:enumeration value="6" />
+				<xsd:enumeration value="7" />
+				<xsd:enumeration value="8" />
+				<xsd:enumeration value="9" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<!--  xsd:simpleType name="TransponderAgencyCodeType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="at" />
+				<xsd:enumeration value="sd" />
+				<xsd:enumeration value="sr" />
+				<xsd:enumeration value="tc" />
+				<xsd:enumeration value="cv" />
+				<xsd:enumeration value="la" />
+				<xsd:enumeration value="ft" />
+			</xsd:restriction>
+		</xsd:simpleType-->
+		
+		<xsd:simpleType name="TransponderTypeCodesType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="N" />
+				<xsd:enumeration value="V" />
+				<xsd:enumeration value="I" />
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:element name="ReturnCode">
+			<xsd:complexType>
+				<xsd:sequence>
+					<xsd:element name="Code" type="xsd:nonNegativeInteger" />
+					<xsd:element minOccurs="0" name="Description" type="xsd:string" />
+					<xsd:element minOccurs="0" name="SeverityCode" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:element>
+      </xsd:schema>
+   </wsdl:types>
+   <wsdl:message name="sendTransactionDataRequest">
+      <wsdl:part name="request" element="tns:TripTransaction"/>
+   </wsdl:message>
+   <wsdl:message name="sendTransactionDataResponse">
+      <wsdl:part name="response" element="tns:ReturnCode"/>
+   </wsdl:message>
+   <wsdl:portType name="TripTransactionInterfacePortType">
+      <wsdl:operation name="sendTransactionData">
+         <wsdl:input message="tns:sendTransactionDataRequest" name="sendTransactionDataRequest"/>
+         <wsdl:output message="tns:sendTransactionDataResponse" name="sendTransactionDataResponse"/>
+      </wsdl:operation>
+   </wsdl:portType>
+   <wsdl:binding name="TripTransactionInterfaceHttpBinding" type="tns:TripTransactionInterfacePortType">
+      <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+      <wsdl:operation name="sendTransactionData">
+         <soap:operation soapAction="http://tripTransaction.wsdl.tcs.sandag.fastlane.etantolling.com/sendTripTransaction"/>
+         <wsdl:input name="sendTransactionDataRequest">
+            <soap:body use="literal"/>
+         </wsdl:input>
+         <wsdl:output name="sendTransactionDataResponse">
+            <soap:body use="literal"/>
+         </wsdl:output>
+      </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:service name="TripTransactionInterface">
+      <wsdl:port binding="tns:TripTransactionInterfaceHttpBinding" name="TripTransactionInterfaceHttpPort">
+         <soap:address location="http://localhost:8080/ws"/>
+      </wsdl:port>
+   </wsdl:service>
+</wsdl:definitions>

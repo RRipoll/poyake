@@ -1,0 +1,5 @@
+TABLE ENTITY FileExtraInfo{
+	PK fileExtraInfoId INT
+	extraInfo VARCHAR(64)
+	sourceFileId INT FKTO SourceFile
+}

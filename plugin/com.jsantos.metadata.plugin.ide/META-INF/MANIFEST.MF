@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: com.jsantos.metadata.plugin.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: com.jsantos.metadata.plugin.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: com.jsantos.metadata.plugin.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: com.poyake.plugin,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: com.jsantos.metadata.plugin.ide.contentassist.antlr.internal,
+ com.jsantos.metadata.plugin.ide.contentassist.antlr

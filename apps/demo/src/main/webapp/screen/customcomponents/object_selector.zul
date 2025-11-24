@@ -1,0 +1,10 @@
+<zk xmlns="xhtml" xmlns:z="zul" xmlns:w="http://www.zkoss.org/2005/zk/client">					
+					<div class="row clearfix">
+						<div class="col-md-4 mb-2">
+							<div class="form-group">
+								<z:div class="form-line" id="COMPONENT">
+								</z:div>
+							</div>
+						</div>
+					</div>
+</zk>		

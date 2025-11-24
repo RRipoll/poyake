@@ -1,0 +1,42 @@
+package com.jsantos.custom.sqlextended;
+
+import com.jsantos.common.model.SearchParameter.CompareType;
+import com.jsantos.common.model.SearchParameter.Operator;
+import com.jsantos.common.model.conf.FilterConfiguration;
+import com.jsantos.common.util.ListValues;
+import com.jsantos.common.util.MapValues;
+import com.jsantos.orm.dbstatement.DetachedRecord;
+import com.jsantos.search.core.services.SqlFacade;
+import com.jsantos.search.sqlextended.SqlExtended;
+
+/**
+ * @author javier santos
+ * @author raul ripoll
+ */
+
+public  class EnuFilterEditorFilter extends SqlExtended  implements ISqlExtended{
+
+	@Override
+	public String generateWhereClause(FilterConfiguration element, MapValues<Object> parameters) {
+		if(null==element.getCompareType() 
+				||element.getCompareType().equals(CompareType.Select)
+				||element.getCompareType().equals(CompareType.Default))
+			return super.generateWhereClause(element,parameters);
+		else {
+			element.setOperator(Operator.IN);
+			
+			ListValues<Object> values=new ListValues<Object>();
+			
+			for (Object object : element.getValues()) {
+				values.add(((DetachedRecord)object).getPk());
+			}
+        
+			element.setValues(values);
+			
+			String where = SqlFacade.createWhereItems(element, parameters);
+			return (null == where || where.isEmpty()) ? "" :  where;
+		}
+	}
+	
+
+}

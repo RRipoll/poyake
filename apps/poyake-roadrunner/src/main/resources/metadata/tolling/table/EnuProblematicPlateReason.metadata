@@ -1,0 +1,10 @@
+TABLE ENTITY tolling.EnuProblematicPlateReason PATTERN Enumeration{
+	PK problematicPlateReason INT NOTNULL
+	shortCode VARCHAR ( 32 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, OCRLOWSCORE, 'OCR Low Score';
+		2, LOWCONTRAST, 'Low Contrast';
+	}
+}

@@ -1,0 +1,18 @@
+TABLE ENTITY config.Enulocale PATTERN Enumeration{
+	PK enuLocaleId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	
+	ENUMETADATA{
+		3082, es_ES, "Spanish (International)";
+		1033, en_US, 'English (USA)'; 
+		1036, fr_FR, 'France (International)';
+	}
+	
+	LABELS {
+	shortCode{en_EN 'Short Code' es_ES 'Código'}
+	description{en_EN 'Description' es_ES 'Descripción'}
+		
+	}	
+}

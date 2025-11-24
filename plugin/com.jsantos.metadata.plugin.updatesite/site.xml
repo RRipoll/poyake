@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Poyake Plugin update site" url="http://poyake.com/updatesite">
+      
+   </description>
+   <feature url="features/com.poyake.plugin.feature_1.0.18.jar" id="com.poyake.plugin.feature" version="1.0.18"/>
+</site>

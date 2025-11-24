@@ -1,0 +1,125 @@
+TABLE ENTITY crm.EnuStateProvince PATTERN Enumeration{
+	PK stateProvinceId INT
+	shortCode VARCHAR ( 3 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	abbr VARCHAR(2)
+	countryId INT NOTNULL FKTO crm.EnuCountry
+	
+	ENUMETADATA{
+		0,xx,'Unknown','xx',0;
+		1,AL,'Alabama','AL',1;
+		2,AK,'Alaska','AK',1;
+		3,AZ,'Arizona','AZ',1;
+		4,AR,'Arkansas','AR',1;
+		5,CA,'California','CA',1;
+		6,CO,'Colorado','CO',1;
+		7,CT,'Connecticut','CT',1;
+		8,DE,'Delaware','DE',1;
+		9,FL,'Florida','FL',1;
+		10,GA,'Georgia','GA',1;
+		11,HI,'Hawaii','HI',1;
+		12,IDH,'Idaho','ID',1;
+		13,IL,'Illinois','IL',1;
+		14,IN,'Indiana','IN',1;
+		15,IA,'Iowa','IA',1;
+		16,KS,'Kansas','KS',1;
+		17,KY,'Kentucky','KY',1;
+		18,LA,'Lousiana','LA',1;
+		19,ME,'Maine','ME',1;
+		20,MD,'Maryland','MD',1;
+		21,MA,'Massachusetts','MA',1;
+		22,MI,'Michigan','MI',1;
+		23,MN,'Minnesota','MN',1;
+		24,MS,'Mississippi','MS',1;
+		25,MO,'Missouri','MO',1;
+		26,MT,'Montana','MT',1;
+		27,NE,'Nebraska','NE',1;
+		28,NV,'Nevada','NV',1;
+		29,NH,'New Hampshire','NH',1;
+		30,NJ,'New Jersey','NJ',1;
+		31,NM,'New Mexico','NM',1;
+		32,NY,'New York','NY',1;
+		33,NC,'North Carolina','NC',1;
+		34,ND,'North Dakota','ND',1;
+		35,OH,'Ohio','OH',1;
+		36,OK,'Oklahoma','OK',1;
+		37,OR,'Oregon','OR',1;
+		38,PA,'Pennsylvania','PA',1;
+		39,RI,'Rhode Island','RI',1;
+		40,SC,'South Carolina','SC',1;
+		41,SD,'South Dakota','SD',1;
+		42,TN,'Tennessee','TN',1;
+		43,TX,'Texas','TX',1;
+		44,UT,'Utah','UT',1;
+		45,VT,'Vermont','VT',1;
+		46,VA,'Virginia','VA',1;
+		47,WA,'Washington','WA',1;
+		48,WV,'West Virginia','WV',1;
+		49,WI,'Wisconsin','WI',1;
+		50,WY,'Wyoming','WY',1;
+		51,AB,'Alberta','AB',2;
+		52,BC,'British Columbia','BC',2;
+		53,MB,'Manitoba','MB',2;
+		54,NB,'New Brunswick','NB',2;
+		55,NL,'Newfoundland and Labrador','NL',2;
+		56,NS,'Nova Scotia','NS',2;
+		57,NT,'Nortwest Territories','NT',2;
+		58,NU,'Nunavut','NU',2;
+		59,ON,'Ontario','ON',2;
+		60,PE,'Prince Edward Island','PE',2;
+		61,QC,'Quebec','QC',2;
+		62,SK,'Saskatchewan','SK',2;
+		63,YT,'Yukon','YT',2;
+		64,AGU,'Aguascalientes','AG',3;
+		65,BCN,'Baja California Norte','BC',3;
+		66,BCS,'Baja California Sur','BS',3;
+		67,CAM,'Campeche','CM',3;
+		68,CHP,'Chiapas','CS',3;
+		69,CHH,'Chihuahua','CH',3;
+		70,COA,'Coahuila','CO',3;
+		71,COL,'Colima','CL',3;
+		72,CMX,'Distrito Federal','DF',3;
+		73,DUR,'Durango','DG',3;
+		74,GUA,'Guanajuato','GT',3;
+		75,GRO,'Guerrero','GR',3;
+		76,HID,'Hidalgo','HG',3;
+		77,JAL,'Jalisco','JA',3;
+		78,MEX,'Mexico','MX',3;
+		79,MIC,'Michoacan','MI',3;
+		80,MOR,'Morelos','MO',3;
+		81,NAY,'Nayarit','NA',3;
+		82,NLE,'Nuevo Leon','NL',3;
+		83,OAX,'Oaxaca','OA',3;
+		84,PUE,'Puebla','PU',3;
+		85,QUE,'Queretaro','QT',3;
+		86,ROO,'Quintana Roo','QR',3;
+		87,SLP,'San Luis Potosi','SL',3;
+		88,SIN,'Sinaloa','SI',3;
+		89,SON,'Sonora','SO',3;
+		90,TAB,'Tabasco','TB',3;
+		91,TAM,'Tamaulipas','TM',3;
+		92,TLA,'Tiaxcala','TL',3;
+		93,VER,'Veracruz','VE',3;
+		94,YUC,'Yucatan','YU',3;
+		95,ZA,'Zacatecas','ZT',3;
+		96,DC,'Washington DC','DC',1;
+		97,AS,'American Samoa','AS',1;
+		98,FM,'Federated States of Micronesia','FM',1;
+		99,GU,'Guam','GU',1;
+		100,MH,'Marshal Islands','MH',1;
+		101,MP,'Northern Mariana Islands','MP',1;
+		102,PW,'Palau','PW',1;
+		103,PR,'Puerto Rico','PR',1;
+		104,VI,'Virgin Islands','VI',1;
+		105,LB,'Labrador','LB',2;
+		106,PQ,'Province du Quebec','PQ',2;
+		107,US,'US','US',1;
+		108,AA,'Armed Forces Americas','AA',1;
+		109,AE,'Armed Forces (Other;','AE',1;
+		110,AP,'Armed Forces Pacific','AP',1;
+		111,II,'International','II',4;
+		201,MAD, 'Madrid', 'MA', 4;
+		202,SAL, 'Salamanca', 'SA', 4;
+	}
+	
+}

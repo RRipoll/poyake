@@ -1,0 +1,5 @@
+TABLE ENTITY tolling.Trip{
+	PK tripId INT
+	ledgerInfoId INT NOTNULL FKTO acc.LedgerInfo
+	ledgerItemId INT NOTNULL FKTO acc.LedgerItem
+}

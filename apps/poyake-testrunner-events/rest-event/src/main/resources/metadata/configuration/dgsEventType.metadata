@@ -1,0 +1,308 @@
+METADATA FOR config.DatagridSetting {
+
+
+'EventDefinition_Add_parameter','RestEventDefinition','{
+  "dataTableName" : "testrunner.RestEventDefinition",
+  "aSName" : "RestEventDefinition",
+  "columnConfigurations" : [ {
+    "name" : "eventTypeId",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "eventName",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "description",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "url",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "json",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "parameters",
+    "hidden" : false,
+    "available" : true,
+    "active" : true
+  }, {
+    "name" : "eventDefinitionUuid",
+    "hidden" : true,
+    "available" : true,
+    "active" : true
+  } ],
+  "orderByConfigurations" : [ {
+    "name" : "eventTypeId",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "eventDefinition.eventTypeId"
+  }, {
+    "name" : "eventName",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "eventDefinition.eventName"
+  }, {
+    "name" : "description",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Descripción"
+  }, {
+    "name" : "parameters",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Parametros"
+  }, {
+    "name" : "json",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "Json"
+  }, {
+    "name" : "url",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "eventDefinition.url"
+  }, {
+    "name" : "eventDefinitionUuid",
+    "asc" : false,
+    "active" : false,
+    "hidden" : false,
+    "label" : "eventDefinition.eventDefinitionUuid"
+  } ],
+  "filterConfigurations" : [ {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "eventName"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "eventTypeId"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "description"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "url"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "json"
+  }, {
+    "hidden" : false,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "parameters"
+  }, {
+    "hidden" : true,
+    "operator" : "EQUAL",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "eventDefinitionUuid"
+  } ],
+  "detailScreenConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "eventName"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "eventTypeId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "description"
+  }, {
+    "hidden" : false,
+    "newLine" : true,
+    "sClass" : "col-md-8",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "url"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "json"
+  }, {
+    "hidden" : false,
+    "newLine" : true,
+    "sClass" : "col-md-12",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "parameters"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "available" : true,
+    "active" : true,
+    "name" : "eventDefinitionUuid"
+  } ],
+  "editConfigurations" : [ {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "eventName"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-6",
+    "required" : true,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "eventTypeId"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-8",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "description"
+  }, {
+    "hidden" : false,
+    "newLine" : true,
+    "sClass" : "col-md-8",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "url"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "httpMethod"
+  }, {
+    "hidden" : false,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "json"
+  }, {
+    "hidden" : false,
+    "newLine" : true,
+    "sClass" : "col-md-12",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "parameters"
+  }, {
+    "hidden" : true,
+    "newLine" : false,
+    "sClass" : "col-md-4",
+    "required" : false,
+    "actions" : [ {
+      "action" : "visibility",
+      "objetives" : [ ],
+      "values" : [ ]
+    } ],
+    "constraints" : [ "com.jsantos.custom.constraints.DefaultMTConstraint" ],
+    "available" : true,
+    "active" : true,
+    "name" : "eventDefinitionUuid"
+  } ]
+}',DEFAULT,'1',DEFAULT,DEFAULT;
+
+}

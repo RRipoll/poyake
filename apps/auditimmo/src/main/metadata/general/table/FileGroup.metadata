@@ -1,0 +1,4 @@
+TABLE ENTITY general.FileGroup {
+	PK fileGroupId INT
+	postingDate DATETIME NOTNULL DEFAULT "getDate()"
+}

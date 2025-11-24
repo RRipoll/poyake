@@ -1,0 +1,45 @@
+ENTITY pub.EventDefFolder {
+	PK eventDefFolderId INTEGER
+	parentFolderId INTEGER FKTO pub.EventDefFolder
+	description VARCHAR(255) STEREOTYPES DESCRIPTION
+	startDate  DATETIME DEFAULT 'CURRENT_TIMESTAMP'
+    endDate DATETIME DEFAULT '2099-01-01'
+    deleted INTEGER DEFAULT '0'
+    stepId INTEGER FKTO pub.Step DEFAULT '1'
+    campitoMas VARCHAR(16)
+    
+    METADATA{
+    	
+    	0, 'NULL', '.',  '1970-01-01 17:40:02.155',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		1, 0, 'Account Creation',  '1970-01-01 17:40:02.156',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		2, 0, 'Input Files',  '1970-01-01 17:40:02.156',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		3, 0, 'Checks',  '1970-01-01 17:40:02.156',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		1104, 'NULL', 'System',  '1970-01-01 11:52:57.455',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		1136, 'NULL', 'show results',  '1970-01-01 13:48:27.158',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		1169, 'NULL', 'Jobs',  '2018-03-14 00:00:00.0',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		1201, 'NULL', 'Interop File',  '2018-03-21 09:59:11.227',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		1202, 'NULL', 'transaction',  '2018-03-22 17:42:10.065',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		1234, 'NULL', 'transponders',  '2018-03-27 15:55:48.472',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		1235, 'NULL', 'Inventory',  '2018-04-12 10:37:41.989',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		1236, 'NULL', 'Simulators',  '2018-04-20 17:44:34.505',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		1237, 'NULL', 'TestMS',  '2018-04-25 15:07:46.927',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		1238, 'NULL', 'Payments',  '2018-04-30 16:56:31.579',  '2099-01-01 00:00:00.0', 0, 1, NULL;
+		1239, 'NULL', 'Communication',  '2018-05-07 12:51:28.849',  '2099-01-01 00:00:00.0', 0, 1, "David"; 
+    	
+    }
+	
+    LABELS{
+    	parentFolderId {
+    		SHORTLABEL en_EN "Parent Folder"
+    		SHORTLABEL es_ES "Carpeta Padre"
+    	}
+    	description {
+    		SHORTLABEL en_EN "Description"
+    		SHORTLABEL es_ES "Descripción"
+    	}
+    }
+    
+	
+}
+
+ 

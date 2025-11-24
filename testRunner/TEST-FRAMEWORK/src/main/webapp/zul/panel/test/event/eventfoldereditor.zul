@@ -1,0 +1,28 @@
+<?page title="Home Page" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+	<window width="90%"  closable="true" title="Create" style="overflow:auto" border="normal" maximizable="true">
+		<groupbox title="Event Folder editor">
+			<div id="FIELD_LIST" />
+			<vlayout>
+				
+				<h:table>
+					<h:tr>
+						<h:td><label value="Description" /></h:td><h:td><textbox multiline="true" width="500px" height="100px" info="@MT(field=EVENTDEFFOLDER.DESCRIPTION)"/></h:td>
+					</h:tr>
+					<h:tr>
+						<h:td><label value="Project" /></h:td><h:td><combobox id="step" info="@MT(field=EVENTDEFFOLDER.STEPID)" width="100%" />
+						</h:td>
+					</h:tr>
+
+				</h:table>
+			</vlayout>
+		</groupbox>
+		<hbox width="100%" pack="right">
+			<space/>
+			<button id="SAVE_BUTTON" label="Save" />
+		</hbox>
+	</window>
+</zk>

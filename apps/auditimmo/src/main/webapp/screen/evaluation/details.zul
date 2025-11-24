@@ -1,0 +1,198 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	<window width="90%"  height="100%" style="padding:0px" >
+	    <h:div class="card h-100 v-100">
+	    	<h:div class="header">
+	    		<h:span class="h4">Evaluation #</h:span>
+	    		<div class="pull-right">
+					<button id="DETAILS_BUTTON_CLOSE" class="btn btn-danger ml-2 waves-effect" >Close</button>
+	    		</div>
+	    	</h:div>
+	    	<h:div class="card h-100" style="margin-bottom:0px;background-color:var(--j-window-background)" >
+			    <h:div class="body h-100" style="padding:0px;background-color:white;position:relative" >
+				        <mt-tabs id="tabs" class="nav nav-tabs tab-nav-right mt-tabbox">
+				            <mt-tab contentPanelId="DIV_CUSTOMER" label="Overview" style="font-size:20px;margin-left:10px"></mt-tab>
+				            <mt-tab contentPanelId="DIV_CHISTORY" label="History" style="font-size:20px;margin-left:10px"></mt-tab>
+				            <mt-tab contentPanelId="DIV_CHABITABILITY" label="Habitability" style="font-size:20px;margin-left:10px"></mt-tab>
+				            <mt-tab contentPanelId="DIV_CSANITARY" label="Sanitary State" style="font-size:20px;margin-left:10px"></mt-tab>
+				        </mt-tabs>		
+				        	<div id="DIV_CUSTOMER" class="h-100">
+								<h:div class="container-fluid w-100 h-100" style="padding:5px;padding-top:20px;background-color:var(--j-window-background)">
+									<h:div class="row h-100">
+										<h:div class="col-4 h-100">
+											<h:div class="card" >
+												<h:div class="header detail-header">Folder Details</h:div>
+												<h:div class="body detail-body">
+													<div class="row">
+														<h:div class="col"><mt-fieldlabel field="FOLDER.FOLDERNAME" /></h:div>
+														<div class="col"><mt-fieldvalue field="FOLDER.FOLDERNAME" /></div>
+													</div>
+													<div class="row">
+														<h:div class="col"><mt-fieldlabel field="FOLDER.FOLDERSTATUSID" /></h:div>
+														<div class="col"><mt-fieldvalue field="FOLDER.FOLDERSTATUSID" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="FOLDER.FOLDERID" /></div>
+														<div class="col"><mt-fieldvalue field="FOLDER.FOLDERID" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="FOLDER.CREATED" /></div>
+														<div class="col"><mt-fieldvalue field="FOLDER.CREATED" /></div>
+													</div>
+													<div class="row">
+														<div class="col">Created By</div>
+														<div class="col"></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="FOLDER.STARTDATE" /></div>
+														<div class="col"><mt-fieldvalue field="FOLDER.STARTDATE" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="FOLDER.INPUTUSERID" /></div>
+														<div class="col"><mt-fieldvalue field="FOLDER.INPUTUSERID" /></div>
+													</div>
+												</h:div>
+											</h:div>
+											<h:div class="card" >
+												<div sclass="header detail-header">Third Party Service Providers</div>
+												<h:div class="body detail-body">
+												</h:div>
+											</h:div>
+									    </h:div>
+										<h:div class="col-4 h-100 pl-0 pr-0">
+											<h:div class="card " >
+												<div sclass="header detail-header">Habitability </div>
+												<h:div class="body" >
+													<div class ="row">
+														<div class="col-3"><mt-fieldlabel field="EVALUATION.EVALUATIONSTATUSID" /></div>
+														<div class="col-9"><mt-fieldvalue field="EVALUATION.EVALUATIONSTATUSID" /></div>
+													</div>
+													<div class="row">
+														<div class="col-3">Habitability</div>
+														<div class="col-9">
+															<h:table class="mt-subsection-table" id="HABITABILITY_TABLE"/>
+															<h:div id="HABITABILITY_RESULT" >Holaquase</h:div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-3">Sanitary</div>
+														<div class="col-9">
+															<h:table class="mt-subsection-table" id="SANITARY_TABLE" />
+															<h:div id="SANITARY_RESULT" >Holaquase</h:div>
+														</div>
+													</div>
+												</h:div>
+											</h:div>
+									    </h:div>
+										<h:div class="col-4 h-100">
+											<h:div class="card" >
+												<div sclass="header detail-header">Applicant</div>
+												<h:div class="body detail-body" id="APPLICANT_DETAILS">
+													<div class="row">
+														<h:div class="col"><mt-fieldlabel field="CONTACT.LASTNAME" /></h:div>
+														<div class="col"><mt-fieldvalue field="CONTACT.LASTNAME" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="CONTACT.FIRSTNAME" /></div>
+														<div class="col"><mt-fieldvalue field="CONTACT.FIRSTNAME" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="CONTACT.COMPANYNAME" /></div>
+														<div class="col"><mt-fieldvalue field="CONTACT.COMPANYNAME" /></div>
+													</div>
+													<div class="row">
+														<div class="col">Category</div>
+														<div class="col"></div>
+													</div>
+												</h:div>
+											</h:div>
+											<h:div class="card" >
+												<div sclass="header detail-header">Evaluator</div>
+												<h:div class="body detail-body" id="EVALUATOR_DETAILS">
+													<div class="row">
+														<h:div class="col"><mt-fieldlabel field="CONTACT.LASTNAME" /></h:div>
+														<div class="col"><mt-fieldvalue field="CONTACT.LASTNAME" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="CONTACT.FIRSTNAME" /></div>
+														<div class="col"><mt-fieldvalue field="CONTACT.FIRSTNAME" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="CONTACT.COMPANYNAME" /></div>
+														<div class="col"><mt-fieldvalue field="CONTACT.COMPANYNAME" /></div>
+													</div>
+													<div class="row">
+														<div class="col">Category</div>
+														<div class="col"></div>
+													</div>
+												</h:div>
+											</h:div>
+											<h:div class="card" >
+												<div sclass="header detail-header">Building<div style="float:right"><a id="MODIFY_BUILDING">Modify</a></div></div>
+												<h:div class="body detail-body">
+													<div class="row">
+														<h:div class="col">Address</h:div>
+														<div class="col">value</div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.BUILDINGTYPEID" /></div>
+														<div class="col"><mt-fieldvalue field="BUILDING.BUILDINGTYPEID"/></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.BUILDINGS" /></div>
+														<div class="col"><mt-fieldvalue field="BUILDING.BUILDINGS" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.PARCELSURFACE" /></div>
+														<div class="col"><mt-fieldvalue field="BUILDING.PARCELSURFACE" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.BUILDINGSURFACE" /></div>
+														<div class="col"><mt-fieldvalue field="BUILDING.BUILDINGSURFACE" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.CONSTRUCTIONDATE" /></div>
+														<div class="col"><mt-fieldvalue field="BUILDING.CONSTRUCTIONDATE" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.FLOORS" /></div>
+														<div class="col"><mt-fieldvalue field="BUILDING.FLOORS" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.APPARTMENTS" /></div>
+														<div class="col"><mt-fieldvalue field="BUILDING.APPARTMENTS" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.LOTS" /></div>
+														<div class="col"><mt-fieldvalue field="BUILDING.LOTS" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.ACCESSINFO" /></div>
+														<div class="col"><mt-fieldvalue field="BUILDING.ACCESSINFO" /></div>
+													</div>
+													<div class="row">
+														<div class="col"><mt-fieldlabel field="BUILDING.DESCRIPTION" /></div>
+														<div class="col"><mt-fieldvalue field="BUILDING.DESCRIPTION" /></div>
+													</div>
+												</h:div>
+												
+											</h:div>
+									    </h:div>
+									</h:div>									    
+								</h:div>
+							</div>
+							<div id="DIV_CHISTORY" visible="false" class="mt-tab-content-panel">
+								<h:div class="container-fluid w-100 h-100" style="padding:5px;padding-top:20px;background-color:var(--j-window-background)">
+									<h:div class="card h-100" style="padding:10px">
+										<div id="HISTORY_GRID" />
+									</h:div>
+								</h:div>
+							</div>
+							<div id="DIV_CHABITABILITY" visible="false" class="mt-tab-content-panel h-100" />
+							<div id="DIV_CSANITARY" visible="false" class="mt-tab-content-panel h-100" />
+				</h:div>
+			</h:div>
+		</h:div>
+	</window>
+</zk>

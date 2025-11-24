@@ -1,0 +1,4 @@
+TABLE ENTITY crm.PhoneNumberPK {
+	PK phoneNumberId INT
+	
+}

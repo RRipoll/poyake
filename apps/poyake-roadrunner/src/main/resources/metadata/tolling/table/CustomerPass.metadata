@@ -1,0 +1,7 @@
+TABLE ENTITY tolling.CustomerPass{
+	PK customerPassId INT
+	customerId INT NOTNULL FKTO crm.CustomerPk
+	passId INT NOTNULL FKTO tolling.Pass
+	startEffectiveDate DATETIME NOTNULL DEFAULT GETPOSTINGDATE
+	endEffectiveDate DATETIME NOTNULL DEFAULT MAXDATE
+}

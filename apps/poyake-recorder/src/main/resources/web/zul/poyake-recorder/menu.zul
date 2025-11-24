@@ -1,0 +1,20 @@
+<?page title="Demo" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	
+
+	<zscript>
+    	desktopScope.put("mtlabels",new com.jsantos.gui.zkutil.Zklabel());
+	</zscript>
+	       
+		    <h:li class="nav-item ">
+           		<a class="nav-link " id="BUTTONRECORDER" iconSclass="z-icon-list"   >
+           		 Recorder</a>
+        	</h:li>
+		   
+		    
+		    
+	  </zk>
+	
+	

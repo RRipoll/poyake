@@ -1,0 +1,102 @@
+.z-tabs {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 14px;
+    overflow: hidden;
+    position: relative;
+    background: none;
+    min-height: 48px;
+}
+
+.z-tabs-content {
+    display: flex;
+    min-height: 48px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+    padding-left: 0;
+    padding-top: 0;
+    list-style: none outside none;
+    zoom: 1;
+    clear: both;
+    border-bottom: 0px solid #cfcfcf;
+}
+
+.z-tab-selected {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    border-bottom: 2px solid #0093f9;
+    background: transparent;
+}
+
+.z-tab {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    display: block;
+    border: 0px;
+    border-bottom: 2px solid transparent;
+    margin: 0;
+    line-height: 20px;
+    background: none;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    padding: 10px 16px;
+}
+
+.z-tab:hover{
+	background:none;
+}
+
+.z-tab:hover .z-tab-text {
+    color: #0093f9;
+}
+
+
+.z-tab-content {
+    display: block;
+}
+
+.z-tab-selected .z-tab-text {
+    color: #0093f9;
+}
+
+.z-tab-text {
+    font-style: normal;
+    color: rgba(0,0,0,0.57);
+    display: block;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0px;
+}
+
+
+.z-tabbox-top>.z-tabs .z-tab.z-tab-selected {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    border-bottom: 2px solid #0093f9;
+    background:transparent;
+    
+}
+
+.z-tabpanel {
+    border: 0px ;
+    padding: 0px;
+    zoom: 1;
+}

@@ -1,0 +1,17 @@
+TABLE ENTITY cfg.ConfigKey {
+	PK configKeyId INT
+	fullPath VARCHAR(2048) 
+	configKeyTypeId INT NOTNULL FKTO cfg.EnuConfigKeyType
+	configDataTypeId INT FKTO cfg.EnuConfigDataType
+	description VARCHAR ( 64 ) NOTNULL
+	defaultValue VARCHAR(64)	
+	isStatic BOOLEAN NOTNULL DEFAULT "1"
+
+	METADATA{
+		1, 'appinfo', SHORTCODE "FOLDER", NULL, 'Root Configuration Folder', NULL, 1; 
+		2, 'appinfo.database', SHORTCODE "FOLDER", NULL, 'Database configuration info', NULL, 1;
+		3, 'appinfo.database.vendor', SHORTCODE "SINGLEVALUE", SHORTCODE "STRING", 'Database Vendor', 'SQLServer', 0;  
+		4, 'appinfo.toiletpaper.price', SHORTCODE "VALUEWITHTIME", SHORTCODE "MONEY", '', '15', 0;  
+		5, 'appinfo.toiletpaper.brands', SHORTCODE "LIST", SHORTCODE "STRING", '', NULL, 0;  
+	}
+}

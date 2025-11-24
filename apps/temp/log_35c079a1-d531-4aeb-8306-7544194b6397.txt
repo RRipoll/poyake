@@ -1,0 +1,1408 @@
+*** ------------------------------------------ --------------------------------------- ***
+*** -------------------------- EVENT RestWebService START --------------- ***
+*** ---------------------------------- ----------------------------------------------- ***
+*** Request = Http://localHost:8081/rest/api/mt/table/BOOK/get/1
+*** parameters [Original Values: {label=, trParameterTypeId=, value=}
+Updates: {label=pK, trParameterTypeId=1, value=1}, Original Values: {label=, trParameterTypeId=, value=}
+Updates: {label=tableName, trParameterTypeId=2, value=BOOK}]
+*** JSON null
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Http://localHost:8081/rest/api/mt/table/BOOK/get/1
+java.lang.Exception: I/O error on GET request for "Http://localHost:8081/rest/api/mt/table/BOOK/get/1": Conexión rehusada; nested exception is java.net.ConnectException: Conexión rehusada / java.net.ConnectException: Conexión rehusada 
+	at com.jsantos.custom.eventRunner.RestWebService.runEvent(RestWebService.java:97)
+	at com.jsantos.runningTest.TestRunner.runEvent(TestRunner.java:58)
+	at com.jsantos.runningTest.TestRunner.runTest(TestRunner.java:50)
+	at com.jsantos.runningTest.TestRunnerController.<init>(TestRunnerController.java:32)
+	at com.jsantos.service.TestRunnerProvider.runTest(TestRunnerProvider.java:108)
+	at org.zkoss.zk.ui.AbstractComponent.onEvent(AbstractComponent.java:3184)
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3154)
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3096)
+	at org.zkoss.zk.ui.impl.EventProcessor.process(EventProcessor.java:138)
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.process0(EventProcessingThreadImpl.java:545)
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.sendEvent(EventProcessingThreadImpl.java:130)
+	at org.zkoss.zk.ui.event.Events.sendEvent(Events.java:366)
+	at org.zkoss.zk.ui.event.Events.sendEvent(Events.java:377)
+	at com.jsantos.gui.objectselector.foldertree.EventTreeController.addingDataToButton(EventTreeController.java:266)
+	at org.zkoss.zk.ui.AbstractComponent.onEvent(AbstractComponent.java:3184)
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3154)
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3096)
+	at org.zkoss.zk.ui.impl.EventProcessor.process(EventProcessor.java:138)
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.process0(EventProcessingThreadImpl.java:545)
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.run(EventProcessingThreadImpl.java:470)
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "Http://localHost:8081/rest/api/mt/table/BOOK/get/1": Conexión rehusada; nested exception is java.net.ConnectException: Conexión rehusada
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+	at com.jsantos.runningTest.webservice.ClientWS.call(ClientWS.java:97)
+	at com.jsantos.runningTest.webservice.ClientWS.call(ClientWS.java:38)
+	at com.jsantos.custom.eventRunner.RestWebService.runEvent(RestWebService.java:66)
+	... 19 more
+Caused by: java.net.ConnectException: Conexión rehusada
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:574)
+	at java.base/sun.nio.ch.Net.connect(Net.java:563)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at java.base/java.net.Socket.connect(Socket.java:597)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	... 24 more
+select * from ( 				 select 1 orderby, * 	from config.DatagridSetting  where searchName=:searchName and inputUserGroupId=:inputUserGroupId   				  union all 				  select 2 orderby, * 	from config.DatagridSetting  where searchName=:searchName and inputUserGroupId=1 )p  order by orderBy asc, dataGridSettingId Desc		
+StoreValuesTest  2
+DatagridSettingExtendedDAO results= 1
+select * from ( 				 select 1 orderby, * 	from config.DatagridSetting  where searchName=:searchName and inputUserGroupId=:inputUserGroupId   				  union all 				  select 2 orderby, * 	from config.DatagridSetting  where searchName=:searchName and inputUserGroupId=1 )p  order by orderBy asc, dataGridSettingId Desc		
+StoreValuesEvent  2
+DatagridSettingExtendedDAO results= 1
+[2m2021-07-23 11:26:35.994[0;39m [31mERROR[0;39m [35m243465[0;39m [2m---[0;39m [2m[nio-8080-exec-3][0;39m [36morg.zkoss.zk.ui.impl.UiEngineImpl       [0;39m [2m:[0;39m 
+
+org.springframework.dao.RecoverableDataAccessException: No records found when loading entity: testrunner.Test with filter (1=1) and testUuid=:testUuid
+	at com.jsantos.orm.dbstatement.DetachedRecord.loadValues(DetachedRecord.java:316) ~[classes/:na]
+	at com.jsantos.orm.dbstatement.DetachedRecord.load(DetachedRecord.java:503) ~[classes/:na]
+	at com.jsantos.orm.dbstatement.DetachedRecord.find(DetachedRecord.java:115) ~[classes/:na]
+	at com.jsantos.orm.dbstatement.DetachedRecord.findByPk(DetachedRecord.java:72) ~[classes/:na]
+	at com.jsantos.service.TestRunnerProvider.runTest(TestRunnerProvider.java:107) ~[classes/:na]
+	at org.zkoss.zk.ui.AbstractComponent.onEvent(AbstractComponent.java:3184) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3154) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3096) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessor.process(EventProcessor.java:138) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.process0(EventProcessingThreadImpl.java:545) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.sendEvent(EventProcessingThreadImpl.java:130) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.event.Events.sendEvent(Events.java:366) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.event.Events.sendEvent(Events.java:377) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at com.jsantos.gui.objectselector.foldertree.EventTreeController.addingDataToButton(EventTreeController.java:266) ~[classes/:na]
+	at org.zkoss.zk.ui.AbstractComponent.onEvent(AbstractComponent.java:3184) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3154) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3096) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessor.process(EventProcessor.java:138) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.process0(EventProcessingThreadImpl.java:545) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.run(EventProcessingThreadImpl.java:470) ~[zk-9.5.0.2.jar:9.5.0.2]
+
+[2m2021-07-23 11:26:36.020[0;39m [31mERROR[0;39m [35m243465[0;39m [2m---[0;39m [2m[nio-8080-exec-3][0;39m [36mFatal                                   [0;39m [2m:[0;39m 
+
+org.springframework.dao.RecoverableDataAccessException: No records found when loading entity: testrunner.Test with filter (1=1) and testUuid=:testUuid
+	at com.jsantos.orm.dbstatement.DetachedRecord.loadValues(DetachedRecord.java:316) ~[classes/:na]
+	at com.jsantos.orm.dbstatement.DetachedRecord.load(DetachedRecord.java:503) ~[classes/:na]
+	at com.jsantos.orm.dbstatement.DetachedRecord.find(DetachedRecord.java:115) ~[classes/:na]
+	at com.jsantos.orm.dbstatement.DetachedRecord.findByPk(DetachedRecord.java:72) ~[classes/:na]
+	at com.jsantos.service.TestRunnerProvider.runTest(TestRunnerProvider.java:107) ~[classes/:na]
+	at org.zkoss.zk.ui.AbstractComponent.onEvent(AbstractComponent.java:3184) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3154) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3096) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessor.process(EventProcessor.java:138) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.process0(EventProcessingThreadImpl.java:545) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.sendEvent(EventProcessingThreadImpl.java:130) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.event.Events.sendEvent(Events.java:366) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.event.Events.sendEvent(Events.java:377) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at com.jsantos.gui.objectselector.foldertree.EventTreeController.addingDataToButton(EventTreeController.java:266) ~[classes/:na]
+	at org.zkoss.zk.ui.AbstractComponent.onEvent(AbstractComponent.java:3184) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3154) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3096) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessor.process(EventProcessor.java:138) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.process0(EventProcessingThreadImpl.java:545) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.run(EventProcessingThreadImpl.java:470) ~[zk-9.5.0.2.jar:9.5.0.2]
+
+[2m2021-07-23 11:26:53.961[0;39m [31mERROR[0;39m [35m243465[0;39m [2m---[0;39m [2m[io-8080-exec-10][0;39m [36morg.zkoss.zk.ui.impl.UiEngineImpl       [0;39m [2m:[0;39m 
+
+org.springframework.dao.RecoverableDataAccessException: No records found when loading entity: testrunner.Test with filter (1=1) and testUuid=:testUuid
+	at com.jsantos.orm.dbstatement.DetachedRecord.loadValues(DetachedRecord.java:316) ~[classes/:na]
+	at com.jsantos.orm.dbstatement.DetachedRecord.load(DetachedRecord.java:503) ~[classes/:na]
+	at com.jsantos.orm.dbstatement.DetachedRecord.find(DetachedRecord.java:115) ~[classes/:na]
+	at com.jsantos.orm.dbstatement.DetachedRecord.findByPk(DetachedRecord.java:72) ~[classes/:na]
+	at com.jsantos.service.TestRunnerProvider.runTest(TestRunnerProvider.java:107) ~[classes/:na]
+	at org.zkoss.zk.ui.AbstractComponent.onEvent(AbstractComponent.java:3184) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3154) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3096) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessor.process(EventProcessor.java:138) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.process0(EventProcessingThreadImpl.java:545) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.sendEvent(EventProcessingThreadImpl.java:130) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.event.Events.sendEvent(Events.java:366) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.event.Events.sendEvent(Events.java:377) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at com.jsantos.gui.objectselector.foldertree.EventTreeController.addingDataToButton(EventTreeController.java:266) ~[classes/:na]
+	at org.zkoss.zk.ui.AbstractComponent.onEvent(AbstractComponent.java:3184) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3154) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3096) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessor.process(EventProcessor.java:138) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.process0(EventProcessingThreadImpl.java:545) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.run(EventProcessingThreadImpl.java:470) ~[zk-9.5.0.2.jar:9.5.0.2]
+
+[2m2021-07-23 11:26:53.977[0;39m [31mERROR[0;39m [35m243465[0;39m [2m---[0;39m [2m[io-8080-exec-10][0;39m [36mFatal                                   [0;39m [2m:[0;39m 
+
+org.springframework.dao.RecoverableDataAccessException: No records found when loading entity: testrunner.Test with filter (1=1) and testUuid=:testUuid
+	at com.jsantos.orm.dbstatement.DetachedRecord.loadValues(DetachedRecord.java:316) ~[classes/:na]
+	at com.jsantos.orm.dbstatement.DetachedRecord.load(DetachedRecord.java:503) ~[classes/:na]
+	at com.jsantos.orm.dbstatement.DetachedRecord.find(DetachedRecord.java:115) ~[classes/:na]
+	at com.jsantos.orm.dbstatement.DetachedRecord.findByPk(DetachedRecord.java:72) ~[classes/:na]
+	at com.jsantos.service.TestRunnerProvider.runTest(TestRunnerProvider.java:107) ~[classes/:na]
+	at org.zkoss.zk.ui.AbstractComponent.onEvent(AbstractComponent.java:3184) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3154) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3096) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessor.process(EventProcessor.java:138) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.process0(EventProcessingThreadImpl.java:545) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.sendEvent(EventProcessingThreadImpl.java:130) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.event.Events.sendEvent(Events.java:366) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.event.Events.sendEvent(Events.java:377) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at com.jsantos.gui.objectselector.foldertree.EventTreeController.addingDataToButton(EventTreeController.java:266) ~[classes/:na]
+	at org.zkoss.zk.ui.AbstractComponent.onEvent(AbstractComponent.java:3184) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3154) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.AbstractComponent.service(AbstractComponent.java:3096) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessor.process(EventProcessor.java:138) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.process0(EventProcessingThreadImpl.java:545) ~[zk-9.5.0.2.jar:9.5.0.2]
+	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.run(EventProcessingThreadImpl.java:470) ~[zk-9.5.0.2.jar:9.5.0.2]
+
+[2m2021-07-23 11:28:02.653[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[       Thread-6][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v2.4.4)[0;39m
+
+[2m2021-07-23 11:28:02.722[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m Starting PoyakeSpringApplication using Java 15.0.2 on MSI-GE72-7RE with PID 243465 (/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/target/classes started by usuario in /home/usuario/git/poyake008/metaplugin/apps/poyake-demo)
+[2m2021-07-23 11:28:02.722[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2021-07-23 11:28:02.913[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8080 (http)
+[2m2021-07-23 11:28:02.913[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2021-07-23 11:28:02.914[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.44]
+[2m2021-07-23 11:28:02.920[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2021-07-23 11:28:02.920[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 194 ms
+[2m2021-07-23 11:28:02.924[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.zkspringboot.ZkAutoConfiguration    [0;39m [2m:[0;39m ZK-Springboot: ServletRegistrationBean for DHtmlUpdateServlet with path /zkau
+Couldn't load datasource from Tomcat. Using default
+Connection props from file: {password=sa, driverClassName=org.h2.Driver, url=jdbc:h2:~/testdbn6;AUTO_SERVER=TRUE;, username=sa}
+ORM Triggers: ====================================================
+	com.jsantos.custom.trigger.AuditTrigger
+	com.jsantos.custom.trigger.ConstraintsTrigger
+	com.jsantos.custom.trigger.MultipleJsonTrigger
+	com.jsantos.custom.trigger.PermissionTrigger
+------------------------------------------------------------------
+DTOFactory: ==========================================
+	com.jsantos.metadata.testrunner.FolderPathsDTO ---> testrunner.FolderPaths
+	com.jsantos.metadata.testrunner.TestTreeDTO ---> testrunner.TestTree
+	com.jsantos.custom.extendeddto.StoreValuesTestExtDTO ---> testrunner.StoreValuesTest
+	com.jsantos.metadata.config.PostingDateDTO ---> config.PostingDate
+	com.jsantos.metadata.testrunner.EventStatusDTO ---> testrunner.EventStatus
+	com.jsantos.custom.extendeddto.MTLabelExtendedDTO ---> label.MTlabel
+	com.jsantos.metadata.audit.InputUserGroupDTO ---> audit.InputUserGroup
+	com.jsantos.metadata.example.BookAuthorDTO ---> example.BookAuthor
+	com.jsantos.metadata.permission.RolPermissionDTO ---> permission.RolPermission
+	com.jsantos.custom.extendeddto.TrParameterExtDTO ---> testrunner.TrParameter
+	com.jsantos.metadata.permission.RolDTO ---> permission.Rol
+	com.jsantos.metadata.testrunner.StoreValuesEventDTO ---> testrunner.StoreValuesEvent
+	com.jsantos.metadata.config.AppInfoDTO ---> config.AppInfo
+	com.jsantos.metadata.audit.VrolGroupDTO ---> audit.VrolGroup
+	com.jsantos.metadata.permission.UserGroupRolDTO ---> permission.UserGroupRol
+	com.jsantos.metadata.testrunner.EventDefFolderDTO ---> testrunner.EventDefFolder
+	com.jsantos.metadata.audit.InputSourceDTO ---> audit.InputSource
+	com.jsantos.metadata.testrunner.TestDTO ---> testrunner.Test
+	com.jsantos.custom.extendeddto.FileshowExtDTO ---> common.Fileshow
+	com.jsantos.metadata.audit.UserGroupDTO ---> audit.UserGroup
+	com.jsantos.custom.extendeddto.DatagridSettingExtDTO ---> config.DatagridSetting
+	com.jsantos.metadata.audit.VUserMultiGroupDTO ---> audit.VUserMultiGroup
+	com.jsantos.metadata.audit.VuserGroupDTO ---> audit.VuserGroup
+	com.jsantos.custom.extendeddto.AuthorExtDTO ---> example.Author
+	com.jsantos.metadata.audit.InputUserDTO ---> audit.InputUser
+	com.jsantos.metadata.testrunner.TrParameterTypeDTO ---> testrunner.TrParameterType
+	com.jsantos.metadata.permission.EnuPermissionTypeDTO ---> permission.EnuPermissionType
+	com.jsantos.metadata.permission.VPermissionRolDTO ---> permission.VPermissionRol
+	com.jsantos.metadata.config.EnulocaleDTO ---> config.Enulocale
+	com.jsantos.metadata.example.VBookDTO ---> example.VBook
+	com.jsantos.metadata.permission.PermissionDTO ---> permission.Permission
+	com.jsantos.metadata.example.GenreDTO ---> example.Genre
+	com.jsantos.metadata.testrunner.FolderDTO ---> testrunner.Folder
+	com.jsantos.metadata.common.StorageFilePkDTO ---> common.StorageFilePk
+	com.jsantos.metadata.audit.VinputUserMultiDTO ---> audit.VinputUserMulti
+	com.jsantos.metadata.permission.VRolLinkDTO ---> permission.VRolLink
+	com.jsantos.metadata.example.BookDTO ---> example.Book
+	com.jsantos.custom.extendeddto.FileGroupExtDTO ---> common.FileGroup
+	com.jsantos.metadata.testrunner.OperatorDTO ---> testrunner.Operator
+	com.jsantos.custom.extendeddto.TestEventExtDTO ---> testrunner.TestEvent
+	com.jsantos.metadata.testrunner.EventDefinitionDTO ---> testrunner.EventDefinition
+	com.jsantos.metadata.permission.VpermissionDTO ---> permission.Vpermission
+	com.jsantos.metadata.testrunner.HttpMethodDTO ---> testrunner.HttpMethod
+	com.jsantos.metadata.permission.VgroupRolDTO ---> permission.VgroupRol
+	com.jsantos.custom.extendeddto.VinputUserExtDTO ---> audit.VinputUser
+	com.jsantos.metadata.testrunner.EventfolderpathsDTO ---> testrunner.Eventfolderpaths
+	com.jsantos.metadata.testrunner.EventTypeDTO ---> testrunner.EventType
+	com.jsantos.metadata.common.StorageFileDTO ---> common.StorageFile
+	com.jsantos.metadata.permission.EnuPermissionValueDTO ---> permission.EnuPermissionValue
+------------------------------------------------------
+
+-----------------------------------FIELD RENDERER-------------------------------
+com.jsantos.common.registry.IMTFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.DateFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.DefaultFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.EnumerationRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.ForeignKeyFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MoneyFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MultipleEnumRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MultipleObjectRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.PasswordFieldRenderer
+Field Renderers: ===============================================
+	 DataType: DATETIME -> DateFieldRenderer
+	 DataType: MONEY -> MoneyFieldRenderer
+	 DataType: MULTIPLEENUM -> MultipleEnumRenderer
+	 DataType: MULTIPLEOBJECT -> MultipleObjectRenderer
+	 DataType: PASSWORD -> PasswordFieldRenderer
+-----------------------------------------------------
+
+------------------------------CUSTOM FIELD MAPPERS------------------------------
+com.jsantos.common.fieldMapper.IFieldMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.BooleanMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.FileMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.FilesMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.MultipleEnumMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.MultipleObjectMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.PasswordMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.TrParameterMapper
+Registered  Field Mapper: com.jsantos.custom.extendeddto.extendedfieldMapper.SettingMapper
+ Field Mapper Component Provider: =================================================
+	 DataType: FILE_GROUP -> FileMapper
+	 DataType: MULTIPLEENUM -> MultipleEnumMapper
+	 DataType: MULTIPLEOBJECT -> MultipleObjectMapper
+	 DataType: PASSWORD -> PasswordMapper
+	 DataType: PARAMETER -> TrParameterMapper
+	 Entity Field: TestEvent.files -> FilesMapper
+	 Entity Field: DatagridSetting.data -> SettingMapper
+-------------------------------------------------------------------------
+
+--------------------------------CUSTOM CONSTRAINTS-------------------------------
+com.jsantos.common.constraint.IConstraintsBuilder
+Registered Constraints Renderer: com.jsantos.custom.JsonConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DataGridJsonConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DefEventConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DefaultMTConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.EmailMTConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.JsonSettingAction
+Registered Constraints Renderer: com.jsantos.custom.constraints.PasswordConstraint
+Field Component Provider: EMAIL -> EmailMTConstraint
+Field Component Provider: PASSWORD -> PasswordConstraint
+Field Component Provider: DatagridSetting.data -> JsonConstraint
+Field Component Provider: TestEvent.eventDefinitionUuid -> DefEventConstraint
+Field Component Provider: DatagridSetting.searchName -> JsonSettingAction
+----------------------------------SQLEXTENDED COMPONENTS--------------------------------
+com.jsantos.custom.sqlextended.ISqlExtended
+Registered SqlExtended Renderer: com.jsantos.custom.sqlextended.MultiEnuEditorFilter
+Registered SqlExtended Renderer: com.jsantos.custom.sqlextended.MultiObjectEditorFilter
+Field Renderers: ===============================================
+	 DataType: MULTIPLEENUM -> MultiEnuEditorFilter
+	 DataType: MULTIPLEOBJECT -> MultiObjectEditorFilter
+-----------------------------------------------------
+
+---------------------------------GRID CELL BUILDERS--------------------------------
+com.jsantos.custom.cell.IGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.DataSettingBuilder
+Registered cell Renderer: com.jsantos.custom.cell.LogBuilder
+Registered cell Renderer: com.jsantos.custom.cell.SelectedEventBuilder
+Registered cell Renderer: com.jsantos.custom.cell.TrEventBuilder
+Registered cell Renderer: com.jsantos.custom.cell.TrParamenterBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.BitCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.BooleanCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.DataSettingBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.FileGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.HtmlCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.JsonBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.MoneyGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.MultipleObjectBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.URLKeyGridCellBuilder
+Grid Field Component Provider: =================================================
+	 DataType: BIT -> BitCellBuilder
+	 DataType: BOOLEAN -> BooleanCellBuilder
+	 DataType: DATASETTING -> DataSettingBuilder
+	 DataType: FILE_GROUP -> FileGridCellBuilder
+	 DataType: HTML -> HtmlCellBuilder
+	 DataType: JSON -> JsonBuilder
+	 DataType: MONEY -> MoneyGridCellBuilder
+	 DataType: MULTIPLEOBJECT -> MultipleObjectBuilder
+	 DataType: URL -> URLKeyGridCellBuilder
+	 Entity Field: DatagridSetting.data -> DataSettingBuilder
+	 Entity Field: StoreValuesEvent.log -> LogBuilder
+	 Entity Field: TestEvent.selected -> SelectedEventBuilder
+	 Entity Field: Test.events -> TrEventBuilder
+	 Entity Field: EventDefinition.parameters -> TrParamenterBuilder
+-------------------------------------------------------------------------
+
+----------------------------------FILTER COMPONENTS--------------------------------
+com.jsantos.custom.filter.IFilterComponent
+Registered filter Renderer: com.jsantos.custom.filter.IntegerFilterComponentBuilder
+Registered filter Renderer: com.jsantos.custom.filter.MultiEnuEditorFilterBuilder
+Registered filter Renderer: com.jsantos.custom.filter.MultiObjectFilterBuilder
+Registered filter Renderer: com.jsantos.custom.filter.UuidFilterBuilder
+Filter Component Provider: INT -> IntegerFilterComponentBuilder
+Filter Component Provider: MULTIPLEENUM -> MultiEnuEditorFilterBuilder
+Filter Component Provider: MULTIPLEOBJECT -> MultiObjectFilterBuilder
+Filter Component Provider: UUID -> UuidFilterBuilder
+------------------------------CUSTOM FIELD CONTAINERS------------------------------
+com.jsantos.custom.customfield.IMTComponent
+Registered Custom Field Containers: com.jsantos.custom.customfield.DataSettingContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.EventTypeContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.FileGroupContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.FilesContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.HtmlFieldContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.JsonContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.MTMultiEnumContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.MTMultiObjectContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.ParameterContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.TestEventJsonContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.TextAreaFieldContainer
+Custom Field Containers: ===============================================
+Custom Field Component Provider: DATASETTING -> DataSettingContainer
+Custom Field Component Provider: FILE_GROUP -> FileGroupContainer
+Custom Field Component Provider: HTML -> HtmlFieldContainer
+Custom Field Component Provider: JSON -> JsonContainer
+Custom Field Component Provider: MULTIPLEENUM -> MTMultiEnumContainer
+Custom Field Component Provider: MULTIPLEOBJECT -> MTMultiObjectContainer
+Custom Field Component Provider: PARAMETER -> ParameterContainer
+Custom Field Component Provider: TEXTAREA -> TextAreaFieldContainer
+Custom Field Component Provider: EventDefinition.eventtypeid -> EventTypeContainer
+Custom Field Component Provider: TestEvent.files -> FilesContainer
+Custom Field Component Provider: TestEvent.json -> TestEventJsonContainer
+-----------------------------------------------------
+
+-------------------------------DETAIL CONTAINER------------------------------------
+com.jsantos.custom.detail.IDetailContainer
+Registered DetailContainer Renderer: com.jsantos.custom.details.AuthorDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.EventDefinitionDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.InputUserGroupDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.TestDetails
+Custom Detail Containers: ===============================================
+Custom Field Container Provider: Author -> AuthorDetails
+Custom Field Container Provider: EventDefinition -> EventDefinitionDetails
+Custom Field Container Provider: InputUserGroup -> InputUserGroupDetails
+Custom Field Container Provider: TestTree -> TestDetails
+-----------------------------------------------------
+
+-------------------------------MENU PROVIDER------------------------------------
+com.jsantos.custom.IMenuProvider
+Menu Provider: com.jsantos.service.AuditUIProvider
+Menu Provider: com.jsantos.service.TestRunnerProvider
+Custom Detail Containers: ===============================================
+Custom Menu Provider: poyake-audit-ui -> 
+Custom Menu Provider: poyake-testrunner -> 
+-----------------------------------------------------
+
+=============================================================
+===== Context Initialization finished                   =====
+=============================================================
+[2m2021-07-23 11:28:03.244[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.http.WebManager         [0;39m [2m:[0;39m Starting ZK 9.5.0.2 CE (build: 2020112410)
+[2m2021-07-23 11:28:03.252[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing file:/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/target/classes/metainfo/zk/zk.xml
+[2m2021-07-23 11:28:03.254[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.util.Configuration      [0;39m [2m:[0;39m Enable event thread has deprecated!
+[2m2021-07-23 11:28:03.254[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing jar:file:/home/usuario/.m2/repository/org/zkoss/zk/zul/9.5.0.2/zul-9.5.0.2.jar!/metainfo/zk/zk.xml
+[2m2021-07-23 11:28:03.256[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing file:/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/src/main/webapp/WEB-INF/zk.xml
+[2m2021-07-23 11:28:03.257[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.util.Configuration      [0;39m [2m:[0;39m Enable event thread has deprecated!
+[2m2021-07-23 11:28:03.257[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.util.resource.impl.LabelLoaderImpl  [0;39m [2m:[0;39m Replace the old one, because it is replicated: ServletLabelLocator: /WEB-INF/labels/app_labels
+[2m2021-07-23 11:28:03.257[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.util.resource.impl.LabelLoaderImpl  [0;39m [2m:[0;39m Replace the old one, because it is replicated: ServletLabelLocator: /WEB-INF/labels/errors
+[2m2021-07-23 11:28:03.287[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2021-07-23 11:28:03.303[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.zkspringboot.ZkWebMvcConfiguration  [0;39m [2m:[0;39m ZK-Springboot: InternalViewResolver enabled - e.g. resolving view 'example' to '/zkau/web/example.zul'
+[2m2021-07-23 11:28:03.319[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2021-07-23 11:28:03.320[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.z.ZkHomepageConfiguration           [0;39m [2m:[0;39m ZK-Springboot: ZkHomepageConfiguration enabled - mapping the root path '/' to 'index'
+[2m2021-07-23 11:28:03.326[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8080 (http) with context path ''
+[2m2021-07-23 11:28:03.331[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m Started PoyakeSpringApplication in 0.637 seconds (JVM running for 123.065)
+[2m2021-07-23 11:28:03.332[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.ConditionEvaluationDeltaLoggingListener[0;39m [2m:[0;39m Condition evaluation unchanged
+[2m2021-07-23 11:29:51.105[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v2.4.4)[0;39m
+
+[2m2021-07-23 11:29:51.174[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m Starting PoyakeSpringApplication using Java 15.0.2 on MSI-GE72-7RE with PID 243465 (/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/target/classes started by usuario in /home/usuario/git/poyake008/metaplugin/apps/poyake-demo)
+[2m2021-07-23 11:29:51.174[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2021-07-23 11:29:51.342[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8080 (http)
+[2m2021-07-23 11:29:51.342[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2021-07-23 11:29:51.342[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.44]
+[2m2021-07-23 11:29:51.349[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2021-07-23 11:29:51.349[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 171 ms
+[2m2021-07-23 11:29:51.353[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.zkspringboot.ZkAutoConfiguration    [0;39m [2m:[0;39m ZK-Springboot: ServletRegistrationBean for DHtmlUpdateServlet with path /zkau
+Couldn't load datasource from Tomcat. Using default
+Connection props from file: {password=sa, driverClassName=org.h2.Driver, url=jdbc:h2:~/testdbn6;AUTO_SERVER=TRUE;, username=sa}
+ORM Triggers: ====================================================
+	com.jsantos.custom.trigger.AuditTrigger
+	com.jsantos.custom.trigger.ConstraintsTrigger
+	com.jsantos.custom.trigger.MultipleJsonTrigger
+	com.jsantos.custom.trigger.PermissionTrigger
+------------------------------------------------------------------
+DTOFactory: ==========================================
+	com.jsantos.metadata.testrunner.FolderPathsDTO ---> testrunner.FolderPaths
+	com.jsantos.metadata.testrunner.TestTreeDTO ---> testrunner.TestTree
+	com.jsantos.custom.extendeddto.StoreValuesTestExtDTO ---> testrunner.StoreValuesTest
+	com.jsantos.metadata.config.PostingDateDTO ---> config.PostingDate
+	com.jsantos.metadata.testrunner.EventStatusDTO ---> testrunner.EventStatus
+	com.jsantos.custom.extendeddto.MTLabelExtendedDTO ---> label.MTlabel
+	com.jsantos.metadata.audit.InputUserGroupDTO ---> audit.InputUserGroup
+	com.jsantos.metadata.example.BookAuthorDTO ---> example.BookAuthor
+	com.jsantos.metadata.permission.RolPermissionDTO ---> permission.RolPermission
+	com.jsantos.custom.extendeddto.TrParameterExtDTO ---> testrunner.TrParameter
+	com.jsantos.metadata.permission.RolDTO ---> permission.Rol
+	com.jsantos.metadata.testrunner.StoreValuesEventDTO ---> testrunner.StoreValuesEvent
+	com.jsantos.metadata.config.AppInfoDTO ---> config.AppInfo
+	com.jsantos.metadata.audit.VrolGroupDTO ---> audit.VrolGroup
+	com.jsantos.metadata.permission.UserGroupRolDTO ---> permission.UserGroupRol
+	com.jsantos.metadata.testrunner.EventDefFolderDTO ---> testrunner.EventDefFolder
+	com.jsantos.metadata.audit.InputSourceDTO ---> audit.InputSource
+	com.jsantos.metadata.testrunner.TestDTO ---> testrunner.Test
+	com.jsantos.custom.extendeddto.FileshowExtDTO ---> common.Fileshow
+	com.jsantos.metadata.audit.UserGroupDTO ---> audit.UserGroup
+	com.jsantos.custom.extendeddto.DatagridSettingExtDTO ---> config.DatagridSetting
+	com.jsantos.metadata.audit.VUserMultiGroupDTO ---> audit.VUserMultiGroup
+	com.jsantos.metadata.audit.VuserGroupDTO ---> audit.VuserGroup
+	com.jsantos.custom.extendeddto.AuthorExtDTO ---> example.Author
+	com.jsantos.metadata.audit.InputUserDTO ---> audit.InputUser
+	com.jsantos.metadata.testrunner.TrParameterTypeDTO ---> testrunner.TrParameterType
+	com.jsantos.metadata.permission.EnuPermissionTypeDTO ---> permission.EnuPermissionType
+	com.jsantos.metadata.permission.VPermissionRolDTO ---> permission.VPermissionRol
+	com.jsantos.metadata.config.EnulocaleDTO ---> config.Enulocale
+	com.jsantos.metadata.example.VBookDTO ---> example.VBook
+	com.jsantos.metadata.permission.PermissionDTO ---> permission.Permission
+	com.jsantos.metadata.example.GenreDTO ---> example.Genre
+	com.jsantos.metadata.testrunner.FolderDTO ---> testrunner.Folder
+	com.jsantos.metadata.common.StorageFilePkDTO ---> common.StorageFilePk
+	com.jsantos.metadata.audit.VinputUserMultiDTO ---> audit.VinputUserMulti
+	com.jsantos.metadata.permission.VRolLinkDTO ---> permission.VRolLink
+	com.jsantos.metadata.example.BookDTO ---> example.Book
+	com.jsantos.custom.extendeddto.FileGroupExtDTO ---> common.FileGroup
+	com.jsantos.metadata.testrunner.OperatorDTO ---> testrunner.Operator
+	com.jsantos.custom.extendeddto.TestEventExtDTO ---> testrunner.TestEvent
+	com.jsantos.metadata.testrunner.EventDefinitionDTO ---> testrunner.EventDefinition
+	com.jsantos.metadata.permission.VpermissionDTO ---> permission.Vpermission
+	com.jsantos.metadata.testrunner.HttpMethodDTO ---> testrunner.HttpMethod
+	com.jsantos.metadata.permission.VgroupRolDTO ---> permission.VgroupRol
+	com.jsantos.custom.extendeddto.VinputUserExtDTO ---> audit.VinputUser
+	com.jsantos.metadata.testrunner.EventfolderpathsDTO ---> testrunner.Eventfolderpaths
+	com.jsantos.metadata.testrunner.EventTypeDTO ---> testrunner.EventType
+	com.jsantos.metadata.common.StorageFileDTO ---> common.StorageFile
+	com.jsantos.metadata.permission.EnuPermissionValueDTO ---> permission.EnuPermissionValue
+------------------------------------------------------
+
+-----------------------------------FIELD RENDERER-------------------------------
+com.jsantos.common.registry.IMTFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.DateFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.DefaultFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.EnumerationRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.ForeignKeyFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MoneyFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MultipleEnumRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MultipleObjectRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.PasswordFieldRenderer
+Field Renderers: ===============================================
+	 DataType: DATETIME -> DateFieldRenderer
+	 DataType: MONEY -> MoneyFieldRenderer
+	 DataType: MULTIPLEENUM -> MultipleEnumRenderer
+	 DataType: MULTIPLEOBJECT -> MultipleObjectRenderer
+	 DataType: PASSWORD -> PasswordFieldRenderer
+-----------------------------------------------------
+
+------------------------------CUSTOM FIELD MAPPERS------------------------------
+com.jsantos.common.fieldMapper.IFieldMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.BooleanMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.FileMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.FilesMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.MultipleEnumMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.MultipleObjectMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.PasswordMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.TrParameterMapper
+Registered  Field Mapper: com.jsantos.custom.extendeddto.extendedfieldMapper.SettingMapper
+ Field Mapper Component Provider: =================================================
+	 DataType: FILE_GROUP -> FileMapper
+	 DataType: MULTIPLEENUM -> MultipleEnumMapper
+	 DataType: MULTIPLEOBJECT -> MultipleObjectMapper
+	 DataType: PASSWORD -> PasswordMapper
+	 DataType: PARAMETER -> TrParameterMapper
+	 Entity Field: TestEvent.files -> FilesMapper
+	 Entity Field: DatagridSetting.data -> SettingMapper
+-------------------------------------------------------------------------
+
+--------------------------------CUSTOM CONSTRAINTS-------------------------------
+com.jsantos.common.constraint.IConstraintsBuilder
+Registered Constraints Renderer: com.jsantos.custom.JsonConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DataGridJsonConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DefEventConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DefaultMTConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.EmailMTConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.JsonSettingAction
+Registered Constraints Renderer: com.jsantos.custom.constraints.PasswordConstraint
+Field Component Provider: EMAIL -> EmailMTConstraint
+Field Component Provider: PASSWORD -> PasswordConstraint
+Field Component Provider: DatagridSetting.data -> JsonConstraint
+Field Component Provider: TestEvent.eventDefinitionUuid -> DefEventConstraint
+Field Component Provider: DatagridSetting.searchName -> JsonSettingAction
+----------------------------------SQLEXTENDED COMPONENTS--------------------------------
+com.jsantos.custom.sqlextended.ISqlExtended
+Registered SqlExtended Renderer: com.jsantos.custom.sqlextended.MultiEnuEditorFilter
+Registered SqlExtended Renderer: com.jsantos.custom.sqlextended.MultiObjectEditorFilter
+Field Renderers: ===============================================
+	 DataType: MULTIPLEENUM -> MultiEnuEditorFilter
+	 DataType: MULTIPLEOBJECT -> MultiObjectEditorFilter
+-----------------------------------------------------
+
+---------------------------------GRID CELL BUILDERS--------------------------------
+com.jsantos.custom.cell.IGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.DataSettingBuilder
+Registered cell Renderer: com.jsantos.custom.cell.LogBuilder
+Registered cell Renderer: com.jsantos.custom.cell.SelectedEventBuilder
+Registered cell Renderer: com.jsantos.custom.cell.TrEventBuilder
+Registered cell Renderer: com.jsantos.custom.cell.TrParamenterBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.BitCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.BooleanCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.DataSettingBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.FileGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.HtmlCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.JsonBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.MoneyGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.MultipleObjectBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.URLKeyGridCellBuilder
+Grid Field Component Provider: =================================================
+	 DataType: BIT -> BitCellBuilder
+	 DataType: BOOLEAN -> BooleanCellBuilder
+	 DataType: DATASETTING -> DataSettingBuilder
+	 DataType: FILE_GROUP -> FileGridCellBuilder
+	 DataType: HTML -> HtmlCellBuilder
+	 DataType: JSON -> JsonBuilder
+	 DataType: MONEY -> MoneyGridCellBuilder
+	 DataType: MULTIPLEOBJECT -> MultipleObjectBuilder
+	 DataType: URL -> URLKeyGridCellBuilder
+	 Entity Field: DatagridSetting.data -> DataSettingBuilder
+	 Entity Field: StoreValuesEvent.log -> LogBuilder
+	 Entity Field: TestEvent.selected -> SelectedEventBuilder
+	 Entity Field: Test.events -> TrEventBuilder
+	 Entity Field: EventDefinition.parameters -> TrParamenterBuilder
+-------------------------------------------------------------------------
+
+----------------------------------FILTER COMPONENTS--------------------------------
+com.jsantos.custom.filter.IFilterComponent
+Registered filter Renderer: com.jsantos.custom.filter.IntegerFilterComponentBuilder
+Registered filter Renderer: com.jsantos.custom.filter.MultiEnuEditorFilterBuilder
+Registered filter Renderer: com.jsantos.custom.filter.MultiObjectFilterBuilder
+Registered filter Renderer: com.jsantos.custom.filter.UuidFilterBuilder
+Filter Component Provider: INT -> IntegerFilterComponentBuilder
+Filter Component Provider: MULTIPLEENUM -> MultiEnuEditorFilterBuilder
+Filter Component Provider: MULTIPLEOBJECT -> MultiObjectFilterBuilder
+Filter Component Provider: UUID -> UuidFilterBuilder
+------------------------------CUSTOM FIELD CONTAINERS------------------------------
+com.jsantos.custom.customfield.IMTComponent
+Registered Custom Field Containers: com.jsantos.custom.customfield.DataSettingContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.EventTypeContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.FileGroupContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.FilesContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.HtmlFieldContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.JsonContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.MTMultiEnumContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.MTMultiObjectContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.ParameterContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.TestEventJsonContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.TextAreaFieldContainer
+Custom Field Containers: ===============================================
+Custom Field Component Provider: DATASETTING -> DataSettingContainer
+Custom Field Component Provider: FILE_GROUP -> FileGroupContainer
+Custom Field Component Provider: HTML -> HtmlFieldContainer
+Custom Field Component Provider: JSON -> JsonContainer
+Custom Field Component Provider: MULTIPLEENUM -> MTMultiEnumContainer
+Custom Field Component Provider: MULTIPLEOBJECT -> MTMultiObjectContainer
+Custom Field Component Provider: PARAMETER -> ParameterContainer
+Custom Field Component Provider: TEXTAREA -> TextAreaFieldContainer
+Custom Field Component Provider: EventDefinition.eventtypeid -> EventTypeContainer
+Custom Field Component Provider: TestEvent.files -> FilesContainer
+Custom Field Component Provider: TestEvent.json -> TestEventJsonContainer
+-----------------------------------------------------
+
+-------------------------------DETAIL CONTAINER------------------------------------
+com.jsantos.custom.detail.IDetailContainer
+Registered DetailContainer Renderer: com.jsantos.custom.details.AuthorDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.EventDefinitionDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.InputUserGroupDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.TestDetails
+Custom Detail Containers: ===============================================
+Custom Field Container Provider: Author -> AuthorDetails
+Custom Field Container Provider: EventDefinition -> EventDefinitionDetails
+Custom Field Container Provider: InputUserGroup -> InputUserGroupDetails
+Custom Field Container Provider: TestTree -> TestDetails
+-----------------------------------------------------
+
+-------------------------------MENU PROVIDER------------------------------------
+com.jsantos.custom.IMenuProvider
+Menu Provider: com.jsantos.service.AuditUIProvider
+Menu Provider: com.jsantos.service.TestRunnerProvider
+Custom Detail Containers: ===============================================
+Custom Menu Provider: poyake-audit-ui -> 
+Custom Menu Provider: poyake-testrunner -> 
+-----------------------------------------------------
+
+=============================================================
+===== Context Initialization finished                   =====
+=============================================================
+[2m2021-07-23 11:29:51.716[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.http.WebManager         [0;39m [2m:[0;39m Starting ZK 9.5.0.2 CE (build: 2020112410)
+[2m2021-07-23 11:29:51.729[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing file:/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/target/classes/metainfo/zk/zk.xml
+[2m2021-07-23 11:29:51.730[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.util.Configuration      [0;39m [2m:[0;39m Enable event thread has deprecated!
+[2m2021-07-23 11:29:51.730[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing jar:file:/home/usuario/.m2/repository/org/zkoss/zk/zul/9.5.0.2/zul-9.5.0.2.jar!/metainfo/zk/zk.xml
+[2m2021-07-23 11:29:51.732[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing file:/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/src/main/webapp/WEB-INF/zk.xml
+[2m2021-07-23 11:29:51.733[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.util.Configuration      [0;39m [2m:[0;39m Enable event thread has deprecated!
+[2m2021-07-23 11:29:51.733[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.util.resource.impl.LabelLoaderImpl  [0;39m [2m:[0;39m Replace the old one, because it is replicated: ServletLabelLocator: /WEB-INF/labels/app_labels
+[2m2021-07-23 11:29:51.733[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.util.resource.impl.LabelLoaderImpl  [0;39m [2m:[0;39m Replace the old one, because it is replicated: ServletLabelLocator: /WEB-INF/labels/errors
+[2m2021-07-23 11:29:51.764[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2021-07-23 11:29:51.779[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.zkspringboot.ZkWebMvcConfiguration  [0;39m [2m:[0;39m ZK-Springboot: InternalViewResolver enabled - e.g. resolving view 'example' to '/zkau/web/example.zul'
+[2m2021-07-23 11:29:51.793[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2021-07-23 11:29:51.794[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.z.ZkHomepageConfiguration           [0;39m [2m:[0;39m ZK-Springboot: ZkHomepageConfiguration enabled - mapping the root path '/' to 'index'
+[2m2021-07-23 11:29:51.800[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8080 (http) with context path ''
+[2m2021-07-23 11:29:51.803[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m Started PoyakeSpringApplication in 0.653 seconds (JVM running for 231.537)
+[2m2021-07-23 11:29:51.805[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.ConditionEvaluationDeltaLoggingListener[0;39m [2m:[0;39m Condition evaluation unchanged
+[2m2021-07-23 11:30:03.565[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[      Thread-16][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v2.4.4)[0;39m
+
+[2m2021-07-23 11:30:03.635[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m Starting PoyakeSpringApplication using Java 15.0.2 on MSI-GE72-7RE with PID 243465 (/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/target/classes started by usuario in /home/usuario/git/poyake008/metaplugin/apps/poyake-demo)
+[2m2021-07-23 11:30:03.635[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2021-07-23 11:30:03.814[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8080 (http)
+[2m2021-07-23 11:30:03.814[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2021-07-23 11:30:03.815[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.44]
+[2m2021-07-23 11:30:03.821[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2021-07-23 11:30:03.822[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 184 ms
+[2m2021-07-23 11:30:03.826[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.zkspringboot.ZkAutoConfiguration    [0;39m [2m:[0;39m ZK-Springboot: ServletRegistrationBean for DHtmlUpdateServlet with path /zkau
+Couldn't load datasource from Tomcat. Using default
+Connection props from file: {password=sa, driverClassName=org.h2.Driver, url=jdbc:h2:~/testdbn6;AUTO_SERVER=TRUE;, username=sa}
+ORM Triggers: ====================================================
+	com.jsantos.custom.trigger.AuditTrigger
+	com.jsantos.custom.trigger.ConstraintsTrigger
+	com.jsantos.custom.trigger.MultipleJsonTrigger
+	com.jsantos.custom.trigger.PermissionTrigger
+------------------------------------------------------------------
+DTOFactory: ==========================================
+	com.jsantos.metadata.testrunner.FolderPathsDTO ---> testrunner.FolderPaths
+	com.jsantos.metadata.testrunner.TestTreeDTO ---> testrunner.TestTree
+	com.jsantos.custom.extendeddto.StoreValuesTestExtDTO ---> testrunner.StoreValuesTest
+	com.jsantos.metadata.config.PostingDateDTO ---> config.PostingDate
+	com.jsantos.metadata.testrunner.EventStatusDTO ---> testrunner.EventStatus
+	com.jsantos.custom.extendeddto.MTLabelExtendedDTO ---> label.MTlabel
+	com.jsantos.metadata.audit.InputUserGroupDTO ---> audit.InputUserGroup
+	com.jsantos.metadata.example.BookAuthorDTO ---> example.BookAuthor
+	com.jsantos.metadata.permission.RolPermissionDTO ---> permission.RolPermission
+	com.jsantos.custom.extendeddto.TrParameterExtDTO ---> testrunner.TrParameter
+	com.jsantos.metadata.permission.RolDTO ---> permission.Rol
+	com.jsantos.metadata.testrunner.StoreValuesEventDTO ---> testrunner.StoreValuesEvent
+	com.jsantos.metadata.config.AppInfoDTO ---> config.AppInfo
+	com.jsantos.metadata.audit.VrolGroupDTO ---> audit.VrolGroup
+	com.jsantos.metadata.permission.UserGroupRolDTO ---> permission.UserGroupRol
+	com.jsantos.metadata.testrunner.EventDefFolderDTO ---> testrunner.EventDefFolder
+	com.jsantos.metadata.audit.InputSourceDTO ---> audit.InputSource
+	com.jsantos.metadata.testrunner.TestDTO ---> testrunner.Test
+	com.jsantos.custom.extendeddto.FileshowExtDTO ---> common.Fileshow
+	com.jsantos.metadata.audit.UserGroupDTO ---> audit.UserGroup
+	com.jsantos.custom.extendeddto.DatagridSettingExtDTO ---> config.DatagridSetting
+	com.jsantos.metadata.audit.VUserMultiGroupDTO ---> audit.VUserMultiGroup
+	com.jsantos.metadata.audit.VuserGroupDTO ---> audit.VuserGroup
+	com.jsantos.custom.extendeddto.AuthorExtDTO ---> example.Author
+	com.jsantos.metadata.audit.InputUserDTO ---> audit.InputUser
+	com.jsantos.metadata.testrunner.TrParameterTypeDTO ---> testrunner.TrParameterType
+	com.jsantos.metadata.permission.EnuPermissionTypeDTO ---> permission.EnuPermissionType
+	com.jsantos.metadata.permission.VPermissionRolDTO ---> permission.VPermissionRol
+	com.jsantos.metadata.config.EnulocaleDTO ---> config.Enulocale
+	com.jsantos.metadata.example.VBookDTO ---> example.VBook
+	com.jsantos.metadata.permission.PermissionDTO ---> permission.Permission
+	com.jsantos.metadata.example.GenreDTO ---> example.Genre
+	com.jsantos.metadata.testrunner.FolderDTO ---> testrunner.Folder
+	com.jsantos.metadata.common.StorageFilePkDTO ---> common.StorageFilePk
+	com.jsantos.metadata.audit.VinputUserMultiDTO ---> audit.VinputUserMulti
+	com.jsantos.metadata.permission.VRolLinkDTO ---> permission.VRolLink
+	com.jsantos.metadata.example.BookDTO ---> example.Book
+	com.jsantos.custom.extendeddto.FileGroupExtDTO ---> common.FileGroup
+	com.jsantos.metadata.testrunner.OperatorDTO ---> testrunner.Operator
+	com.jsantos.custom.extendeddto.TestEventExtDTO ---> testrunner.TestEvent
+	com.jsantos.metadata.testrunner.EventDefinitionDTO ---> testrunner.EventDefinition
+	com.jsantos.metadata.permission.VpermissionDTO ---> permission.Vpermission
+	com.jsantos.metadata.testrunner.HttpMethodDTO ---> testrunner.HttpMethod
+	com.jsantos.metadata.permission.VgroupRolDTO ---> permission.VgroupRol
+	com.jsantos.custom.extendeddto.VinputUserExtDTO ---> audit.VinputUser
+	com.jsantos.metadata.testrunner.EventfolderpathsDTO ---> testrunner.Eventfolderpaths
+	com.jsantos.metadata.testrunner.EventTypeDTO ---> testrunner.EventType
+	com.jsantos.metadata.common.StorageFileDTO ---> common.StorageFile
+	com.jsantos.metadata.permission.EnuPermissionValueDTO ---> permission.EnuPermissionValue
+------------------------------------------------------
+
+-----------------------------------FIELD RENDERER-------------------------------
+com.jsantos.common.registry.IMTFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.DateFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.DefaultFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.EnumerationRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.ForeignKeyFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MoneyFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MultipleEnumRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MultipleObjectRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.PasswordFieldRenderer
+Field Renderers: ===============================================
+	 DataType: DATETIME -> DateFieldRenderer
+	 DataType: MONEY -> MoneyFieldRenderer
+	 DataType: MULTIPLEENUM -> MultipleEnumRenderer
+	 DataType: MULTIPLEOBJECT -> MultipleObjectRenderer
+	 DataType: PASSWORD -> PasswordFieldRenderer
+-----------------------------------------------------
+
+------------------------------CUSTOM FIELD MAPPERS------------------------------
+com.jsantos.common.fieldMapper.IFieldMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.BooleanMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.FileMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.FilesMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.MultipleEnumMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.MultipleObjectMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.PasswordMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.TrParameterMapper
+Registered  Field Mapper: com.jsantos.custom.extendeddto.extendedfieldMapper.SettingMapper
+ Field Mapper Component Provider: =================================================
+	 DataType: FILE_GROUP -> FileMapper
+	 DataType: MULTIPLEENUM -> MultipleEnumMapper
+	 DataType: MULTIPLEOBJECT -> MultipleObjectMapper
+	 DataType: PASSWORD -> PasswordMapper
+	 DataType: PARAMETER -> TrParameterMapper
+	 Entity Field: TestEvent.files -> FilesMapper
+	 Entity Field: DatagridSetting.data -> SettingMapper
+-------------------------------------------------------------------------
+
+--------------------------------CUSTOM CONSTRAINTS-------------------------------
+com.jsantos.common.constraint.IConstraintsBuilder
+Registered Constraints Renderer: com.jsantos.custom.JsonConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DataGridJsonConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DefEventConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DefaultMTConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.EmailMTConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.JsonSettingAction
+Registered Constraints Renderer: com.jsantos.custom.constraints.PasswordConstraint
+Field Component Provider: EMAIL -> EmailMTConstraint
+Field Component Provider: PASSWORD -> PasswordConstraint
+Field Component Provider: DatagridSetting.data -> JsonConstraint
+Field Component Provider: TestEvent.eventDefinitionUuid -> DefEventConstraint
+Field Component Provider: DatagridSetting.searchName -> JsonSettingAction
+----------------------------------SQLEXTENDED COMPONENTS--------------------------------
+com.jsantos.custom.sqlextended.ISqlExtended
+Registered SqlExtended Renderer: com.jsantos.custom.sqlextended.MultiEnuEditorFilter
+Registered SqlExtended Renderer: com.jsantos.custom.sqlextended.MultiObjectEditorFilter
+Field Renderers: ===============================================
+	 DataType: MULTIPLEENUM -> MultiEnuEditorFilter
+	 DataType: MULTIPLEOBJECT -> MultiObjectEditorFilter
+-----------------------------------------------------
+
+---------------------------------GRID CELL BUILDERS--------------------------------
+com.jsantos.custom.cell.IGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.DataSettingBuilder
+Registered cell Renderer: com.jsantos.custom.cell.LogBuilder
+Registered cell Renderer: com.jsantos.custom.cell.SelectedEventBuilder
+Registered cell Renderer: com.jsantos.custom.cell.TrEventBuilder
+Registered cell Renderer: com.jsantos.custom.cell.TrParamenterBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.BitCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.BooleanCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.DataSettingBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.FileGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.HtmlCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.JsonBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.MoneyGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.MultipleObjectBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.URLKeyGridCellBuilder
+Grid Field Component Provider: =================================================
+	 DataType: BIT -> BitCellBuilder
+	 DataType: BOOLEAN -> BooleanCellBuilder
+	 DataType: DATASETTING -> DataSettingBuilder
+	 DataType: FILE_GROUP -> FileGridCellBuilder
+	 DataType: HTML -> HtmlCellBuilder
+	 DataType: JSON -> JsonBuilder
+	 DataType: MONEY -> MoneyGridCellBuilder
+	 DataType: MULTIPLEOBJECT -> MultipleObjectBuilder
+	 DataType: URL -> URLKeyGridCellBuilder
+	 Entity Field: DatagridSetting.data -> DataSettingBuilder
+	 Entity Field: StoreValuesEvent.log -> LogBuilder
+	 Entity Field: TestEvent.selected -> SelectedEventBuilder
+	 Entity Field: Test.events -> TrEventBuilder
+	 Entity Field: EventDefinition.parameters -> TrParamenterBuilder
+-------------------------------------------------------------------------
+
+----------------------------------FILTER COMPONENTS--------------------------------
+com.jsantos.custom.filter.IFilterComponent
+Registered filter Renderer: com.jsantos.custom.filter.IntegerFilterComponentBuilder
+Registered filter Renderer: com.jsantos.custom.filter.MultiEnuEditorFilterBuilder
+Registered filter Renderer: com.jsantos.custom.filter.MultiObjectFilterBuilder
+Registered filter Renderer: com.jsantos.custom.filter.UuidFilterBuilder
+Filter Component Provider: INT -> IntegerFilterComponentBuilder
+Filter Component Provider: MULTIPLEENUM -> MultiEnuEditorFilterBuilder
+Filter Component Provider: MULTIPLEOBJECT -> MultiObjectFilterBuilder
+Filter Component Provider: UUID -> UuidFilterBuilder
+------------------------------CUSTOM FIELD CONTAINERS------------------------------
+com.jsantos.custom.customfield.IMTComponent
+Registered Custom Field Containers: com.jsantos.custom.customfield.DataSettingContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.EventTypeContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.FileGroupContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.FilesContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.HtmlFieldContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.JsonContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.MTMultiEnumContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.MTMultiObjectContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.ParameterContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.TestEventJsonContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.TextAreaFieldContainer
+Custom Field Containers: ===============================================
+Custom Field Component Provider: DATASETTING -> DataSettingContainer
+Custom Field Component Provider: FILE_GROUP -> FileGroupContainer
+Custom Field Component Provider: HTML -> HtmlFieldContainer
+Custom Field Component Provider: JSON -> JsonContainer
+Custom Field Component Provider: MULTIPLEENUM -> MTMultiEnumContainer
+Custom Field Component Provider: MULTIPLEOBJECT -> MTMultiObjectContainer
+Custom Field Component Provider: PARAMETER -> ParameterContainer
+Custom Field Component Provider: TEXTAREA -> TextAreaFieldContainer
+Custom Field Component Provider: EventDefinition.eventtypeid -> EventTypeContainer
+Custom Field Component Provider: TestEvent.files -> FilesContainer
+Custom Field Component Provider: TestEvent.json -> TestEventJsonContainer
+-----------------------------------------------------
+
+-------------------------------DETAIL CONTAINER------------------------------------
+com.jsantos.custom.detail.IDetailContainer
+Registered DetailContainer Renderer: com.jsantos.custom.details.AuthorDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.EventDefinitionDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.InputUserGroupDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.TestDetails
+Custom Detail Containers: ===============================================
+Custom Field Container Provider: Author -> AuthorDetails
+Custom Field Container Provider: EventDefinition -> EventDefinitionDetails
+Custom Field Container Provider: InputUserGroup -> InputUserGroupDetails
+Custom Field Container Provider: TestTree -> TestDetails
+-----------------------------------------------------
+
+-------------------------------MENU PROVIDER------------------------------------
+com.jsantos.custom.IMenuProvider
+Menu Provider: com.jsantos.service.AuditUIProvider
+Menu Provider: com.jsantos.service.TestRunnerProvider
+Custom Detail Containers: ===============================================
+Custom Menu Provider: poyake-audit-ui -> 
+Custom Menu Provider: poyake-testrunner -> 
+-----------------------------------------------------
+
+=============================================================
+===== Context Initialization finished                   =====
+=============================================================
+[2m2021-07-23 11:30:04.210[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.http.WebManager         [0;39m [2m:[0;39m Starting ZK 9.5.0.2 CE (build: 2020112410)
+[2m2021-07-23 11:30:04.220[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing file:/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/target/classes/metainfo/zk/zk.xml
+[2m2021-07-23 11:30:04.222[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.util.Configuration      [0;39m [2m:[0;39m Enable event thread has deprecated!
+[2m2021-07-23 11:30:04.222[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing jar:file:/home/usuario/.m2/repository/org/zkoss/zk/zul/9.5.0.2/zul-9.5.0.2.jar!/metainfo/zk/zk.xml
+[2m2021-07-23 11:30:04.224[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing file:/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/src/main/webapp/WEB-INF/zk.xml
+[2m2021-07-23 11:30:04.225[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.util.Configuration      [0;39m [2m:[0;39m Enable event thread has deprecated!
+[2m2021-07-23 11:30:04.225[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.util.resource.impl.LabelLoaderImpl  [0;39m [2m:[0;39m Replace the old one, because it is replicated: ServletLabelLocator: /WEB-INF/labels/app_labels
+[2m2021-07-23 11:30:04.225[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.util.resource.impl.LabelLoaderImpl  [0;39m [2m:[0;39m Replace the old one, because it is replicated: ServletLabelLocator: /WEB-INF/labels/errors
+[2m2021-07-23 11:30:04.255[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2021-07-23 11:30:04.276[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.zkspringboot.ZkWebMvcConfiguration  [0;39m [2m:[0;39m ZK-Springboot: InternalViewResolver enabled - e.g. resolving view 'example' to '/zkau/web/example.zul'
+[2m2021-07-23 11:30:04.301[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2021-07-23 11:30:04.302[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.z.ZkHomepageConfiguration           [0;39m [2m:[0;39m ZK-Springboot: ZkHomepageConfiguration enabled - mapping the root path '/' to 'index'
+[2m2021-07-23 11:30:04.322[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8080 (http) with context path ''
+[2m2021-07-23 11:30:04.325[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m Started PoyakeSpringApplication in 0.713 seconds (JVM running for 244.059)
+[2m2021-07-23 11:30:04.326[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.ConditionEvaluationDeltaLoggingListener[0;39m [2m:[0;39m Condition evaluation unchanged
+[2m2021-07-23 11:36:28.309[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[      Thread-21][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v2.4.4)[0;39m
+
+[2m2021-07-23 11:36:28.381[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m Starting PoyakeSpringApplication using Java 15.0.2 on MSI-GE72-7RE with PID 243465 (/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/target/classes started by usuario in /home/usuario/git/poyake008/metaplugin/apps/poyake-demo)
+[2m2021-07-23 11:36:28.381[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2021-07-23 11:36:28.535[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8080 (http)
+[2m2021-07-23 11:36:28.536[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2021-07-23 11:36:28.536[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.44]
+[2m2021-07-23 11:36:28.542[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2021-07-23 11:36:28.542[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 158 ms
+[2m2021-07-23 11:36:28.546[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.zkspringboot.ZkAutoConfiguration    [0;39m [2m:[0;39m ZK-Springboot: ServletRegistrationBean for DHtmlUpdateServlet with path /zkau
+Couldn't load datasource from Tomcat. Using default
+Connection props from file: {password=sa, driverClassName=org.h2.Driver, url=jdbc:h2:~/testdbn6;AUTO_SERVER=TRUE;, username=sa}
+ORM Triggers: ====================================================
+	com.jsantos.custom.trigger.AuditTrigger
+	com.jsantos.custom.trigger.ConstraintsTrigger
+	com.jsantos.custom.trigger.MultipleJsonTrigger
+	com.jsantos.custom.trigger.PermissionTrigger
+------------------------------------------------------------------
+DTOFactory: ==========================================
+	com.jsantos.metadata.testrunner.FolderPathsDTO ---> testrunner.FolderPaths
+	com.jsantos.metadata.testrunner.TestTreeDTO ---> testrunner.TestTree
+	com.jsantos.custom.extendeddto.StoreValuesTestExtDTO ---> testrunner.StoreValuesTest
+	com.jsantos.metadata.config.PostingDateDTO ---> config.PostingDate
+	com.jsantos.metadata.testrunner.EventStatusDTO ---> testrunner.EventStatus
+	com.jsantos.custom.extendeddto.MTLabelExtendedDTO ---> label.MTlabel
+	com.jsantos.metadata.audit.InputUserGroupDTO ---> audit.InputUserGroup
+	com.jsantos.metadata.example.BookAuthorDTO ---> example.BookAuthor
+	com.jsantos.metadata.permission.RolPermissionDTO ---> permission.RolPermission
+	com.jsantos.custom.extendeddto.TrParameterExtDTO ---> testrunner.TrParameter
+	com.jsantos.metadata.permission.RolDTO ---> permission.Rol
+	com.jsantos.metadata.testrunner.StoreValuesEventDTO ---> testrunner.StoreValuesEvent
+	com.jsantos.metadata.config.AppInfoDTO ---> config.AppInfo
+	com.jsantos.metadata.audit.VrolGroupDTO ---> audit.VrolGroup
+	com.jsantos.metadata.permission.UserGroupRolDTO ---> permission.UserGroupRol
+	com.jsantos.metadata.testrunner.EventDefFolderDTO ---> testrunner.EventDefFolder
+	com.jsantos.metadata.audit.InputSourceDTO ---> audit.InputSource
+	com.jsantos.metadata.testrunner.TestDTO ---> testrunner.Test
+	com.jsantos.custom.extendeddto.FileshowExtDTO ---> common.Fileshow
+	com.jsantos.metadata.audit.UserGroupDTO ---> audit.UserGroup
+	com.jsantos.custom.extendeddto.DatagridSettingExtDTO ---> config.DatagridSetting
+	com.jsantos.metadata.audit.VUserMultiGroupDTO ---> audit.VUserMultiGroup
+	com.jsantos.metadata.audit.VuserGroupDTO ---> audit.VuserGroup
+	com.jsantos.custom.extendeddto.AuthorExtDTO ---> example.Author
+	com.jsantos.metadata.audit.InputUserDTO ---> audit.InputUser
+	com.jsantos.metadata.testrunner.TrParameterTypeDTO ---> testrunner.TrParameterType
+	com.jsantos.metadata.permission.EnuPermissionTypeDTO ---> permission.EnuPermissionType
+	com.jsantos.metadata.permission.VPermissionRolDTO ---> permission.VPermissionRol
+	com.jsantos.metadata.config.EnulocaleDTO ---> config.Enulocale
+	com.jsantos.metadata.example.VBookDTO ---> example.VBook
+	com.jsantos.metadata.permission.PermissionDTO ---> permission.Permission
+	com.jsantos.metadata.example.GenreDTO ---> example.Genre
+	com.jsantos.metadata.testrunner.FolderDTO ---> testrunner.Folder
+	com.jsantos.metadata.common.StorageFilePkDTO ---> common.StorageFilePk
+	com.jsantos.metadata.audit.VinputUserMultiDTO ---> audit.VinputUserMulti
+	com.jsantos.metadata.permission.VRolLinkDTO ---> permission.VRolLink
+	com.jsantos.metadata.example.BookDTO ---> example.Book
+	com.jsantos.custom.extendeddto.FileGroupExtDTO ---> common.FileGroup
+	com.jsantos.metadata.testrunner.OperatorDTO ---> testrunner.Operator
+	com.jsantos.custom.extendeddto.TestEventExtDTO ---> testrunner.TestEvent
+	com.jsantos.metadata.testrunner.EventDefinitionDTO ---> testrunner.EventDefinition
+	com.jsantos.metadata.permission.VpermissionDTO ---> permission.Vpermission
+	com.jsantos.metadata.testrunner.HttpMethodDTO ---> testrunner.HttpMethod
+	com.jsantos.metadata.permission.VgroupRolDTO ---> permission.VgroupRol
+	com.jsantos.custom.extendeddto.VinputUserExtDTO ---> audit.VinputUser
+	com.jsantos.metadata.testrunner.EventfolderpathsDTO ---> testrunner.Eventfolderpaths
+	com.jsantos.metadata.testrunner.EventTypeDTO ---> testrunner.EventType
+	com.jsantos.metadata.common.StorageFileDTO ---> common.StorageFile
+	com.jsantos.metadata.permission.EnuPermissionValueDTO ---> permission.EnuPermissionValue
+------------------------------------------------------
+
+-----------------------------------FIELD RENDERER-------------------------------
+com.jsantos.common.registry.IMTFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.DateFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.DefaultFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.EnumerationRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.ForeignKeyFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MoneyFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MultipleEnumRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MultipleObjectRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.PasswordFieldRenderer
+Field Renderers: ===============================================
+	 DataType: DATETIME -> DateFieldRenderer
+	 DataType: MONEY -> MoneyFieldRenderer
+	 DataType: MULTIPLEENUM -> MultipleEnumRenderer
+	 DataType: MULTIPLEOBJECT -> MultipleObjectRenderer
+	 DataType: PASSWORD -> PasswordFieldRenderer
+-----------------------------------------------------
+
+------------------------------CUSTOM FIELD MAPPERS------------------------------
+com.jsantos.common.fieldMapper.IFieldMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.BooleanMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.FileMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.FilesMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.MultipleEnumMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.MultipleObjectMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.PasswordMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.TrParameterMapper
+Registered  Field Mapper: com.jsantos.custom.extendeddto.extendedfieldMapper.SettingMapper
+ Field Mapper Component Provider: =================================================
+	 DataType: FILE_GROUP -> FileMapper
+	 DataType: MULTIPLEENUM -> MultipleEnumMapper
+	 DataType: MULTIPLEOBJECT -> MultipleObjectMapper
+	 DataType: PASSWORD -> PasswordMapper
+	 DataType: PARAMETER -> TrParameterMapper
+	 Entity Field: TestEvent.files -> FilesMapper
+	 Entity Field: DatagridSetting.data -> SettingMapper
+-------------------------------------------------------------------------
+
+--------------------------------CUSTOM CONSTRAINTS-------------------------------
+com.jsantos.common.constraint.IConstraintsBuilder
+Registered Constraints Renderer: com.jsantos.custom.JsonConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DataGridJsonConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DefEventConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DefaultMTConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.EmailMTConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.JsonSettingAction
+Registered Constraints Renderer: com.jsantos.custom.constraints.PasswordConstraint
+Field Component Provider: EMAIL -> EmailMTConstraint
+Field Component Provider: PASSWORD -> PasswordConstraint
+Field Component Provider: DatagridSetting.data -> JsonConstraint
+Field Component Provider: TestEvent.eventDefinitionUuid -> DefEventConstraint
+Field Component Provider: DatagridSetting.searchName -> JsonSettingAction
+----------------------------------SQLEXTENDED COMPONENTS--------------------------------
+com.jsantos.custom.sqlextended.ISqlExtended
+Registered SqlExtended Renderer: com.jsantos.custom.sqlextended.MultiEnuEditorFilter
+Registered SqlExtended Renderer: com.jsantos.custom.sqlextended.MultiObjectEditorFilter
+Field Renderers: ===============================================
+	 DataType: MULTIPLEENUM -> MultiEnuEditorFilter
+	 DataType: MULTIPLEOBJECT -> MultiObjectEditorFilter
+-----------------------------------------------------
+
+---------------------------------GRID CELL BUILDERS--------------------------------
+com.jsantos.custom.cell.IGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.DataSettingBuilder
+Registered cell Renderer: com.jsantos.custom.cell.LogBuilder
+Registered cell Renderer: com.jsantos.custom.cell.SelectedEventBuilder
+Registered cell Renderer: com.jsantos.custom.cell.TrEventBuilder
+Registered cell Renderer: com.jsantos.custom.cell.TrParamenterBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.BitCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.BooleanCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.DataSettingBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.FileGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.HtmlCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.JsonBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.MoneyGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.MultipleObjectBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.URLKeyGridCellBuilder
+Grid Field Component Provider: =================================================
+	 DataType: BIT -> BitCellBuilder
+	 DataType: BOOLEAN -> BooleanCellBuilder
+	 DataType: DATASETTING -> DataSettingBuilder
+	 DataType: FILE_GROUP -> FileGridCellBuilder
+	 DataType: HTML -> HtmlCellBuilder
+	 DataType: JSON -> JsonBuilder
+	 DataType: MONEY -> MoneyGridCellBuilder
+	 DataType: MULTIPLEOBJECT -> MultipleObjectBuilder
+	 DataType: URL -> URLKeyGridCellBuilder
+	 Entity Field: DatagridSetting.data -> DataSettingBuilder
+	 Entity Field: StoreValuesEvent.log -> LogBuilder
+	 Entity Field: TestEvent.selected -> SelectedEventBuilder
+	 Entity Field: Test.events -> TrEventBuilder
+	 Entity Field: EventDefinition.parameters -> TrParamenterBuilder
+-------------------------------------------------------------------------
+
+----------------------------------FILTER COMPONENTS--------------------------------
+com.jsantos.custom.filter.IFilterComponent
+Registered filter Renderer: com.jsantos.custom.filter.IntegerFilterComponentBuilder
+Registered filter Renderer: com.jsantos.custom.filter.MultiEnuEditorFilterBuilder
+Registered filter Renderer: com.jsantos.custom.filter.MultiObjectFilterBuilder
+Registered filter Renderer: com.jsantos.custom.filter.UuidFilterBuilder
+Filter Component Provider: INT -> IntegerFilterComponentBuilder
+Filter Component Provider: MULTIPLEENUM -> MultiEnuEditorFilterBuilder
+Filter Component Provider: MULTIPLEOBJECT -> MultiObjectFilterBuilder
+Filter Component Provider: UUID -> UuidFilterBuilder
+------------------------------CUSTOM FIELD CONTAINERS------------------------------
+com.jsantos.custom.customfield.IMTComponent
+Registered Custom Field Containers: com.jsantos.custom.customfield.DataSettingContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.EventTypeContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.FileGroupContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.FilesContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.HtmlFieldContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.JsonContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.MTMultiEnumContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.MTMultiObjectContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.ParameterContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.TestEventJsonContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.TextAreaFieldContainer
+Custom Field Containers: ===============================================
+Custom Field Component Provider: DATASETTING -> DataSettingContainer
+Custom Field Component Provider: FILE_GROUP -> FileGroupContainer
+Custom Field Component Provider: HTML -> HtmlFieldContainer
+Custom Field Component Provider: JSON -> JsonContainer
+Custom Field Component Provider: MULTIPLEENUM -> MTMultiEnumContainer
+Custom Field Component Provider: MULTIPLEOBJECT -> MTMultiObjectContainer
+Custom Field Component Provider: PARAMETER -> ParameterContainer
+Custom Field Component Provider: TEXTAREA -> TextAreaFieldContainer
+Custom Field Component Provider: EventDefinition.eventtypeid -> EventTypeContainer
+Custom Field Component Provider: TestEvent.files -> FilesContainer
+Custom Field Component Provider: TestEvent.json -> TestEventJsonContainer
+-----------------------------------------------------
+
+-------------------------------DETAIL CONTAINER------------------------------------
+com.jsantos.custom.detail.IDetailContainer
+Registered DetailContainer Renderer: com.jsantos.custom.details.AuthorDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.EventDefinitionDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.InputUserGroupDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.TestDetails
+Custom Detail Containers: ===============================================
+Custom Field Container Provider: Author -> AuthorDetails
+Custom Field Container Provider: EventDefinition -> EventDefinitionDetails
+Custom Field Container Provider: InputUserGroup -> InputUserGroupDetails
+Custom Field Container Provider: TestTree -> TestDetails
+-----------------------------------------------------
+
+-------------------------------MENU PROVIDER------------------------------------
+com.jsantos.custom.IMenuProvider
+Menu Provider: com.jsantos.service.AuditUIProvider
+Menu Provider: com.jsantos.service.TestRunnerProvider
+Custom Detail Containers: ===============================================
+Custom Menu Provider: poyake-audit-ui -> 
+Custom Menu Provider: poyake-testrunner -> 
+-----------------------------------------------------
+
+=============================================================
+===== Context Initialization finished                   =====
+=============================================================
+[2m2021-07-23 11:36:28.919[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.http.WebManager         [0;39m [2m:[0;39m Starting ZK 9.5.0.2 CE (build: 2020112410)
+[2m2021-07-23 11:36:28.926[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing file:/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/target/classes/metainfo/zk/zk.xml
+[2m2021-07-23 11:36:28.927[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.util.Configuration      [0;39m [2m:[0;39m Enable event thread has deprecated!
+[2m2021-07-23 11:36:28.928[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing jar:file:/home/usuario/.m2/repository/org/zkoss/zk/zul/9.5.0.2/zul-9.5.0.2.jar!/metainfo/zk/zk.xml
+[2m2021-07-23 11:36:28.929[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing file:/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/src/main/webapp/WEB-INF/zk.xml
+[2m2021-07-23 11:36:28.931[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.util.Configuration      [0;39m [2m:[0;39m Enable event thread has deprecated!
+[2m2021-07-23 11:36:28.931[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.util.resource.impl.LabelLoaderImpl  [0;39m [2m:[0;39m Replace the old one, because it is replicated: ServletLabelLocator: /WEB-INF/labels/app_labels
+[2m2021-07-23 11:36:28.931[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.util.resource.impl.LabelLoaderImpl  [0;39m [2m:[0;39m Replace the old one, because it is replicated: ServletLabelLocator: /WEB-INF/labels/errors
+[2m2021-07-23 11:36:28.957[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2021-07-23 11:36:28.971[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.zkspringboot.ZkWebMvcConfiguration  [0;39m [2m:[0;39m ZK-Springboot: InternalViewResolver enabled - e.g. resolving view 'example' to '/zkau/web/example.zul'
+[2m2021-07-23 11:36:28.985[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2021-07-23 11:36:28.986[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.z.ZkHomepageConfiguration           [0;39m [2m:[0;39m ZK-Springboot: ZkHomepageConfiguration enabled - mapping the root path '/' to 'index'
+[2m2021-07-23 11:36:28.996[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8080 (http) with context path ''
+[2m2021-07-23 11:36:28.998[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m Started PoyakeSpringApplication in 0.641 seconds (JVM running for 628.733)
+[2m2021-07-23 11:36:28.999[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.ConditionEvaluationDeltaLoggingListener[0;39m [2m:[0;39m Condition evaluation unchanged
+[2m2021-07-23 11:59:43.521[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[      Thread-26][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v2.4.4)[0;39m
+
+[2m2021-07-23 11:59:43.601[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m Starting PoyakeSpringApplication using Java 15.0.2 on MSI-GE72-7RE with PID 243465 (/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/target/classes started by usuario in /home/usuario/git/poyake008/metaplugin/apps/poyake-demo)
+[2m2021-07-23 11:59:43.601[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2021-07-23 11:59:43.769[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8080 (http)
+[2m2021-07-23 11:59:43.769[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2021-07-23 11:59:43.769[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.44]
+[2m2021-07-23 11:59:43.776[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2021-07-23 11:59:43.776[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 172 ms
+[2m2021-07-23 11:59:43.779[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.zkspringboot.ZkAutoConfiguration    [0;39m [2m:[0;39m ZK-Springboot: ServletRegistrationBean for DHtmlUpdateServlet with path /zkau
+Couldn't load datasource from Tomcat. Using default
+Connection props from file: {password=sa, driverClassName=org.h2.Driver, url=jdbc:h2:~/testdbn6;AUTO_SERVER=TRUE;, username=sa}
+ORM Triggers: ====================================================
+	com.jsantos.custom.trigger.AuditTrigger
+	com.jsantos.custom.trigger.ConstraintsTrigger
+	com.jsantos.custom.trigger.MultipleJsonTrigger
+	com.jsantos.custom.trigger.PermissionTrigger
+------------------------------------------------------------------
+DTOFactory: ==========================================
+	com.jsantos.metadata.testrunner.FolderPathsDTO ---> testrunner.FolderPaths
+	com.jsantos.metadata.testrunner.TestTreeDTO ---> testrunner.TestTree
+	com.jsantos.custom.extendeddto.StoreValuesTestExtDTO ---> testrunner.StoreValuesTest
+	com.jsantos.metadata.config.PostingDateDTO ---> config.PostingDate
+	com.jsantos.metadata.testrunner.EventStatusDTO ---> testrunner.EventStatus
+	com.jsantos.custom.extendeddto.MTLabelExtendedDTO ---> label.MTlabel
+	com.jsantos.metadata.audit.InputUserGroupDTO ---> audit.InputUserGroup
+	com.jsantos.metadata.example.BookAuthorDTO ---> example.BookAuthor
+	com.jsantos.metadata.permission.RolPermissionDTO ---> permission.RolPermission
+	com.jsantos.custom.extendeddto.TrParameterExtDTO ---> testrunner.TrParameter
+	com.jsantos.metadata.permission.RolDTO ---> permission.Rol
+	com.jsantos.metadata.testrunner.StoreValuesEventDTO ---> testrunner.StoreValuesEvent
+	com.jsantos.metadata.config.AppInfoDTO ---> config.AppInfo
+	com.jsantos.metadata.audit.VrolGroupDTO ---> audit.VrolGroup
+	com.jsantos.metadata.permission.UserGroupRolDTO ---> permission.UserGroupRol
+	com.jsantos.metadata.testrunner.EventDefFolderDTO ---> testrunner.EventDefFolder
+	com.jsantos.metadata.audit.InputSourceDTO ---> audit.InputSource
+	com.jsantos.metadata.testrunner.TestDTO ---> testrunner.Test
+	com.jsantos.custom.extendeddto.FileshowExtDTO ---> common.Fileshow
+	com.jsantos.metadata.audit.UserGroupDTO ---> audit.UserGroup
+	com.jsantos.custom.extendeddto.DatagridSettingExtDTO ---> config.DatagridSetting
+	com.jsantos.metadata.audit.VUserMultiGroupDTO ---> audit.VUserMultiGroup
+	com.jsantos.metadata.audit.VuserGroupDTO ---> audit.VuserGroup
+	com.jsantos.custom.extendeddto.AuthorExtDTO ---> example.Author
+	com.jsantos.metadata.audit.InputUserDTO ---> audit.InputUser
+	com.jsantos.metadata.testrunner.TrParameterTypeDTO ---> testrunner.TrParameterType
+	com.jsantos.metadata.permission.EnuPermissionTypeDTO ---> permission.EnuPermissionType
+	com.jsantos.metadata.permission.VPermissionRolDTO ---> permission.VPermissionRol
+	com.jsantos.metadata.config.EnulocaleDTO ---> config.Enulocale
+	com.jsantos.metadata.example.VBookDTO ---> example.VBook
+	com.jsantos.metadata.permission.PermissionDTO ---> permission.Permission
+	com.jsantos.metadata.example.GenreDTO ---> example.Genre
+	com.jsantos.metadata.testrunner.FolderDTO ---> testrunner.Folder
+	com.jsantos.metadata.common.StorageFilePkDTO ---> common.StorageFilePk
+	com.jsantos.metadata.audit.VinputUserMultiDTO ---> audit.VinputUserMulti
+	com.jsantos.metadata.permission.VRolLinkDTO ---> permission.VRolLink
+	com.jsantos.metadata.example.BookDTO ---> example.Book
+	com.jsantos.custom.extendeddto.FileGroupExtDTO ---> common.FileGroup
+	com.jsantos.metadata.testrunner.OperatorDTO ---> testrunner.Operator
+	com.jsantos.custom.extendeddto.TestEventExtDTO ---> testrunner.TestEvent
+	com.jsantos.metadata.testrunner.EventDefinitionDTO ---> testrunner.EventDefinition
+	com.jsantos.metadata.permission.VpermissionDTO ---> permission.Vpermission
+	com.jsantos.metadata.testrunner.HttpMethodDTO ---> testrunner.HttpMethod
+	com.jsantos.metadata.permission.VgroupRolDTO ---> permission.VgroupRol
+	com.jsantos.custom.extendeddto.VinputUserExtDTO ---> audit.VinputUser
+	com.jsantos.metadata.testrunner.EventfolderpathsDTO ---> testrunner.Eventfolderpaths
+	com.jsantos.metadata.testrunner.EventTypeDTO ---> testrunner.EventType
+	com.jsantos.metadata.common.StorageFileDTO ---> common.StorageFile
+	com.jsantos.metadata.permission.EnuPermissionValueDTO ---> permission.EnuPermissionValue
+------------------------------------------------------
+
+-----------------------------------FIELD RENDERER-------------------------------
+com.jsantos.common.registry.IMTFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.DateFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.DefaultFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.EnumerationRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.ForeignKeyFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MoneyFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MultipleEnumRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MultipleObjectRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.PasswordFieldRenderer
+Field Renderers: ===============================================
+	 DataType: DATETIME -> DateFieldRenderer
+	 DataType: MONEY -> MoneyFieldRenderer
+	 DataType: MULTIPLEENUM -> MultipleEnumRenderer
+	 DataType: MULTIPLEOBJECT -> MultipleObjectRenderer
+	 DataType: PASSWORD -> PasswordFieldRenderer
+-----------------------------------------------------
+
+------------------------------CUSTOM FIELD MAPPERS------------------------------
+com.jsantos.common.fieldMapper.IFieldMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.BooleanMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.FileMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.FilesMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.MultipleEnumMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.MultipleObjectMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.PasswordMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.TrParameterMapper
+Registered  Field Mapper: com.jsantos.custom.extendeddto.extendedfieldMapper.SettingMapper
+ Field Mapper Component Provider: =================================================
+	 DataType: FILE_GROUP -> FileMapper
+	 DataType: MULTIPLEENUM -> MultipleEnumMapper
+	 DataType: MULTIPLEOBJECT -> MultipleObjectMapper
+	 DataType: PASSWORD -> PasswordMapper
+	 DataType: PARAMETER -> TrParameterMapper
+	 Entity Field: TestEvent.files -> FilesMapper
+	 Entity Field: DatagridSetting.data -> SettingMapper
+-------------------------------------------------------------------------
+
+--------------------------------CUSTOM CONSTRAINTS-------------------------------
+com.jsantos.common.constraint.IConstraintsBuilder
+Registered Constraints Renderer: com.jsantos.custom.JsonConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DataGridJsonConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DefEventConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DefaultMTConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.EmailMTConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.JsonSettingAction
+Registered Constraints Renderer: com.jsantos.custom.constraints.PasswordConstraint
+Field Component Provider: EMAIL -> EmailMTConstraint
+Field Component Provider: PASSWORD -> PasswordConstraint
+Field Component Provider: DatagridSetting.data -> JsonConstraint
+Field Component Provider: TestEvent.eventDefinitionUuid -> DefEventConstraint
+Field Component Provider: DatagridSetting.searchName -> JsonSettingAction
+----------------------------------SQLEXTENDED COMPONENTS--------------------------------
+com.jsantos.custom.sqlextended.ISqlExtended
+Registered SqlExtended Renderer: com.jsantos.custom.sqlextended.MultiEnuEditorFilter
+Registered SqlExtended Renderer: com.jsantos.custom.sqlextended.MultiObjectEditorFilter
+Field Renderers: ===============================================
+	 DataType: MULTIPLEENUM -> MultiEnuEditorFilter
+	 DataType: MULTIPLEOBJECT -> MultiObjectEditorFilter
+-----------------------------------------------------
+
+---------------------------------GRID CELL BUILDERS--------------------------------
+com.jsantos.custom.cell.IGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.DataSettingBuilder
+Registered cell Renderer: com.jsantos.custom.cell.LogBuilder
+Registered cell Renderer: com.jsantos.custom.cell.SelectedEventBuilder
+Registered cell Renderer: com.jsantos.custom.cell.TrEventBuilder
+Registered cell Renderer: com.jsantos.custom.cell.TrParamenterBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.BitCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.BooleanCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.DataSettingBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.FileGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.HtmlCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.JsonBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.MoneyGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.MultipleObjectBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.URLKeyGridCellBuilder
+Grid Field Component Provider: =================================================
+	 DataType: BIT -> BitCellBuilder
+	 DataType: BOOLEAN -> BooleanCellBuilder
+	 DataType: DATASETTING -> DataSettingBuilder
+	 DataType: FILE_GROUP -> FileGridCellBuilder
+	 DataType: HTML -> HtmlCellBuilder
+	 DataType: JSON -> JsonBuilder
+	 DataType: MONEY -> MoneyGridCellBuilder
+	 DataType: MULTIPLEOBJECT -> MultipleObjectBuilder
+	 DataType: URL -> URLKeyGridCellBuilder
+	 Entity Field: DatagridSetting.data -> DataSettingBuilder
+	 Entity Field: StoreValuesEvent.log -> LogBuilder
+	 Entity Field: TestEvent.selected -> SelectedEventBuilder
+	 Entity Field: Test.events -> TrEventBuilder
+	 Entity Field: EventDefinition.parameters -> TrParamenterBuilder
+-------------------------------------------------------------------------
+
+----------------------------------FILTER COMPONENTS--------------------------------
+com.jsantos.custom.filter.IFilterComponent
+Registered filter Renderer: com.jsantos.custom.filter.IntegerFilterComponentBuilder
+Registered filter Renderer: com.jsantos.custom.filter.MultiEnuEditorFilterBuilder
+Registered filter Renderer: com.jsantos.custom.filter.MultiObjectFilterBuilder
+Registered filter Renderer: com.jsantos.custom.filter.UuidFilterBuilder
+Filter Component Provider: INT -> IntegerFilterComponentBuilder
+Filter Component Provider: MULTIPLEENUM -> MultiEnuEditorFilterBuilder
+Filter Component Provider: MULTIPLEOBJECT -> MultiObjectFilterBuilder
+Filter Component Provider: UUID -> UuidFilterBuilder
+------------------------------CUSTOM FIELD CONTAINERS------------------------------
+com.jsantos.custom.customfield.IMTComponent
+Registered Custom Field Containers: com.jsantos.custom.customfield.DataSettingContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.EventTypeContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.FileGroupContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.FilesContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.HtmlFieldContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.JsonContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.MTMultiEnumContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.MTMultiObjectContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.ParameterContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.TestEventJsonContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.TextAreaFieldContainer
+Custom Field Containers: ===============================================
+Custom Field Component Provider: DATASETTING -> DataSettingContainer
+Custom Field Component Provider: FILE_GROUP -> FileGroupContainer
+Custom Field Component Provider: HTML -> HtmlFieldContainer
+Custom Field Component Provider: JSON -> JsonContainer
+Custom Field Component Provider: MULTIPLEENUM -> MTMultiEnumContainer
+Custom Field Component Provider: MULTIPLEOBJECT -> MTMultiObjectContainer
+Custom Field Component Provider: PARAMETER -> ParameterContainer
+Custom Field Component Provider: TEXTAREA -> TextAreaFieldContainer
+Custom Field Component Provider: EventDefinition.eventtypeid -> EventTypeContainer
+Custom Field Component Provider: TestEvent.files -> FilesContainer
+Custom Field Component Provider: TestEvent.json -> TestEventJsonContainer
+-----------------------------------------------------
+
+-------------------------------DETAIL CONTAINER------------------------------------
+com.jsantos.custom.detail.IDetailContainer
+Registered DetailContainer Renderer: com.jsantos.custom.details.AuthorDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.EventDefinitionDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.InputUserGroupDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.TestDetails
+Custom Detail Containers: ===============================================
+Custom Field Container Provider: Author -> AuthorDetails
+Custom Field Container Provider: EventDefinition -> EventDefinitionDetails
+Custom Field Container Provider: InputUserGroup -> InputUserGroupDetails
+Custom Field Container Provider: TestTree -> TestDetails
+-----------------------------------------------------
+
+-------------------------------MENU PROVIDER------------------------------------
+com.jsantos.custom.IMenuProvider
+Menu Provider: com.jsantos.service.AuditUIProvider
+Menu Provider: com.jsantos.service.TestRunnerProvider
+Custom Detail Containers: ===============================================
+Custom Menu Provider: poyake-audit-ui -> 
+Custom Menu Provider: poyake-testrunner -> 
+-----------------------------------------------------
+
+=============================================================
+===== Context Initialization finished                   =====
+=============================================================
+[2m2021-07-23 11:59:44.278[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.http.WebManager         [0;39m [2m:[0;39m Starting ZK 9.5.0.2 CE (build: 2020112410)
+[2m2021-07-23 11:59:44.289[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing file:/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/target/classes/metainfo/zk/zk.xml
+[2m2021-07-23 11:59:44.290[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.util.Configuration      [0;39m [2m:[0;39m Enable event thread has deprecated!
+[2m2021-07-23 11:59:44.291[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing jar:file:/home/usuario/.m2/repository/org/zkoss/zk/zul/9.5.0.2/zul-9.5.0.2.jar!/metainfo/zk/zk.xml
+[2m2021-07-23 11:59:44.294[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing file:/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/src/main/webapp/WEB-INF/zk.xml
+[2m2021-07-23 11:59:44.296[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.util.Configuration      [0;39m [2m:[0;39m Enable event thread has deprecated!
+[2m2021-07-23 11:59:44.296[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.util.resource.impl.LabelLoaderImpl  [0;39m [2m:[0;39m Replace the old one, because it is replicated: ServletLabelLocator: /WEB-INF/labels/app_labels
+[2m2021-07-23 11:59:44.296[0;39m [33m WARN[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.util.resource.impl.LabelLoaderImpl  [0;39m [2m:[0;39m Replace the old one, because it is replicated: ServletLabelLocator: /WEB-INF/labels/errors
+[2m2021-07-23 11:59:44.334[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2021-07-23 11:59:44.355[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.zkspringboot.ZkWebMvcConfiguration  [0;39m [2m:[0;39m ZK-Springboot: InternalViewResolver enabled - e.g. resolving view 'example' to '/zkau/web/example.zul'
+[2m2021-07-23 11:59:44.374[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2021-07-23 11:59:44.375[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.z.ZkHomepageConfiguration           [0;39m [2m:[0;39m ZK-Springboot: ZkHomepageConfiguration enabled - mapping the root path '/' to 'index'
+[2m2021-07-23 11:59:44.380[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8080 (http) with context path ''
+[2m2021-07-23 11:59:44.385[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m Started PoyakeSpringApplication in 0.805 seconds (JVM running for 2024.119)
+[2m2021-07-23 11:59:44.386[0;39m [32m INFO[0;39m [35m243465[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.ConditionEvaluationDeltaLoggingListener[0;39m [2m:[0;39m Condition evaluation unchanged

@@ -1,0 +1,232 @@
+FROMSQLFILE '/sqlservertest/src/main/resources/metadata/queries/QFullCustomerInfo.sql'
+SQLFILEDEPENDENCY '/sqlservertest/src/main/resources/metadata/functions/testSqlFunction.sql'
+
+SQLQUERY  ENTITY QFullCustomerInfo {
+	customerId INT SAMEAS crm.Customer.customerId
+	firstName VARCHAR(64) SAMEAS crm.Customer.firstName
+	lastName VARCHAR(64) SAMEAS crm.Customer.lastName
+	vatNumberCode VARCHAR(8) SAMEAS crm.Customer.vatNumberCode
+	taxCode3 VARCHAR(10) SAMEAS crm.Customer.taxCode3
+	theStreet VARCHAR(64) SAMEAS crm.Address.street
+	city VARCHAR(64) SAMEAS crm.Address.city
+	zipCode VARCHAR(9) SAMEAS crm.Address.zipCode
+	pepoteColumn VARCHAR
+	currentDate DATETIME
+	twenty INT
+
+	QUERYSOURCE
+<<<
+Select 
+c.*
+,a.street as theStreet
+,a.city
+,a.zipCode
+,'PEPOTE' pepoteColumn
+,getDate() as currentDate
+,dbo.F_timesTen(2) as twenty
+from 
+	crm.Customer c
+	left join crm.Address a on c.customerId=a.customerId and c.customerId=a.customerId
+>>>
+
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: null  
+VIEW NAME: null 
+VIEW SCHEMA: dbo
+
+Tables:
+	TABLE: crm.Customer Alias: c
+	TABLE: crm.Address Alias: a
+Output:
+	c.* -> crm.Customer
+	COLUMN: theStreet -> crm.Address.street
+	COLUMN: city -> crm.Address.city
+	COLUMN: zipCode -> crm.Address.zipCode
+	EXPRESSION: pepoteColumn -> 'PEPOTE'
+	EXPRESSION: currentDate -> getDate()
+	EXPRESSION: twenty -> dbo.F_timesTen(2)
+
+
+================= Resolver Information ======================== 
+Entity List:
+	audit.InputUser ,audit.EnuInputSource ,QFullCustomerInfo ,crm.Customer ,crm.Address ,acc.AuditedTable ,acc.PurchaseOrder ,Albaran ,audit.EnuFileType ,audit.FileExtraInfo ,audit.SourceFile ,EnuRefundRequestType ,EnuTransactionType ,LinkTable ,RefundRequest ,VFullCustomerInfoColumns:
+	EXPANDED customerId -> crm.Customer.customerId
+	EXPANDED firstName -> crm.Customer.firstName
+	EXPANDED lastName -> crm.Customer.lastName
+	EXPANDED vatNumberCode -> crm.Customer.vatNumberCode
+	EXPANDED taxCode3 -> crm.Customer.taxCode3
+	SOLVED theStreet -> crm.Address.street
+	SOLVED city -> crm.Address.city
+	SOLVED zipCode -> crm.Address.zipCode
+	EXPRESSION pepoteColumn -> 
+	EXPRESSION currentDate -> 
+	EXPRESSION twenty -> 
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        dml_clause 
+          select_statement 
+            query_expression 
+              query_specification Select
+                select_list 
+                  select_list_elem 
+                    asterisk 
+                      table_name 
+                        id 
+                          simple_id c
+                      .*
+                  ,
+                  select_list_elem 
+                    column_elem 
+                      table_name 
+                        id 
+                          simple_id a
+                      .
+                      id 
+                        simple_id street
+                      as_column_alias as
+                        column_alias 
+                          id 
+                            simple_id theStreet
+                  ,
+                  select_list_elem 
+                    column_elem 
+                      table_name 
+                        id 
+                          simple_id a
+                      .
+                      id 
+                        simple_id city
+                  ,
+                  select_list_elem 
+                    column_elem 
+                      table_name 
+                        id 
+                          simple_id a
+                      .
+                      id 
+                        simple_id zipCode
+                  ,
+                  select_list_elem 
+                    expression_elem 
+                      expression 
+                        primitive_expression 
+                          constant 'PEPOTE'
+                      as_column_alias 
+                        column_alias 
+                          id 
+                            simple_id pepoteColumn
+                  ,
+                  select_list_elem 
+                    expression_elem 
+                      expression 
+                        function_call getDate()
+                      as_column_alias as
+                        column_alias 
+                          id 
+                            simple_id currentDate
+                  ,
+                  select_list_elem 
+                    expression_elem 
+                      expression 
+                        function_call 
+                          scalar_function_name 
+                            func_proc_name_server_database_schema 
+                              func_proc_name_database_schema 
+                                func_proc_name_schema 
+                                  id 
+                                    simple_id dbo
+                                  .
+                                  id 
+                                    simple_id F_timesTen
+                          (
+                          expression_list 
+                            expression 
+                              primitive_expression 
+                                constant 2
+                          )
+                      as_column_alias as
+                        column_alias 
+                          id 
+                            simple_id twenty
+                from
+                table_sources 
+                  table_source 
+                    table_source_item_joined 
+                      table_source_item 
+                        table_name_with_hint 
+                          table_name 
+                            id 
+                              simple_id crm
+                            .
+                            id 
+                              simple_id Customer
+                        as_table_alias 
+                          table_alias 
+                            id 
+                              simple_id c
+                      join_part leftjoin
+                        table_source 
+                          table_source_item_joined 
+                            table_source_item 
+                              table_name_with_hint 
+                                table_name 
+                                  id 
+                                    simple_id crm
+                                  .
+                                  id 
+                                    simple_id Address
+                              as_table_alias 
+                                table_alias 
+                                  id 
+                                    simple_id a
+                        on
+                        search_condition 
+                          search_condition_and 
+                            search_condition_not 
+                              predicate 
+                                expression 
+                                  full_column_name 
+                                    table_name 
+                                      id 
+                                        simple_id c
+                                    .
+                                    id 
+                                      simple_id customerId
+                                comparison_operator =
+                                expression 
+                                  full_column_name 
+                                    table_name 
+                                      id 
+                                        simple_id a
+                                    .
+                                    id 
+                                      simple_id customerId
+                            and
+                            search_condition_not 
+                              predicate 
+                                expression 
+                                  full_column_name 
+                                    table_name 
+                                      id 
+                                        simple_id c
+                                    .
+                                    id 
+                                      simple_id customerId
+                                comparison_operator =
+                                expression 
+                                  full_column_name 
+                                    table_name 
+                                      id 
+                                        simple_id a
+                                    .
+                                    id 
+                                      simple_id customerId
+  <EOF>*/

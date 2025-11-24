@@ -1,0 +1,6 @@
+TABLE ENTITY tolling.ProblematicPlate{
+	PK problematicPlateId INT NOTNULL
+	licensePlateId INT NOTNULL FKTO tolling.LicensePlate
+	problematicPlateReasonId INT NOTNULL FKTO tolling.EnuProblematicPlateReason
+	notes VARCHAR(512) 
+}

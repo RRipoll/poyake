@@ -1,0 +1,4 @@
+TABLE ENTITY eva.Appointment{
+	PK appointmentId INT
+	folderId INT NOTNULL FKTO eva.FolderPK
+}

@@ -1,0 +1,16 @@
+/ContactDTO.java
+/ContactPkDTO.java
+/EnuCountry.java
+/EnuCountryDTO.java
+/EnuStateProvince.java
+/EnuStateProvinceDTO.java
+/HPostalAddressDTO.java
+/MTTableCONTACT.java
+/MTTableCONTACTPK.java
+/MTTableENUCOUNTRY.java
+/MTTableENUSTATEPROVINCE.java
+/MTTableHPOSTALADDRESS.java
+/MTTablePOSTALADDRESSPK.java
+/PostalAddressPkDTO.java
+/MTTablePOSTALADDRESS.java
+/PostalAddressDTO.java

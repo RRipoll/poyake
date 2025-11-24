@@ -1,0 +1,70 @@
+<zk xmlns:c="client">
+    
+    <window>
+    <style src="/widgets/effects/upload_effect/Customize.css" />
+    <script type="text/javascript" src="/widgets/effects/upload_effect/UPMSamples.js" />
+    <panel width="550px" framable="true" border="normal">
+        <caption label="ZK Mail Sender">
+            <div sclass="buttons">
+                <button label="Send" iconSclass="z-icon-send-o" onClick='alert("Sent!")' />
+                <button label="Draft" iconSclass="z-icon-save"/>
+                <button label="Discard" iconSclass="z-icon-trash-o"/>
+            </div>
+        </caption>
+        <toolbar  hflex="1">
+            <vlayout hflex="1" spacing="6px">
+                <hlayout valign="middle">
+                    <label sclass="name" value="To : " />
+                    <textbox value="info@zkoss.org" hflex="1" />
+                </hlayout>
+                <hlayout valign="middle">
+                    <label sclass="name" value="CC : " />
+                    <textbox value="myDearBoss@yourCompany.com"  hflex="1" />
+                </hlayout>
+                <hlayout valign="middle">
+                    <label sclass="name" value="Subject : " />
+                    <textbox value="Kindly View The Attachment"  hflex="1" />
+                    <button width="85px" id="attachBtn" sclass="attachBtn"
+                            iconSclass="z-icon-paperclip"
+                            upload="true,maxsize=10240" label="Attach" onUpload="addItem()"/>
+                </hlayout>
+                <vlayout id="flist" hflex="1" sclass="fileList" />
+            </vlayout>
+        </toolbar>
+        <panelchildren>
+            <div sclass="input-area">
+                <textbox multiline="true" rows="10" width="100%" >
+                    <attribute name="value"><![CDATA[
+Hi,
+    I am writing to confirm you about the budget of annual meeting.
+    Please view the detail as attachment below.
+ 
+BR]]></attribute>
+                </textbox>
+            </div>
+        </panelchildren>
+        <toolbar sclass="footer">
+            <div id="footer"></div>
+        </toolbar>
+    </panel>
+    <zscript><![CDATA[
+    void addItem() {
+        org.zkoss.util.media.Media media = event.getMedia();
+        Hlayout hl = new Hlayout();
+        hl.setSpacing("6px");
+        hl.setClass("newFile");
+        hl.appendChild(new Label(media.getName()));
+        A rm = new A("remove");
+        rm.addEventListener(Events.ON_CLICK,new org.zkoss.zk.ui.event.EventListener(){
+            public void onEvent(Event event) throws Exception {
+                hl.detach();
+            }
+        });
+        hl.appendChild(rm);
+        flist.appendChild(hl);
+    }
+    ]]></zscript>
+    </window>
+</zk>
+
+

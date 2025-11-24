@@ -1,0 +1,15 @@
+TABLE ENTITY tolling.LicensePlate{
+	PK licensePlateId INT
+	licencePlateJurisdictionId INT NOTNULL FKTO tolling.EnuLicensePlateJurisdiction
+	lpnumber VARCHAR(16) NOTNULL STEREOTYPES DESCRIPTION
+	licensePlatetypeId INT NOTNULL FKTO tolling.EnuLicensePlateType
+	
+	
+	
+	
+	LABELS{
+		lpnumber { SHORTLABEL en_EN 'License Plate #' es_ES 'Matr??cula'}
+		licencePlateJurisdictionId {SHORTLABEL en_EN 'Jurisdiction' es_ES 'Jurisdicci??n'}
+		licensePlatetypeId {SHORTLABEL en_EN 'Plate Type' es_ES 'Tipo de Placa'}
+	}
+}

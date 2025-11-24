@@ -1,0 +1,14 @@
+ENTITY InputUser {
+	PK inputUserId INT
+	loginName VARCHAR(10)
+	pass VARCHAR(16)
+	pass2 VARCHAR(16)
+
+	
+	METADATA{
+		1, "sa", 'xxxx', 'xxx2';
+		2, "jperez", 'xxxx', 'xxx2';
+	}
+	
+	
+}

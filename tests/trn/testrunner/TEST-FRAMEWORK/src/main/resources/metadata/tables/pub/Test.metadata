@@ -1,0 +1,18 @@
+ENTITY pub.Test{
+	
+	PK testid INTEGER 
+    owner INTEGER 
+    folderid INTEGER FKTO pub.Folder
+    testname VARCHAR(255)
+    description VARCHAR(255)
+    notes VARCHAR(1024)
+    created DATETIME DEFAULT 'CURRENT_TIMESTAMP'
+    deleted INTEGER DEFAULT '0'
+    startdate DATETIME DEFAULT 'CURRENT_TIMESTAMP'
+    enddate DATETIME DEFAULT '2099-01-01'
+    regressiontest INTEGER DEFAULT '0'
+    runnightlyscripts INTEGER DEFAULT '0'
+    keywords VARCHAR(255)
+    version INTEGER DEFAULT '0'
+    id INTEGER DEFAULT '(NEXT VALUE FOR pub.SEQ_ID)'
+}

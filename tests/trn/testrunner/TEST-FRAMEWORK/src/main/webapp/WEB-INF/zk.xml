@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<system-config>
+		<disable-event-thread>false</disable-event-thread>
+		<label-location>/WEB-INF/errors_labels.properties</label-location>
+		<label-location>/WEB-INF/header_table_labels.properties</label-location>
+		 <max-upload-size>100000</max-upload-size>
+	</system-config>
+
+	<library-property>
+		<name>org.zkoss.zul.Combobox.mold</name>
+		<value>rounded</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.zul.Button.mold</name>
+		<value>trendy</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.util.logging.realCauseBriefly</name>
+		<value>0</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.theme.preferred</name>
+		<value>atlantic</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.zul.progressbox.position</name>
+		<value>center</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.zk.ui.processMask.enabled</name>
+		<value>true</value>
+	</library-property>
+<library-property>
+        <name>org.zkoss.zk.ui.updateByClient.allowed</name>
+        <value>true</value>
+    </library-property>
+	<desktop-config>
+		<theme-provider-class>com.idcglobal.cubic.nh.layout.ThemeProvider</theme-provider-class>
+	</desktop-config>
+
+	<device-config>
+		<device-type>ajax</device-type>
+		<timeout-uri>/zul/panel/testlibrary.zul</timeout-uri>
+	</device-config>
+	
+	<language-config>
+		<addon-uri>/WEB-INF/lang-addon.xml</addon-uri>
+    </language-config>
+
+</zk>

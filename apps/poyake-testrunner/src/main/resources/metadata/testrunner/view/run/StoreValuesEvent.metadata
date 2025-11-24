@@ -1,0 +1,8 @@
+VIEW ENTITY testrunner.StoreValuesEvent {
+    PK storeValuesEventid 	UUID  
+    eventName 				VARCHAR  STEREOTYPES DESCRIPTION
+    data 					JSON 
+    log 					VARCHAR
+    status 					INT FKTO testrunner.EventStatus DEFAULT '1'
+    event 					EVENT STEREOTYPES NOGUIINPUT
+}

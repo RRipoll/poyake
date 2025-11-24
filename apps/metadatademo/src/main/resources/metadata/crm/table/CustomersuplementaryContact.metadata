@@ -1,0 +1,5 @@
+TABLE ENTITY crm.CustomerSuplementaryContact {
+	PK customerId INT FKTO crm.CustomerPk
+	PK personOrCompanyId INT FKTO crm.PersonOrCompanyPk
+	contactTypeId INT FKTO crm.EnuContactType
+}

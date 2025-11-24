@@ -1,0 +1,215 @@
+FROMSQLFILE '/poyake-roadrunner/src/main/resources/metadata/crm/view/VDetailPageCaseList.sql'
+
+VIEW  ENTITY crm.VDetailPageCaseList {
+	PK csCaseId INT SAMEAS cs.CSCase.csCaseId
+	subject VARCHAR(1024) SAMEAS cs.CSCase.subject
+	caseTypeId INT SAMEAS cs.CSCase.caseTypeId
+	caseStatusId INT SAMEAS cs.CSCase.caseStatusId
+	casePriorityId INT SAMEAS cs.CSCase.casePriorityId
+	manualReviewRequired BIT SAMEAS cs.CSCase.manualReviewRequired
+	customerId INT SAMEAS crm.HCustomer.customerId
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: crm.VDetailPageCaseList  
+VIEW NAME: VDetailPageCaseList 
+VIEW SCHEMA: crm
+
+Tables:
+	TABLE: cs.cscase Alias: c
+	TABLE: cs.CustomerCase Alias: cc
+	TABLE: crm.HCustomer Alias: cu
+Output:
+	COLUMN: csCaseId -> cs.cscase.csCaseId
+	COLUMN: subject -> cs.cscase.subject
+	COLUMN: caseTypeId -> cs.cscase.caseTypeId
+	COLUMN: caseStatusId -> cs.cscase.caseStatusId
+	COLUMN: casePriorityId -> cs.cscase.casePriorityId
+	COLUMN: manualReviewRequired -> cs.cscase.manualReviewRequired
+	COLUMN: customerId -> crm.HCustomer.customerId
+
+
+================= Resolver Information ======================== 
+Entity List:
+	acc.Allocation ,audit.InputUser ,audit.InputSource ,acc.Ledger ,acc.LedgerItem ,acc.LedgerInfo ,acc.EnuTransactionType ,acc.EnuLedgerType ,acc.Annotation ,acc.EnuAnnotationType ,crm.CustomerPk ,acc.Balance ,acc.Cancellation ,acc.Repost ,acc.VTransactionHistory ,config.DatagridSetting ,CustomerPaymentMethod ,payment.PaymentMethod ,payment.EnuPaymentType ,crm.CustomerSuplementaryContact ,crm.PersonOrCompanyPk ,crm.EnuContactType ,crm.EmailAddressPk ,crm.EnuCountry ,crm.EnuCustomerType ,crm.EnuPhoneNumberType ,crm.EnuStateProvince ,crm.HCustomer ,crm.PostalAddressPk ,crm.HEmailAddress ,crm.HPersonOrCompany ,crm.PhoneNumberPK ,crm.HPhoneNumber ,crm.HPostalAddress ,crm.VCustomerHistory ,VCustomerSearch ,crm.VDetailPageVehicleList ,tolling.LicensePlate ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.VehicleInfo ,tolling.Vehicle ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.CustomerVehicle ,cs.CSCase ,cs.CSCasePK ,cs.EnuCaseType ,cs.EnuCaseStatus ,cs.EnuCasePriority ,cs.CustomerCase ,cs.VCaseSearch ,payment.Payment ,payment.PaymentCredit ,tolling.CustomerPass ,tolling.Pass ,tolling.EnuPromoType ,tolling.Gantry ,tolling.Promo ,tolling.Trip ,tolling.TripInfo ,tolling.VFindVehicle ,tolling.VTripSearchColumns:
+	SOLVED csCaseId -> cs.CSCase.csCaseId
+	SOLVED subject -> cs.CSCase.subject
+	SOLVED caseTypeId -> cs.CSCase.caseTypeId
+	SOLVED caseStatusId -> cs.CSCase.caseStatusId
+	SOLVED casePriorityId -> cs.CSCase.casePriorityId
+	SOLVED manualReviewRequired -> cs.CSCase.manualReviewRequired
+	SOLVED customerId -> crm.HCustomer.customerId
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id crm
+              .
+              id 
+                simple_id VDetailPageCaseList
+            as
+            select_statement 
+              query_expression 
+                query_specification SELECT
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id csCaseId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id subject
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id caseTypeId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id caseStatusId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id casePriorityId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id c
+                        .
+                        id 
+                          simple_id manualReviewRequired
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id cu
+                        .
+                        id 
+                          simple_id customerId
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id cs
+                              .
+                              id 
+                                simple_id cscase
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id c
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id cs
+                                    .
+                                    id 
+                                      simple_id CustomerCase
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id cc
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id cc
+                                      .
+                                      id 
+                                        simple_id csCaseId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id c
+                                      .
+                                      id 
+                                        simple_id csCaseId
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id HCustomer
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id cu
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id cc
+                                      .
+                                      id 
+                                        simple_id customerId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id cc
+                                      .
+                                      id 
+                                        simple_id customerId
+  <EOF>*/

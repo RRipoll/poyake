@@ -1,0 +1,86 @@
+package com.jsantos.custom.filter;
+
+import org.zkoss.zk.ui.Component;
+import org.zkoss.zul.Div;
+
+import com.jsantos.common.model.SearchParameter.CompareType;
+import com.jsantos.common.model.conf.FilterConfiguration;
+import com.jsantos.common.util.ListValues;
+import com.jsantos.factory.locale.LocaleFactory;
+import com.jsantos.gui.zkcomponent.MTIntbox;
+import com.jsantos.metadata.MTDataTypes;
+import com.jsantos.orm.mt.MTDataType;
+
+/**
+ * @author javier santos
+ * @author raul ripoll
+ */
+
+public class IntegerFilterComponentBuilder extends FilterComponent {
+
+	IFilterComponent filtercomponent;
+
+	@Override
+	public Component buildFilterComponent() {
+		return filtercomponent.buildFilterComponent();
+	}
+
+	@Override
+	public MTDataType forModelType() {
+		return MTDataTypes.INT;
+	}
+
+	public Component buildIntegerFilterComponent() {
+
+		Div retValue = new Div();
+		retValue.setSclass("form-group form-float");
+		Div div2 = new Div();
+		div2.setSclass("form-line");
+		div2.setParent(retValue);
+
+		MTIntbox comp = new MTIntbox();
+
+		setEditorAtributes(comp, this);
+		comp.setParent(div2);
+		comp.setLabel(getDescription());
+
+		return retValue;
+	}
+
+	@Override
+	public void setInitialValues(ListValues<Object> initialValues) {
+		filtercomponent.setInitialValues(initialValues);
+	}
+
+	@Override
+	public ListValues<Object> getValues() {
+		return filtercomponent.getValues();
+	}
+
+	@Override
+	public FilterConfiguration getConfiguration() {
+		return filtercomponent.getConfiguration();
+	}
+
+	@Override
+	public void setConfiguration(FilterConfiguration conf) {
+		if (null != conf.getMtField().getForeignKey() && !conf.getMtField().isPrimaryKey()) {
+			if (conf.getMtField().getForeignKey().getPatterns().contains("Enumeration")) {
+				filtercomponent = new EnuFilterEditorBuilder();
+			} else {
+				filtercomponent = new PKFilterEditorBuilder();
+			}
+		} else {
+			if (CompareType.Range.equals(conf.getCompareType()))
+				filtercomponent = new RangeFilterEditorBuilder();
+			else
+				filtercomponent = new DefaultFilterEditorBuilder();
+		}
+		filtercomponent.setConfiguration(conf);
+	}
+
+	@Override
+	public ListValues<Object> getInitialValues() {
+		return filtercomponent.getInitialValues();
+	}
+}

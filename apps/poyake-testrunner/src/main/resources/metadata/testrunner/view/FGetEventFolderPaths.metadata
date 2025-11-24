@@ -1,0 +1,68 @@
+SQLNATIVE FILESTART{
+	DBTYPE H2  
+		<SQLNATIVESTART>
+
+CREATE  FORCE ALIAS testrunner.GETEVENTFOLDERPATH AS STRINGDECODE('
+String getEventFolderPath(java.sql.Connection con, String currentNodeuuId) throws Exception {
+        if( null==currentNodeuuId ) return null;
+        String buff = "";
+        java.sql.ResultSet rs = con.createStatement().executeQuery(" SELECT description,parentfolderuuid  FROM testrunner.eventdeffolder WHERE eventdeffolderuuid = ''" + currentNodeuuId+"''");
+        if(rs.next()){
+                          String parent=getEventFolderPath(con,rs.getString("parentfolderuuid"));
+                          buff=    (null==parent?"":parent+"/") +       (null==rs.getString("description")?"":rs.getString("description"));
+                     }
+              return buff;
+        }
+    ');    
+</SQLNATIVEEND>
+
+DBTYPE POSTGRESQL
+	<SQLNATIVESTART>
+	
+	CREATE or replace FUNCTION testrunner.GetEventFolderPath ( pCurrentNodeID    VARCHAR )
+		RETURNS VARCHAR(1000)
+		as
+		$$
+		DECLARE 
+			vCurrentNodeName     VARCHAR(50);
+			vParentID            INT;
+		BEGIN
+		IF pCurrentNodeID IS NULL OR pCurrentNodeID = 0 then RETURN NULL; end if;
+		SELECT DESCRIPTION, PARENTFOLDERUuid  into vCurrentNodeName, vParentID 
+		FROM eventdeffolder
+		WHERE eventdeffolderUuid = pCurrentNodeID;
+
+		RETURN coalesce(testrunner.GetEventFolderPath(vParentID) || '/', '') || vCurrentNodeName;
+	end
+	$$
+	LANGUAGE plpgsql;
+</SQLNATIVEEND>
+
+
+
+
+DBTYPE SQLSERVER
+		<SQLNATIVESTART>
+	CREATE FUNCTION [dbo].[GetEventFolderPath] ( @pCurrentNodeID    INT )
+	RETURNS VARCHAR(1000)
+	AS
+		BEGIN
+
+		DECLARE @vCurrentNodeName     VARCHAR(50)
+		DECLARE @vParentID            INT
+
+		IF @pCurrentNodeID IS NULL OR @pCurrentNodeID = 0
+    	RETURN NULL
+
+		SELECT @vCurrentNodeName = [DESCRIPTION], @vParentID = [PARENTFOLDERID]
+		FROM [eventdeffolder]
+		WHERE [eventdeffolderid] = @pCurrentNodeID
+
+		RETURN ISNULL([dbo].[GetEventFolderPath] ( @vParentID ) + '/', '') + @vCurrentNodeName
+
+	END
+</SQLNATIVEEND>
+
+
+}
+

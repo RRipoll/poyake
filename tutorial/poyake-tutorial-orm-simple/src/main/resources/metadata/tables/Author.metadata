@@ -1,0 +1,11 @@
+TABLE ENTITY Author{
+	PK authorId INT 
+	firstName VARCHAR (100) NOTNULL
+	lastName VARCHAR (100) NOTNULL
+
+	
+	LABELS{
+		firstName {SHORTLABEL en_EN 'First Name'}
+		ENTITY {SHORTLABEL en_EN 'Autor'}
+	}	
+}

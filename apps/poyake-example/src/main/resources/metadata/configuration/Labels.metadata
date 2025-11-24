@@ -1,0 +1,3 @@
+LABELS {
+	 ATTRIBUTE example.Book.title {SHORTLABEL en_EN 'the Title'}	
+}

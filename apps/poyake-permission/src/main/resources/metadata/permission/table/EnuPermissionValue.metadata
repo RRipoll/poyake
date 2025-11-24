@@ -1,0 +1,22 @@
+TABLE ENTITY permission.EnuPermissionValue PATTERN Enumeration{
+	PK permissionValueId INT NOTNULL 
+	shortCode VARCHAR ( 16 ) NOTNULL 
+	description VARCHAR ( 32 )  NOTNULL STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+	0,ALL,'All';
+	1,WRITE,'Write';
+	2,READ,'Read';
+	3,NO,'No';
+	
+	}
+	
+	
+	ENULABELS{
+		NO {es_ES 'No'}
+		READ {es_ES 'Lectura'}
+		WRITE {es_ES 'Escritura'}
+		ALL {es_ES 'Todos'}
+	}
+	
+}

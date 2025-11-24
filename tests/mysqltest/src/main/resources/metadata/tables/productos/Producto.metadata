@@ -1,0 +1,16 @@
+TABLE ENTITY Producto PATTERN auditada
+{
+	PK productoId INT
+	nombre VARCHAR (100)
+	ref VARCHAR (15)
+	descripcion VARCHAR (256)
+	comentariosId INT NOTNULL FKTO Comentarios
+	creado DATETIME
+	editado DATETIME
+	borrado DATETIME
+	
+	METADATA {
+		1, "perrito", 'REF1', "UN PERRETE", 1, '2001-01-01', '2001-01-01', '2001-01-01'; 
+		2, "gatito", 'REF2', "UN GATETE", 2, '2001-01-01', '2001-01-01', '2001-01-01'; 
+	}
+}

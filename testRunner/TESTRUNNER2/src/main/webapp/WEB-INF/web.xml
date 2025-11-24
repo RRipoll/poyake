@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<display-name>NH-Layout</display-name>
+	
+	<listener>
+		<description>
+			Used to cleanup when a session is destroyed
+		</description>
+		<display-name>ZK Session cleaner</display-name>
+		<listener-class>org.zkoss.zk.ui.http.HttpSessionListener
+		</listener-class>
+	</listener>
+	<listener>
+		<description>IDC globals code context initialization</description>
+		<display-name>IDC globals code context context initialization</display-name>
+		
+		<listener-class>com.etantolling.testrunner.config.WebContextInitializer</listener-class>
+	
+	</listener>
+	<!-- Use RequestContextListener to support web-scoped beans (request, session, global session). -->
+	
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	<servlet>
+		<description>
+			The ZK loader for ZUML pages
+		</description>
+		<servlet-name>zkLoader</servlet-name>
+		<servlet-class>org.zkoss.zk.ui.http.DHtmlLayoutServlet</servlet-class>
+		<init-param>
+			<param-name>update-uri</param-name>
+			<param-value>/zkau</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<description>
+			The asynchronous update engine for ZK
+		</description>
+		<servlet-name>auEngine</servlet-name>
+		<servlet-class>org.zkoss.zk.au.http.DHtmlUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>zkLoader</servlet-name>
+		<url-pattern>*.zul</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zkLoader</servlet-name>
+		<url-pattern>*.zhtml</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>auEngine</servlet-name>
+		<url-pattern>/zkau/*</url-pattern>
+	</servlet-mapping>
+		<servlet>
+	  <servlet-name>BarcodeServlet</servlet-name>
+	  <servlet-class>org.krysalis.barcode4j.servlet.BarcodeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	  <servlet-name>BarcodeServlet</servlet-name>
+	  <url-pattern>/barcode</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<session-config>
+		<session-timeout>240</session-timeout>
+	</session-config>
+	<!-- 
+	<security-constraint>
+	    <web-resource-collection>
+	        <web-resource-name>securedBOS</web-resource-name>
+	        <url-pattern>/*</url-pattern>
+	    </web-resource-collection>
+	    <user-data-constraint>
+ 	        <transport-guarantee>CONFIDENTIAL</transport-guarantee> 
+	    </user-data-constraint>
+	</security-constraint>
+	 -->
+</web-app>

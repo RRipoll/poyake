@@ -1,0 +1,6 @@
+<Context reloadable="true" allowLinking="true">
+ 	 
+ 	<ResourceLink name="jdbc/maindb" global="jdbc/testrepository" type="javax.sql.DataSource" />
+	
+	<Manager pathname="" /> 	
+</Context>

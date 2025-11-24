@@ -1,0 +1,13 @@
+ENTITY crm.Address {
+	PK addressId INT
+	street VARCHAR(64)
+	city VARCHAR(64)
+	zipCode VARCHAR(9)
+	country VARCHAR(16) 
+	customerId INT FKTO crm.Customer
+
+
+	LABELS{
+		street {SHORTLABEL es_ES "Calle"}
+	}
+}

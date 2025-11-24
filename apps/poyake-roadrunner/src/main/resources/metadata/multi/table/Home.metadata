@@ -1,0 +1,15 @@
+//SQLFILEDEPENDENCY '/commondata/src/main/resources/metadata/config/getPostingDate.sql'
+
+TABLE ENTITY multi.Home{
+	PK homeId INT
+	postingDate DATE NOTNULL DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	customerId INT NOTNULL FKTO crm.CustomerPk
+	name VARCHAR(255) STEREOTYPES DESCRIPTION
+	
+	METADATA{
+		1,DEFAULT,1,"primera";
+		2,DEFAULT,1,"segunda";
+		3,DEFAULT,1,"tercera";
+	}
+	
+}

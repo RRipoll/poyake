@@ -1,0 +1,5 @@
+ENTITY LinkTable {
+	PK addressId INT FKTO crm.Address
+	customerId INT FKTO crm.Customer
+	
+}

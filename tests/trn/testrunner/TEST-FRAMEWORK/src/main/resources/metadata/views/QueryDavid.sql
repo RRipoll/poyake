@@ -1,0 +1,1 @@
+select * from pub.event e join pub.EventDefinition ed on e.eventdefinitionId=ed.eventdefinitionid

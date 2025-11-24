@@ -1,0 +1,5 @@
+TABLE ENTITY acc.AuditedTable {
+	PK auditedTableId INT
+	inputUserId INT NOTNULL FKTO audit.InputUser
+	created DATE NOTNULL DEFAULT "'01-Jan-2099'"
+}

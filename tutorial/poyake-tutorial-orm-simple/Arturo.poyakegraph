@@ -1,0 +1,26 @@
+[
+  {
+    "entityFQN": "Book",
+    "x": 526,
+    "y": 83,
+    "showPks": true,
+    "showFks": true,
+    "showNonKeyFields": true
+  },
+  {
+    "entityFQN": "Author",
+    "x": 188,
+    "y": 340,
+    "showPks": true,
+    "showFks": true,
+    "showNonKeyFields": true
+  },
+  {
+    "entityFQN": "Genre",
+    "x": 892,
+    "y": 340,
+    "showPks": true,
+    "showFks": true,
+    "showNonKeyFields": true
+  }
+]

@@ -1,0 +1,14 @@
+TABLE ENTITY eva.EnuWorkType PATTERN Enumeration{
+	PK workTypeId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, QUOTE, 'Quote';
+		2, REPAIRWORK, 'Repair work';
+		3, PLANS, 'Plans';
+		4, DIAGNOSIS, 'Diagnosis';
+		5, MAINTENANCE, 'Maintenance';
+		6, OTHER, 'Other';
+	}
+}

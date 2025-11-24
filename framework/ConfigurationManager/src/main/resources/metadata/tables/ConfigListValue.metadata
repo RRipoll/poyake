@@ -1,0 +1,5 @@
+TABLE ENTITY cfg.ConfigListValue {
+	PK configSetValueId INT 
+	configKeyId INT FKTO cfg.ConfigKey 
+	value VARCHAR(64)
+}

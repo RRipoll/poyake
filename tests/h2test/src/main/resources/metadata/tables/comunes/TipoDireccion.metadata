@@ -1,0 +1,16 @@
+TABLE ENTITY TipoDireccion PATTERN auditada
+{
+	PK tipoDireccionId INT
+	tipo VARCHAR (50) NOTNULL
+	descripcion VARCHAR (256)
+	
+	
+	creado DATETIME
+	editado DATETIME
+	borrado DATETIME
+	METADATA
+	{
+		1,"Dirección de Envío","Dirección donde recibe paquetes","2020-01-01 00:00:00","2020-01-01 00:00:00","2020-01-01 00:00:00";
+		2,"Dirección de Facturación","Dirección donde enviar facturas","2020-01-01 00:00:00","2020-01-01 00:00:00","2020-01-01 00:00:00";
+	}
+}

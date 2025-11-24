@@ -1,0 +1,12 @@
+TABLE ENTITY cfg.EnuConfigKeyType PATTERN Enumeration{
+	PK configKeyTypeId INT
+	UQ shortCode VARCHAR ( 16 ) NOTNULL
+	description VARCHAR ( 32 ) NOTNULL
+	
+	METADATA {
+		1, "SINGLEVALUE", "Leaf entry (holds a value)";
+		2, "VALUEWITHTIME", "Leaf entry (holds a value)";
+		3, "FOLDER", "Folder";
+		4, "LIST", "A List of entries";
+	}
+}

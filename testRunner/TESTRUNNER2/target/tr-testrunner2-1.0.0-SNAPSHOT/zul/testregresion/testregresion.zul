@@ -1,0 +1,163 @@
+<?page title="Test Runner Tool"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	
+<?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"?>
+	
+	<window apply="com.etantolling.testrunner.testrunner2.regresion.TestGUIControler">
+	
+	 <tabbox id="tb_customers" vflex="1">
+		<tabs>
+			<tab id="create" label="Create"/>
+			<tab id="see" label="History"/>
+		</tabs>
+		<tabpanels>
+			<tabpanel id="createpanel">
+	
+	
+	
+	
+				<div><h:h1>REGRESION TEST CREATION</h:h1></div>
+				<div id="TEST_FILTER" >
+					<div >
+						<div style="float:left;padding:2px 10px;">
+								<label value="ID"/>
+								<intbox id="TESTID">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes field="TESTID" />
+								</intbox>
+						</div>						
+						
+						<div style="float:left;padding:2px 10px;">
+								
+								<label value="Owner"/>
+								<textbox id="OWNER" width="150px">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes where=" like " />
+									<custom-attributes field="OWNER" />
+								</textbox>
+						</div>						
+
+						<div style="float:left;padding:2px 10px;">
+								
+								<label value="Folder"/>
+								<textbox id="FOLDERID" width="150px">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes where=" like " />
+									<custom-attributes field="FOLDERID" />
+								</textbox>
+						</div>						
+
+						<div style="float:left;padding:2px 10px;">
+								
+								<label value="KeyWords"/>
+								<textbox id="KEYWORDS" width="150px">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes where=" like " />
+									<custom-attributes field="KEYWORDS" />
+								</textbox>
+						</div>						
+
+						<div style="float:left;padding:2px 10px;">
+							
+							<label value="Start Date"/>
+								<datebox format="MM/dd/yyyy" id="STARTDATE">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes where=" ge " />
+									<custom-attributes field="STARTDATE" />
+								</datebox>
+						</div>						
+
+						<div style="float:left;padding:2px 10px;">
+								
+								<label value="End Date"/>
+								<datebox format="MM/dd/yyyy" id="ENDDATE">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes where=" le " />
+									<custom-attributes field="ENDDATE" />
+								</datebox>
+						</div>						
+						<div style="float:left;padding:2px 10px;">
+							<button label="run Regresion Test Batch" id="regresion_run"/>	
+						</div>		
+					</div>
+						
+						<space/>	
+								<button label="Filter">
+									<custom-attributes type="FILTER"/>
+								</button>
+		</div>
+		<div id="TEST_LIST"  style="float:right; width:100%; height:100%;"/>
+
+
+	
+	</tabpanel>
+	<tabpanel id="createsee" vflex="1">
+	
+	
+	<div><h:h1>HISTORY REGRESION TEST</h:h1></div>
+				<div id="TEST_FILTER_HISTORY" >
+					<div >
+						<div style="float:left;padding:2px 10px;">
+								<label value="TestId"/>
+								<intbox id="TESTID_HISTORY">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes field="TESTID" />
+								</intbox>
+						</div>						
+						
+						<div style="float:left;padding:2px 10px;">
+								<label value="TestRunnerId"/>
+								<intbox id="TESTRUNNERID_HISTORY">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes field="TESTRUNNERID" />
+								</intbox>
+						</div>						
+						
+						<div style="float:left;padding:2px 10px;">
+								
+								<label value="Creator"/>
+								<textbox id="OWNER_HISTORY" width="150px">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes where=" like " />
+									<custom-attributes field="CREATOR" />
+								</textbox>
+						</div>						
+
+
+
+						<div style="float:left;padding:2px 10px;">
+							
+							<label value="Created From "/>
+								<datebox format="MM/dd/yyyy" id="STARTDATE_HISTORY">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes where=" ge " />
+									<custom-attributes field="CREATED" />
+								</datebox>
+						</div>						
+
+						<div style="float:left;padding:2px 10px;">
+								
+								<label value=" TO "/>
+								<datebox format="MM/dd/yyyy" id="ENDDATE_HISTORY">
+									<custom-attributes type="FILTER"/>
+									<custom-attributes where=" le " />
+									<custom-attributes field="CREATED" />
+								</datebox>
+						</div>						
+					</div>
+						<space/>
+		</div>
+		<div id="TEST_LIST_HISTORY"  style="float:right; width:100% ;"/>
+	
+	
+	
+	
+	</tabpanel>
+
+	</tabpanels>
+	</tabbox>
+			
+	</window>
+</zk>

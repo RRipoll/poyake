@@ -1,0 +1,85 @@
+td.apptitletext{
+	color: #DF0003;
+	font-family: Arial,Verdana,Helvetica,sans-serif;
+	font-size: 40px;
+	font-weight: bold;	
+}
+
+td.lightweightbutton {
+	color: yellow
+}
+
+td.leftmenu {
+	height: 33px;
+	background: #E1F1FB;
+	color:black;
+	padding:5px;
+	padding-left: 10px;
+	cursor:pointer;
+	font-family: Arial,Verdana,Helvetica,sans-serif;
+	font-weight: bold;	
+}
+
+td.leftmenu:hover {
+	background: #CFDDE6;
+}
+
+td.leftmenu_selected {
+	height: 33px;
+	background: #A8BDC8;
+	color:black;
+	padding:5px;
+	padding-left: 10px;
+	cursor:pointer;
+	font-family: Arial,Verdana,Helvetica,sans-serif;
+	font-weight: bold;	
+}
+
+td.leftsubmenu {
+	height: 20px;
+	background: lightgrey;
+	color: darkgrey;
+	padding:2px;
+	padding-left: 20px;
+	cursor:pointer;
+	font-family: Arial,Verdana,Helvetica,sans-serif;
+	font-weight: bold;	
+}
+
+td.leftsubmenu:hover {
+	background: #CFDDE6;
+	color:white;
+}
+
+
+td.leftsubmenu_selected {
+	height: 20px;
+	background: #A8BDC8;
+	color: white;
+	padding:2px;
+	padding-left: 20px;
+	cursor:pointer;
+	font-family: Arial,Verdana,Helvetica,sans-serif;
+	font-weight: bold;	
+}
+
+table.grid_table{
+	width:100%;
+}
+
+th.grid_header{
+	background: #A8BDC8;
+	border-color:#DAE7F6 #9EB6CE #9EB6CE #DAE7F6;
+	border-style:solid;
+	border-width:1px;
+	font-size:12px;
+	font-weight:normal;
+	padding:2px;
+}	
+
+div.grid_div{
+	width:100%;
+	height:100%;
+	overflow:auto;
+}
+

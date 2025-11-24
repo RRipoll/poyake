@@ -1,0 +1,13 @@
+TABLE ENTITY crm.EnuCountry PATTERN Enumeration{
+	PK countryId INT 
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		0, UNK, 'Unknown';
+		1, US, 'USA';
+		2, CA, 'Canada';
+		3, MX, 'Mexico';
+		4, SP, 'Spain';
+	}
+}

@@ -1,0 +1,6 @@
+TABLE ENTITY PurchaseOrder EXTENDS AuditedTable{
+	PK purchaseOrderId INT FKTO AuditedTable
+	firstName VARCHAR(16)
+	lastName VARCHAR(16)
+	vatNumber VARCHAR(16)
+}

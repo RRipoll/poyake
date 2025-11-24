@@ -1,0 +1,18 @@
+TABLE ENTITY audit.InputSource STEREOTYPES CONFIG{
+	PK inputSourceId INT
+	shortCode VARCHAR(16) NOTNULL
+	description VARCHAR(64) NOTNULL STEREOTYPES DESCRIPTION
+	
+	METADATA{
+		1, 'SYSTEM', 'System source';
+		2, 'APP', 'Back Office Application';
+	}
+	LABELS {
+		inputSourceId {en_EN 'Source #' es_ES '# Origen'}
+		shortCode{en_EN 'Short Code' es_ES 'Código'}
+		description{en_EN 'Description' es_ES 'Descripción'}
+		
+	}
+	
+	
+}

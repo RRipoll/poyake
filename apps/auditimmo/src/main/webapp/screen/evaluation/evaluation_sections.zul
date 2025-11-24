@@ -1,0 +1,27 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+		<div class="container-fluid h-100 root-div" >
+			<div class="mt-evaluations-sidebar mt-sidebar-container ">
+				<h:nav class="my-navbar-background my-navbar h-100">
+					<div align="right" height="25px" style="padding-right:5px;valign:top;">Sections</div>
+					<div  class="mt-evaluations-checkboxes">
+						<checkbox class="evaluations-checkbox" label="O"/>
+						<checkbox class="evaluations-checkbox" label="E-"/>
+						<checkbox class="evaluations-checkbox" label="Ev"/>
+						<checkbox class="evaluations-checkbox" label="NA"/>
+					</div>
+					<div class="mt-evaluations-sections" id="EVALUATION_SECTIONS" />
+				</h:nav>
+			</div>
+			<div class="mt-subsection-container" >
+					<div class="pull-right">
+						<button class="btn btn-primary" id="SUBSECTION_BUTTON_PRIOR">Prior</button>
+						<button class="btn btn-primary" id="SUBSECTION_BUTTON_NEXT">Next</button>
+					</div>
+					<div id="SUBSECTION_CONTAINER"/>
+			</div>
+			<button class="btn btn-danger" style="position:absolute;right:10px;bottom:10px" id="BUTTON_SECTIONS_CLOSE">Close</button>
+		</div>
+</zk>

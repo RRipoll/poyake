@@ -1,0 +1,237 @@
+FROMSQLFILE '/mysqltest/src/main/resources/metadata/views/VProductInfo.sql'
+
+VIEW  ENTITY VProductInfo {
+	productoId INT SAMEAS Producto.productoId
+	nombre VARCHAR(100) SAMEAS Producto.nombre
+	referencia VARCHAR(15) SAMEAS Producto.ref
+	descripcion VARCHAR(256) SAMEAS Producto.descripcion
+	caracteristicas VARCHAR(1000)
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: VProductInfo  
+VIEW NAME: VProductInfo 
+VIEW SCHEMA: dbo
+
+Tables:
+	TABLE: Producto Alias: p
+	TABLE: Caracteristica Alias: c
+	TABLE: Caracteristica Alias: c
+	TABLE: Caracteristicas Alias: cars
+Output:
+	COLUMN: productoId -> Producto.productoId
+	COLUMN: nombre -> Producto.nombre
+	COLUMN: referencia -> NOT FOUND
+	COLUMN: descripcion -> Producto.descripcion
+	COLUMN: caracteristicas -> NOT FOUND
+
+
+================= Resolver Information ======================== 
+Entity List:
+	InfoProducto ,Producto ,Comentarios ,Agente ,Empleado ,Persona ,Direcciones ,Empresa ,GrupoAgente ,TipoGrupoAgente ,GruposAgente ,Usuario ,CodPostal ,Comentario ,TipoComentario ,Direccion ,TipoDireccion ,Telefono ,TipoTelefono ,Telefonos ,Caracteristica ,Caracteristicas ,UnidadColumns:
+	SOLVED productoId -> Producto.productoId
+	SOLVED nombre -> Producto.nombre
+	SOLVED referencia -> Producto.ref
+	SOLVED descripcion -> Producto.descripcion
+	ATTRIBUTE_NOT_FOUND caracteristicas -> 
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id VProductInfo
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id p
+                        .
+                        id 
+                          simple_id productoId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id p
+                        .
+                        id 
+                          simple_id nombre
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id ref
+                        as_column_alias as
+                          column_alias 
+                            id 
+                              simple_id referencia
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id p
+                        .
+                        id 
+                          simple_id descripcion
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id caracteristicas
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id Producto
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id p
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                derived_table 
+                                  subquery 
+                                    select_statement 
+                                      query_expression (
+                                        query_expression 
+                                          query_specification select
+                                            select_list 
+                                              select_list_elem 
+                                                expression_elem 
+                                                  expression 
+                                                    function_call 
+                                                      scalar_function_name 
+                                                        func_proc_name_server_database_schema 
+                                                          func_proc_name_database_schema 
+                                                            func_proc_name_schema 
+                                                              id 
+                                                                simple_id Group_Concat
+                                                      (
+                                                      expression_list 
+                                                        expression 
+                                                          full_column_name 
+                                                            table_name 
+                                                              id 
+                                                                simple_id c
+                                                            .
+                                                            id 
+                                                              simple_id nombre
+                                                      )
+                                                  as_column_alias 
+                                                    column_alias 
+                                                      id 
+                                                        simple_id caracteristicas
+                                              ,
+                                              select_list_elem 
+                                                column_elem 
+                                                  table_name 
+                                                    id 
+                                                      simple_id cars
+                                                  .
+                                                  id 
+                                                    simple_id productId
+                                            from
+                                            table_sources 
+                                              table_source 
+                                                table_source_item_joined 
+                                                  table_source_item 
+                                                    table_name_with_hint 
+                                                      table_name 
+                                                        id 
+                                                          simple_id Caracteristica
+                                                    as_table_alias 
+                                                      table_alias 
+                                                        id 
+                                                          simple_id c
+                                                  join_part join
+                                                    table_source 
+                                                      table_source_item_joined 
+                                                        table_source_item 
+                                                          table_name_with_hint 
+                                                            table_name 
+                                                              id 
+                                                                simple_id Caracteristicas
+                                                          as_table_alias 
+                                                            table_alias 
+                                                              id 
+                                                                simple_id cars
+                                                    on
+                                                    search_condition 
+                                                      search_condition_and 
+                                                        search_condition_not 
+                                                          predicate 
+                                                            expression 
+                                                              full_column_name 
+                                                                table_name 
+                                                                  id 
+                                                                    simple_id c
+                                                                .
+                                                                id 
+                                                                  simple_id caracteristicaId
+                                                            comparison_operator =
+                                                            expression 
+                                                              full_column_name 
+                                                                table_name 
+                                                                  id 
+                                                                    simple_id cars
+                                                                .
+                                                                id 
+                                                                  simple_id caracteristicaId
+                                            groupby
+                                            group_by_item 
+                                              expression 
+                                                full_column_name 
+                                                  table_name 
+                                                    id 
+                                                      simple_id cars
+                                                  .
+                                                  id 
+                                                    simple_id productId
+                                        )
+                                as_table_alias as
+                                  table_alias 
+                                    id 
+                                      simple_id C2
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id C2
+                                      .
+                                      id 
+                                        simple_id productId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id p
+                                      .
+                                      id 
+                                        simple_id productoId
+  <EOF>*/

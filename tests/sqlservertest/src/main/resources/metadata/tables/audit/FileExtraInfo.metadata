@@ -1,0 +1,5 @@
+TABLE ENTITY audit.FileExtraInfo{
+	PK fileExtraInfoId INT
+	extraInfo VARCHAR(64)
+	sourceFileId INT FKTO audit.SourceFile
+}

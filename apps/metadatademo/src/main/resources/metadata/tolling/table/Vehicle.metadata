@@ -1,0 +1,3 @@
+TABLE ENTITY tolling.Vehicle{
+	PK vehicleId INT
+}

@@ -1,0 +1,26 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+	<window closable="true" title="create">
+		<groupbox title="Add Parameters (+)" open="false">
+			<hlayout  >
+				<label value="Label Name" /><textbox id="newlabelname"  width="300px" />
+				<space/>
+				<label value="Type" /><combobox id="newType" />
+				<space/>
+				<checkbox label="Input"  id="ISINPUTPARAMETER"/>
+				<space/>
+				<checkbox label="Output" id="ISOUTPUTPARAMETER"/>
+			
+				<button id="ADD_PAREMETERS" label="Add Paramenter" />
+				<button id="RESET_PAREMETERS" label="Reset Parameters" />
+			</hlayout>
+		</groupbox>
+		
+		<div id="FIELD_LIST">
+		</div>
+		
+		<button id="SAVE_BUTTON" label="Save" />
+	</window>
+</zk>

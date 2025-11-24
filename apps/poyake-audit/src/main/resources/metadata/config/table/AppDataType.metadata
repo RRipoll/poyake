@@ -1,0 +1,14 @@
+TABLE ENTITY config.AppDataType PATTERN Enumeration {
+	
+	PK appDataTypeId INT 
+	shortCode VARCHAR ( 16 ) NOTNULL
+	description VARCHAR ( 32 ) NOTNULL STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1,TEXT,'Text';
+		2,INTEGER,'Integer';
+		3,BOOLEAN,'Boolean';
+		4,DATE,'Date';
+		5,DECIMAL,'Decimal';
+	}
+}

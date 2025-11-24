@@ -1,0 +1,66 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:z="zul">
+ 	
+   <z:window border="0" closable="true"  sizable="true" >
+		<style >
+    		#jsoneditor {
+      			width: 100%;
+      			height: 80%;
+    		}
+  		</style>
+  		<h:section class="content" style="margin:0px;min-width:400px">
+  			<div class="card" style="margin-bottom:0px" >
+				<div class="header bg-light-green">
+					<label id="HEADER_LABEL" class="h5"></label>
+					
+  					<div class="float-right bg-light-green" id="HEADER_DIV">
+						<n:button class="float-left btn btn-danger ml-2 waves-effect pull-right" id="getJSON">Update JSON</n:button>	
+						<h:button id="JSONEDITOR_CANCEL_BUTTON" class="btn btn-danger ml-2 waves-effect pull-right">${mtlabels.cancel}</h:button>
+					</div>
+				</div>
+  				
+  				<div class="body" >
+					<textbox id="label"   visible="false" >
+  						<custom-attributes org.zkoss.zk.ui.updateByClient="true"/>
+  					</textbox>
+					<n:div id="jsoneditor"></n:div>
+	
+			<n:script  >
+  				var container = document.getElementById('jsoneditor');
+  				var options = {
+  					mode: 'tree',
+    				modes: ['code', 'text', 'tree'], // allowed modes
+    				onError: function (err) {
+      					alert(err.toString());
+    				},
+    				onModeChange: function (newMode, oldMode) {
+      					console.log('Mode switched from', oldMode, 'to', newMode);
+    				}
+  				};
+  			
+  				var editor = new JSONEditor(container, options);
+  		
+  				document.getElementById('getJSON').onclick = function () {
+    				var json = editor.get();
+    				zk.Widget.$("$label").setValue(json);
+    				zk.Widget.$("$label").smartUpdate('value', json);
+    				zk.Widget.$("$label").fire('onChange',{}, {toServer:true});
+  					};
+    			
+		</n:script>	
+					<div id="FIELD_LIST" />
+					<div id="EXTRA_DIV" />
+					<div id="BUTTON_DIV" />
+				</div>
+			</div>
+		
+			
+		
+		
+		
+			
+		</h:section>
+	</z:window>
+</zk>

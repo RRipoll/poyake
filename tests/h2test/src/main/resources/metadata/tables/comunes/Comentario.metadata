@@ -1,0 +1,14 @@
+// Un objeto para tratar multiples comentarios para objetos, pueden ser de diferentes tipos
+TABLE ENTITY Comentario PATTERN auditada
+{
+	PK comentarioId INT
+	tipo INT NOTNULL FKTO TipoComentario
+	texto VARCHAR(1024) NOTNULL
+	comentariosId INT NOTNULL FKTO Comentarios
+	
+	creado DATETIME
+	editado DATETIME
+	borrado DATETIME
+	
+	
+}

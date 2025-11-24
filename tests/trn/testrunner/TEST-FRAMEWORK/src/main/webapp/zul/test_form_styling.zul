@@ -1,0 +1,120 @@
+<?page title="Home Page" ?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	<window width="99%" closable="true" title="Test Editor Styling"
+			apply="com.jsantos.metadata.demo.EditFormStylingController">
+		<style>
+		
+				
+				.field {
+				  display: flex;
+				  flex-flow: column-reverse;
+				  margin-bottom: 1em;
+				}
+
+				input {
+				  font-size: 1.1em;
+				  border: 0;
+				  border-bottom: 1px solid #ccc;
+				  font-family: inherit;
+				  -webkit-appearance: none;
+				  border-radius: 0;
+				  padding: 0;
+				  cursor: text;
+				}
+				
+				::-webkit-input-placeholder {
+				  opacity: 0;
+				}
+
+				label, input {
+				  transition: all 0.2s;
+				  touch-action: manipulation;
+				}
+
+				
+				input:focus {
+				  outline: 0;
+				  border-bottom: 1px solid #666;
+				}
+				
+				label {
+				  font-size: 0.8em;
+				  letter-spacing: 0.05em;
+				  color:grey;
+				  transform-origin: left bottom;
+				  transform: translate(0, 1.3rem);
+				}
+				
+				input:not(:placeholder-shown) + label{
+					transform-origin: left bottom;
+					transform: translate(0, 0);
+				}
+				
+				input:focus + label{
+					transform-origin: left bottom;
+					transform: translate(0, 0);
+				}
+				
+		
+		</style>
+			<hbox hflex="1">
+				<div class="field" >
+					<textbox id="nombre"  name="nombre" zclass="none" placeholder="."/>
+					<n:label for="${nombre.uuid}">Nombre</n:label>
+				</div>
+				<div class="field" >
+					<textbox id="apellido"  name="apellido" zclass="none" placeholder="."/>
+					<n:label for="${apellido.uuid}">Apellido</n:label>
+				</div>
+			</hbox>
+			<div class="field">
+				<textbox id="direccion"  name="direccion" zclass="none" placeholder="."/>
+				<n:label for="${direccion.uuid }">Dirección</n:label>
+			
+			</div>
+			<div >
+				<style>
+				input.z-combobox-input{
+				  outline: 0;
+				  border:0px;
+				  border-bottom: 1px solid #666;
+				}		
+				a.z-combobox-button{
+				  border:0px;
+				}	
+				</style>			
+				<combobox id="pais2" name="pais2">
+					<comboitem value="España" label="España"/>
+					<comboitem value="Portugal" label="Portugal"/>
+				</combobox>
+			</div>
+			<div >
+				<style>
+				input.z-datebox-input{
+				  outline: 0;
+				  border:0px;
+				  border-bottom: 1px solid #666;
+				}		
+				a.z-datebox-button{
+				  border:0px;
+				}				
+				</style>
+				<datebox cols="12" format="yyyy/MM/dd" onCreate="self.value = new Date()" id="birthdate" placeholder="."/>
+			</div>
+			<div>
+				<n:br/>
+				<radiogroup>
+					<radio label="one" />
+					<radio label="two" />
+				</radiogroup>
+			</div>
+			<div>
+				<n:br/>
+				<checkbox label="Accept cookies?" />
+			</div>
+			<hbox width="100%" pack="end"><button id="ButtonOK">OK</button></hbox>
+			
+	</window>
+</zk>

@@ -1,0 +1,14 @@
+  <Resource 
+  auth="Container" 
+  driverClassName="org.h2.Driver" 
+  maxActive="20" 
+  maxIdle="30" 
+  maxWait="10000" 
+  name="jdbc/testrepository" 
+  password="sa" 
+  type="javax.sql.DataSource" 
+  url="jdbc:h2:./testdb;AUTO_SERVER=TRUE" 
+  username="sa"/>
+  <!-- url="jdbc:h2:<Disk address>;AUTO_SERVER=TRUE"   -->
+     
+   

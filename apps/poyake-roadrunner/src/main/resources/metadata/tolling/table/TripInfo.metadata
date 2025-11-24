@@ -1,0 +1,23 @@
+TABLE ENTITY tolling.TripInfo PATTERN AutoHistory{
+	tripId INT NOTNULL FKTO tolling.Trip STEREOTYPES AUTOHISTORYMAINFK
+	fareAmount MONEY NOTNULL
+	laneExitDate DATE NOTNULL
+	gantryId INT NOTNULL FKTO tolling.Gantry
+	laneEntryDate DATE
+	licensePlateId INT FKTO tolling.LicensePlate
+	passId INT FKTO tolling.Pass
+	
+	PK revisionId INT STEREOTYPES NOGUIINPUT
+	startDate DATETIME NOTNULL DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	endDate DATETIME NOTNULL DEFAULT MAXDATE STEREOTYPES NOGUIINPUT
+	inputUserId INT NOTNULL FKTO audit.InputUser DEFAULT "1" STEREOTYPES NOGUIINPUT
+	inputSourceId INT NOTNULL FKTO audit.InputSource DEFAULT "1" STEREOTYPES NOGUIINPUT
+	
+	LABELS{
+		ENTITY {en_EN 'Trip' es_ES 'Transito'}
+		tripId {en_EN 'Trip #' es_ES '# Transito'}
+		fareAmount {SHORTLABEL en_EN 'Amount' es_ES 'Cantidad'}
+		laneEntryDate {SHORTLABEL en_EN 'Lane Entry Date' es_ES 'Fecha de Entrada'}
+		laneExitDate {SHORTLABEL en_EN 'Lane Exit Date' es_ES 'Fecha de Salida'}
+	}
+}

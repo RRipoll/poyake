@@ -1,0 +1,3 @@
+TABLE ENTITY acc.LedgerItem{
+	PK ledgerItemId INT
+}

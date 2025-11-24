@@ -1,0 +1,104 @@
+<?page title="Test Runner Tool"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	
+	<?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"?>
+	
+	<zscript><![CDATA[  
+		if (!com.etantolling.testrunner.test.zkweb.DesktopHelper.isUserLogged()) {
+			Executions.getCurrent().sendRedirect("testgui.zul");   
+		}
+    ]]>
+    </zscript>
+	
+	
+	<window apply="com.etantolling.testrunner.testrunner2.testrunnergui.TestGUIController">
+		<div><h:h1>TEST RUNNER v3.0</h:h1> <h:h1> from : <label id="testUrl"/> to: <label id="bosUrl"/></h:h1></div><div>Test list:</div>
+		<hbox pack="right" width="100%"><button id="RECORDER" label="Recorder" />
+		<separator></separator><separator></separator>
+		</hbox>
+		<div id="TEST_FILTER">
+		<hlayout>
+			<label value="ID"/><space/>
+			<intbox id="TESTID">
+				<custom-attributes type="FILTER"/>
+				<custom-attributes field="TESTID" />
+			</intbox>
+			<space/>
+			<label value="Test Name"/><space/>
+			<textbox id="TESTNAME" width="150px">
+				<custom-attributes type="FILTER"/>
+				<custom-attributes where=" like " />
+				<custom-attributes field="TESTNAME" />
+			</textbox>
+			<space/>
+			<label value="Test Description"/><space/>
+			<textbox id="DESCRIPTION" width="150px">
+				<custom-attributes type="FILTER"/>
+				<custom-attributes where=" like " />
+				<custom-attributes field="DESCRIPTION" />
+			</textbox>
+			<space/>
+			<label value="Owner"/><space/>
+			<textbox id="OWNER" width="150px">
+				<custom-attributes type="FILTER"/>
+				<custom-attributes where=" like " />
+				<custom-attributes field="OWNER" />
+			</textbox>
+			<space/>
+			
+			<label value="Folder"/><space/>
+			
+			<!--
+			
+			<textbox id="FOLDERID" width="150px">
+				<custom-attributes type="FILTER"/>
+				<custom-attributes where=" like " />
+				<custom-attributes field="FOLDERID" />
+			</textbox>
+			
+			-->
+			
+			<combobox id="FOLDERID" width="150px" autocomplete="true" autodrop="true" readonly="true" >
+				<custom-attributes type="FILTER"/>
+				<custom-attributes field="FOLDERID" />
+				<custom-attributes values="folderValues" />
+			</combobox>
+						
+			<space/>
+						
+			<label value="KeyWords"/><space/>
+			<textbox id="KEYWORDS" width="150px">
+				<custom-attributes type="FILTER"/>
+				<custom-attributes where=" like " />
+				<custom-attributes field="KEYWORDS" />
+			</textbox>
+			<space/>
+		
+			<space/>	
+			<button label="Filter">
+				<custom-attributes type="FILTER"/>
+			</button>
+		</hlayout>
+		<space/>
+		<groupbox>
+			<div id="divTestRunning" visible="true">
+				<separator></separator>
+				<label style="font-weight:bold;" id="lblTestRunning"></label>
+				<separator></separator>
+			</div>
+		</groupbox>
+	</div>
+	<div id="TEST_LIST" height="70%" style="overflow:auto;">
+		<custom-attributes TESTID="hflex:min"/>
+		<custom-attributes OWNER="hflex:min"/>
+		<custom-attributes STARTDATE="hflex:min"/>
+		<custom-attributes ENDDATE="hflex:min"/>
+		<custom-attributes NOTES="hflex:1"/>
+		<custom-attributes DESCRIPTION="hflex:1"/>
+		<custom-attributes FOLDERID="hide:true"/>
+	    <custom-attributes RUNNIGHTLYSCRIPTS="hide:true"/>
+	</div>
+	</window>
+</zk>

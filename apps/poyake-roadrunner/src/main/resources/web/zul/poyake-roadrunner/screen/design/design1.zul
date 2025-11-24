@@ -1,0 +1,78 @@
+
+<?meta charset="UTF-8" ?>
+<?meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" ?>
+<?link rel="stylesheet" href="~./common/css/bootstrap.min.css"?>
+<?link rel="stylesheet" href="css/adminbsb.css" ?>
+
+
+<zk xmlns="native" xmlns:z="zul" xmlns:w="http://www.zkoss.org/2005/zk/client">
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>FORM EXAMPLES</h2>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                VERTICAL LAYOUT
+                                <small>With floating label</small>
+                            </h2>
+                        </div>
+                        <div class="body">
+                                <div class="form-group form-float">
+                                    <z:div class="form-line" >
+                                    	<z:mt-textbox id="email_address" label="Email Address" />
+                                    </z:div>
+                                </div>
+                                <div class="form-group form-float">
+                                    <z:div class="form-line" >
+                                    	<z:mt-intbox id="intbox" label="Int Box" />
+                                    </z:div>
+                                </div>
+                                <div class="form-group form-float">
+                                    <z:div class="form-line" >
+                                    	<z:mt-decimalbox id="decimalbox" label="Decimal Box" />
+                                    </z:div>
+                                </div>
+                                <div class="form-group form-float">
+                                    <z:div class="form-line">
+                                        <z:mt-textbox type="password" id="pass" label="Password"/>
+                                    </z:div>
+                                </div>
+
+                                <div class="form-group form-float">
+                                    <z:div class="form-line">
+                                        <z:mt-selectbox id="select2" label="Select 2"/>
+                                    </z:div>
+                                </div>
+
+                                <br/>
+                                <z:checkbox id="remember_me_3" label="pepe"/>
+                                <br/>
+                                <z:radio id="remember_me_4" label="hola caracola"/>
+                                <br/>
+                                <div class="form-group form-float">
+                                    <z:div class="form-line">
+                                    	<style>
+                                    	</style>
+		                                <z:combobox class="">
+		                                	<z:comboitem label="Pepe" value="1" class=""/>
+		                                </z:combobox>
+		                            </z:div>
+		                        </div>
+                                <z:button class="btn btn-primary m-t-15 waves-effect">LOGIN</z:button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+ </zk>
+ 
+ 

@@ -1,0 +1,312 @@
+FROMSQLFILE '/metadatademo/src/main/resources/metadata/payment/view/VPaymentMethods.sql'
+
+VIEW  ENTITY payment.VPaymentMethods {
+	paymentMethodId INT SAMEAS payment.PaymentMethod.paymentMethodId
+	paymentTypeClassId INT SAMEAS payment.EnuPaymentType.paymentTypeClassId
+	paymentTypeId INT SAMEAS payment.PaymentMethod.paymentTypeId
+	number VARCHAR
+	customerId INT SAMEAS crm.CustomerPaymentMethod.customerId
+	
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: payment.VPaymentMethods  
+VIEW NAME: VPaymentMethods 
+VIEW SCHEMA: payment
+
+Tables:
+	TABLE: payment.PaymentMethod Alias: pm
+	TABLE: payment.EnuPaymentType Alias: pt
+	TABLE: payment.enuPaymentTypeClass Alias: ptc
+	TABLE: crm.customerPaymentMethod Alias: cpm
+Output:
+	COLUMN: paymentMethodId -> payment.PaymentMethod.paymentMethodId
+	COLUMN: paymentTypeClassId -> payment.EnuPaymentType.paymentTypeClassId
+	COLUMN: paymentTypeId -> payment.PaymentMethod.paymentTypeId
+	EXPRESSION: number -> casewhenptc.shortCode='CREDITCARD'thenpm.ccNumberwhenptc.shortCode='DIRECTDEBIT'thenpm.accountNumberwhenptc.shortCode='CHECK'thenpm.checkNumberelsenullend
+	COLUMN: customerId -> crm.customerPaymentMethod.customerId
+
+
+================= Resolver Information ======================== 
+Entity List:
+	acc.Allocation ,audit.InputUser ,audit.InputSource ,acc.Ledger ,acc.LedgerItem ,acc.LedgerInfo ,acc.EnuTransactionType ,acc.EnuLedgerType ,acc.Annotation ,acc.EnuAnnotationType ,crm.CustomerPk ,acc.Annotation ,acc.Balance ,acc.Cancellation ,acc.EnuAnnotationType ,acc.EnuLedgerType ,acc.EnuTransactionType ,acc.Ledger ,acc.LedgerInfo ,acc.LedgerItem ,acc.Repost ,acc.VTransactionHistory ,tolling.Trip ,payment.PaymentCredit ,payment.Payment ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,acc.VTripPayment ,acc.Allocation ,acc.VUnallocatedCredit ,audit.EnuInputUserGroup ,audit.InputSource ,audit.InputUser ,audit.InputUserGroup ,audit.EnuInputUserGroup ,config.DatagridSetting ,crm.CustomerPaymentMethod ,payment.PaymentMethod ,crm.CustomerPk ,crm.CustomerSuplementaryContact ,crm.PersonOrCompanyPk ,crm.EnuContactType ,crm.EmailAddressPk ,crm.EnuContactType ,crm.EnuCountry ,crm.EnuCustomerType ,crm.EnuPhoneNumberType ,crm.EnuStateProvince ,crm.EnuCountry ,crm.HCustomer ,crm.PostalAddressPk ,crm.EnuCustomerType ,crm.HEmailAddress ,crm.EmailAddressPk ,crm.HPersonOrCompany ,crm.PhoneNumberPK ,crm.HPhoneNumber ,crm.EnuPhoneNumberType ,crm.HPostalAddress ,crm.EnuStateProvince ,crm.PersonOrCompanyPk ,crm.PhoneNumberPK ,crm.PostalAddressPk ,crm.VCustomerHistory ,VCustomerSearch ,crm.HCustomer ,crm.HPersonOrCompany ,crm.HPhoneNumber ,crm.HEmailAddress ,crm.VDetailPageCaseList ,cs.CSCase ,cs.CSCasePK ,cs.EnuCaseType ,cs.EnuCaseStatus ,cs.EnuCasePriority ,crm.VDetailPageVehicleList ,tolling.LicensePlate ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.VehicleInfo ,tolling.Vehicle ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.CustomerVehicle ,cs.CSCase ,cs.CSCasePK ,cs.CustomerCase ,cs.EnuCasePriority ,cs.EnuCaseStatus ,cs.EnuCaseType ,cs.VCaseSearch ,cs.CustomerCase ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,payment.Payment ,payment.PaymentMethod ,payment.VPaymentMethods ,tolling.CustomerPass ,tolling.Pass ,tolling.CustomerVehicle ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.EnuPromoType ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.Gantry ,tolling.LicensePlate ,tolling.Pass ,tolling.Promo ,tolling.EnuPromoType ,tolling.Trip ,tolling.TripInfo ,tolling.Gantry ,tolling.Vehicle ,tolling.VehicleInfo ,tolling.VFindVehicle ,tolling.VTripSearch ,tolling.TripInfoColumns:
+	SOLVED paymentMethodId -> payment.PaymentMethod.paymentMethodId
+	SOLVED paymentTypeClassId -> payment.EnuPaymentType.paymentTypeClassId
+	SOLVED paymentTypeId -> payment.PaymentMethod.paymentTypeId
+	EXPRESSION number -> 
+	SOLVED customerId -> crm.CustomerPaymentMethod.customerId
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id payment
+              .
+              id 
+                simple_id VPaymentMethods
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id pm
+                        .
+                        id 
+                          simple_id paymentMethodId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id pt
+                        .
+                        id 
+                          simple_id paymentTypeClassId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id pm
+                        .
+                        id 
+                          simple_id paymentTypeId
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          case_expression case
+                            switch_search_condition_section when
+                              search_condition 
+                                search_condition_and 
+                                  search_condition_not 
+                                    predicate 
+                                      expression 
+                                        full_column_name 
+                                          table_name 
+                                            id 
+                                              simple_id ptc
+                                          .
+                                          id 
+                                            simple_id shortCode
+                                      comparison_operator =
+                                      expression 
+                                        primitive_expression 
+                                          constant 'CREDITCARD'
+                              then
+                              expression 
+                                full_column_name 
+                                  table_name 
+                                    id 
+                                      simple_id pm
+                                  .
+                                  id 
+                                    simple_id ccNumber
+                            switch_search_condition_section when
+                              search_condition 
+                                search_condition_and 
+                                  search_condition_not 
+                                    predicate 
+                                      expression 
+                                        full_column_name 
+                                          table_name 
+                                            id 
+                                              simple_id ptc
+                                          .
+                                          id 
+                                            simple_id shortCode
+                                      comparison_operator =
+                                      expression 
+                                        primitive_expression 
+                                          constant 'DIRECTDEBIT'
+                              then
+                              expression 
+                                full_column_name 
+                                  table_name 
+                                    id 
+                                      simple_id pm
+                                  .
+                                  id 
+                                    simple_id accountNumber
+                            switch_search_condition_section when
+                              search_condition 
+                                search_condition_and 
+                                  search_condition_not 
+                                    predicate 
+                                      expression 
+                                        full_column_name 
+                                          table_name 
+                                            id 
+                                              simple_id ptc
+                                          .
+                                          id 
+                                            simple_id shortCode
+                                      comparison_operator =
+                                      expression 
+                                        primitive_expression 
+                                          constant 'CHECK'
+                              then
+                              expression 
+                                full_column_name 
+                                  table_name 
+                                    id 
+                                      simple_id pm
+                                  .
+                                  id 
+                                    simple_id checkNumber
+                            else
+                            expression 
+                              primitive_expression null
+                            end
+                        as_column_alias as
+                          column_alias 
+                            id 
+                              simple_id number
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id cpm
+                        .
+                        id 
+                          simple_id customerId
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id payment
+                              .
+                              id 
+                                simple_id PaymentMethod
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id pm
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id payment
+                                    .
+                                    id 
+                                      simple_id EnuPaymentType
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id pt
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id pt
+                                      .
+                                      id 
+                                        simple_id paymentTypeId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id pm
+                                      .
+                                      id 
+                                        simple_id paymentTypeId
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id payment
+                                    .
+                                    id 
+                                      simple_id enuPaymentTypeClass
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id ptc
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id pt
+                                      .
+                                      id 
+                                        simple_id paymentTypeClassId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id ptc
+                                      .
+                                      id 
+                                        simple_id paymentTypeClassId
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id crm
+                                    .
+                                    id 
+                                      simple_id customerPaymentMethod
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id cpm
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id cpm
+                                      .
+                                      id 
+                                        simple_id paymentMethodId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id pm
+                                      .
+                                      id 
+                                        simple_id paymentMethodId
+  <EOF>*/

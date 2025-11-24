@@ -1,0 +1,5 @@
+TABLE ENTITY EnuSize{
+	PK sizeId INT
+	UQ shortCode VARCHAR(10)
+	descripion VARCHAR(64)
+}

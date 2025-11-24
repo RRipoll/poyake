@@ -1,0 +1,10 @@
+TABLE ENTITY CodPostal 
+{
+	PK codPostalId INT
+	cp INT
+	calle VARCHAR (100)
+	poblacion VARCHAR (100)
+	provincia VARCHAR (100)
+	pais VARCHAR (100)
+	
+}

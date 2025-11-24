@@ -1,0 +1,111 @@
+.mt-evaluations-sidebar{
+	max-width:300px;
+}
+
+
+.mt-evaluations-checkboxes{
+	padding:10px;	
+}
+
+.evaluations-checkbox{
+	padding-left:10px;
+}
+.evaluations-checkbox>label{
+	padding-left:23px;
+	padding-right:10px;
+	bacground:yellow;
+	font-size:0.8rem;
+}
+
+.mt-evaluations-sections{
+	padding:10px;	
+	overflow-y:scroll;
+	position:absolute;
+	top:100px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+}
+
+.mt-evaluation-section{
+	cursor:pointer
+}
+
+.mt-evaluation-section:hover{
+	background-color:lightgrey;
+}
+
+.mt-subsection-container{
+	top:0px;
+	left:300px;
+	right:0px;
+	bottom:0px;
+	position:absolute;
+	padding:20px;
+	background-color:var(--j-window-background);
+}
+
+.mt-evaluation-subsection{
+	padding-left:20px;
+	cursor:pointer;
+	margin-bottom:5px;
+}
+
+.mt-evaluation-subsection-status{
+	float:right;
+	border-left:1px solid lightgrey;
+	font-weight:700;
+	padding:0px;
+	text-align:center;
+}
+
+.mt-evaluation-subsection-label{
+}
+
+
+.mt-subsection_selected{
+	background-color:black;
+	color:white;
+}
+
+.mt-evaluation-subsection:hover{
+	background-color:lightgrey;
+}
+
+
+.mt-subsection-table{
+	border:1px solid black;
+	margin:10px;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+.mt-subsection-table > tbody > tr > td{
+	border:1px solid black;
+	width:40px;
+	height:40px;
+	text-align:center;
+	vertical-align: center;
+}
+
+.mt-subsection-table-checkbox{
+	padding-left:0px;
+}
+
+.mt-subsection-table-checkbox>label{
+	padding-left:20px;
+	margin-bottom:0px;
+	line-height:38px;
+}
+
+.mt-subsection-table-checkbox>label:before{
+	border:0px;
+}
+
+.mt-td-checked{
+	background-image: url("../img/black-X.png");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+

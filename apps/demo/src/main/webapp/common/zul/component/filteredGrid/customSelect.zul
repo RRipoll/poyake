@@ -1,0 +1,24 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:z="zul">
+
+	<z:window border="0" >
+		<h:section class="content" style="margin:0px;min-width:300px">
+			<div class="card" style="margin-bottom:0px" >
+				<div class="header bg-light-green">
+					<label id="HEADER_LABEL" class="h5">${mtlabels.filter_select}</label>
+				</div>
+				<div class="body" >
+					
+					<div id="SELECT_LIST" style="overflow: auto;"/>
+						
+					
+					<button id="CUSTOM_SAVE_BUTTON" class="btn btn-primary ml-2 waves-effect pull-right">${mtlabels.filter_save}</button>
+				  <button id="CUSTOM_CANCEL_BUTTON" class="btn bg-orange ml-2 waves-effect pull-right">${mtlabels.cancel}</button>
+				
+				</div>
+			</div>
+		</h:section>
+	</z:window>
+</zk>

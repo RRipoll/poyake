@@ -1,0 +1,4 @@
+NOT_NULABLE=no puede ser nulo
+VALUE_LENGHT_TOO_LONG=cadena demasiado larga
+EMAIL=Email es requeridos
+PASSWORD= password es debil

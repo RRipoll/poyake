@@ -1,0 +1,296 @@
+--------
+log
+/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/../temp/log_0f274ba3-0758-4728-acfa-56089f114a9d.txt
+
+--------
+Full match: $.fullName
+*** ------------------------------------------ --------------------------------------- ***
+*** -------------------------- EVENT RestWebService START --------------- ***
+*** ---------------------------------- ----------------------------------------------- ***
+*** Request = Http://localHost:8081/rest/api/search/table/author?page=0&size=10&orderBy=
+*** parameters [Original Values: {label=tableName, trParameterTypeId=2, value=author}
+Updates: {}, Original Values: {label=page, trParameterTypeId=1, value=0}
+Updates: {}, Original Values: {label=size, trParameterTypeId=1, value=10}
+Updates: {}, Original Values: {label=orderBy, trParameterTypeId=2, value=}
+Updates: {}]
+*** JSON {"and":[{"parameters":[{"fieldName":"fullName","operator":"LIKE","values":["Cervantes"]}]}]}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Http://localHost:8081/rest/api/search/table/author?page=0&size=10&orderBy=
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*** Response.getStatusCode = 200 OK
+*** Response = {"columnDef":[{"headerName":"Author #","field":"authorId","width":null,"cellRendererFramework":null,"type":"INT","formatters":null,"group":null},{"headerName":"Full Name","field":"fullName","width":null,"cellRendererFramework":null,"type":"VARCHAR","formatters":null,"group":null},{"headerName":"note","field":"note","width":null,"cellRendererFramework":null,"type":"HTML","formatters":null,"group":null}],"rawData":[{"authorId":1,"fullName":"Cervantes","note":""}],"total":1,"page":0,"size":1}
+*** ---------------------------------------------------------------------------------- ***
+*** -----------------------------EVENT RestWebService END -------------- ***
+*** ---------------------------------------------------------------------------------- ***
+--------
+data
+{"columnDef":[{"headerName":"Author #","field":"authorId","width":null,"cellRendererFramework":null,"type":"INT","formatters":null,"group":null},{"headerName":"Full Name","field":"fullName","width":null,"cellRendererFramework":null,"type":"VARCHAR","formatters":null,"group":null},{"headerName":"note","field":"note","width":null,"cellRendererFramework":null,"type":"HTML","formatters":null,"group":null}],"rawData":[{"authorId":1,"fullName":"Cervantes","note":""}],"total":1,"page":0,"size":1}
+
+--------
+select * from ( 				 select 1 orderby, * 	from config.DatagridSetting  where searchName=:searchName and inputUserGroupId=:inputUserGroupId   				  union all 				  select 2 orderby, * 	from config.DatagridSetting  where searchName=:searchName and inputUserGroupId=1 )p  order by orderBy asc, dataGridSettingId Desc		
+StoreValuesTest  2
+DatagridSettingExtendedDAO results= 1
+select * from ( 				 select 1 orderby, * 	from config.DatagridSetting  where searchName=:searchName and inputUserGroupId=:inputUserGroupId   				  union all 				  select 2 orderby, * 	from config.DatagridSetting  where searchName=:searchName and inputUserGroupId=1 )p  order by orderBy asc, dataGridSettingId Desc		
+StoreValuesEvent  2
+DatagridSettingExtendedDAO results= 1
+--------
+storeValuesEvents
+[]
+
+--------
+[2m2021-08-30 16:45:15.696[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[       Thread-6][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v2.4.4)[0;39m
+
+[2m2021-08-30 16:45:15.764[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m Starting PoyakeSpringApplication using Java 15.0.2 on MSI-GE72-7RE with PID 325789 (/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/target/classes started by usuario in /home/usuario/git/poyake008/metaplugin/apps/poyake-demo)
+[2m2021-08-30 16:45:15.765[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.jsantos.demo.PoyakeSpringApplication  [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2021-08-30 16:45:15.968[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8080 (http)
+[2m2021-08-30 16:45:15.969[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2021-08-30 16:45:15.969[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.44]
+[2m2021-08-30 16:45:15.977[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2021-08-30 16:45:15.977[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 207 ms
+[2m2021-08-30 16:45:15.981[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.zkspringboot.ZkAutoConfiguration    [0;39m [2m:[0;39m ZK-Springboot: ServletRegistrationBean for DHtmlUpdateServlet with path /zkau
+Couldn't load datasource from Tomcat. Using default
+Connection props from file: {password=sa, driverClassName=org.h2.Driver, url=jdbc:h2:~/testdbn6;AUTO_SERVER=TRUE;, username=sa}
+--------
+storeValuesEvents
+[]
+
+--------
+ORM Triggers: ====================================================
+	com.jsantos.custom.trigger.AuditTrigger
+	com.jsantos.custom.trigger.ConstraintsTrigger
+	com.jsantos.custom.trigger.MultipleJsonTrigger
+	com.jsantos.custom.trigger.PermissionTrigger
+------------------------------------------------------------------
+DTOFactory: ==========================================
+	com.jsantos.custom.extendeddto.StoreValuesTestExtDTO ---> testrunner.StoreValuesTest
+	com.jsantos.metadata.config.PostingDateDTO ---> config.PostingDate
+	com.jsantos.metadata.testrunner.EventStatusDTO ---> testrunner.EventStatus
+	com.jsantos.custom.extendeddto.MTLabelExtendedDTO ---> label.MTlabel
+	com.jsantos.metadata.audit.InputUserGroupDTO ---> audit.InputUserGroup
+	com.jsantos.metadata.config.AppDataTypeDTO ---> config.AppDataType
+	com.jsantos.metadata.example.BookAuthorDTO ---> example.BookAuthor
+	com.jsantos.metadata.permission.RolPermissionDTO ---> permission.RolPermission
+	com.jsantos.custom.extendeddto.TrParameterExtDTO ---> testrunner.TrParameter
+	com.jsantos.metadata.permission.RolDTO ---> permission.Rol
+	com.jsantos.metadata.testrunner.StoreValuesEventDTO ---> testrunner.StoreValuesEvent
+	com.jsantos.metadata.config.AppInfoDTO ---> config.AppInfo
+	com.jsantos.metadata.audit.VrolGroupDTO ---> audit.VrolGroup
+	com.jsantos.metadata.permission.UserGroupRolDTO ---> permission.UserGroupRol
+	com.jsantos.metadata.testrunner.EventDefFolderDTO ---> testrunner.EventDefFolder
+	com.jsantos.metadata.audit.InputSourceDTO ---> audit.InputSource
+	com.jsantos.metadata.testrunner.TestDTO ---> testrunner.Test
+	com.jsantos.custom.extendeddto.FileshowExtDTO ---> common.Fileshow
+	com.jsantos.metadata.audit.UserGroupDTO ---> audit.UserGroup
+	com.jsantos.metadata.config.AppInfoTreeDTO ---> config.AppInfoTree
+	com.jsantos.metadata.testrunner.CheckParamEventDefinitionDTO ---> testrunner.CheckParamEventDefinition
+	com.jsantos.metadata.testrunner.AddParameterDefinitionDTO ---> testrunner.AddParameterDefinition
+	com.jsantos.custom.extendeddto.DatagridSettingExtDTO ---> config.DatagridSetting
+	com.jsantos.metadata.audit.VUserMultiGroupDTO ---> audit.VUserMultiGroup
+	com.jsantos.metadata.audit.VuserGroupDTO ---> audit.VuserGroup
+	com.jsantos.custom.extendeddto.AuthorExtDTO ---> example.Author
+	com.jsantos.metadata.audit.InputUserDTO ---> audit.InputUser
+	com.jsantos.metadata.permission.EnuPermissionTypeDTO ---> permission.EnuPermissionType
+	com.jsantos.custom.extendeddto.RestEventDefinitionExtDTO ---> testrunner.RestEventDefinition
+	com.jsantos.metadata.permission.VPermissionRolDTO ---> permission.VPermissionRol
+	com.jsantos.metadata.config.EnulocaleDTO ---> config.Enulocale
+	com.jsantos.metadata.example.VBookDTO ---> example.VBook
+	com.jsantos.custom.extendeddto.CheckParameterItemExtDTO ---> testrunner.CheckParameterItem
+	com.jsantos.metadata.permission.PermissionDTO ---> permission.Permission
+	com.jsantos.metadata.example.GenreDTO ---> example.Genre
+	com.jsantos.metadata.testrunner.FolderDTO ---> testrunner.Folder
+	com.jsantos.metadata.common.StorageFilePkDTO ---> common.StorageFilePk
+	com.jsantos.metadata.audit.VinputUserMultiDTO ---> audit.VinputUserMulti
+	com.jsantos.metadata.permission.VRolLinkDTO ---> permission.VRolLink
+	com.jsantos.metadata.example.BookDTO ---> example.Book
+	com.jsantos.custom.extendeddto.FileGroupExtDTO ---> common.FileGroup
+	com.jsantos.metadata.testrunner.OperatorDTO ---> testrunner.Operator
+	com.jsantos.metadata.testrunner.EventDefinitionDTO ---> testrunner.EventDefinition
+	com.jsantos.metadata.permission.VpermissionDTO ---> permission.Vpermission
+	com.jsantos.metadata.testrunner.HttpMethodDTO ---> testrunner.HttpMethod
+	com.jsantos.metadata.permission.VgroupRolDTO ---> permission.VgroupRol
+	com.jsantos.metadata.testrunner.EventParameterDTO ---> testrunner.EventParameter
+	com.jsantos.custom.extendeddto.VinputUserExtDTO ---> audit.VinputUser
+	com.jsantos.metadata.testrunner.EventTypeDTO ---> testrunner.EventType
+	com.jsantos.metadata.common.StorageFileDTO ---> common.StorageFile
+	com.jsantos.metadata.permission.EnuPermissionValueDTO ---> permission.EnuPermissionValue
+------------------------------------------------------
+
+-----------------------------------FIELD RENDERER-------------------------------
+com.jsantos.common.registry.IMTFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.DateFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.DefaultFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.EnumerationRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.ForeignKeyFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MoneyFieldRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MultipleEnumRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.MultipleObjectRenderer
+Registered Field Renderer: com.jsantos.custom.fieldrenderer.general.PasswordFieldRenderer
+Field Renderers: ===============================================
+	 DataType: DATETIME -> DateFieldRenderer
+	 DataType: MONEY -> MoneyFieldRenderer
+	 DataType: MULTIPLEENUM -> MultipleEnumRenderer
+	 DataType: MULTIPLEOBJECT -> MultipleObjectRenderer
+	 DataType: PASSWORD -> PasswordFieldRenderer
+-----------------------------------------------------
+
+------------------------------CUSTOM FIELD MAPPERS------------------------------
+com.jsantos.common.fieldMapper.IFieldMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.BooleanMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.CheckParameterMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.EventDefinitionMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.EventsMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.FileMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.FilesMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.MultipleEnumMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.MultipleObjectMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.PasswordMapper
+Registered  Field Mapper: com.jsantos.custom.extendedFieldMapper.TrParameterMapper
+Registered  Field Mapper: com.jsantos.custom.extendeddto.extendedfieldMapper.SettingMapper
+ Field Mapper Component Provider: =================================================
+	 DataType: PARAMETER -> TrParameterMapper
+	 DataType: FILE_GROUP -> FileMapper
+	 DataType: MULTIPLEENUM -> MultipleEnumMapper
+	 DataType: MULTIPLEOBJECT -> MultipleObjectMapper
+	 DataType: PASSWORD -> PasswordMapper
+	 Entity Field: CheckParamEventDefinition.parameters -> CheckParameterMapper
+	 Entity Field: EventDefinition.eventDefinition -> EventDefinitionMapper
+	 Entity Field: Test.events -> EventsMapper
+	 Entity Field: DatagridSetting.data -> SettingMapper
+-------------------------------------------------------------------------
+
+--------------------------------CUSTOM CONSTRAINTS-------------------------------
+com.jsantos.common.constraint.IConstraintsBuilder
+Registered Constraints Renderer: com.jsantos.custom.JsonConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.CheckParameterAction
+Registered Constraints Renderer: com.jsantos.custom.constraints.DataGridJsonConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.DefaultMTConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.EmailMTConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.JsonSettingAction
+Registered Constraints Renderer: com.jsantos.custom.constraints.PasswordConstraint
+Registered Constraints Renderer: com.jsantos.custom.constraints.parameterAction
+Field Component Provider: EMAIL -> EmailMTConstraint
+Field Component Provider: PASSWORD -> PasswordConstraint
+Field Component Provider: DatagridSetting.data -> JsonConstraint
+Field Component Provider: CheckParameterItem.operator -> CheckParameterAction
+Field Component Provider: DatagridSetting.searchName -> JsonSettingAction
+Field Component Provider: TrParameter.trParameterTypeId -> parameterAction
+----------------------------------SQLEXTENDED COMPONENTS--------------------------------
+com.jsantos.custom.sqlextended.ISqlExtended
+Registered SqlExtended Renderer: com.jsantos.custom.sqlextended.MultiEnuEditorFilter
+Registered SqlExtended Renderer: com.jsantos.custom.sqlextended.MultiObjectEditorFilter
+Field Renderers: ===============================================
+	 DataType: MULTIPLEENUM -> MultiEnuEditorFilter
+	 DataType: MULTIPLEOBJECT -> MultiObjectEditorFilter
+-----------------------------------------------------
+
+---------------------------------GRID CELL BUILDERS--------------------------------
+com.jsantos.custom.cell.IGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.DataSettingBuilder
+Registered cell Renderer: com.jsantos.custom.cell.LogBuilder
+Registered cell Renderer: com.jsantos.custom.cell.SelectedEventBuilder
+Registered cell Renderer: com.jsantos.custom.cell.TrEventBuilder
+Registered cell Renderer: com.jsantos.custom.cell.TrParamenterBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.BitCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.BooleanCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.DataSettingBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.FileGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.HtmlCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.JsonBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.MoneyGridCellBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.MultipleObjectBuilder
+Registered cell Renderer: com.jsantos.custom.cell.general.URLKeyGridCellBuilder
+Grid Field Component Provider: =================================================
+	 DataType: EVENTSELECTED -> SelectedEventBuilder
+	 DataType: PARAMETER -> TrParamenterBuilder
+	 DataType: BIT -> BitCellBuilder
+	 DataType: BOOLEAN -> BooleanCellBuilder
+	 DataType: DATASETTING -> DataSettingBuilder
+	 DataType: FILE_GROUP -> FileGridCellBuilder
+	 DataType: HTML -> HtmlCellBuilder
+	 DataType: JSON -> JsonBuilder
+	 DataType: MONEY -> MoneyGridCellBuilder
+	 DataType: MULTIPLEOBJECT -> MultipleObjectBuilder
+	 DataType: URL -> URLKeyGridCellBuilder
+	 Entity Field: DatagridSetting.data -> DataSettingBuilder
+	 Entity Field: StoreValuesEvent.log -> LogBuilder
+	 Entity Field: Test.events -> TrEventBuilder
+-------------------------------------------------------------------------
+
+----------------------------------FILTER COMPONENTS--------------------------------
+com.jsantos.custom.filter.IFilterComponent
+Registered filter Renderer: com.jsantos.custom.filter.IntegerFilterComponentBuilder
+Registered filter Renderer: com.jsantos.custom.filter.MultiEnuEditorFilterBuilder
+Registered filter Renderer: com.jsantos.custom.filter.MultiObjectFilterBuilder
+Registered filter Renderer: com.jsantos.custom.filter.UuidFilterBuilder
+Filter Component Provider: INT -> IntegerFilterComponentBuilder
+Filter Component Provider: MULTIPLEENUM -> MultiEnuEditorFilterBuilder
+Filter Component Provider: MULTIPLEOBJECT -> MultiObjectFilterBuilder
+Filter Component Provider: UUID -> UuidFilterBuilder
+------------------------------CUSTOM FIELD CONTAINERS------------------------------
+com.jsantos.custom.customfield.IMTComponent
+Registered Custom Field Containers: com.jsantos.custom.customfield.DataSettingContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.EventTypeContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.FileGroupContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.HtmlFieldContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.JsonContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.MTMultiEnumContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.MTMultiObjectContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.ParameterContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.TestEventJsonContainer
+Registered Custom Field Containers: com.jsantos.custom.customfield.TextAreaFieldContainer
+Custom Field Containers: ===============================================
+Custom Field Component Provider: DATASETTING -> DataSettingContainer
+Custom Field Component Provider: FILE_GROUP -> FileGroupContainer
+Custom Field Component Provider: HTML -> HtmlFieldContainer
+Custom Field Component Provider: JSON -> JsonContainer
+Custom Field Component Provider: MULTIPLEENUM -> MTMultiEnumContainer
+Custom Field Component Provider: MULTIPLEOBJECT -> MTMultiObjectContainer
+Custom Field Component Provider: PARAMETER -> ParameterContainer
+Custom Field Component Provider: TEXTAREA -> TextAreaFieldContainer
+Custom Field Component Provider: EventDefinition.eventTypeId -> EventTypeContainer
+Custom Field Component Provider: RestEventDefinition.json -> TestEventJsonContainer
+-----------------------------------------------------
+
+-------------------------------DETAIL CONTAINER------------------------------------
+com.jsantos.custom.detail.IDetailContainer
+Registered DetailContainer Renderer: com.jsantos.custom.details.AuthorDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.EventDefinitionDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.InputUserGroupDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.TestDetails
+Registered DetailContainer Renderer: com.jsantos.custom.details.TestEventDetails
+Custom Detail Containers: ===============================================
+Custom Field Container Provider: Author -> AuthorDetails
+Custom Field Container Provider: EventDefinition -> EventDefinitionDetails
+Custom Field Container Provider: InputUserGroup -> InputUserGroupDetails
+Custom Field Container Provider: Test -> TestDetails
+Custom Field Container Provider: EventParameter -> TestEventDetails
+-----------------------------------------------------
+
+-------------------------------MENU PROVIDER------------------------------------
+com.jsantos.custom.IMenuProvider
+Menu Provider: com.jsantos.service.AuditUIProvider
+Menu Provider: com.jsantos.service.TestRunnerProvider
+Custom Detail Containers: ===============================================
+Custom Menu Provider: poyake-audit-ui -> 
+Custom Menu Provider: poyake-testrunner -> 
+-----------------------------------------------------
+
+=============================================================
+===== Context Initialization finished                   =====
+=============================================================
+[2m2021-08-30 16:45:16.342[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.http.WebManager         [0;39m [2m:[0;39m Starting ZK 9.5.0.2 CE (build: 2020112410)
+[2m2021-08-30 16:45:16.349[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing file:/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/target/classes/metainfo/zk/zk.xml
+[2m2021-08-30 16:45:16.350[0;39m [33m WARN[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.util.Configuration      [0;39m [2m:[0;39m Enable event thread has deprecated!
+[2m2021-08-30 16:45:16.351[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing jar:file:/home/usuario/.m2/repository/org/zkoss/zk/zul/9.5.0.2/zul-9.5.0.2.jar!/metainfo/zk/zk.xml
+[2m2021-08-30 16:45:16.352[0;39m [32m INFO[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.sys.ConfigParser        [0;39m [2m:[0;39m Parsing file:/home/usuario/git/poyake008/metaplugin/apps/poyake-demo/src/main/webapp/WEB-INF/zk.xml
+[2m2021-08-30 16:45:16.353[0;39m [33m WARN[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.zkoss.zk.ui.util.Configuration      [0;39m [2m:[0;39m Enable event thread has deprecated!
+[2m2021-08-30 16:45:16.353[0;39m [33m WARN[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.util.resource.impl.LabelLoaderImpl  [0;39m [2m:[0;39m Replace the old one, because it is replicated: ServletLabelLocator: /WEB-INF/labels/app_labels
+[2m2021-08-30 16:45:16.353[0;39m [33m WARN[0;39m [35m325789[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.z.util.resource.impl.LabelLoaderImpl  [0;39m [2m:[0;39m Replace the old one, because it is replicated: ServletLabelLocator: /WEB-INF/labels/errors

@@ -1,0 +1,6 @@
+TABLE ENTITY eva.Message{
+	PK messageId INT
+	folderId INT  FKTO eva.FolderPK
+	msgText VARCHAR(2000) NOTNULL
+	title VARCHAR(255) NOTNULL
+}

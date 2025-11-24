@@ -1,0 +1,15 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+
+	<div class="input-group mt-app-header-element" width="150px" style="margin-bottom: 0px;">
+					<textbox class="form-control form-control-height bg-light small border border-primary pl-1" zclass="" placeholder="${mtlabels.mainscreen_account_number}" id="SEARCH_ACCOUNT"/>
+					<h:div class="input-group-append">
+						<h:button class="btn btn-primary form-control-height" id="SEARCH_ACCOUNT_BUTTON">
+							<h:i class="material-icons">search</h:i>
+						</h:button>
+					</h:div>
+	</div>
+
+			
+		</zk>	

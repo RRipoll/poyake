@@ -1,0 +1,37 @@
+<?page title="Home Page" ?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	<window width="99%" closable="true" title="Test Editor Styling" height="100%">
+	<style>
+		body *:not([class*="z-icon-"]) {
+		    font-family: Roboto;
+		    font-weight: 500;
+	</style>
+		<hbox>
+			<jtextbox  label="Nombre" width="200px"/>
+			<jtextbox  label="Apellido" width="200px"/>
+			<mtcombobox width="150px" readonly="true" label="Pais">
+			
+				<comboitem value="USA" label="USA" />
+				<comboitem value="Portugal" label="Portugal"/>
+			</mtcombobox>
+		<jdatebox label="Fecha de nacimiento"/>
+				<radiogroup>
+					<radio label="one" />
+					<radio label="two" />
+				</radiogroup>
+		<checkbox label="Accept cookies?" />
+		<mtfield field="crm.HCustomer.customerId" width="100px"/>
+		</hbox>
+		<div>
+				<n:br/>
+			</div>
+			<div>
+				<n:br/>
+				<checkbox label="Accept cookies?" />
+			</div>
+		<hbox width="100%" pack="end"><button id="ButtonOK">OK</button></hbox>
+		
+	</window>
+</zk>

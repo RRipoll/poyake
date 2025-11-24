@@ -1,0 +1,267 @@
+grammar com.jsantos.metadata.plugin.MetaDsl hidden(WS, ML_COMMENT, SL_COMMENT)
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+generate metaDsl "http://www.jsantos.com/metadata/plugin/MetaDsl"
+
+Model :
+    entities+=Entity*
+    sequences +=Sequence*
+    (configuration=Configuration)?
+    (generalLabelSection=GeneralLabelSection)?
+ //   (sqlDeclarationsBlock=SQLDECLARATIONSBLOCK)
+ 	sqlNatives +=SqlNative*
+ 	metadatas +=Metadata*
+;
+
+
+Configuration:
+	'CONFIGURATION' '{'
+	    languages +=Language+
+	    dataTypes +=DataType+
+	    (constants +=Constant)*
+	    (tableStereotypes +=TableStereotype)*
+	    (columnStereotypes +=ColumnStereotype)*
+	    (patterns+=Pattern)*
+	    'DEFAULT_PRIMARY_KEY_GENERATION_STRATEGY' defaultPkGenerationStrategy=('NONE'|'SEQUENCE'|'IDENTITY')
+	    ('MTCLASSNAME' mtClassName=ID)?
+	'}'
+;
+Language:
+	'LANG' name=ID ';'
+;
+
+Constant:
+	'CONSTANT' name=ID value=STRING
+;
+
+DataType:
+	'DATATYPE' name=ID details=DataTypeDefinition
+	';'
+;
+
+DataTypeDefinition:
+	DataTypeDetails|SubTypeDataType
+;
+
+DataTypeDetails:
+	'SQLNATIVETYPE' dbNativeType=ID 
+	((withPrecissionAndScale?='WITHPRECISSIONANDSCALE') |(withLength?='WITHLENGTH'))?
+	'JAVATYPE' javaType=FQN
+;
+
+SubTypeDataType:
+	'SUBTYPEOF' subTypeOf=[DataType] ('(' (length=NATURAL|maxlength?='MAX') (',' scale=NATURAL)? ')')?
+;
+
+TableStereotype:
+	'TABLESTEREOTYPE' name=ID ';'
+;
+
+ColumnStereotype:
+	'COLUMNSTEREOTYPE' name=ID ';'
+;
+
+Pattern:
+	'PATTERN' name=ID '{'
+		(attributes+=Attribute)*
+	'}'
+;
+
+
+FQN:
+    ID ('.' ID)*
+;
+ 
+Entity:
+	('FROMSQLFILE' fromSQLFile=STRING)?
+	(sqlFileDependencies +=SqlFileDependency)*
+    (entityType=('TABLE'|'VIEW'|'SQLQUERY'))? 'ENTITY' name=FQN ('EXTENDS' extends=[Entity|FQN])? ('PATTERN' patterns+=[Pattern] (',' patterns +=[Pattern])? )? ('STEREOTYPES' stereotypes+=[TableStereotype] (',' stereotypes+=[TableStereotype])?)? '{'
+        (attributes+=Attribute)*
+        (metadata=Metadata)?
+        (enuMetadata=EnuMetadata)?
+        (labelSection=LabelSection)?
+		(enumerationLabels=EnumerationLabels)?	
+        (documentationSection=DocumentationSection)?
+        (querySourceBlock=QuerySourceBlock)?
+    '}'
+;
+
+SqlFileDependency:
+	'SQLFILEDEPENDENCY' sqlFileDependency=STRING
+;	
+
+Sequence:
+	'SEQUENCE' name=FQN 
+	('START' 'WITH' startWith=NATURAL)?
+	('INCREMENT' 'BY' incrementBy=NATURAL)?
+	('MINVALUE' minValue=NATURAL)?
+	('MAXVALUE' maxValue=NATURAL)?
+	(cycle?='CYCLE' )?
+	('CACHE' cache=NATURAL)?
+;
+ 
+Attribute:
+    (unique?='UQ')? (pk?='PK')? name=ID  
+    (type=[DataType]) 
+    ('(' (length=NATURAL|maxlength?='MAX') (',' scale=NATURAL)? ')')?
+    (notNullable?='NOTNULL')? 
+    ('SAMEAS' sameAsAttribute=[Attribute|FQN])? 
+    ('FKTO' fkto=[Entity|FQN])? 
+    ('MULTIREFTO' multiRefTo=[Entity|FQN])? 
+    ('DEFAULT' (default=STRING|defaultConstant=[Constant]))?
+    (transient?='TRANSIENT')?
+    ('STEREOTYPES' stereotypes+=[ColumnStereotype] (',' stereotypes+=[ColumnStereotype])? )?
+    (idGenerator=IdGenerator)?
+;
+
+IdGenerator:
+	'IDGENERATOR' attribute=[Attribute] typeBlock=IdGeneratorTypeBlock
+; 
+
+IdGeneratorTypeBlock:
+	(IdGeneratorSimple|IdGeneratorSequence)
+;
+
+IdGeneratorSimple :
+	{IdGeneratorSimple} 
+	type='BYRULE'|'GUID'|'IDENTITY'|'NONE'|'APPLICATION'
+;
+
+IdGeneratorSequence:
+	{IdGeneratorSequence}
+	type='SEQUENCE' sequence=[Sequence|FQN] 
+;
+    
+EnuMetadata:
+	'ENUMETADATA'   '{'
+		(enuMetadataRows+=EnuMetadataRow)*
+	'}'
+;    
+
+EnuMetadataRow:
+	key=NATURAL ','
+	name=ID ','
+	description=STRING
+	(',' rowValues+=MetadataRowCell)* ';' 
+;
+    
+Metadata:
+	name='METADATA' ('FOR' entity=[Entity|FQN])? '{'
+	(metadataRows+=MetadataRow)*
+	'}'
+;
+
+
+ShortCode:
+	'SHORTCODE' shortCodeValue=STRING
+;
+
+
+MetadataRow:
+	  rowValues+=MetadataRowCell (',' rowValues+=MetadataRowCell)* ';' 
+;
+
+MetadataRowCell:
+	(stringValue=(STRING|DOUBLE|NATURAL|NEGATIVEINT))|
+	(shortCode=ShortCode)|
+	isNull?='NULL' |
+	isDefault?='DEFAULT'
+;
+
+LabelSection:
+	name='LABELS' '{' 
+		(labels+=LabelBlock+)
+	'}'
+;
+
+LabelBlock :
+	{LabelBlock} (entity?='ENTITY'|attribute=[Attribute|FQN]) '{' (type=('SHORTLABEL'|'LONGLABEL'))? labels+=Label* '}'
+;
+
+
+GeneralLabelSection:
+	name='LABELS' '{'
+		(keyLabel+=KeyLabel)*	
+		(overrideLabelBlock+=OverrideLabelBlock)*
+	'}'
+;
+
+KeyLabel:
+	'KEY' key=FQN '{' labels+=Label* '}'
+;
+
+OverrideLabelBlock :
+	{OverrideLabelBlock} 
+	(('ATTRIBUTE' attribute=[Attribute|FQN])|('ENTITY' entity=[Entity|FQN])|('ENUMERATIONITEM' enuMetadataRow=[EnuMetadataRow|FQN])) '{' (type=('SHORTLABEL'|'LONGLABEL'))? labels+=Label* '}'
+;
+
+
+EnumerationLabels:
+	'ENULABELS' '{'
+		(enumerationLabel +=EnumerationLabel)*
+	'}'
+;
+
+EnumerationLabel:
+	enuMetadataRow=[EnuMetadataRow|FQN] '{' (type=('SHORTLABEL'|'LONGLABEL'))? labels+=Label* '}'
+;
+
+
+Label:
+	 (lang=[Language])?  labelText=STRING 
+;
+
+DocumentationSection:
+	name='DOCUMENTATION' '{'
+		(documentationBlocks +=DocumentationBlock+)
+	'}'
+;
+
+DocumentationBlock:
+	('ENTITY'|attribute=[Attribute]) documentationText=(ML_STRING|STRING)
+;
+
+QuerySourceBlock:
+	'QUERYSOURCE' querySource=ML_STRING
+;
+
+SQLDECLARATIONSBLOCK:
+	'SQLDECLARATIONS' '{'
+		(sqlFunctions += SQLFunction)*
+	'}'
+;
+
+SQLFunction:
+	'FUNCTION' name=STRING 'SQLFILE' sqlFile=STRING ";"
+;
+
+
+
+SqlNative:
+	'SQLNATIVE' ('ID' name=FQN)?  (sqlPosition=('FILESTART'|'FILEEND'))? 
+	'{' 
+		
+		(sqlNativeBlocks+=SqlNativeBlock)*
+	'}'
+;
+
+SqlNativeBlock:
+	('DBTYPE' dbType=('H2'|'POSTGRESQL'|'MYSQL'|'SQLSERVER'|'ORACLE'|'DEFAULT'))
+	sqlBlock=ML_SQLBLOCK
+;
+
+// TERMINALS
+terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal NATURAL: ('0'..'9')+;
+terminal NEGATIVEINT: ('-''0'..'9')+;
+terminal DOUBLE: ('-'?'0'..'9'+'.''0'..'9'+);
+terminal STRING:
+			'"' ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"' |
+			"'" ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|"'") )* "'"
+		;
+terminal ML_STRING : "<<<" -> ">>>";
+terminal ML_SQLBLOCK : "<SQLNATIVESTART>" -> "</SQLNATIVEEND>";
+terminal ML_COMMENT : '/*' -> '*/';
+terminal SL_COMMENT : '//' !('\n'|'\r')* ('\r'? '\n')?;
+terminal WS         : (' '|'\t'|'\r'|'\n')+;
+terminal ANY_OTHER: .;
+

@@ -1,0 +1,134 @@
+FROMSQLFILE '/metadatademo/src/main/resources/metadata/acc/view/VAccountBalance.sql'
+
+VIEW  ENTITY acc.VAccountBalance {
+	PK customerId INT SAMEAS acc.Annotation.customerId
+	balance MONEY
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: acc.VAccountBalance  
+VIEW NAME: VAccountBalance 
+VIEW SCHEMA: acc
+
+Tables:
+	TABLE: acc.Ledger Alias: l
+	TABLE: acc.Annotation Alias: a
+Output:
+	COLUMN: customerId -> acc.Annotation.customerId
+	EXPRESSION: balance -> sum(amount)
+
+
+================= Resolver Information ======================== 
+Entity List:
+	acc.Allocation ,audit.InputUser ,audit.InputSource ,acc.Ledger ,acc.LedgerItem ,acc.LedgerInfo ,acc.EnuTransactionType ,acc.EnuLedgerType ,acc.Annotation ,acc.EnuAnnotationType ,crm.CustomerPk ,acc.Balance ,acc.Cancellation ,acc.Repost ,acc.VTransactionHistory ,tolling.Trip ,payment.Payment ,payment.EnuPaymentType ,payment.EnuPaymentTypeClass ,acc.VTripPayment ,acc.VUnallocatedCredit ,acc.VUnpaidDebit ,audit.EnuInputUserGroup ,audit.InputUserGroup ,common.EnuTemplateType ,common.FileGroup ,common.StorageFile ,common.Template ,config.Enulocale ,crm.CustomerPaymentMethod ,payment.PaymentMethod ,crm.CustomerSuplementaryContact ,crm.PersonOrCompanyPk ,crm.EnuContactType ,crm.EmailAddressPk ,crm.EnuCountry ,crm.EnuCustomerType ,crm.EnuPhoneNumberType ,crm.EnuStateProvince ,crm.HCustomer ,crm.PostalAddressPk ,crm.HEmailAddress ,crm.HPersonOrCompany ,crm.PhoneNumberPK ,crm.HPhoneNumber ,crm.HPostalAddress ,crm.Turista ,crm.VCustomerHistory ,crm.VCustomerSearch ,inv.Invoice ,crm.VCustomerSearchEditor ,crm.VDetailPageCaseList ,cs.CSCase ,cs.CSCasePK ,cs.EnuCaseType ,cs.EnuCaseStatus ,cs.EnuCasePriority ,crm.VDetailPageVehicleList ,tolling.LicensePlate ,tolling.EnuLicensePlateJurisdiction ,tolling.EnuLicensePlateType ,tolling.VehicleInfo ,tolling.Vehicle ,tolling.EnuVehicleClass ,tolling.EnuVehicleClassType ,tolling.CustomerVehicle ,cs.CustomerCase ,cs.VCaseSearch ,inv.InvoiceDocument ,inv.InvoiceLedgerItem ,inv.VInvoiceableAccount ,inv.VdetailPageInvoiceList ,inv.VinvoiceHeader ,inv.VitemInvoiceDetail ,tolling.TripInfo ,tolling.Gantry ,tolling.Pass ,payment.VPaymentMethods ,tolling.CustomerPass ,tolling.EnuProblematicPlateReason ,tolling.EnuPromoType ,tolling.ProblematicPlate ,tolling.Promo ,tolling.VFindVehicle ,tolling.VProblematicPlate ,tolling.VTripSearchColumns:
+	SOLVED customerId -> acc.Annotation.customerId
+	EXPRESSION balance -> 
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createview
+            simple_name 
+              id 
+                simple_id acc
+              .
+              id 
+                simple_id VAccountBalance
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        table_name 
+                          id 
+                            simple_id a
+                        .
+                        id 
+                          simple_id customerId
+                    ,
+                    select_list_elem 
+                      expression_elem 
+                        expression 
+                          function_call 
+                            aggregate_windowed_function sum(
+                              all_distinct_expression 
+                                expression 
+                                  full_column_name 
+                                    id 
+                                      simple_id amount
+                              )
+                        as_column_alias as
+                          column_alias 
+                            id 
+                              simple_id balance
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          table_name_with_hint 
+                            table_name 
+                              id 
+                                simple_id acc
+                              .
+                              id 
+                                simple_id Ledger
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id l
+                        join_part join
+                          table_source 
+                            table_source_item_joined 
+                              table_source_item 
+                                table_name_with_hint 
+                                  table_name 
+                                    id 
+                                      simple_id acc
+                                    .
+                                    id 
+                                      simple_id Annotation
+                                as_table_alias 
+                                  table_alias 
+                                    id 
+                                      simple_id a
+                          on
+                          search_condition 
+                            search_condition_and 
+                              search_condition_not 
+                                predicate 
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id a
+                                      .
+                                      id 
+                                        simple_id annotationId
+                                  comparison_operator =
+                                  expression 
+                                    full_column_name 
+                                      table_name 
+                                        id 
+                                          simple_id l
+                                      .
+                                      id 
+                                        simple_id annotationId
+                  groupby
+                  group_by_item 
+                    expression 
+                      full_column_name 
+                        table_name 
+                          id 
+                            simple_id a
+                        .
+                        id 
+                          simple_id customerId
+  <EOF>*/

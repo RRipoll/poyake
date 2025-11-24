@@ -1,0 +1,29 @@
+<?page title="Demo" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	
+
+	<zscript>
+    	desktopScope.put("mtlabels",new com.jsantos.gui.zkutil.Zklabel());
+	</zscript>
+		    <h:li class="nav-item dropdown">
+                <custom-attributes permissionId="TESTRUNNER"/>
+				<custom-attributes permissionValueId="1"/>
+                <h:a class="nav-link dropdown-toggle" id="testrunner" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" iconSclass="z-icon-compass" >${mtlabels.mainscreen_TestRunner}</h:a>
+                <n:ul class="dropdown-menu" aria-labelledby="testrunner">
+                   	<n:div class="dropdown-divider"/>
+               			
+                    	<a class="dropdown-item" id="EVENTDEFTREE" > ${mtlabels.mainscreen_eventDefTree}</a>
+                    <n:div class="dropdown-divider"/>
+                    	<a class="dropdown-item" id="EVENTDEFINITION" visible="false"> ${mtlabels.mainscreen_EventDefinition}</a>
+                    	<a class="dropdown-item" id="TESTTREE" > ${mtlabels.mainscreen_TestTree}</a>
+                    	<a class="dropdown-item" id="TEST" > ${mtlabels.mainscreen_TestSearch}</a>
+                    	<a class="dropdown-item" id="EVENTDEFFOLDER" visible="false"> ${mtlabels.mainscreen_EventDefFolder}</a>
+                    	<a class="dropdown-item" id="FOLDER" visible="false"> ${mtlabels.mainscreen_Folder}</a>
+                  	<n:div class="dropdown-divider"/>
+                </n:ul> 
+            </h:li>
+	  </zk>
+	
+	

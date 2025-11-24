@@ -1,0 +1,3 @@
+TABLE ENTITY cs.CSCasePK{
+	PK csCaseId INT 
+}

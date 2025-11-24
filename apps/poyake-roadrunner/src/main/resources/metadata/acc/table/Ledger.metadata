@@ -1,0 +1,11 @@
+TABLE ENTITY acc.Ledger{
+	PK revisionId INT
+	ledgerItemId INT NOTNULL FKTO acc.LedgerItem
+	ledgerInfoId INT NOTNULL FKTO acc.LedgerInfo
+	transactionTypeId INT NOTNULL FKTO acc.EnuTransactionType
+	ledgerTypeId INT NOTNULL FKTO acc.EnuLedgerType
+	annotationId INT NOTNULL FKTO acc.Annotation
+	amount MONEY NOTNULL
+	balance MONEY NOTNULL
+	
+}

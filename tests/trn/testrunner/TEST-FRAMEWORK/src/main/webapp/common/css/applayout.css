@@ -1,0 +1,27 @@
+.mainlayouttable{
+	height:100%;
+	width:100%;
+}
+
+.mainlayoutheadertr{
+	height:100px;
+	background-color:yellow;
+}
+
+.mainlayoutmainrow{
+	height:100%;
+}
+
+.mainlayoutnav{
+	width:200px;
+}
+
+.mainlayoutcontent{
+	height:20px;
+}
+
+.mainlayoutcontentdiv{
+	height:100%;
+	overflow:auto;
+}
+

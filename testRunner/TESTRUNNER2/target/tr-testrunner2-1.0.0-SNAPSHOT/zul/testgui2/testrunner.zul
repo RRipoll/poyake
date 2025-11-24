@@ -1,0 +1,77 @@
+<?page title="Test Runner Tool"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client" xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	
+<?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"?>
+
+	<window width="90%" closable="true" title="Test Runner v3.0"
+		maximizable="true" maximized="true">
+		<div vflex="1" style="overflow:auto;">
+			<groupbox>
+				<div id="divTestRunning" visible="true">
+					<separator></separator>
+					<label style="font-weight:bold;" id="lblTestRunning"></label>
+					<separator></separator>
+				</div>
+			</groupbox>
+			<hbox>
+				<groupbox width="300px">
+					<caption>
+						Test ID:
+						<label id="TEST_ID" />
+					</caption>
+					<hbox>
+						Test Name:
+						<label id="TEST_NAME" />
+					</hbox>
+					<hbox>
+						Description:
+						<label id="TEST_DESCRIPTION" />
+					</hbox>
+				</groupbox>
+				<groupbox>
+					<caption>Run test to target Event:</caption>
+					<hbox visible="false">
+						Current System Date:
+						<label id="CURRENT_POSTINGDATE" />
+					</hbox>
+					<hbox>
+							<hbox id="BY_SELECTION" visible="true">
+								<button id="BUTTON_RUN_TO_SELECTION" label="Run" />
+								<space/><space/>
+								<button id="BUTTON_FEATURE" label="Get Cucumber" />
+								<label id="EVENT_SELECTED"  />
+								<space/><space/>
+								<button id="BUTTON_STORE_VALUES" label="Stored Values" />
+								<space/><space/>
+								<button id="BUTTON_HISTORY" label="History" />
+							</hbox>
+					</hbox>
+						
+						
+				</groupbox>
+			</hbox>
+			<groupbox width="100%">
+				<caption>
+					<label>Notes</label>
+				</caption>
+				<textbox multiline="true" height="100px" width="100%" id="TEST_NOTES" />
+			</groupbox>
+
+			<groupbox>
+				<caption>
+					<label>Event List</label>
+				</caption>
+				<div id="EVENT_LIST" height="40%" style="overflow:auto;height:40%;" />
+			</groupbox>
+
+			 
+			<textbox id="TEST_OUTPUT" multiline="true" height="100px" width="100%" cols="5" vflex="min" />
+			<window title="Test Output:" maximizable="true">
+				<textbox id="TEST_OUTPUT_test" multiline="true" height="100px" width="100%" cols="5" vflex="min" />
+			</window>
+			
+		</div>
+
+	</window>
+</zk>

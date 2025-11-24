@@ -1,0 +1,17 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:n="http://www.zkoss.org/2005/zk/native"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+	<?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"?>
+	<window vflex="true" hflex="true" apply="com.etantilling.testrunner.test.framework.toll.testframework.panel.screens.CopyEvents">
+		<vbox hflex="true">
+		<label>Event List:</label> 
+		<textbox id="EVENT_LIST" width="100%" multiline="true" height="100px"/>
+		<label>copy to test:</label>
+		<textbox id="TESTID"/>
+		<button id="COPY" label="COPY"/>
+		<label>Results:</label>
+		<textbox id="RESULTS" width="100%" multiline="true" height="500px"/>
+		</vbox>
+	</window>
+</zk>

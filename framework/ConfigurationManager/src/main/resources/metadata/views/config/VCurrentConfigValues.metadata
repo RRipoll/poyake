@@ -1,0 +1,538 @@
+FROMSQLFILE '/ConfigurationManager/src/main/resources/metadata/views/config/VCurrentConfigValues.sql'
+
+VIEW  ENTITY cfg.VCurrentConfigValues {
+	configKeyId INT
+	fullPath VARCHAR(2048)
+	value VARCHAR(32)
+	
+}
+
+/*
+================= Parser Information   ======================== 
+Results:
+VIEW FULL NAME: config.VCurrentConfigValues  
+VIEW NAME: VCurrentConfigValues 
+VIEW SCHEMA: config
+
+Tables:
+	TABLE: config.configKey Alias: k
+	TABLE: config.configKey Alias: k
+	TABLE: config.ConfigValue Alias: v
+	TABLE: config.EnuConfigKeyType
+	TABLE: config.ConfigKey Alias: k
+	TABLE: config.ConfigValueWithTimePKs Alias: pk
+	TABLE: config.ConfigValueWithTime Alias: v
+	TABLE: config.EnuConfigKeyType
+Output:
+	COLUMN: configKeyId -> NOT FOUND
+	COLUMN: keyId -> NOT FOUND
+	COLUMN: value -> NOT FOUND
+
+
+================= Resolver Information ======================== 
+Entity List:
+	config.ConfigKey ,config.EnuConfigKeyType ,config.EnuConfigDataType ,config.ConfigSetValuePKs ,config.ConfigValue ,config.ConfigValueWithTime ,config.ConfigValueWithTimePKs ,config.VCurrentConfigValuesColumns:
+	ATTRIBUTE_NOT_FOUND configKeyId -> 
+	ATTRIBUTE_NOT_FOUND keyId -> 
+	ATTRIBUTE_NOT_FOUND value -> 
+
+================= Parse Tree ======================== 
+tsql_file 
+  batch 
+    sql_clauses 
+      sql_clause 
+        ddl_clause 
+          create_view createoralterview
+            simple_name 
+              id 
+                simple_id config
+              .
+              id 
+                simple_id VCurrentConfigValues
+            as
+            select_statement 
+              query_expression 
+                query_specification select
+                  select_list 
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id configKeyId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id keyId
+                    ,
+                    select_list_elem 
+                      column_elem 
+                        id 
+                          simple_id value
+                  from
+                  table_sources 
+                    table_source 
+                      table_source_item_joined 
+                        table_source_item 
+                          derived_table 
+                            subquery 
+                              select_statement 
+                                query_expression (
+                                  query_expression 
+                                    query_specification select
+                                      select_list 
+                                        select_list_elem 
+                                          column_elem 
+                                            table_name 
+                                              id 
+                                                simple_id k
+                                            .
+                                            id 
+                                              simple_id configKeyId
+                                        ,
+                                        select_list_elem 
+                                          column_elem 
+                                            table_name 
+                                              id 
+                                                simple_id k
+                                            .
+                                            id 
+                                              simple_id keyId
+                                        ,
+                                        select_list_elem 
+                                          expression_elem 
+                                            expression 
+                                              function_call iif(
+                                                search_condition 
+                                                  search_condition_and 
+                                                    search_condition_not 
+                                                      predicate 
+                                                        expression 
+                                                          full_column_name 
+                                                            table_name 
+                                                              id 
+                                                                simple_id v
+                                                            .
+                                                            id 
+                                                              simple_id value
+                                                        is
+                                                        null_notnull null
+                                                ,
+                                                expression 
+                                                  full_column_name 
+                                                    table_name 
+                                                      id 
+                                                        simple_id k
+                                                    .
+                                                    id 
+                                                      simple_id defaultValue
+                                                ,
+                                                expression 
+                                                  full_column_name 
+                                                    table_name 
+                                                      id 
+                                                        simple_id v
+                                                    .
+                                                    id 
+                                                      simple_id value
+                                                )
+                                            as_column_alias as
+                                              column_alias 
+                                                id 
+                                                  simple_id value
+                                      from
+                                      table_sources 
+                                        table_source 
+                                          table_source_item_joined 
+                                            table_source_item 
+                                              table_name_with_hint 
+                                                table_name 
+                                                  id 
+                                                    simple_id config
+                                                  .
+                                                  id 
+                                                    simple_id configKey
+                                              as_table_alias 
+                                                table_alias 
+                                                  id 
+                                                    simple_id k
+                                            join_part leftjoin
+                                              table_source 
+                                                table_source_item_joined 
+                                                  table_source_item 
+                                                    table_name_with_hint 
+                                                      table_name 
+                                                        id 
+                                                          simple_id config
+                                                        .
+                                                        id 
+                                                          simple_id ConfigValue
+                                                    as_table_alias 
+                                                      table_alias 
+                                                        id 
+                                                          simple_id v
+                                              on
+                                              search_condition 
+                                                search_condition_and 
+                                                  search_condition_not 
+                                                    predicate 
+                                                      expression 
+                                                        full_column_name 
+                                                          table_name 
+                                                            id 
+                                                              simple_id v
+                                                          .
+                                                          id 
+                                                            simple_id configKeyId
+                                                      comparison_operator =
+                                                      expression 
+                                                        full_column_name 
+                                                          table_name 
+                                                            id 
+                                                              simple_id k
+                                                          .
+                                                          id 
+                                                            simple_id configKeyId
+                                                  and
+                                                  search_condition_not 
+                                                    predicate 
+                                                      expression 
+                                                        full_column_name 
+                                                          table_name 
+                                                            id 
+                                                              simple_id v
+                                                          .
+                                                          id 
+                                                            simple_id startDate
+                                                      comparison_operator <=
+                                                      expression 
+                                                        function_call getDate()
+                                                  and
+                                                  search_condition_not 
+                                                    predicate 
+                                                      expression 
+                                                        full_column_name 
+                                                          table_name 
+                                                            id 
+                                                              simple_id v
+                                                          .
+                                                          id 
+                                                            simple_id endDate
+                                                      comparison_operator >
+                                                      expression 
+                                                        function_call getDate()
+                                      where
+                                      search_condition 
+                                        search_condition_and 
+                                          search_condition_not 
+                                            predicate 
+                                              expression 
+                                                full_column_name 
+                                                  table_name 
+                                                    id 
+                                                      simple_id k
+                                                  .
+                                                  id 
+                                                    simple_id configKeyTypeId
+                                              comparison_operator =
+                                              expression 
+                                                bracket_expression (
+                                                  subquery 
+                                                    select_statement 
+                                                      query_expression 
+                                                        query_specification select
+                                                          select_list 
+                                                            select_list_elem 
+                                                              column_elem 
+                                                                id 
+                                                                  simple_id configKeyTypeId
+                                                          from
+                                                          table_sources 
+                                                            table_source 
+                                                              table_source_item_joined 
+                                                                table_source_item 
+                                                                  table_name_with_hint 
+                                                                    table_name 
+                                                                      id 
+                                                                        simple_id config
+                                                                      .
+                                                                      id 
+                                                                        simple_id EnuConfigKeyType
+                                                          where
+                                                          search_condition 
+                                                            search_condition_and 
+                                                              search_condition_not 
+                                                                predicate 
+                                                                  expression 
+                                                                    full_column_name 
+                                                                      id 
+                                                                        simple_id shortCode
+                                                                  comparison_operator =
+                                                                  expression 
+                                                                    primitive_expression 
+                                                                      constant 'SINGLEVALUE'
+                                                  )
+                                    sql_union UNION
+                                      query_specification select
+                                        select_list 
+                                          select_list_elem 
+                                            column_elem 
+                                              table_name 
+                                                id 
+                                                  simple_id k
+                                              .
+                                              id 
+                                                simple_id configKeyId
+                                          ,
+                                          select_list_elem 
+                                            column_elem 
+                                              table_name 
+                                                id 
+                                                  simple_id k
+                                              .
+                                              id 
+                                                simple_id keyId
+                                          ,
+                                          select_list_elem 
+                                            expression_elem 
+                                              expression 
+                                                function_call iif(
+                                                  search_condition 
+                                                    search_condition_and 
+                                                      search_condition_not 
+                                                        predicate 
+                                                          expression 
+                                                            full_column_name 
+                                                              table_name 
+                                                                id 
+                                                                  simple_id v
+                                                              .
+                                                              id 
+                                                                simple_id value
+                                                          is
+                                                          null_notnull null
+                                                  ,
+                                                  expression 
+                                                    full_column_name 
+                                                      table_name 
+                                                        id 
+                                                          simple_id k
+                                                      .
+                                                      id 
+                                                        simple_id defaultValue
+                                                  ,
+                                                  expression 
+                                                    full_column_name 
+                                                      table_name 
+                                                        id 
+                                                          simple_id v
+                                                      .
+                                                      id 
+                                                        simple_id value
+                                                  )
+                                              as_column_alias as
+                                                column_alias 
+                                                  id 
+                                                    simple_id value
+                                        from
+                                        table_sources 
+                                          table_source 
+                                            table_source_item_joined 
+                                              table_source_item 
+                                                table_name_with_hint 
+                                                  table_name 
+                                                    id 
+                                                      simple_id config
+                                                    .
+                                                    id 
+                                                      simple_id ConfigKey
+                                                as_table_alias 
+                                                  table_alias 
+                                                    id 
+                                                      simple_id k
+                                              join_part join
+                                                table_source 
+                                                  table_source_item_joined 
+                                                    table_source_item 
+                                                      table_name_with_hint 
+                                                        table_name 
+                                                          id 
+                                                            simple_id config
+                                                          .
+                                                          id 
+                                                            simple_id ConfigValueWithTimePKs
+                                                      as_table_alias 
+                                                        table_alias 
+                                                          id 
+                                                            simple_id pk
+                                                on
+                                                search_condition 
+                                                  search_condition_and 
+                                                    search_condition_not 
+                                                      predicate 
+                                                        expression 
+                                                          full_column_name 
+                                                            table_name 
+                                                              id 
+                                                                simple_id pk
+                                                            .
+                                                            id 
+                                                              simple_id configKeyId
+                                                        comparison_operator =
+                                                        expression 
+                                                          full_column_name 
+                                                            table_name 
+                                                              id 
+                                                                simple_id k
+                                                            .
+                                                            id 
+                                                              simple_id configKeyId
+                                              join_part join
+                                                table_source 
+                                                  table_source_item_joined 
+                                                    table_source_item 
+                                                      table_name_with_hint 
+                                                        table_name 
+                                                          id 
+                                                            simple_id config
+                                                          .
+                                                          id 
+                                                            simple_id ConfigValueWithTime
+                                                      as_table_alias 
+                                                        table_alias 
+                                                          id 
+                                                            simple_id v
+                                                on
+                                                search_condition 
+                                                  search_condition_and 
+                                                    search_condition_not 
+                                                      predicate 
+                                                        expression 
+                                                          full_column_name 
+                                                            table_name 
+                                                              id 
+                                                                simple_id v
+                                                            .
+                                                            id 
+                                                              simple_id ConfigValueWithTimeId
+                                                        comparison_operator =
+                                                        expression 
+                                                          full_column_name 
+                                                            table_name 
+                                                              id 
+                                                                simple_id pk
+                                                            .
+                                                            id 
+                                                              simple_id configValueWithTimeId
+                                                    and
+                                                    search_condition_not 
+                                                      predicate 
+                                                        expression 
+                                                          full_column_name 
+                                                            table_name 
+                                                              id 
+                                                                simple_id v
+                                                            .
+                                                            id 
+                                                              simple_id startDate
+                                                        comparison_operator <=
+                                                        expression 
+                                                          function_call getDate()
+                                                    and
+                                                    search_condition_not 
+                                                      predicate 
+                                                        expression 
+                                                          full_column_name 
+                                                            table_name 
+                                                              id 
+                                                                simple_id v
+                                                            .
+                                                            id 
+                                                              simple_id endDate
+                                                        comparison_operator >
+                                                        expression 
+                                                          function_call getDate()
+                                                    and
+                                                    search_condition_not 
+                                                      predicate 
+                                                        expression 
+                                                          full_column_name 
+                                                            table_name 
+                                                              id 
+                                                                simple_id v
+                                                            .
+                                                            id 
+                                                              simple_id effectiveStartDate
+                                                        comparison_operator <=
+                                                        expression 
+                                                          function_call getDate()
+                                                    and
+                                                    search_condition_not 
+                                                      predicate 
+                                                        expression 
+                                                          full_column_name 
+                                                            table_name 
+                                                              id 
+                                                                simple_id v
+                                                            .
+                                                            id 
+                                                              simple_id endDate
+                                                        comparison_operator >
+                                                        expression 
+                                                          function_call getDate()
+                                        where
+                                        search_condition 
+                                          search_condition_and 
+                                            search_condition_not 
+                                              predicate 
+                                                expression 
+                                                  full_column_name 
+                                                    table_name 
+                                                      id 
+                                                        simple_id k
+                                                    .
+                                                    id 
+                                                      simple_id configKeyTypeId
+                                                comparison_operator =
+                                                expression 
+                                                  bracket_expression (
+                                                    subquery 
+                                                      select_statement 
+                                                        query_expression 
+                                                          query_specification select
+                                                            select_list 
+                                                              select_list_elem 
+                                                                column_elem 
+                                                                  id 
+                                                                    simple_id configKeyTypeId
+                                                            from
+                                                            table_sources 
+                                                              table_source 
+                                                                table_source_item_joined 
+                                                                  table_source_item 
+                                                                    table_name_with_hint 
+                                                                      table_name 
+                                                                        id 
+                                                                          simple_id config
+                                                                        .
+                                                                        id 
+                                                                          simple_id EnuConfigKeyType
+                                                            where
+                                                            search_condition 
+                                                              search_condition_and 
+                                                                search_condition_not 
+                                                                  predicate 
+                                                                    expression 
+                                                                      full_column_name 
+                                                                        id 
+                                                                          simple_id shortCode
+                                                                    comparison_operator =
+                                                                    expression 
+                                                                      primitive_expression 
+                                                                        constant 'VALUEWITHTIME'
+                                                    )
+                                  )
+                          as_table_alias 
+                            table_alias 
+                              id 
+                                simple_id X
+  <EOF>*/

@@ -1,0 +1,10 @@
+TABLE ENTITY demo.DemoTable{
+	PK demoTableId INTEGER
+	name VARCHAR(16) NOTNULL
+	amount MONEY NOTNULL
+	
+	METADATA{
+		1, "PEPE", -2;
+		2, "maolo", 22;
+	}
+}

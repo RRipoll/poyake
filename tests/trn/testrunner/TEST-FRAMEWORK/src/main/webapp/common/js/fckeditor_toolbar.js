@@ -1,0 +1,1 @@
+FCKConfig.ToolbarSets["MyToolbar"] = [['Undo','Redo','-','Bold','Italic','Underline','StrikeThrough','OrderedList','UnorderedList','Link','Unlink','Anchor'],];

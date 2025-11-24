@@ -1,0 +1,81 @@
+SQLNATIVE FILESTART{
+	DBTYPE H2  
+		<SQLNATIVESTART>
+
+CREATE FORCE ALIAS testrunner.GETFOLDERPATH AS STRINGDECODE('
+	String getFolderPath(java.sql.Connection con, String currentNodeuuId) throws Exception {
+	       if(null==currentNodeuuId ) return null;
+                String buff ="";
+		java.sql.ResultSet rs = con.createStatement().executeQuery(" SELECT description,parentfolderuuid  FROM testrunner.folder WHERE folderuuid =''" + currentNodeuuId+"''");
+                if(rs.next()){
+                  	String parent=getFolderPath(con,rs.getString("parentfolderuuid"));
+                  	buff=    (null==parent?"":parent+"/") +       (null==rs.getString("description")?"":rs.getString("description"));
+			}
+		return buff;
+		}');       
+   
+
+
+
+
+</SQLNATIVEEND>
+
+DBTYPE POSTGRESQL
+	<SQLNATIVESTART>
+	
+
+CREATE FUNCTION testrunner.GetFolderPath ( pCurrentNodeID    VARCHAR )
+RETURNS VARCHAR(1000)
+as
+$$
+DECLARE 
+	vCurrentNodeName     VARCHAR(50);
+	vParentID            INT;
+BEGIN
+	IF pCurrentNodeID IS NULL OR pCurrentNodeID = 0 THEN 
+		RETURN null; 
+	end if;
+	
+	SELECT  DESCRIPTION, PARENTFOLDERUuid into vCurrentNodeName, vParentID
+		FROM FOLDER
+		WHERE FOLDERUuid = pCurrentNodeID;
+	
+	RETURN COALESCE(testrunner.GetFolderPath(vParentID) || '/', '') || vCurrentNodeName;
+
+end
+$$
+LANGUAGE plpgsql;
+
+
+
+</SQLNATIVEEND>
+
+
+
+
+	DBTYPE SQLSERVER
+		<SQLNATIVESTART>
+	
+CREATE FUNCTION [dbo].[GetFolderPath] ( @pCurrentNodeID    INT )
+RETURNS VARCHAR(1000)
+AS
+BEGIN
+
+DECLARE @vCurrentNodeName     VARCHAR(50)
+DECLARE @vParentID            INT
+
+IF @pCurrentNodeID IS NULL OR @pCurrentNodeID = 0
+    RETURN NULL
+
+SELECT @vCurrentNodeName = [DESCRIPTION], @vParentID = [PARENTFOLDERID]
+FROM [FOLDER]
+WHERE [FOLDERID] = @pCurrentNodeID
+
+RETURN ISNULL([dbo].[GetFolderPath] ( @vParentID ) + '/', '') + @vCurrentNodeName
+
+END
+
+</SQLNATIVEEND>
+}
+
+

@@ -1,0 +1,15 @@
+ENTITY pub.Step {
+	PK stepId INTEGER
+	description VARCHAR(255)
+    
+    
+    METADATA{
+    	
+    	0, 'Core';
+		1, 'Input';
+    }
+	
+	
+}
+
+ 

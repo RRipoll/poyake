@@ -1,0 +1,4 @@
+Meta files:
+platform:/resource/commondata/src/main/resources/metadata/config/functions.metadata
+platform:/resource/commondata/src/main/resources/metadata/config/reset.metadata
+platform:/resource/commondata/src/main/resources/metadata/configuration/configuration.metadata

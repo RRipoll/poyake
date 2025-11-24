@@ -1,0 +1,11 @@
+//Un objeto para cualquier cosa que pueda hacer camibios en el programa
+TABLE ENTITY Agente PATTERN auditada
+{
+	PK agenteId INT 
+	comentariosId INT NOTNULL FKTO Comentarios
+	
+	creado DATETIME
+	editado DATETIME
+	borrado DATETIME
+	
+}

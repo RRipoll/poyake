@@ -1,0 +1,10 @@
+ENTITY audit.EnuInputSource {
+	PK inputSourceId INT 
+	shortCode VARCHAR ( 8 )
+	description VARCHAR(64)
+	
+	METADATA{
+		1, "BOS", "Back Office System";
+		2, "WEB", "Web Site";
+	}
+}

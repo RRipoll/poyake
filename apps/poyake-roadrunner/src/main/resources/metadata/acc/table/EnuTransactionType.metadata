@@ -1,0 +1,11 @@
+TABLE ENTITY acc.EnuTransactionType PATTERN Enumeration{
+	PK transactionTypeId INT
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, PAYMENT, 'Payment';
+		2, TRIP, 'Trip';
+	}
+	
+}

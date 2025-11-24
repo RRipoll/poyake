@@ -1,0 +1,10 @@
+TABLE ENTITY eva.EnuNoteType PATTERN Enumeration{
+	PK noteTypeId INT 
+	shortCode VARCHAR ( 16 )
+	description VARCHAR ( 32 ) STEREOTYPES DESCRIPTION
+	
+	ENUMETADATA{
+		1, FILE, 'File';
+		2, MANDATE, 'Mandate Evaluation';
+	}
+}

@@ -1,0 +1,27 @@
+TABLE ENTITY tolling.VehicleInfo PATTERN AutoHistory{
+	vehicleId INT NOTNULL FKTO tolling.Vehicle STEREOTYPES AUTOHISTORYMAINFK,DESCRIPTION
+	licensePlateId INT NOTNULL FKTO tolling.LicensePlate STEREOTYPES DESCRIPTION
+	color VARCHAR(100)
+	make VARCHAR(255)
+	model VARCHAR(255)
+	vehicleClassId INT FKTO tolling.EnuVehicleClass
+	style VARCHAR(20)
+	axles INT
+	modelYear INT
+
+	PK revisionId INT STEREOTYPES NOGUIINPUT
+	startDate DATETIME NOTNULL DEFAULT GETPOSTINGDATE STEREOTYPES NOGUIINPUT
+	endDate DATETIME NOTNULL DEFAULT MAXDATE STEREOTYPES NOGUIINPUT
+	inputUserId INT NOTNULL FKTO audit.InputUser DEFAULT "1" STEREOTYPES NOGUIINPUT
+	inputSourceId INT NOTNULL FKTO audit.InputSource DEFAULT "1" STEREOTYPES NOGUIINPUT
+	
+	LABELS{
+		vehicleId {en_EN 'Vehicle #' es_ES '# Vehículo'}
+		make {es_ES 'Fabricante'}
+		model {es_ES 'Modelo'}
+		vehicleClassId {en_EN 'Class' es_ES 'Clase'}
+		style {es_ES 'Tipo'}
+		axles {es_ES 'Ejes'}
+		modelYear {en_EN 'Model Year' es_ES 'Año'}
+	}
+}

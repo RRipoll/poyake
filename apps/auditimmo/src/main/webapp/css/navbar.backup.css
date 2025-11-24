@@ -1,0 +1,42 @@
+		.my-navbar{
+			background:#4e5873;
+			background:#353e65;
+			background: linear-gradient(0deg, #3f0e40 0%, #353e65 100%);
+			background: linear-gradient(0deg, #353e65 0%, #6B6B6B 100%);
+    	}
+		
+		.z-navbar, .z-navbar>ul .z-nav-content, .z-navbar>ul .z-navitem-content, .z-navbar>ul .z-navseparator{
+			color:white;
+			background:transparent;
+		}
+		
+		.z-navbar>ul ul .z-nav-content, .z-navbar>ul ul .z-navitem-content, .z-navbar>ul ul .z-navseparator{
+			color:white;
+			background:transparent;
+		}
+		
+		.z-navbar .z-navitem-selected .z-navitem-content:hover{
+			color:white;
+			background:red;
+		}
+
+		.z-navbar .z-navitem .z-navitem-content:hover{
+			color:white;
+			background:orange;
+		}
+
+		.z-navbar .z-navitem-selected .z-navitem-content{
+			color:white;
+			background:orange;
+		}
+		
+		.z-navbar-vertical>ul>li:first-child a:hover{
+			color:white;
+			background:blue;
+		}
+		
+		.z-navbar>ul .z-nav-content:hover, .z-navbar>ul .z-navitem-content:hover, .z-navbar>ul .z-navseparator:hover{
+			color:white;
+			background:blue;
+		}
+		
